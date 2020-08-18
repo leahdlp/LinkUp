@@ -1,0 +1,10 @@
+.login-signup-header {
+    border: red 1px solid;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-btns { 
+    display: flex;
+
+}

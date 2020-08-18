@@ -16,8 +16,10 @@ class NavBar extends React.Component {
     loggedOut() {
         return (
             <div className="login-signup-header">
-                <Link to="/signup">Sign up</Link>
-                <Link to="/login">Log in</Link>
+                <div className="nav-btns">
+                    <Link to="/signup">Sign up</Link>
+                    <Link to="/login">Log in</Link>
+                </div>
             </div>
         )
     }

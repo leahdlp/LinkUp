@@ -24,16 +24,34 @@ class SignUpForm extends React.Component {
         this.props.processForm(user);
     }
 
-    render() {
+    renderErrors() {
+        let errors = this.props.errors;
+        let klass = "";
+        let feedback = "";
+        if (errors.length != 0) klass = "errors";
+        if (errors.includes("Your email or password was entered incorrectly.")) {
+            feedback = "To reset your password, please click here";
+        }
+
         return (
-            <div className="signup-form">
-                <ul className="errors"> 
+            <div className={klass}>
+                <ul>
                     {this.props.errors.map((error, i) => (
                         <li key={`error-${i}`}>{error}</li>
                     ))}
                 </ul>
+                <p>{feedback}</p>
+            </div>
+        )
+    }
+
+    render() {
+        return (
+            <div className="signup-form">
+                {this.renderErrors()}
                 <form onSubmit={this.handleSubmit}>
-                    <label> First Name
+                    <label className="user-input"> First Name:
+                        <br />
                         <input
                             type="text"
                             value={this.state.first_name}
@@ -41,7 +59,8 @@ class SignUpForm extends React.Component {
                         />
                     </label>
                     <br />
-                    <label> Last Name
+                    <label className="user-input"> Last Name:
+                        <br />
                         <input
                             type="text"
                             value={this.state.last_name}
@@ -49,7 +68,8 @@ class SignUpForm extends React.Component {
                         />
                     </label>
                     <br />
-                    <label> Email
+                    <label className="user-input"> Email address:
+                        <br />
                         <input
                             type="text"
                             value={this.state.email}
@@ -57,7 +77,8 @@ class SignUpForm extends React.Component {
                         />
                     </label>
                     <br />
-                    <label> Username (optional)
+                    <label className="user-input"> Username (optional): 
+                        <br />
                         <input
                             type="text"
                             value={this.state.username}
@@ -65,7 +86,8 @@ class SignUpForm extends React.Component {
                         />
                     </label>
                     <br />
-                    <label> Password
+                    <label className="user-input"> Password:
+                        <br />
                         <input
                             type="password"
                             value={this.state.password}
