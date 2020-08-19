@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 class SignUpForm extends React.Component {
     constructor(props) {
@@ -21,6 +21,7 @@ class SignUpForm extends React.Component {
         event.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
+        this.props.history.push("/");
     }
 
     handleDemoUser(event) {
@@ -32,6 +33,7 @@ class SignUpForm extends React.Component {
         };
         
         this.props.processForm(user);
+        this.props.history.push("/");
     }
 
     renderErrors() {
