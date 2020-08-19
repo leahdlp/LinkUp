@@ -8,7 +8,12 @@ class NavBar extends React.Component {
         return (
             <div className="loggedIn-header">
                 <h2>Welcome aboard! {user.first_name} {user.last_name}</h2>
-                <button className="logout-btn" onClick={() => this.props.logout()}>Log Out!</button>
+                <button 
+                    className="logout-btn" 
+                    onClick={() => this.props.logout()}
+                >
+                    Log Out!
+                </button>
             </div>
         )
     }
@@ -17,8 +22,8 @@ class NavBar extends React.Component {
         return (
             <div className="login-signup-header">
                 <div className="nav-btns">
-                    <Link to="/signup">Sign up</Link>
-                    <Link to="/login">Log in</Link>
+                    <Link to="/login" id="login-link">Log in</Link>
+                    <Link to="/signup" id="signup-link">Sign up</Link>
                 </div>
             </div>
         )
@@ -26,8 +31,8 @@ class NavBar extends React.Component {
 
     render () {
         let user = this.props.currentUser;
-        let greeting = user ? this.loggedIn(user) : this.loggedOut();
-        return greeting;
+        let nav = user ? this.loggedIn(user) : this.loggedOut();
+        return nav;
     }
 }
 

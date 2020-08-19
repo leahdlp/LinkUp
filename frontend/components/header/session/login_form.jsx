@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 class LogInForm extends React.Component {
     constructor(props) {
@@ -40,52 +41,68 @@ class LogInForm extends React.Component {
         }
 
         return (
-            <div className={klass}>
-                <ul>
-                    {this.props.errors.map((error, i) => (
-                        <li key={`error-${i}`}>{error}</li>
-                    ))}
-                </ul>
-                <p>{feedback}</p>
+            <div className="errors-container">
+                <div className={klass}>
+                    <ul>
+                        {this.props.errors.map((error, i) => (
+                            <li key={`error-${i}`}>{error}</li>
+                        ))}
+                    </ul>
+                    <p>{feedback}</p>
+                </div>
             </div>
         )
     }
 
     render () {
         return(
-            <div className="login-form">
+            <div className="login-page">
                 { this.renderErrors() }
 
-                <button onClick={() => this.handleDemoUser()}>
-                    Log In as Demo User
-                </button>
-
-                <form onSubmit={this.handleSubmit}>
-                    <label className="user-input"> Email address:
-                        <br />
-                        <input 
-                            type="text" 
-                            value={this.state.email}
-                            onChange={this.update("email")}
-                        />
-                    </label>
-                    <br />
-                    <label className="user-input"> Password:
-                        <br />
-                        <input
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.update("password")}
-                        />
-                    </label>
-                    <br />
-                    <div className="form-submit-btn">
-                        <input 
-                            type="submit" 
-                            value={this.props.formType}
-                        />
+                <div className="form-header">
+                    <div className="form-type">
+                        <h2>{this.props.formType}</h2>
                     </div>
-                </form>
+                    <br />
+                    <p id="signin-msg">
+                        Not registered with us yet?
+                        <Link to="/signup">Sign up</Link>
+                    </p>
+                    
+                </div>
+
+                <div className="login-form">
+                    <form onSubmit={this.handleSubmit}>
+                        <label className="user-input"> Email address:
+                            <br />
+                            <input 
+                                type="text" 
+                                value={this.state.email}
+                                onChange={this.update("email")}
+                            />
+                        </label>
+                        <br />
+                        <label className="user-input"> Password:
+                            <br />
+                            <input
+                                type="password"
+                                value={this.state.password}
+                                onChange={this.update("password")}
+                            />
+                        </label>
+                        <br />
+                        <div className="form-submit-btn">
+                            <input 
+                                type="submit" 
+                                value={this.props.formType}
+                            />
+                            <br />
+                            <button onClick={() => this.handleDemoUser()}>
+                                Log In as Demo User
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         )
     }
