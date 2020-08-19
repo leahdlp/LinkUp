@@ -23,13 +23,12 @@ class LogInForm extends React.Component {
         this.props.processForm(user);
 
         this.state = {email: "", password: ""}
-        this.props.history.push("/");
     }
 
     handleDemoUser(event) {
         const user = { email: "thanAMug@gmail.com", password: "0123456789" };
         this.props.processForm(user);
-        this.props.history.push("/");
+        // this.props.history.push("/");
     }
 
     renderErrors() {

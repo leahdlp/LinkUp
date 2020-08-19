@@ -21,7 +21,6 @@ class SignUpForm extends React.Component {
         event.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
-        this.props.history.push("/");
     }
 
     handleDemoUser(event) {
@@ -33,7 +32,7 @@ class SignUpForm extends React.Component {
         };
         
         this.props.processForm(user);
-        this.props.history.push("/");
+        // this.props.history.push("/");
     }
 
     renderErrors() {
@@ -89,8 +88,8 @@ class SignUpForm extends React.Component {
                                         <br />
                                         <input
                                             type="text"
-                                            value={this.state.first_name}
-                                            onChange={this.update("first_name")}
+                                            value={this.state.name}
+                                            onChange={this.update("name")}
                                         />
                                     </label>
                                     <br />
