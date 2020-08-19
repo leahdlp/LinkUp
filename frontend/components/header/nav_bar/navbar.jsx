@@ -8,12 +8,13 @@ class NavBar extends React.Component {
         return (
             <div className="loggedIn-header">
                 <h2>Welcome aboard! {user.first_name} {user.last_name}</h2>
-                <button 
+                <Link 
+                    to="/"
                     className="logout-btn" 
                     onClick={() => this.props.logout()}
                 >
-                    Log Out!
-                </button>
+                    Log out
+                </Link>
             </div>
         )
     }

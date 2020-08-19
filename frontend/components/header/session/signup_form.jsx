@@ -5,10 +5,8 @@ class SignUpForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            first_name: "",
-            last_name: "",
+            name: "",
             email: "",
-            username: "",
             password: ""
         }
 
@@ -28,12 +26,11 @@ class SignUpForm extends React.Component {
     handleDemoUser(event) {
         const id = Math.floor(Math.random() * 100000000000000000);
         const user = { 
-            first_name: "Teddy", 
-            last_name: "Pendergrass",
-            username: "",
+            name: "Teddy Pendergrass", 
             email: `user${id}@newUser.com`, 
             password: "0123456789" 
         };
+        
         this.props.processForm(user);
     }
 
@@ -60,83 +57,75 @@ class SignUpForm extends React.Component {
         )
     }
 
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
+
     render() {
         return (
-            <div className="login-page">
+            <div>
+
                 {this.renderErrors()}
 
-                <div className="form-header">
-                    <div className="form-type">
-                        <h2>{this.props.formType}</h2>
-                    </div>
-                    <br />
-                    <p id="signin-msg">
-                        Not registered with us yet?
-                        <Link to="/signup">Sign up</Link>
-                    </p>
-
-                </div>
-
-                <div className="signup-form">
-
-                    <form onSubmit={this.handleSubmit}>
-                        <label className="user-input"> Your Name:
+                <div className="signup-page">
+                    <div className="signup-form">
+                        <div className="form-header">
+                            <div className="form-type">
+                                <h2>{this.props.formType}</h2>
+                            </div>
                             <br />
-                            <input
-                                type="text"
-                                value={this.state.first_name}
-                                onChange={this.update("first_name")}
-                            />
-                        </label>
-                        <br />
-                        {/* <label className="user-input"> Last Name:
-                            <br />
-                            <input
-                                type="text"
-                                value={this.state.last_name}
-                                onChange={this.update("last_name")}
-                            />
-                        </label> */}
-                        <br />
-                        <label className="user-input"> Email address:
-                            <br />
-                            <input
-                                type="text"
-                                value={this.state.email}
-                                onChange={this.update("email")}
-                            />
-                        </label>
-                        <br />
-                        {/* <label className="user-input"> Username (optional): 
-                            <br />
-                            <input
-                                type="text"
-                                value={this.state.username}
-                                onChange={this.update("username")}
-                            />
-                        </label> */}
-                        <br />
-                        <label className="user-input"> Password:
-                            <br />
-                            <input
-                                type="password"
-                                value={this.state.password}
-                                onChange={this.update("password")}
-                            />
-                        </label>
-                        <br />
-                        <div className="form-submit-btn">
-                            <input 
-                                type="submit" 
-                                value={this.props.formType}
-                                className="form-submit-btn"
-                            />
-                            <br />
-                            <button onClick={() => this.handleDemoUser()}>
-                                Sign Up as Demo User
-                            </button>
+                            <p id="header-msg">
+                                Already registered with us?
+                                <Link className="other-link" to="/login">Log in</Link>
+                            </p>
                         </div>
-                    </form>
+
+                        <div className="form-container">
+                            <form onSubmit={this.handleSubmit} className="form">
+                                <div className="inputs">
+                                    <label className="user-input"> Your Name:
+                                        <br />
+                                        <input
+                                            type="text"
+                                            value={this.state.first_name}
+                                            onChange={this.update("first_name")}
+                                        />
+                                    </label>
+                                    <br />
+                                    <label className="user-input"> Email address:
+                                        <br />
+                                        <input
+                                            type="text"
+                                            value={this.state.email}
+                                            onChange={this.update("email")}
+                                        />
+                                    </label>
+                                    <br />
+                                    <label className="user-input"> Password:
+                                        <br />
+                                        <input
+                                            type="password"
+                                            value={this.state.password}
+                                            onChange={this.update("password")}
+                                        />
+                                    </label>
+                                </div>
+                                <br />
+                                <div className="form-submit-btn-container">
+                                    <div className="form-submit-btn">
+                                        <input
+                                            type="submit"
+                                            value={this.props.formType}
+                                        />
+                                        <br />
+                                        <button onClick={() => this.handleDemoUser()}>
+                                            Sign Up as Demo User
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

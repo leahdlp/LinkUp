@@ -3,9 +3,7 @@
 # Table name: users
 #
 #  id              :bigint           not null, primary key
-#  first_name      :string           not null
-#  last_name       :string           not null
-#  username        :string
+#  name            :string           not null
 #  email           :string           not null
 #  password_digest :string           not null
 #  session_token   :string           not null
@@ -16,7 +14,7 @@ class User < ApplicationRecord
     # AAASPIRE
     after_initialize :ensure_session_token
 
-    validates :first_name, :last_name, :password_digest, presence: true
+    validates :name, :password_digest, presence: true
     validates :email, :session_token, presence: true, uniqueness: true
     validates :password, length: { minimum: 10, allow_nil: true }
 

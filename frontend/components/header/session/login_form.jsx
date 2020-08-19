@@ -54,54 +54,66 @@ class LogInForm extends React.Component {
         )
     }
 
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
+
     render () {
         return(
-            <div className="login-page">
+            <div>
+
                 { this.renderErrors() }
-
-                <div className="form-header">
-                    <div className="form-type">
-                        <h2>{this.props.formType}</h2>
-                    </div>
-                    <br />
-                    <p id="signin-msg">
-                        Not registered with us yet?
-                        <Link to="/signup">Sign up</Link>
-                    </p>
-                    
-                </div>
-
-                <div className="login-form">
-                    <form onSubmit={this.handleSubmit}>
-                        <label className="user-input"> Email address:
+        
+                <div className="login-page">
+                    <div className="login-form">
+                        <div className="form-header">
+                            <div className="form-type">
+                                <h2>{this.props.formType}</h2>
+                            </div>
                             <br />
-                            <input 
-                                type="text" 
-                                value={this.state.email}
-                                onChange={this.update("email")}
-                            />
-                        </label>
-                        <br />
-                        <label className="user-input"> Password:
-                            <br />
-                            <input
-                                type="password"
-                                value={this.state.password}
-                                onChange={this.update("password")}
-                            />
-                        </label>
-                        <br />
-                        <div className="form-submit-btn">
-                            <input 
-                                type="submit" 
-                                value={this.props.formType}
-                            />
-                            <br />
-                            <button onClick={() => this.handleDemoUser()}>
-                                Log In as Demo User
-                            </button>
+                            <p id="header-msg">
+                                Not registered with us yet?
+                                <Link className="other-link" to="/signup">Sign up</Link>
+                            </p>
                         </div>
-                    </form>
+
+                        <div className="form-container">
+                            <form onSubmit={this.handleSubmit} className="form">
+                                <div className="inputs">
+                                    <label className="user-input"> Email address:
+                                        <br />
+                                        <input 
+                                            type="text" 
+                                            value={this.state.email}
+                                            onChange={this.update("email")}
+                                        />
+                                    </label>
+                                    <br />
+                                    <label className="user-input"> Password:
+                                        <br />
+                                        <input
+                                            type="password"
+                                            value={this.state.password}
+                                            onChange={this.update("password")}
+                                        />
+                                    </label>
+                                </div>
+                                <br />
+                                <div className="form-submit-btn-container">
+                                    <div className="form-submit-btn">
+                                        <input 
+                                            type="submit" 
+                                            value={this.props.formType}
+                                        />
+                                        <br />
+                                        <button onClick={() => this.handleDemoUser()}>
+                                            Log In as Demo User
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

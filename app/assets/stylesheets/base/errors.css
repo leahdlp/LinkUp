@@ -1,6 +1,7 @@
 .errors-container {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
     padding-bottom: 40px;
 }
 
@@ -10,20 +11,21 @@
     font-weight: bolder;
     /* border: red 1px solid; */
     background-color: #FBE1E3;
-    display: inline-block;
+    display: block;
     border-radius: 3px;
     padding: 16px 16px 0px;
-    height: 132px;
+    height: fit-content;
     width: 680px;
 }
 
-.errors > li {
-    color: red;
+.errors li {
+    color: rgb(165, 1, 1);
     padding: 0px 0px 8px;
 }
 
 .errors > p {
     font-size: 16px;
     color: black;
+    font-weight: lighter;
     padding: 0px 0px 16px;
 }
