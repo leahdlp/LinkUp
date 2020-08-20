@@ -10,10 +10,56 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_19_205535) do
+ActiveRecord::Schema.define(version: 2020_08_20_054009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_categories_on_name", unique: true
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description", null: false
+    t.integer "subcategory_id", null: false
+    t.integer "location_id", null: false
+    t.integer "creator_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name", "creator_id"], name: "index_groups_on_name_and_creator_id", unique: true
+    t.index ["name", "description"], name: "index_groups_on_name_and_description", unique: true
+    t.index ["name", "location_id"], name: "index_groups_on_name_and_location_id", unique: true
+    t.index ["name", "subcategory_id"], name: "index_groups_on_name_and_subcategory_id", unique: true
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "city", null: false
+    t.string "state", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city", "state"], name: "index_locations_on_city_and_state", unique: true
+  end
+
+  create_table "members", force: :cascade do |t|
+    t.integer "group_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "group_id"], name: "index_members_on_user_id_and_group_id", unique: true
+  end
+
+  create_table "subcategories", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "group_id", null: false
+    t.index ["name", "category_id"], name: "index_subcategories_on_name_and_category_id", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name", null: false

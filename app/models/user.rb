@@ -18,6 +18,9 @@ class User < ApplicationRecord
     validates :email, :session_token, presence: true, uniqueness: true
     validates :password, length: { minimum: 10, allow_nil: true }
 
+    # has_many :members,
+
+
     attr_reader :password
 
     def self.generate_session_token

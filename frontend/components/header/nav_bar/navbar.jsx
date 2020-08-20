@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 class NavBar extends React.Component {
 
     loggedIn(user) {
-        let logout = this.props.logout;
+        // let logout = this.props.logout;
         return (
             <div className="loggedIn-header">
                 <h2>Welcome aboard! {user.first_name} {user.last_name}</h2>

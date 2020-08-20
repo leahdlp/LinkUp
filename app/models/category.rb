@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: categories
+#
+#  id         :bigint           not null, primary key
+#  name       :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+class Category < ApplicationRecord
+    has_many :subcategories,
+        foreign_key: :category_id,
+        class_name: :SubCategory
+
+    has_many :groups,
+        foreign_key: :category_id,
+        class_name: :Group
+end
