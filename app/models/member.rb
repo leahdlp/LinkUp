@@ -10,6 +10,7 @@
 #
 class Member < ApplicationRecord
     validates :group_id, :user_id, presence: true
+    validates :user_id, uniqueness: { scope: :group_id }
 
     belongs_to :group,
         foreign_key: :group_id,

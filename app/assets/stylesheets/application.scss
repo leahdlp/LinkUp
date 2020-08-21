@@ -16,6 +16,8 @@
 /* CSS Reset */
 @import "base/reset";
 @import "base/errors";
-@import "components/form";
-@import "components/navbar";
-@import "components/covidbar";
+@import "components/session/form";
+@import "components/header/covid_bar.css";
+@import "components/header/navbar.css";
+@import "components/footer/footer.css";
+@import "components/groups/group_show_nav.css"

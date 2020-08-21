@@ -12,10 +12,11 @@
 #  updated_at     :datetime         not null
 #
 class Group < ApplicationRecord
-
-    belongs_to :category,
-        foreign_key: :category_id,
-        class_name: :Category
+    validates :name, :description, :creator_id, :location_id, :subcategory_id, presence: true 
+    validates :name, uniqueness: { scope: :description }
+    validates :name, uniqueness: { scope: :creator_id }
+    validates :name, uniqueness: { scope: :location_id }
+    validates :name, uniqueness: { scope: :subcategory_id }
 
     belongs_to :subcategory,
         foreign_key: :subcategory_id,
@@ -28,4 +29,9 @@ class Group < ApplicationRecord
     has_many :members,
         foreign_key: :group_id,
         class_name: :Member 
+
+    has_many :categories,
+        through: :subcategory,
+        source: :category
+
 end

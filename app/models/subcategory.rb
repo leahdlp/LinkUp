@@ -7,10 +7,10 @@
 #  category_id :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  group_id    :integer          not null
 #
 class Subcategory < ApplicationRecord
     validates :name, :category_id, presence: true
+    validates :name, uniqueness: { scope: :category_id }
     
     belongs_to :category,
         foreign_key: :category_id,

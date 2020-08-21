@@ -1,1 +1,1 @@
-json.extract! group, :id, :name, :description, :category_id, :subcategory_id, :location_id
+json.extract! group, :id, :name, :description, :subcategory_id, :location_id, :creator_id

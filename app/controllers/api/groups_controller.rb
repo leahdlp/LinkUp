@@ -14,13 +14,25 @@
 #
 
 class Api::GroupsController < ApplicationController
+    before_action :require_logged_in, except: [:index, :show]
+
     def index
-        @group = Group.all
-        render :index
+        @groups = Group.all
+        render "/api/groups/index"
+    end
+
+    def show
+        # debugger
+        @group = Group.find_by(id: params[:id])
+        render "/api/groups/info"
     end
 
     def create
         @group = Group.new(group_params)
+        @group.creator_id = current_user.id
+        Member.create({ group_id: @group.id, user_id: current_user.id })
+
+        # debugger
 
         if @group.save
             render "/api/groups/show"
@@ -30,29 +42,33 @@ class Api::GroupsController < ApplicationController
     end
 
     def update
-        @group.find_by(id: params[:id])
+        @group = Group.find_by(id: params[:id])
 
-        if @group
-            @group.update(group_params)
+        if @group.creator_id === current_user.id && @group.update(group_params)
             render "/api/groups/show"
         else
-            render json: ["Group not found"], status: 404
+            render json: ["Could not update, group not found"], status: 404
         end
     end
 
     def destroy
-        @group.find_by(id: params[:id])
+        @group = Group.find_by(id: params[:id])
 
-        if @group
+        if @group.creator_id === current_user.id
             @group.destroy!
-            render "/api/groups/index"
+            render json: "/api/groups/show"
         else
-            render json: ["Group not found"], status: 404
+            render json: ["Could not destroy, group not found"], status: 404
         end
     end
 
     private
     def group_params
-        params.require(:group).permit(:name, :description, :subcategory_id, :location_id)
+        params.require(:group).permit(
+            :name, 
+            :description, 
+            :subcategory_id, 
+            :location_id
+        )
     end
 end
