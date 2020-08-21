@@ -23,7 +23,12 @@ class GroupShow extends React.Component {
                     group={group}
                 />
 
-                {group.description}
+                <div className="desc-container">
+                    <h3>What we're about</h3>
+                    <p className="description">
+                        {group.description}
+                    </p>
+                </div>
 
                 {group.subcategory_id}
             </div>

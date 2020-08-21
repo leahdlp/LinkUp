@@ -1,0 +1,11 @@
+.description {
+    font-weight: 300;
+}
+
+.desc-container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 32px;
+    margin-left: 20px;
+    margin-bottom: 32px;
+    margin-right: 20px;
+}
