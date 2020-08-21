@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { fetchGroups, fetchGroup, createGroup, updateGroup, deleteGroup } from './actions/groups_actions'
+import { createMember, deleteMember } from './actions/members_actions';
 import configureStore from './store/store'
 import Root from './components/root'
 
@@ -27,11 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // window.logout = logout
     window.dispatch = store.dispatch;
     window.getState = store.getState;
-    window.fetchGroups = fetchGroups;
-    window.fetchGroup = fetchGroup;
-    window.createGroup = createGroup;
-    window.updateGroup = updateGroup;
-    window.deleteGroup = deleteGroup;
+    // window.fetchGroups = fetchGroups;
+    // window.fetchGroup = fetchGroup;
+    // window.createGroup = createGroup;
+    // window.updateGroup = updateGroup;
+    // window.deleteGroup = deleteGroup;
+    window.createMember = createMember;
+    window.deleteMember = deleteMember;
     // FOR TESTING
 
     ReactDOM.render(<Root store={store}/>, root);

@@ -9,7 +9,7 @@ const GroupShowHeaderNav = ({ group }) => {
                 <Link to={`/groups/${group.id}`} id="nav-button">Events</Link>
                 <Link to={`/groups/${group.id}`} id="nav-button">Members</Link>
                 <Link to={`/groups/${group.id}`} id="nav-button">Photos</Link>
-                <button onClick={() => }>Join this group</button>
+                <button onClick={() => console.log('this')}>Join this group</button>
             </div>
         </div>
     )

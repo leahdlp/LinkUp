@@ -15,7 +15,6 @@ const groupsReducer = (oldState={}, action) => {
             if (!nextState[action.group.id]) {
                 nextState = Object.assign(nextState, action.group)
             }
-            
             return nextState;
         case REMOVE_GROUP:
             delete nextState[action.groupId];

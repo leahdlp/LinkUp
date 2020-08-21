@@ -19,6 +19,7 @@ export const createGroup = group => (
         data: { group }
     })
 )
+
 export const updateGroup = group => (
     $.ajax({
         url: `/api/groups/${group.id}`,
