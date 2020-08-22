@@ -112,8 +112,8 @@ class SignUpForm extends React.Component {
                                     </label>
                                 </div>
                                 <br />
-                                <div className="form-submit-btn-container">
-                                    <div className="form-submit-btn">
+                                <div className="pink-btn-container">
+                                    <div className="pink-btn">
                                         <input
                                             type="submit"
                                             value={this.props.formType}

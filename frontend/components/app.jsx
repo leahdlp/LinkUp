@@ -19,7 +19,7 @@ const App = () => (
 
         <AuthRoute path="/signup" component={SignUpContainer}/>
         <AuthRoute path="/login" component={LogInContainer} />
-        <Route exact path="/groups" component={GroupsIndexContainer} />
+        <Route exact path="/" component={GroupsIndexContainer} />
         <Route path="/groups/:groupId" component={GroupShowContainer} />
         {/* <Route path="/:groupName/members" component={<div>this</div>}/> */}
 

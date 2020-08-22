@@ -18,20 +18,23 @@ class Group < ApplicationRecord
     validates :name, uniqueness: { scope: :location_id }
     validates :name, uniqueness: { scope: :subcategory_id }
 
-    belongs_to :subcategory,
-        foreign_key: :subcategory_id,
-        class_name: :Subcategory
+    # belongs_to :subcategory,
+    #     foreign_key: :subcategory_id,
+    #     class_name: :Subcategory
 
-    belongs_to :location,
-        foreign_key: :location_id,
-        class_name: :Location
+    # belongs_to :location,
+    #     foreign_key: :location_id,
+    #     class_name: :Location
 
-    has_many :members,
-        foreign_key: :group_id,
-        class_name: :Member 
+    # belongs_to :creator,
+    #     foreign_key: :creator_id,
+    #     class_name: :User
 
-    has_many :categories,
-        through: :subcategory,
-        source: :category
+    # has_many :members,
+    #     foreign_key: :group_id,
+    #     class_name: :Member 
 
+    # has_many :categories,
+    #     through: :subcategory,
+    #     source: :category
 end

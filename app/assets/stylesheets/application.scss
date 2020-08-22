@@ -17,9 +17,11 @@
 @import "base/reset";
 @import "base/errors";
 @import "components/session/form";
-@import "components/header/covid_bar.css";
-@import "components/header/navbar.css";
-@import "components/footer/footer.css";
-@import "components/groups/group_show_nav.css";
-@import "components/groups/group_show_body.css";
-@import "components/groups/group_show_header.css";
+@import "components/header/covid_bar";
+@import "components/header/navbar";
+@import "components/footer/footer";
+@import "components/groups/group_show_nav";
+@import "components/groups/group_show_body";
+@import "components/groups/group_show_header";
+@import "components/groups/groupIndex";
+@import "./base/buttons"

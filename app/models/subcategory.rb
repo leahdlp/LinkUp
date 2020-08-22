@@ -12,11 +12,11 @@ class Subcategory < ApplicationRecord
     validates :name, :category_id, presence: true
     validates :name, uniqueness: { scope: :category_id }
     
-    belongs_to :category,
-        foreign_key: :category_id,
-        class_name: :Category
+    # belongs_to :category,
+    #     foreign_key: :category_id,
+    #     class_name: :Category
 
-    has_many :groups,
-        foreign_key: :subcategory_id,
-        class_name: :Subcategory
+    # has_many :groups,
+    #     foreign_key: :subcategory_id,
+    #     class_name: :Group
 end

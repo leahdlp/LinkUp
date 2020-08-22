@@ -8,8 +8,8 @@ class GroupsIndex extends React.Component {
     
     render () {
         return (
-            <div>
-                <ul>
+            <div className="group-list-container">
+                <ul className="group-list">
                     {this.props.groups.map(group => (
                         <GroupsIndexItem
                             key={`group-${group.id}`}

@@ -1,7 +1,8 @@
 .show-navbar-container{
     border-top: 1px solid rgb(211, 211, 211);
-    /* display: flex; */
-    
+    /* display: flex;
+    align-items: center;
+    text-align: center; */
 }
 
 .show-navbar {
@@ -18,4 +19,10 @@
 
 #nav-button:focus {
     color: rgb(12, 147, 201);
+}
+
+#pink-btn-show-pg {
+    width: fit-content;
+    display: flex;
+    align-items: center;
 }

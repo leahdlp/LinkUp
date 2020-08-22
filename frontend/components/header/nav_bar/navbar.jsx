@@ -4,17 +4,38 @@ import { Link } from 'react-router-dom'
 class NavBar extends React.Component {
 
     loggedIn(user) {
-        // let logout = this.props.logout;
         return (
             <div className="loggedIn-header">
-                <h2>Welcome aboard! {user.first_name} {user.last_name}</h2>
-                <Link 
-                    to="/"
-                    className="logout-btn" 
-                    onClick={() => this.props.logout()}
-                >
-                    Log out
-                </Link>
+                <div id="logo">
+                    <h2>Welcome aboard! {user.name}</h2>
+                </div>
+                <div id="nav-links-container">
+                    <Link
+                        id="special-offer"
+                        to="/"
+                    >
+                        Start a new group 50% OFF
+                    </Link>
+                    <Link 
+                        id="explore"
+                        to="/"
+                    >
+                        Explore
+                    </Link>
+                    <Link 
+                        id="messages"
+                        to="/"
+                    >
+                        Messages
+                    </Link>
+                    <Link 
+                        to="/"
+                        className="logout-btn" 
+                        onClick={() => this.props.logout()}
+                    >
+                        Log out
+                    </Link>
+                </div>
             </div>
         )
     }

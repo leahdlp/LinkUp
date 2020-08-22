@@ -1,14 +1,26 @@
-import { RECEIVE_MEMBER, REMOVE_MEMBER } from '../../actions/members_actions';
+import { 
+    RECEIVE_MEMBER, 
+    REMOVE_MEMBER, 
+    RECEIVE_MEMBERS 
+} from '../../actions/members_actions';
 
-const membersReducer = (oldState=[], action) => {
+const membersReducer = (oldState={}, action) => {
+    Object.freeze(oldState);
+    let nextState = Object.assign({}, oldState);
+    // debugger
     switch (action.type) {
+        case RECEIVE_MEMBERS:
+            return action.members;
         case RECEIVE_MEMBER:
-            return ['received'];
+            nextState[action.member.id] = action.member;
+            return nextState;
         case REMOVE_MEMBER:
-            return ['removed'];
+            delete nextState[action.memberId];
+            return nextState;
         default:
             return oldState;
     }
+    // return oldState;
 }
 
 export default membersReducer;

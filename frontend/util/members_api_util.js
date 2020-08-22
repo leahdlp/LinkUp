@@ -1,8 +1,15 @@
-export const createMember = member => (
+export const fetchMembers = groupId => (
+    $.ajax({
+        url: `/api/groups/${groupId}/members`,
+        method: 'GET'
+    })
+)
+
+export const createMember = groupId => (
     $.ajax({
         url: `/api/members`,
         method: 'POST',
-        data: { member }
+        data: { member: { group_id: groupId } }
     })
 )
 

@@ -12,6 +12,7 @@ const GroupShowHeader = props => {
                 </div>
                 <GroupShowHeaderNav 
                     group={props.group}
+                    createMember={props.createMember}
                     id="grp-show-nav"
                 />
             </div>
