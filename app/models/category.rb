@@ -10,7 +10,7 @@
 class Category < ApplicationRecord
     validates :name, presence: true, uniqueness: true
     
-    # has_many :subcategories,
-    #     foreign_key: :category_id,
-    #     class_name: :Subcategory
+    has_many :subcategories,
+        foreign_key: :category_id,
+        class_name: :Subcategory
 end

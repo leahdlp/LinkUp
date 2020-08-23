@@ -1,6 +1,7 @@
 import React from 'react';
 import GroupShowHeader from './group_show_header';
-import MemberList from './members/member_list'
+import MemberList from './members/member_list';
+import SubcategoriesList from './subcategories/show_subcategories'
 
 class GroupShow extends React.Component {
     constructor(props) {
@@ -9,19 +10,21 @@ class GroupShow extends React.Component {
 
     componentDidMount() {
         let groupId = this.props.match.params.groupId;
-        this.props.fetchGroup(groupId);
-        // this.props.fetchMembers(groupId);
+        this.props.fetchGroup(groupId)
+            // .then(this.props.fetchLocation())
     }
 
     afterMount() {
         const group = this.props.group
-        console.log(this.props.members)
+        // debugger
+
         return (
             <div>
                 <GroupShowHeader 
                     name={group.name}
                     creatorId={group.creator_id}
-                    locationId={group.location_id}
+                    state={this.props.state}
+                    fetchLocation={() => this.props.fetchLocation(group.location_id)}
                     group={group}
                     createMember={this.props.createMember}
                 />
@@ -33,12 +36,15 @@ class GroupShow extends React.Component {
                     </p>
                 </div>
             
-                {group.subcategory_id}
+                <SubcategoriesList 
+                    fetchSubcategory={this.props.fetchSubcategory} 
+                    group={group}
+                    subcategories={this.props.subcategories}
+                />
 
                 <MemberList 
                     fetchMembers={this.props.fetchMembers}
                     groupId={this.props.group.id}
-                    users={this.props.users}
                     members={this.props.members}
                 />
             </div>

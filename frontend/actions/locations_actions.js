@@ -18,7 +18,7 @@ export const fetchLocations = () => dispatch => (
         .then(locations => dispatch(receiveLocations(locations)))
 )
 
-export const fetchLocation = locationId => dispatch => (
+export const fetchLocation = locationId => dispatch => {
     LocationAPIUtil.fetchLocation(locationId)
         .then(location => dispatch(receiveLocation(location)))
-)
+}

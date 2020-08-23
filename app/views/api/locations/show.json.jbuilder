@@ -1,7 +1,7 @@
 json.partial! '/api/locations/location', location: @location
 
-@location.groups.each do |group|
-    json.set! group.id do 
-        json.partial! '/api/groups/show'
-    end
-end
+# @location.groups.each do |location|
+#     json.set! location.id do 
+#         json.partial! '/api/locations/show', location: location
+#     end
+# end

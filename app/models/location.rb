@@ -12,7 +12,7 @@ class Location < ApplicationRecord
     validates :city, :state, presence: true
     validates :city, uniqueness: { scope: :state }
 
-    # has_many :groups,
-    #     foreign_key: :location_id,
-    #     class_name: :Group
+    has_many :groups,
+        foreign_key: :location_id,
+        class_name: :Group
 end

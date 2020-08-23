@@ -5,6 +5,7 @@ class Api::LocationsController < ApplicationController
     end
 
     def show 
+        # debugger
         @location = Location.find_by(id: params[:id])
         render :show
     end

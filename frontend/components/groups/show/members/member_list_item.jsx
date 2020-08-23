@@ -1,9 +1,12 @@
 import React from 'react';
 
 const MemberListItem = ({ member }) => {
-    <li>
-        {console.log(member)}
-    </li>
+    return (
+        <li>
+            {member.name}
+            {/* {users[member.user_id].name} */}
+        </li>
+    )
 }
 
 export default MemberListItem;
