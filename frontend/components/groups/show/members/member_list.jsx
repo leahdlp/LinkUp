@@ -8,15 +8,17 @@ class MemberList extends React.Component {
 
     render() {
         return(
-            <ul>
-                {this.props.members.map(member => (
-                    <MemberListItem 
-                        key={`member-${member.id}`}
-                        member={member} 
-                        users={this.props.users}
-                    />
-                ))}
-            </ul>
+            <div className="member-list-container">
+                <ul className="member-list">
+                    {this.props.members.map(member => (
+                        <MemberListItem 
+                            key={`member-${member.id}`}
+                            member={member} 
+                            users={this.props.users}
+                        />
+                    ))}
+                </ul>
+            </div>
         )
     }
 }

@@ -16,7 +16,7 @@ class CovidBar extends React.Component {
     loggedOut() {
         return (
             <div className="covid-alert">
-                <label>COVID-19 advisory
+                <label className="covid-alert-header">COVID-19 advisory
                     <p>
                         For the health and safety of Meetup communities, we're 
                         advising that all events be hosted online in the coming weeks. 

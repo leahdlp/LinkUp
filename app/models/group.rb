@@ -37,4 +37,6 @@ class Group < ApplicationRecord
     has_many :categories,
         through: :subcategory,
         source: :category
+
+    has_one_attached :photo
 end

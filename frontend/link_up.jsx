@@ -4,7 +4,7 @@ import { fetchGroups, fetchGroup, createGroup, updateGroup, deleteGroup } from '
 import { createMember, deleteMember } from './actions/members_actions';
 import { fetchLocations, fetchLocation } from './util/locations_api_util';
 import { fetchCategories, fetchCategory } from './util/categories_api_util';
-import { fetchSubcategories, fetchSubcategory } from './util/subcategories_api_util';
+import { fetchSubcategories, fetchSubcategory } from './actions/subcategories_actions';
 import configureStore from './store/store'
 import Root from './components/root'
 

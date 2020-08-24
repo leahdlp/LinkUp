@@ -14,14 +14,28 @@
  */
 
 /* CSS Reset */
+// REUSABLES:
 @import "base/reset";
 @import "base/errors";
+@import "./base/buttons";
+@import "base/variables";
+
+// COMPONENTS
+// Form:
 @import "components/session/form";
+// CovidBar:
 @import "components/header/covid_bar";
+// Header:
 @import "components/header/navbar";
+// Footer:
 @import "components/footer/footer";
+// GroupIndex:
+@import "components/groups/groupIndex";
+// GroupShow:
 @import "components/groups/group_show_nav";
 @import "components/groups/group_show_body";
 @import "components/groups/group_show_header";
-@import "components/groups/groupIndex";
-@import "./base/buttons"
+@import "components/groups/group_show_members";
+@import "components/groups/group_show_categories";
+// GroupForm:
+@import "components/groups/group_form";

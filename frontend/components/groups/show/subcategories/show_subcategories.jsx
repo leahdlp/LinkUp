@@ -7,12 +7,20 @@ class SubcategoriesList extends React.Component {
 
     render() {
         return (
-            <ul>
-                {this.props.subcategories.map(subcategory => (
-                    <li key={`subcat-${subcategory.id}`}>{subcategory.name}</li>
-                ))}
+            <div className="subcats-container">
+                <div className="subcats-header">Related Topics</div>
+                <ul className="subcats-list">
+                    {this.props.subcategories.map(subcategory => (
+                        <li 
+                            key={`subcat-${subcategory.id}`}
+                            className="subcategory"
+                        >
+                            {subcategory.name}
+                        </li>
+                    ))}
 
-            </ul>
+                </ul>
+            </div>
         )
     }
 }

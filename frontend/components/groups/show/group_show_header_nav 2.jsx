@@ -11,7 +11,7 @@ const GroupShowHeaderNav = ({ group }) => {
                 <Link to={`/groups/${group.id}`} id="nav-button">Photos</Link>
 
                 <div className="pink-btn-container" id="pink-btn-show-pg">
-                    <div className="pink-btn" id="show-pg-pink-btn">
+                    <div className="pink-btn">
                         <button
                             onClick={() => this.props.createMember(group.id)}
                         >

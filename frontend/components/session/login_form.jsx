@@ -1,18 +1,17 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
-class SignUpForm extends React.Component {
+class LogInForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: "",
-            description: "",
-            subcategory_id: 0,
-            location_id: 0,
-            creator_id: 0
+            email: "",
+            password: ""
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoUser = this.handleDemoUser.bind(this);
     }
 
     update(field) {
@@ -23,16 +22,12 @@ class SignUpForm extends React.Component {
         event.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
+
+        this.state = {email: "", password: ""}
     }
 
     handleDemoUser(event) {
-        const id = Math.floor(Math.random() * 100000000000000000);
-        const user = {
-            name: "Teddy Pendergrass",
-            email: `user${id}@newUser.com`,
-            password: "0123456789"
-        };
-
+        const user = { email: "thanAMug@gmail.com", password: "0123456789" };
         this.props.processForm(user);
         // this.props.history.push("/");
     }
@@ -64,72 +59,56 @@ class SignUpForm extends React.Component {
         this.props.clearErrors();
     }
 
-    render() {
-        return (
+    render () {
+        return(
             <div>
 
-                {this.renderErrors()}
-
-                <div className="signup-page">
-                    <div className="signup-form">
+                { this.renderErrors() }
+        
+                <div className="login-page">
+                    <div className="login-form">
                         <div className="form-header">
                             <div className="form-type">
                                 <h2>{this.props.formType}</h2>
                             </div>
                             <br />
                             <p id="header-msg">
-                                Already registered with us?
-                                <Link className="other-link" to="/login">Log in</Link>
+                                Not registered with us yet?
+                                <Link className="other-link" to="/signup">Sign up</Link>
                             </p>
                         </div>
 
                         <div className="form-container">
                             <form onSubmit={this.handleSubmit} className="form">
                                 <div className="inputs">
-                                    <label className="user-input"> Your Name:
-                                        <br />
-                                        <input
-                                            type="text"
-                                            value={this.state.name}
-                                            onChange={this.update("name")}
-                                        />
-                                    </label>
-                                    <br />
                                     <label className="user-input"> Email address:
                                         <br />
-                                        <input
-                                            type="text"
-                                            value={this.state.description}
-                                            onChange={this.update("description")}
+                                        <input 
+                                            type="text" 
+                                            value={this.state.email}
+                                            onChange={this.update("email")}
                                         />
                                     </label>
                                     <br />
-                                    <label className="user-input"> Category:
+                                    <label className="user-input"> Password:
                                         <br />
-                                        {/* <input
+                                        <input
                                             type="password"
-                                            value={this.state.creator_id}
-                                            onChange={this.update("creator_id")}
-                                        /> */}
-                                        <select name="group[subcategory_id]">
-                                            <option disabled>-- Please Select --</option>
-                                            <option value={this.state.subcategory_id}>
-                                                
-                                            </option>
-
-                                        </select>
+                                            value={this.state.password}
+                                            onChange={this.update("password")}
+                                        />
                                     </label>
                                 </div>
                                 <br />
-                                <div className="form-submit-btn-container">
-                                    <div className="form-submit-btn">
-                                        <input
-                                            type="submit"
+                                <div className="pink-btn-container">
+                                    <div className="pink-btn">
+                                        <input 
+                                            type="submit" 
                                             value={this.props.formType}
                                         />
                                         <br />
                                         <button onClick={() => this.handleDemoUser()}>
-                                            Sign Up as Demo User
+                                            Log In as Demo User
                                         </button>
                                     </div>
                                 </div>
@@ -142,4 +121,4 @@ class SignUpForm extends React.Component {
     }
 }
 
-export default SignUpForm;
+export default LogInForm;

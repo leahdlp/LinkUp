@@ -29,23 +29,25 @@ class GroupShow extends React.Component {
                     createMember={this.props.createMember}
                 />
 
-                <div className="desc-container">
-                    <h3>What we're about</h3>
-                    <p className="description">
-                        {group.description}
-                    </p>
+                <div className="body-container">
+                    <div className="desc-container">
+                        <h3>What we're about</h3>
+                        <p className="description">
+                            {group.description}
+                        </p>
+                    </div>
+                
+                    <MemberList 
+                        fetchMembers={this.props.fetchMembers}
+                        groupId={this.props.group.id}
+                        members={this.props.members}
+                    />
                 </div>
-            
+
                 <SubcategoriesList 
                     fetchSubcategory={this.props.fetchSubcategory} 
                     group={group}
                     subcategories={this.props.subcategories}
-                />
-
-                <MemberList 
-                    fetchMembers={this.props.fetchMembers}
-                    groupId={this.props.group.id}
-                    members={this.props.members}
                 />
             </div>
         )

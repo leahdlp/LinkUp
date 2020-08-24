@@ -112,9 +112,6 @@ user100 = User.create({ name: "Anglica Ross", email: "angelica@gmail.com", passw
 user101 = User.create({ name: "Janet Mock", email: "janeta@gmail.com", password: "0123456789" })
 user102 = User.create({ name: "Billy Porter", email: "billy@gmail.com", password: "0123456789" })
 
-# EVENTS:
-
-
 # CATEGORIES
 Category.destroy_all
 cat1 = Category.create({ name: "Arts & Culture" })
@@ -751,3 +748,6 @@ member31 = Member.create!({ user_id: user4.id, group_id: group5.id })
 member32 = Member.create!({ user_id: user4.id, group_id: group6.id })
 member33 = Member.create!({ user_id: user4.id, group_id: group7.id })
 
+# EVENTS:
+event1 = Event.create!({})
+# ATTENDEES:

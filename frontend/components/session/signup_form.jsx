@@ -1,16 +1,17 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
-class LogInForm extends React.Component {
+class SignUpForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            name: "",
             email: "",
             password: ""
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoUser = this.handleDemoUser.bind(this);
     }
 
     update(field) {
@@ -21,12 +22,16 @@ class LogInForm extends React.Component {
         event.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
-
-        this.state = {email: "", password: ""}
     }
 
     handleDemoUser(event) {
-        const user = { email: "thanAMug@gmail.com", password: "0123456789" };
+        const id = Math.floor(Math.random() * 100000000000000000);
+        const user = { 
+            name: "Teddy Pendergrass", 
+            email: `user${id}@newUser.com`, 
+            password: "0123456789" 
+        };
+        
         this.props.processForm(user);
         // this.props.history.push("/");
     }
@@ -58,32 +63,41 @@ class LogInForm extends React.Component {
         this.props.clearErrors();
     }
 
-    render () {
-        return(
+    render() {
+        return (
             <div>
 
-                { this.renderErrors() }
-        
-                <div className="login-page">
-                    <div className="login-form">
+                {this.renderErrors()}
+
+                <div className="signup-page">
+                    <div className="signup-form">
                         <div className="form-header">
                             <div className="form-type">
                                 <h2>{this.props.formType}</h2>
                             </div>
                             <br />
                             <p id="header-msg">
-                                Not registered with us yet?
-                                <Link className="other-link" to="/signup">Sign up</Link>
+                                Already registered with us?
+                                <Link className="other-link" to="/login">Log in</Link>
                             </p>
                         </div>
 
                         <div className="form-container">
                             <form onSubmit={this.handleSubmit} className="form">
                                 <div className="inputs">
+                                    <label className="user-input"> Your Name:
+                                        <br />
+                                        <input
+                                            type="text"
+                                            value={this.state.name}
+                                            onChange={this.update("name")}
+                                        />
+                                    </label>
+                                    <br />
                                     <label className="user-input"> Email address:
                                         <br />
-                                        <input 
-                                            type="text" 
+                                        <input
+                                            type="text"
                                             value={this.state.email}
                                             onChange={this.update("email")}
                                         />
@@ -101,13 +115,13 @@ class LogInForm extends React.Component {
                                 <br />
                                 <div className="pink-btn-container">
                                     <div className="pink-btn">
-                                        <input 
-                                            type="submit" 
+                                        <input
+                                            type="submit"
                                             value={this.props.formType}
                                         />
                                         <br />
                                         <button onClick={() => this.handleDemoUser()}>
-                                            Log In as Demo User
+                                            Sign Up as Demo User
                                         </button>
                                     </div>
                                 </div>
@@ -120,4 +134,4 @@ class LogInForm extends React.Component {
     }
 }
 
-export default LogInForm;
+export default SignUpForm;
