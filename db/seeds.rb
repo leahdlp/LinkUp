@@ -749,5 +749,324 @@ member32 = Member.create!({ user_id: user4.id, group_id: group6.id })
 member33 = Member.create!({ user_id: user4.id, group_id: group7.id })
 
 # EVENTS:
-event1 = Event.create!({})
+event1 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event2 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event3 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event4 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event5 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event6 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event7 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event8 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event9 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event10 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event11 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event12 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event13 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event14 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event15 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event16 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event17 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event18 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event19 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event20 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event21 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event22 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event23 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event24 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event25 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event26 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event27 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event28 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event29 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
+event30 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
+
 # ATTENDEES:
+attendee1 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee2 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee3 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee4 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee5 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee6 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee7 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee8 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee9 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee10 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee11 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee12 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee13 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee14 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee15 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee16 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee17 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee18 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee19 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee20 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee21 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee22 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee23 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee24 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee25 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee26 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee27 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee28 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee29 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee30 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee31 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee32 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee33 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee34 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee35 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee36 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee37 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee38 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee39 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee40 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee41 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee42 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee43 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee44 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee45 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee46 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee47 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee48 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee49 = Attendee.create!({ event_id: event.id, user_id: user.id })
+attendee50 = Attendee.create!({ event_id: event.id, user_id: user.id })

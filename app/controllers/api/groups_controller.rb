@@ -24,7 +24,7 @@ class Api::GroupsController < ApplicationController
     def show
         # debugger
         @group = Group.find_by(id: params[:id])
-        render "/api/groups/info"
+        render "/api/groups/show"
     end
 
     def create
@@ -32,7 +32,7 @@ class Api::GroupsController < ApplicationController
         @group.creator_id = current_user.id
         Member.create({ group_id: @group.id, user_id: current_user.id })
 
-        # debugger
+        debugger
 
         if @group.save
             render "/api/groups/show"

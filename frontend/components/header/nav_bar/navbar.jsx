@@ -35,6 +35,28 @@ class NavBar extends React.Component {
                     >
                         Log out
                     </Link>
+                    <div className="profile-dropdown">
+                        <button className="dropbtn">
+                            Drop Icon
+                        </button>
+                        <div className="dropdown-content">
+                            <button onClick={()=>(this.props.history.push("/"))}>
+                                Profile
+                            </button>
+                            <button onClick={()=>(this.props.history.push("/"))}>
+                                Log out
+                            </button>                            
+                            <button onClick={()=>(this.props.history.push("/"))}>
+                                LinkedIn
+                            </button>                            
+                            <button onClick={()=>this.props.history.push("/")}>
+                                Github
+                            </button>
+                            <button onClick={()=>(this.props.history.push("/"))}>
+                                AngelList
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

@@ -79,3 +79,10 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     color: slategray;
     padding-bottom: 10px;
 }
+
+.eachtab {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    background-color: white;
+}

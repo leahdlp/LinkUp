@@ -11,6 +11,10 @@ class GroupCreateForm extends React.Component {
     }
 
     update(field) {
+        console.log(event);
+        console.log(event.currentTarget)
+        // console.log(this.state)
+        console.log(event.currentTarget.value)
         return event => this.setState({ [field]: event.currentTarget.value })
     }
 
@@ -18,6 +22,11 @@ class GroupCreateForm extends React.Component {
         event.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
+    }
+
+    handleCancel(event) {
+        console.log(this.props)
+        this.props.history.push(`/groups/${this.props.group.id}/edit`)
     }
 
     renderErrors() {
@@ -60,7 +69,7 @@ class GroupCreateForm extends React.Component {
         )
     }  
 
-    renderForm(group) {
+    renderForm() {
         // debugger
         return (
             <div className="form-container">
@@ -74,7 +83,7 @@ class GroupCreateForm extends React.Component {
                                 onChange={this.update("name")}
                             />
                         </label>
-                        <br />
+                        <br /> 
                         <label className="user-input"> Description:
                             <br />
                             <input
@@ -86,21 +95,18 @@ class GroupCreateForm extends React.Component {
                         <br />
                         <label className="user-input"> Location:
                             <br />
-                            {/* <input
-                                type="text"
-                                value={this.state.creator_id}
-                                onChange={this.update("creator_id")}
-                            /> */}
                             <select 
                                 name="group[location_id]"
-                                onSelect={() => this.update("location_id")}
-                            >
+                                // value={this.state.location_id}
+                                onChange={() => this.update("location_id")}>
+                                >
                                 <option selected disabled>-- Please Select --</option>
+
                                 {Object.values(this.props.locations).map(location => (
                                     <option 
-                                        value={this.state.location_id}
-                                        key={`location-${location.id}`}
-                                    >
+                                        // onSelect={() => this.update("location_id")}
+                                        value={location.id}
+                                        key={`location-${location.id}`}>
                                         {location.city}, {location.state}
                                     </option>
                                 ))}
@@ -109,21 +115,16 @@ class GroupCreateForm extends React.Component {
                         <br />
                         <label className="user-input"> Categories:
                             <br />
-                            {/* <input
-                                            type="password"
-                                            value={this.state.creator_id}
-                                            onChange={this.update("creator_id")}
-                                        /> */}
                             <select
-                                name="group[location_id]"
-                                onSelect={() => this.update("location_id")}
-                            >
+                                // name="group[subcategory_id]"
+                                // value={this.state.subcategory_id}
+                                onChange={() => this.update("subcategory_id")}>
                                 <option selected disabled>-- Please Select --</option>
+
                                 {Object.values(this.props.subcategories).map(subcategory => (
                                     <option
-                                        value={this.state.subcategory_id}
-                                        key={`location-${subcategory.id}`}
-                                    >
+                                        value={subcategory.id}
+                                        key={`subcat-${subcategory.id}`}>
                                         {subcategory.name}
                                     </option>
                                 ))}
@@ -149,6 +150,7 @@ class GroupCreateForm extends React.Component {
     }
 
     render() {
+        if (this.props.group === undefined) return null;
         return (
             <div>
                 {this.renderErrors()}

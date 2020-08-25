@@ -10,7 +10,7 @@ import GroupForm from './group_form';
 class GroupEditForm extends React.Component {
     componentDidMount() {
         // debugger
-        this.props.fetchGroup(this.props.group.id);
+        this.props.fetchGroup(this.props.match.params.groupId);
         this.props.fetchLocations();
         this.props.fetchSubcategories();
     }
@@ -20,9 +20,9 @@ class GroupEditForm extends React.Component {
     }
 
     render() {
-        console.log(this.props)
         const locations = this.props.locations;
         const subcategories = this.props.subcategories;
+        if (this.props.group === undefined) return null;
         if (locations === undefined || subcategories === undefined) return null;
         return (
             <GroupForm 

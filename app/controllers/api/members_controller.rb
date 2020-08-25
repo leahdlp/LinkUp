@@ -6,22 +6,22 @@ class Api::MembersController < ApplicationController
     end 
 
     def create
-        debugger
+        # debugger
         @member = Member.new(member_params)
         @member.user_id = current_user.id
 
         if @member.save
-            render "/api/member/info"
+            render "/api/members/info"
         else
             render json: ['Cannot create member'], status: 422
         end
     end
 
     def destroy
-        @member = Group.find_by(id: params[group_id]).members.find_by(id: current_user.id)
+        @member = Member.find_by(id: params[:id])
 
         if @member.destroy
-            render "/api/member/info"
+            render "/api/members/info"
 
         else
             render json: ['Member couldnt be destroyed'], status: 422

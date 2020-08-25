@@ -1,52 +1,43 @@
 import React from 'react';
-import GroupShowHeader from './group_show_header';
+import GroupShowHeader from './header/group_show_header';
 import MemberList from './members/member_list';
 import SubcategoriesList from './subcategories/show_subcategories'
 
 class GroupShow extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
-        let groupId = this.props.match.params.groupId;
-        this.props.fetchGroup(groupId)
-            // .then(this.props.fetchLocation())
+        this.props.fetchSubcategory(this.props.group.subcategory_id);
     }
 
     afterMount() {
         const group = this.props.group
         // debugger
-
         return (
             <div>
                 <GroupShowHeader 
-                    name={group.name}
-                    creatorId={group.creator_id}
-                    state={this.props.state}
-                    fetchLocation={() => this.props.fetchLocation(group.location_id)}
+                    currentUser={this.props.currentUser}
+                    members={this.props.members}
+                    location={this.props.location}
                     group={group}
                     createMember={this.props.createMember}
+                    deleteMember={this.props.deleteMember}
                 />
 
                 <div className="body-container">
                     <div className="desc-container">
-                        <h3>What we're about</h3>
+                        {/* <h3>What we're about</h3> */}
                         <p className="description">
-                            {group.description}
+                            {/* {group.description} */}
                         </p>
                     </div>
                 
                     <MemberList 
-                        fetchMembers={this.props.fetchMembers}
                         groupId={this.props.group.id}
                         members={this.props.members}
+                        users={this.props.users}
                     />
                 </div>
 
                 <SubcategoriesList 
-                    fetchSubcategory={this.props.fetchSubcategory} 
-                    group={group}
                     subcategories={this.props.subcategories}
                 />
             </div>
@@ -55,7 +46,7 @@ class GroupShow extends React.Component {
     
     render() {
         return (
-            this.props.group === undefined ? null : this.afterMount()
+            this.props.subcategories === undefined ? null : this.afterMount()
         )
     }
 }
