@@ -369,7 +369,7 @@ philly = Location.create({ city: "Philadelphia", state: "Pennsylvania" })
 
 
 # GROUPS:
-Groups.destroy_all
+Group.destroy_all
 group1 = Group.create!({ 
     name: "Art in Public Spaces", 
     description: "Art is everywhere. Let's take a moment to really see it. If you're interested in exploring NYC's spaces through playful art engagement - join us! From drawing and modeling to meditation and games, we hope to build a community of Art-Seers and Art-Doers. A variety of venues will serve as our lab and playground. Open minds. Open hearts. All art skill levels welcome.", 
