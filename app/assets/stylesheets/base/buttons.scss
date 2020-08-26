@@ -66,17 +66,3 @@ $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubu
     width: 0px;
     // border: 10px solid blue
 }
-
-#show-edit {
-    border-radius: 4px;
-    padding: 8px 16px 8px 16px;
-    background-color: $pink-btn-color;
-    color: white;
-    font-size: 20px;
-    // font-weight: bold;
-}
-
-#show-edit:hover {
-    background-color: #c41633;
-    cursor: pointer;
-}

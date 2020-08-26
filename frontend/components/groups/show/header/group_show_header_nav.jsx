@@ -6,9 +6,10 @@ class GroupShowHeaderNav extends React.Component {
     memberButton() {
         const group = this.props.group;
 
-        let button = <button onClick={() => this.props.createMember(group.id)}>
-            Join this group
-        </button>
+        let button =
+            <button onClick={() => this.props.createMember(group.id)}>
+                Join this group
+            </button>
 
         let members = this.props.members;
 
@@ -24,27 +25,13 @@ class GroupShowHeaderNav extends React.Component {
         return button;
     }
 
-    displayMemberButton() {
-        const group = this.props.group;
-
-        if (this.props.currentUser && 
-            this.props.group.creator_id === this.props.currentUser.id) {
-            return <div className="not-displayed"></div>;
-        } else {
-            return this.memberButton()
-        }
-    }
-
     editGroupButton() {
         let group = this.props.group;
 
-        let button = <div className="pink-btn-container" id="pink-btn-show-pg">
-            <div className="pink-btn">
-                <div id="show-edit">
-                    <Link to={`/groups/${group.id}/edit`}>Edit Group</Link>
-                </div>
+        let button = 
+            <div id="show-edit">
+                <Link to={`/groups/${group.id}/edit`}>Edit Group</Link>
             </div>
-        </div>
 
         if (this.props.currentUser && 
             group.creator_id !== this.props.currentUser.id) {
@@ -57,13 +44,10 @@ class GroupShowHeaderNav extends React.Component {
     deleteGroupButton() {
         let group = this.props.group;
 
-        let button = <div className="pink-btn-container" id="pink-btn-show-pg">
-            <div className="pink-btn">
-                <button onClick={() => this.props.deleteGroup(group.id)}>
-                    Delete Group
-                </button>
-            </div>
-        </div>
+        let button =
+            <button onClick={() => this.props.deleteGroup(group.id)}>
+                Delete Group
+            </button>
 
         if (this.props.currentUser &&
             group.creator_id !== this.props.currentUser.id) {
@@ -71,6 +55,27 @@ class GroupShowHeaderNav extends React.Component {
         }
 
         return button;
+    }
+
+    groupButtons() {
+        return (<div className="group-btns">
+            {this.editGroupButton()}
+            {this.deleteGroupButton()}
+        </div>)
+    }
+
+    displayMemberButtonOrGroupButtons() {
+        if (this.props.currentUser &&
+            this.props.group.creator_id === this.props.currentUser.id) {
+            return this.groupButtons();
+        } else if (this.props.currentUser &&
+            this.props.group.creator_id !== this.props.currentUser.id) {
+            return this.memberButton()
+        } else {
+            return (
+                <Link id="join-to-login" to="/login">Join Group</Link>
+            )
+        }
     }
 
     render() {
@@ -87,11 +92,9 @@ class GroupShowHeaderNav extends React.Component {
                         <div className="show-nav-btns">
                             <div className="show-pink-btn-container">
                                 <div className="show-pink-btn">
-                                    {this.displayMemberButton()}
+                                    {this.displayMemberButtonOrGroupButtons()}
                                 </div>
                             </div>
-                            {this.editGroupButton()}
-                            {this.deleteGroupButton()}
                         </div>
                     </div>
                 </div>

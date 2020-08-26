@@ -16,13 +16,18 @@ const GroupShowHeader = ({
     return (
         <div className="show-pg-header-container">
             <div className="show-pg-header">
-                <div className="group-details-container">
-                    <div className="group-details">
-                        <h1>{group.name}</h1>
-                        <p>
-                            {location[group.location_id].city},   {location[group.location_id].state}
-                        </p>
-                        <p>{members[group.creatorId]}</p>
+                <div className="img-details-header-container">
+                    <div className="img-details-header">
+                        <div className="group-img-container"></div>
+                        <div className="group-details-container">
+                            <div className="group-details">
+                                <h1>{group.name}</h1>
+                                <p>
+                                    {location[group.location_id].city},   {location[group.location_id].state}
+                                </p>
+                                <p>{members[group.creatorId]}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 

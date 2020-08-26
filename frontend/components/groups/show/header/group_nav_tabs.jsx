@@ -55,11 +55,13 @@ class NavTabs extends React.Component {
                         panes={panes}
                     />
                 </div>
-                <div className="tab-content">
-                    {this.setHeader(idx)}
-                    <article>
-                        {selected.content}
-                    </article>
+                <div className="tab-content-container">
+                    <div className="tab-content">
+                        {this.setHeader(idx)}
+                        <article>
+                            {selected.content}
+                        </article>
+                    </div>
                 </div>
             </div>
         )

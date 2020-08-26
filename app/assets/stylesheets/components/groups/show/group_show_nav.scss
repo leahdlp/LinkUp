@@ -6,7 +6,7 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     border-bottom: $border-bottom;
     display: flex;
     background-color: white;
-    // border: yellow 1px solid;
+    // border: goldenrod 10px solid;
 }
 
 .show-navbar {
@@ -14,9 +14,9 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     background-color: white;
     width: 100%;
     height: 55px;
-    // border: 1px green solid;
     display: flex;
     align-items: center;
+    // border: gray 1px solid;
 }
 
 .tabs-container {
@@ -50,11 +50,12 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     min-width: fit-content;
     background-color: white;
 }
-.show-pink-btn > button {
+.show-pink-btn button {
     display: flex;
     justify-content: center;
     border-radius: 4px;
     padding: 0px 16px;
+    margin-left: 10px;
     min-height: 36px;
     height: fit-content;
     background-color: $pink-btn-color;
@@ -62,6 +63,41 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     font-family: $meetup-font;
     font-size: 20px;
     text-align: center;
+}
+
+.group-btns {
+    display: flex;
+    justify-content: space-around;
+}
+
+#show-edit {
+    display: flex;
+    align-items: center;;
+    border-radius: 4px;
+    padding: 0px 16px 0px 16px;
+    background-color: $pink-btn-color;
+    color: white;
+    font-size: 20px;
+}
+
+#join-to-login {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 4px 16px 4px 16px;
+    background-color: $pink-btn-color;
+    color: white;
+    font-size: 20px;
+}
+
+#show-edit:hover {
+    background-color: #c41633;
+    cursor: pointer;
+}
+
+#join-to-login:hover {
+    background-color: #c41633;
+    cursor: pointer;
 }
 
 .tab {
@@ -103,9 +139,15 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     color: rgb(12, 147, 201);
 }
 
+.tab-content-container {
+    display: block;
+    height: fit-content;
+    // border: deeppink 1px solid;
+}
+
 .tab-content {
     display: block;
-    margin-left: 95px;
+    margin-left: 80px;
     margin-top: 5%;
     margin-bottom: 40px;
     min-width: 600px;
@@ -113,11 +155,4 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     height: fit-content;
     font-size: 16px;
     color: black;
-}
-
-#pink-btn-show-pg {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: fit-content;
 }

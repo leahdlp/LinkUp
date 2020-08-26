@@ -22,15 +22,16 @@ class GroupShow extends React.Component {
                     deleteMember={this.props.deleteMember}
                     deleteGroup={this.props.deleteGroup}
                 />
-
-                <div className="member-container">
-                    <MemberList 
-                        groupId={this.props.group.id}
-                        members={this.props.members}
-                        users={this.props.users}
-                    />
+                <div className="member-section">
+                    <div className="member-container">
+                        <MemberList 
+                            groupId={this.props.group.id}
+                            members={this.props.members}
+                            users={this.props.users}
+                        />
+                    </div>
                 </div>
-
+                
                 <div className="subcats">
                     <SubcategoriesList 
                         subcategories={this.props.subcategories}
