@@ -2,20 +2,12 @@ $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubu
 $border-bottom: 1px solid rgb(211, 211, 211);
 
 .login-signup-header {
-    /* border: red 1px solid; */
     display: flex;
     justify-content: flex-end;
     background-color: white;
     font-family: $meetup-font;
     padding: 16px 16px 8px;
     border-bottom: $border-bottom;
-}
-
-.nav-btns { 
-    display: flex;
-    justify-content: space-around;
-    font-size: 14px;
-    background-color: white;
 }
 
 .loggedIn-header { 
@@ -28,10 +20,6 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     border-bottom: $border-bottom;
 }
 
-.nav-links-container {
-    display: block;
-}
-
 .logout-btn {
     display: flex;
     justify-content: space-around;
@@ -41,14 +29,13 @@ $border-bottom: 1px solid rgb(211, 211, 211);
 }
 
 #signup-link {
-    /* border: sienna 1px solid; */
-    margin: 10px;
+    margin: 16px;
     text-decoration: none;
     color: slategray;
 }
 
 #login-link {
-    margin: 10px;
+    margin: 16px;
     text-decoration: none;
     color: slategray;
 }
@@ -59,30 +46,41 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     font-size: 14px;
     background-color: white;
     color: slategray;
-    padding-bottom: 10px;
-}
-
-#messages {
-    display: flex;
-    justify-content: space-around;
-    font-size: 14px;
-    background-color: white;
-    color: slategray;
-    padding-bottom: 10px;
+    padding: 16px;
 }
 
 #special-offer {
     display: flex;
     justify-content: space-around;
-    font-size: 14px;
+    padding: 16px;
     background-color: white;
-    color: slategray;
-    padding-bottom: 10px;
+    font-size: 14px;
+    color: rgb(41, 161, 241);
+    font-weight: bolder;
+    border-right: rgb(221, 218, 218) 1px solid;
 }
 
-.eachtab {
+#logout {
     display: flex;
     justify-content: space-around;
-    font-size: 14px;
+    padding: 16px;
     background-color: white;
+    font-size: 14px;
+    color: slategray;  
+}
+
+#nav-links-container {
+    // display: block;
+    // text-align: center;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.nav-btns { 
+    display: flex;
+    justify-content: space-around;
+    // border: 10px solid black;
+    background-color: white;
+    font-size: 14px;
 }

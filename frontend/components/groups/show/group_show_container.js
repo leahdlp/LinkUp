@@ -47,7 +47,7 @@ const mapStateToProps = (state, ownProps)=> ({
 
 const mapDispatchToProps = dispatch => ({
     fetchGroup: groupId => dispatch(fetchGroup(groupId)),
-    fetchGroups: () => dispatch(fetchGroups()),
+    // fetch: () => dispatch(fetchGroups()),
     deleteGroup: groupId => dispatch(deleteGroup(groupId)),
     fetchMembers: groupId => dispatch(fetchMembers(groupId)),
     createMember: groupId => dispatch(createMember(groupId)),

@@ -23,6 +23,7 @@ const GroupShowHeader = ({
                     </p>
                     <p>{members[group.creatorId]}</p>
                 </div>
+                
                 <GroupShowHeaderNav
                     currentUser={currentUser}
                     group={group}

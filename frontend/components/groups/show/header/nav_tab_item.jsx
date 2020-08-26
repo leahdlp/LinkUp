@@ -3,8 +3,8 @@ import React from 'react';
 const Tab = props => {
     let selected = props.currentPane;
     let headers = props.panes.map((pane, idx) => {
-        let title = pane.title;
-        let iden = idx === selected ? "current" : "";
+    let title = pane.title;
+    let iden = idx === selected ? "current" : "";
 
         return (
             <li 

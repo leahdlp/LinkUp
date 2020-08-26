@@ -1,0 +1,109 @@
+$meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$border-bottom: 1px solid rgb(216, 187, 187);
+
+.show-navbar-container {
+    border-top: 1px solid rgb(211, 211, 211);
+    display: flex;
+}
+
+.show-navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: $meetup-font;
+    background-color: white;
+    width: 100%;
+    height: 55px;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    border-bottom: $border-bottom;
+    // position: sticky;
+    // top: 0;
+    // position: -webkit-sticky; /* Safari  */
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky; /* Safari */
+}
+
+.show-nav-btns {
+    display: flex;
+    border-bottom: $border-bottom;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky; /* Safari */
+}
+
+.tab {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+    background-color: white;
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky; /* Safari */
+}
+
+.tab-header-container {
+    width: inherit;
+    height: inherit;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky; /* Safari */
+}
+
+.tab-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 4px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    font-family: $meetup-font;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky; /* Safari */
+}
+
+.eachtab {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    text-decoration: none;
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky; /* Safari */
+}
+
+#current {
+    color: rgb(12, 147, 201);
+}
+
+.tab-content {
+    display: block;
+    margin-top: 5%;
+    margin-left: 18%;
+    margin-bottom: 40px;
+    width: 50%;
+    height: fit-content;
+    font-size: 16px;
+    color: black;
+}
+
+#pink-btn-show-pg {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    position: sticky;
+}

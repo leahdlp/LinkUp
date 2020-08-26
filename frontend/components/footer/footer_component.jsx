@@ -10,10 +10,14 @@ const Footer = props => (
                 </div>
             </div>
             
-            {/* <div> */}
+            <div className ="my-links">
                 {/* <i className="fab fa-github-square"></i> */}
-                {/* <p>Github</p> */}
-            {/* </div> */}
+                <ul className="link-list">
+                    <li><a id="linkedin" href="https://www.linkedin.com/in/leahdelapena/">LinkedIn</a></li>
+                    <li><a id="github" href="https://github.com/leahdlp">Github</a></li>
+                    <li><a id="angellist" href="https://angel.co/u/leah-de-la-pena">AngelList</a></li>
+                </ul>
+            </div>
 
         </div>
         <div className="sub-footer">

@@ -24,13 +24,6 @@ class GroupShow extends React.Component {
                 />
 
                 <div className="member-container">
-                    {/* <div className="desc-container"> */}
-                        {/* <h3>What we're about</h3> */}
-                        {/* <p className="description"> */}
-                            {/* {group.description} */}
-                        {/* </p> */}
-                    {/* </div> */}
-                
                     <MemberList 
                         groupId={this.props.group.id}
                         members={this.props.members}
