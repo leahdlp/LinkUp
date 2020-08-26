@@ -715,7 +715,7 @@ group21 = Group.create!({
 # group111 = Group.create({ name: "Blacks in Technology - SF Bay Area(Official)", description: "coool group", subcategory_id: sub_cat, location_id: "", creator_id: user })
 
 # MEMBERS:
-Members.destroy_all
+Member.destroy_all
 member1 = Member.create!({ user_id: user0.id, group_id: group1.id })
 member2 = Member.create!({ user_id: user0.id, group_id: group2.id })
 member3 = Member.create!({ user_id: user0.id, group_id: group3.id })
