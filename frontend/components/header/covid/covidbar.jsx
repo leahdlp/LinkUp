@@ -2,17 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 class CovidBar extends React.Component {
-
-    // loggedIn(user) {
-    //     let logout = this.props.logout;
-    //     return (
-    //         <div className="loggedIn-">
-    //             <h2>Welcome aboard! {user.first_name} {user.last_name}</h2>
-    //             <button className="logout-btn" onClick={() => this.props.logout()}>Log Out!</button>
-    //         </div>
-    //     )
-    // }
-
     loggedOut() {
         return (
             <div className="covid-alert">

@@ -17,16 +17,11 @@ class GroupPage extends React.Component {
     }
 
     render() {
-        // console.log(this.props.group);
-        // console.log(this.props.members);
-        // console.log(this.props.location);
-
         if (this.props.group === undefined) return null;
         if (this.props.members === undefined) return null;
         if (this.props.location === undefined) return null;
 
         return (
-            // <p>hello</p>
             <GroupShow 
                 currentUser={this.props.currentUser}
                 group={this.props.group}

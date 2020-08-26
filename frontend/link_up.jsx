@@ -26,24 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     // FOR TESTING 
-    // window.signup = signup;
-    // window.login = login;
-    // window.logout = logout
     window.dispatch = store.dispatch;
     window.getState = store.getState;
-    // window.fetchGroups = fetchGroups;
-    // window.fetchGroup = fetchGroup;
-    // window.createGroup = createGroup;
-    // window.updateGroup = updateGroup;
-    // // window.deleteGroup = deleteGroup;
-    // window.createMember = createMember;
-    // window.deleteMember = deleteMember;
-    window.fetchLocation = fetchLocation;
-    window.fetchLocations = fetchLocations;
-    window.fetchCategories = fetchCategories;
-    window.fetchCategory = fetchCategory;
-    window.fetchSubcategories = fetchSubcategories;
-    window.fetchSubcategory = fetchSubcategory;
     // FOR TESTING
 
     ReactDOM.render(<Root store={store}/>, root);

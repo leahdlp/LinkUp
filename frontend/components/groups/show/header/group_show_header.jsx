@@ -12,7 +12,7 @@ const GroupShowHeader = ({
 }) => {
 
     if (location[group.location_id] === undefined) return null;
-    // console.log(deleteGroup)
+ 
     return (
         <div className="show-pg-header-container">
             <div className="show-pg-header">

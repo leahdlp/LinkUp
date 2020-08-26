@@ -8,7 +8,7 @@ $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubu
     display: flex;
     justify-content: flex-end;
     font-family: $meetup-font;
-    border: green 1px solid;
+    // border: green 1px solid;
     width: 15%;
     height: 30%;
     margin-top: 100px;
@@ -16,13 +16,13 @@ $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubu
 }
 
 .member-list {
-    border: hotpink 1px solid;
+    // border: hotpink 1px solid;
     display: grid;
     grid-template-columns: auto auto auto;
 }
 
 .member-list-item {
-    border: indigo 1px solid;
+    // border: indigo 1px solid;
     height: 16.67%;
     width: 16.67%;
 }

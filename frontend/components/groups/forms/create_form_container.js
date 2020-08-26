@@ -21,7 +21,7 @@ class GroupCreateForm extends React.Component {
     render() {
         const locations = this.props.locations;
         const subcategories = this.props.subcategories;
-        
+
         if (locations === undefined || subcategories === undefined) return null;
         return (
             <GroupForm
@@ -54,7 +54,6 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    // fetchGroup: groupId => dispatch(fetchGroup(groupId)),
     fetchLocations: () => dispatch(fetchLocations()),
     fetchSubcategories: () => dispatch(fetchSubcategories()),
     processForm: group => dispatch(createGroup(group)),

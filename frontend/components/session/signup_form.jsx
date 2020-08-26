@@ -33,7 +33,6 @@ class SignUpForm extends React.Component {
         };
         
         this.props.processForm(user);
-        // this.props.history.push("/");
     }
 
     renderErrors() {

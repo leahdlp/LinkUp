@@ -19,7 +19,7 @@ class GroupCreateForm extends React.Component {
 
         group.location_id = parseInt(group.location_id);
         group.subcategory_id = parseInt(group.subcategory_id);
-        console.log(group)
+
         this.props.processForm(group);
         
         if (group.id) {

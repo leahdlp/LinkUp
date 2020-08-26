@@ -4,14 +4,13 @@ const Tab = props => {
     let selected = props.currentPane;
     let headers = props.panes.map((pane, idx) => {
         let title = pane.title;
-        let klass = idx === selected ? "current" : "";
+        let iden = idx === selected ? "current" : "";
 
         return (
             <li 
                 key={`tab-${idx}`} 
-                // className={klass} 
                 className='eachtab'
-                id={klass}
+                id={iden}
                 onClick={() => props.switchTab(idx)}
             >
                 {title}
