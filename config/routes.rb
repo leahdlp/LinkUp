@@ -13,4 +13,6 @@ Rails.application.routes.draw do
     resources :subcategories, only: [:index, :show]
     resources :locations, only: [:index, :show]
   end
+
+  # resources :members, only: [:show]
 end

@@ -7,7 +7,7 @@ import {
 const membersReducer = (oldState={}, action) => {
     Object.freeze(oldState);
     let nextState = Object.assign({}, oldState);
-    // debugger
+
     switch (action.type) {
         case RECEIVE_MEMBERS:
             return action.members;
@@ -20,7 +20,7 @@ const membersReducer = (oldState={}, action) => {
         default:
             return oldState;
     }
-    // return oldState;
+
 }
 
 export default membersReducer;

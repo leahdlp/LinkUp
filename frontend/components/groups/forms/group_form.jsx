@@ -7,26 +7,30 @@ class GroupCreateForm extends React.Component {
         this.state = this.props.group;
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleDemoUser = this.handle.bind(this);
     }
 
     update(field) {
-        console.log(event);
-        console.log(event.currentTarget)
-        // console.log(this.state)
-        console.log(event.currentTarget.value)
-        return event => this.setState({ [field]: event.currentTarget.value })
+        return () => this.setState({ [field]: event.target.value })
     }
 
     handleSubmit(event) {
         event.preventDefault();
-        const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        const group = Object.assign({}, this.state);
+
+        group.location_id = parseInt(group.location_id);
+        group.subcategory_id = parseInt(group.subcategory_id);
+        console.log(group)
+        this.props.processForm(group);
+        
+        if (group.id) {
+            this.props.history.push(`groups/${group.id}`);
+        } else {
+            this.props.history.push("/");
+        }
     }
 
     handleCancel(event) {
-        console.log(this.props)
-        this.props.history.push(`/groups/${this.props.group.id}/edit`)
+        this.props.history.goBack();
     }
 
     renderErrors() {
@@ -49,7 +53,6 @@ class GroupCreateForm extends React.Component {
     }
 
     renderHeader() {
-        // console.log(group)
         return (
             <div className="group-form-header">
                 <div className="form-type">
@@ -70,7 +73,9 @@ class GroupCreateForm extends React.Component {
     }  
 
     renderForm() {
-        // debugger
+        let currentLoc = this.state.location_id || "default";
+        let currentCat = this.state.subcategory_id || "default"
+
         return (
             <div className="form-container">
                 <form onSubmit={this.handleSubmit} className="form">
@@ -86,7 +91,9 @@ class GroupCreateForm extends React.Component {
                         <br /> 
                         <label className="user-input"> Description:
                             <br />
-                            <input
+                            <textarea
+                                rows="10"
+                                cols="50"
                                 type="text"
                                 value={this.state.description}
                                 onChange={this.update("description")}
@@ -96,15 +103,15 @@ class GroupCreateForm extends React.Component {
                         <label className="user-input"> Location:
                             <br />
                             <select 
-                                name="group[location_id]"
-                                // value={this.state.location_id}
-                                onChange={() => this.update("location_id")}>
-                                >
-                                <option selected disabled>-- Please Select --</option>
+                                value={currentLoc}
+                                onChange={this.update("location_id")}>
+
+                                <option disabled value="default">
+                                    -- Please Select --
+                                </option>
 
                                 {Object.values(this.props.locations).map(location => (
                                     <option 
-                                        // onSelect={() => this.update("location_id")}
                                         value={location.id}
                                         key={`location-${location.id}`}>
                                         {location.city}, {location.state}
@@ -112,14 +119,18 @@ class GroupCreateForm extends React.Component {
                                 ))}
                             </select>
                         </label>
+
                         <br />
+
                         <label className="user-input"> Categories:
                             <br />
                             <select
-                                // name="group[subcategory_id]"
-                                // value={this.state.subcategory_id}
-                                onChange={() => this.update("subcategory_id")}>
-                                <option selected disabled>-- Please Select --</option>
+                                value={currentCat}
+                                onChange={this.update("subcategory_id")}>
+
+                                <option disabled value="default">
+                                    -- Please Select --
+                                </option>
 
                                 {Object.values(this.props.subcategories).map(subcategory => (
                                     <option
@@ -139,10 +150,10 @@ class GroupCreateForm extends React.Component {
                                 value={this.props.formType}
                             />
                             <br />
-                            <button onClick={() => this.handleCancel()}>
-                                cancel
-                            </button>
                         </div>
+                        <button onClick={() => this.handleCancel()}>
+                            cancel
+                        </button>
                     </div>
                 </form>
             </div>

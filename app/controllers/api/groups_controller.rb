@@ -18,11 +18,10 @@ class Api::GroupsController < ApplicationController
 
     def index
         @groups = Group.all
-        render "/api/groups/index"
+        render "/api/groups/index" 
     end
 
     def show
-        # debugger
         @group = Group.find_by(id: params[:id])
         render "/api/groups/show"
     end
@@ -32,7 +31,6 @@ class Api::GroupsController < ApplicationController
         @group.creator_id = current_user.id
         Member.create({ group_id: @group.id, user_id: current_user.id })
 
-        debugger
 
         if @group.save
             render "/api/groups/show"
@@ -44,6 +42,7 @@ class Api::GroupsController < ApplicationController
     def update
         @group = Group.find_by(id: params[:id])
 
+        
         if @group.creator_id === current_user.id && @group.update(group_params)
             render "/api/groups/show"
         else

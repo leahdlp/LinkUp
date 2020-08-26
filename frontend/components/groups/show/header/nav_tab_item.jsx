@@ -9,8 +9,9 @@ const Tab = props => {
         return (
             <li 
                 key={`tab-${idx}`} 
-                className={klass} 
+                // className={klass} 
                 className='eachtab'
+                id={klass}
                 onClick={() => props.switchTab(idx)}
             >
                 {title}

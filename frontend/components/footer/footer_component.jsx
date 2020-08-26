@@ -17,7 +17,7 @@ const Footer = props => (
 
         </div>
         <div className="sub-footer">
-            <p>2020 Meetup LLC</p>
+            <p>2020 LinkUp LLC</p>
             <div className="sub-footer-sub">
                 <p>Terms of Service</p>
                 <p>Privacy Policy</p>

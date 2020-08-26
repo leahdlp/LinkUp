@@ -9,10 +9,8 @@ const subcategoriesReducer = (oldState={}, action) => {
 
     switch (action.type) {
         case RECEIVE_SUBCATEGORIES:
-            // debugger
             return action.subcategories;
         case RECEIVE_SUBCATEGORY:
-            // debugger
             nextState[action.subcategory.id] = action.subcategory;
             return nextState;
         default:

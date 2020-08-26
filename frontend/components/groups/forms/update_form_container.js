@@ -9,7 +9,6 @@ import GroupForm from './group_form';
 
 class GroupEditForm extends React.Component {
     componentDidMount() {
-        // debugger
         this.props.fetchGroup(this.props.match.params.groupId);
         this.props.fetchLocations();
         this.props.fetchSubcategories();
@@ -26,6 +25,7 @@ class GroupEditForm extends React.Component {
         if (locations === undefined || subcategories === undefined) return null;
         return (
             <GroupForm 
+                history={this.props.history}
                 processForm={this.props.processForm}
                 errors={this.props.errors}
                 formType={this.props.formType}

@@ -5,7 +5,6 @@ class Api::SubcategoriesController < ApplicationController
     end
 
     def show
-        # debugger
         @subcategory = Subcategory.find_by(id: params[:id])
         render :show
     end

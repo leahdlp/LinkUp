@@ -15,9 +15,12 @@ $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubu
     width: 55.55%;
 }
 
-.body-container {
+.member-container {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: flex-end;
+    // align-items: flex-end;
+    // margin: 10px;
+    // border: green 10px solid;
+    height: 500px;
 }
 

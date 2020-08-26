@@ -21,10 +21,11 @@ class GroupCreateForm extends React.Component {
     render() {
         const locations = this.props.locations;
         const subcategories = this.props.subcategories;
-        // debugger
+        
         if (locations === undefined || subcategories === undefined) return null;
         return (
             <GroupForm
+                history={this.props.history}
                 processForm={this.props.processForm}
                 errors={this.props.errors}
                 formType={this.props.formType}

@@ -1,24 +1,25 @@
 import React from 'react';
 import GroupShowHeaderNav from './group_show_header_nav'
 
-const GroupShowHeader = ({ group, 
+const GroupShowHeader = ({ 
+    group, 
     members, 
     location, 
     createMember, 
-    deleteMember, 
+    deleteMember,
+    deleteGroup,
     currentUser 
 }) => {
 
     if (location[group.location_id] === undefined) return null;
-
+    // console.log(deleteGroup)
     return (
         <div className="show-pg-header-container">
             <div className="show-pg-header">
                 <div className="group-details">
                     <h1>{group.name}</h1>
                     <p>
-                        {location[group.location_id].city}, 
-                        {location[group.location_id].state}
+                        {location[group.location_id].city},   {location[group.location_id].state}
                     </p>
                     <p>{members[group.creatorId]}</p>
                 </div>
@@ -28,6 +29,7 @@ const GroupShowHeader = ({ group,
                     members={members}
                     createMember={createMember}
                     deleteMember={deleteMember}
+                    deleteGroup={deleteGroup}
                     id="grp-show-nav"
                 />
             </div>

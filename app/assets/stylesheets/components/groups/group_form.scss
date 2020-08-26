@@ -16,3 +16,40 @@ div {
     background-color: white;
     border: $border-bottom;
 }
+
+.group-form-header {
+    background-color: white;
+}
+
+.user-input > textarea {
+    background-color: $pg-background-color;
+}
+
+.form-submit-btn-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    // border: yellow 1px solid;
+}
+
+.form-submit-btn {
+    background-color: white;
+}
+
+.form-submit-btn > input {
+    background-color: $pink-btn-color;
+    font-family: $meetup-font;
+    font-size: 20px;
+    color: white;
+    border-radius: 4px;
+    height: fit-content;
+    min-height: 36px;
+    margin-top: 16px;
+    // margin-bottom: 16px;
+    padding: 0px 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    // align-items: center;
+}

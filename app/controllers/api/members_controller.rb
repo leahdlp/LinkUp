@@ -1,12 +1,15 @@
 class Api::MembersController < ApplicationController
     def index
-        # debugger
         @members = Group.find_by(id: params[:group_id]).members
         render :index
     end 
 
+    # def show
+    #     @member = Member.find_by(id: params[:id])
+    #     render "/api/members/show"
+    # end
+
     def create
-        # debugger
         @member = Member.new(member_params)
         @member.user_id = current_user.id
 

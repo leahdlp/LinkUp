@@ -49,6 +49,7 @@ class NavTabs extends React.Component {
                     />
                 </div>
                 <div className="tab-content">
+                    <h3>What we're about</h3>
                     <article>
                         {selected.content}
                     </article>

@@ -10,7 +10,7 @@ class GroupShow extends React.Component {
 
     afterMount() {
         const group = this.props.group
-        // debugger
+        
         return (
             <div>
                 <GroupShowHeader 
@@ -20,15 +20,16 @@ class GroupShow extends React.Component {
                     group={group}
                     createMember={this.props.createMember}
                     deleteMember={this.props.deleteMember}
+                    deleteGroup={this.props.deleteGroup}
                 />
 
-                <div className="body-container">
-                    <div className="desc-container">
+                <div className="member-container">
+                    {/* <div className="desc-container"> */}
                         {/* <h3>What we're about</h3> */}
-                        <p className="description">
+                        {/* <p className="description"> */}
                             {/* {group.description} */}
-                        </p>
-                    </div>
+                        {/* </p> */}
+                    {/* </div> */}
                 
                     <MemberList 
                         groupId={this.props.group.id}
@@ -37,9 +38,11 @@ class GroupShow extends React.Component {
                     />
                 </div>
 
-                <SubcategoriesList 
-                    subcategories={this.props.subcategories}
-                />
+                <div className="subcats">
+                    <SubcategoriesList 
+                        subcategories={this.props.subcategories}
+                    />
+                </div>
             </div>
         )
     }
