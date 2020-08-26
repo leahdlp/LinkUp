@@ -12,7 +12,7 @@ class NavBar extends React.Component {
                 <div id="nav-links-container">
                     <Link
                         id="special-offer"
-                        to="/"
+                        to="/groups/new"
                     >
                         Start a new group 50% OFF
                     </Link>
@@ -23,19 +23,13 @@ class NavBar extends React.Component {
                         Explore
                     </Link>
                     <Link 
-                        id="messages"
                         to="/"
-                    >
-                        Messages
-                    </Link>
-                    <Link 
-                        to="/"
+                        id="logout"
                         className="logout-btn" 
-                        onClick={() => this.props.logout()}
-                    >
+                        onClick={() => this.props.logout()}>
                         Log out
                     </Link>
-                    <div className="profile-dropdown">
+                    <div className="dropdown">
                         <button className="dropbtn">
                             Drop Icon
                         </button>
@@ -52,7 +46,9 @@ class NavBar extends React.Component {
                             <button onClick={()=>this.props.history.push("/")}>
                                 Github
                             </button>
-                            <button onClick={()=>(this.props.history.push("/"))}>
+                            <button 
+                                id="last-dropdown"
+                                onClick={()=>(this.props.history.push("/"))}>
                                 AngelList
                             </button>
                         </div>

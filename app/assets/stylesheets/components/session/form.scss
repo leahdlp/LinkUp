@@ -7,43 +7,43 @@ div {
 }
 
 .login-page {
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    border: $border-bottom;
+    margin-top: 60px;
+    margin-bottom: 30%;
     margin: auto;
     width: 50%;
     max-width: 400px;
-    border-radius: 4px;
-    margin-top: 60px;
-    margin-bottom: 30%;
-    display: flex;
-    justify-content: center;
     background-color: white;
-    border: $border-bottom;
 }
 
 
 .login-form {
-    border-radius: 4px;
     display: block;
+    border-radius: 4px;
     width: 100%;
     height: fit-content;
     background-color: white;
 }
 
 .signup-page {
+    display: flex;
+    justify-content: center;
+    border: $border-bottom;
+    border-radius: 4px;
+    margin-top: 60px;
+    margin-bottom: 200px;
     margin: auto;
     width: 50%;
     max-width: 400px;
-    border-radius: 4px;
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
     background-color: white;
-    border: $border-bottom;
-    margin-bottom: 200px;
 }
 
 .signup-form {
-    border-radius: 4px;
     display: block;
+    border-radius: 4px;
     width: 100%;
     height: fit-content;
     background-color: white;
@@ -56,10 +56,10 @@ div {
 }
 
 .form-container {
-    padding: 16px;
     display: block;
-    background-color: white;
     border-radius: 4px;
+    padding: 16px;
+    background-color: white;
 
 }
 
@@ -74,12 +74,12 @@ div {
 }
 
 .form-type {
-    font-size: 32px;
-    font-weight: bolder;
     display: block;
+    border-radius: 4px;
     padding-top: 10px;
     background-color: white;
-    border-radius: 4px;
+    font-size: 32px;
+    font-weight: bolder;
 
 }
 
@@ -102,12 +102,12 @@ div {
 .user-input > input {
     display: flex;
     justify-content: center;
+    border-radius: 4px;
     height: 21px;
     width: 95%;
-    padding: 4px;
     margin-bottom: 16px;
+    padding: 4px;
     background-color: $pg-background-color;
-    border-radius: 4px;
 }
 
 .user-input > input:focus {

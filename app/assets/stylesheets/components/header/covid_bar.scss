@@ -3,22 +3,22 @@ $pg-background-color: rgb(245, 245, 247);
 $covid-background-color: rgb(48, 47, 47);
 
 .covid-alert {
-    background: $covid-background-color;
-    font-family: $meetup-font;
-    font-size: 13px;
     display: flex;
     justify-content: center;
     padding: 20px;
+    background: $covid-background-color;
+    font-family: $meetup-font;
+    font-size: 13px;
 }
 
 .covid-alert-header {
-    color: orange;
-    background-color: $covid-background-color;
     display: inline;
+    background-color: $covid-background-color;
+    color: orange;
 }
 
 .covid-alert p {
-    color: white;
     display: inline;
     margin-left: 10px;
+    color: white;
 }

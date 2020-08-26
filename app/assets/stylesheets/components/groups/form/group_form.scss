@@ -1,0 +1,55 @@
+$meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$pg-background-color: rgb(245, 245, 247);
+$border-bottom: 1px solid rgb(211, 211, 211);
+
+div {
+    background-color: $pg-background-color;
+}
+
+.group-page {
+    font-family: $meetup-font;
+    margin: auto;
+    border-radius: 4px;
+    margin-bottom: 30%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: $border-bottom;
+}
+
+.group-form-header {
+    background-color: white;
+}
+
+.user-input > textarea {
+    background-color: $pg-background-color;
+}
+
+.form-submit-btn-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    // border: yellow 1px solid;
+}
+
+.form-submit-btn {
+    background-color: white;
+}
+
+.form-submit-btn > input {
+    background-color: $pink-btn-color;
+    font-family: $meetup-font;
+    font-size: 20px;
+    color: white;
+    border-radius: 4px;
+    height: fit-content;
+    min-height: 36px;
+    margin-top: 16px;
+    // margin-bottom: 16px;
+    padding: 0px 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    // align-items: center;
+}

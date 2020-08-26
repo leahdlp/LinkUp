@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavTabs from './group_header_tabs';
+import NavTabs from './group_nav_tabs';
 
 class GroupShowHeaderNav extends React.Component {
     memberButton() {
@@ -79,10 +79,6 @@ class GroupShowHeaderNav extends React.Component {
         return (
             <div className="show-navbar-container">
                 <div className="show-navbar">
-                    {/* <Link to={`/groups/${group.id}`} id="nav-button">About</Link>
-                    <Link to={`/groups/${group.id}`} id="nav-button">Events</Link>
-                    <Link to={`/groups/${group.id}`} id="nav-button">Members</Link>
-                    <Link to={`/groups/${group.id}`} id="nav-button">Photos</Link> */}
                     <div className="tabs-container">
                         <NavTabs 
                             group={group}
