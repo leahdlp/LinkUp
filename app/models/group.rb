@@ -32,7 +32,8 @@ class Group < ApplicationRecord
 
     has_many :members,
         foreign_key: :group_id,
-        class_name: :Member 
+        class_name: :Member,
+        dependent: :destroy
 
     has_many :categories,
         through: :subcategory,
