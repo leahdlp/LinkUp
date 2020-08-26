@@ -28,7 +28,7 @@ $footer-color: rgb(48, 58, 66);
 .footer-top {
     background: $footer-color;
     border-bottom: rgb(112, 112, 112) 1px solid;
-    width: 75%;
+    width: 59%;
     height: 100px;
     display: flex;
     align-items: center;
@@ -53,7 +53,7 @@ $footer-color: rgb(48, 58, 66);
 
 .my-links {
     background-color: $footer-color;
-    margin-left: 12.5%;
+    margin-left: 20.5%;
     margin-top: 10px;
 }
 
@@ -64,9 +64,16 @@ $footer-color: rgb(48, 58, 66);
 }
 
 .sub-footer > p {
-    
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .sub-footer-sub {
     background-color: $sub-footer-color;
+    display: flex;
+    margin-right: 600px;
+}
+
+.sub-footer-sub > p {
+    margin-right: 10px;
 }

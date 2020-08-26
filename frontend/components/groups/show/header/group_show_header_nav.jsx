@@ -84,17 +84,16 @@ class GroupShowHeaderNav extends React.Component {
                             group={group}
                             members={this.props.members}
                         />
-                    </div>
-
-                </div>
-                <div className="show-nav-btns">
-                    <div className="pink-btn-container">
-                        <div className="pink-btn">
-                            {this.displayMemberButton()}
+                        <div className="show-nav-btns">
+                            <div className="show-pink-btn-container">
+                                <div className="show-pink-btn">
+                                    {this.displayMemberButton()}
+                                </div>
+                            </div>
+                            {this.editGroupButton()}
+                            {this.deleteGroupButton()}
                         </div>
                     </div>
-                    {this.editGroupButton()}
-                    {this.deleteGroupButton()}
                 </div>
             </div>
         )
