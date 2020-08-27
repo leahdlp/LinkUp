@@ -58,6 +58,8 @@ export const updateGroup = group => dispatch => (
 
 export const deleteGroup = groupId => dispatch => (
     GroupAPIUtil.deleteGroup(groupId)
-    .then(groupId => dispatch(removeGroup(groupId)))
-    .fail(errors => dispatch(receiveGroupErrors(errors)))
+        .then(group => dispatch(removeGroup(group.id)))
+        .fail(errors => dispatch(receiveGroupErrors(errors.responseJSON)))
+    // .then(group => console.log(group.id))
+    // .fail(errors => console.log(errors))
 )
