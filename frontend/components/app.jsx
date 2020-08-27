@@ -24,22 +24,22 @@ const App = () => (
         </header>
 
         <Switch>
-            <AuthRoute path="/" component={EventIndexContainer} />
-            <ProtectedRoute path="/" component={GroupsIndexContainer} />
+            {/* <AuthRoute path="/" component={EventIndexContainer} /> */}
+            {/* <ProtectedRoute path="/" component={GroupsIndexContainer} /> */}
         </Switch>
 
         <Switch> 
-            <Route exact path="/groups/:groupId/edit" component={GroupEditFormContainer} />
-            <Route exact path="/groups/new" component={GroupCreateFormContainer}/>
+            <ProtectedRoute exact path="/groups/:groupId/edit" component={GroupEditFormContainer} />
+            <ProtectedRoute exact path="/groups/new" component={GroupCreateFormContainer}/>
             <Route path="/groups/:groupId" component={GroupShowContainer} />
             <AuthRoute path="/login" component={LogInContainer} />
             <AuthRoute path="/signup" component={SignUpContainer}/>
-            {/* <Route path="/" component={GroupsIndexContainer} /> */}
+            <ProtectedRoute exact path="/" component={GroupsIndexContainer} />
         </Switch>
 
         <Switch>
             <Route exact path="/events/:eventId/edit" component={EventEditFormContainer} />
-            <Route exact path="/events/new" component={EventCreateFormContainer} />
+            <ProtectedRoute exact path="/events/new" component={EventCreateFormContainer} />
             {/* <Route path="/:groupName/members" component={<div>this</div>}/> */}
             {/* <h1>what?</h1> */}
         </Switch>

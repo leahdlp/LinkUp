@@ -35,6 +35,7 @@ export const fetchGroups = () => dispatch => (
     GroupAPIUtil.fetchGroups()
         .then(groups => dispatch(receiveGroups(groups)))
         .fail(errors => dispatch(receiveGroupErrors(errors.responseJSON)))
+
 )
 
 export const fetchGroup = groupId => dispatch => (
@@ -57,6 +58,6 @@ export const updateGroup = group => dispatch => (
 
 export const deleteGroup = groupId => dispatch => (
     GroupAPIUtil.deleteGroup(groupId)
-        .then(groupId => dispatch(removeGroup(groupId)))
-        .fail(errors => dispatch(receiveGroupErrors(errors.responseJSON)))
+    .then(groupId => dispatch(removeGroup(groupId)))
+    .fail(errors => dispatch(receiveGroupErrors(errors)))
 )
