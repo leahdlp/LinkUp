@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_23_061631) do
+ActiveRecord::Schema.define(version: 2020_08_27_004644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,11 +36,30 @@ ActiveRecord::Schema.define(version: 2020_08_23_061631) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "attendees", force: :cascade do |t|
+    t.integer "event_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id", "user_id"], name: "index_attendees_on_event_id_and_user_id", unique: true
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_categories_on_name", unique: true
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "group_id", null: false
+    t.datetime "date_time", null: false
+    t.integer "location_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "description", null: false
+    t.index ["group_id", "date_time", "location_id"], name: "index_events_on_group_id_and_date_time_and_location_id", unique: true
   end
 
   create_table "groups", force: :cascade do |t|

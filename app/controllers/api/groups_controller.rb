@@ -31,7 +31,6 @@ class Api::GroupsController < ApplicationController
         @group.creator_id = current_user.id
         Member.create({ group_id: @group.id, user_id: current_user.id })
 
-
         if @group.save
             render "/api/groups/show"
         else
@@ -42,7 +41,6 @@ class Api::GroupsController < ApplicationController
     def update
         @group = Group.find_by(id: params[:id])
 
-        
         if @group.creator_id === current_user.id && @group.update(group_params)
             render "/api/groups/show"
         else
@@ -55,7 +53,7 @@ class Api::GroupsController < ApplicationController
 
         if @group.creator_id === current_user.id
             @group.destroy!
-            render json: "/api/groups/show"
+            render "/api/groups/show"
         else
             render json: ["Could not destroy, group not found"], status: 404
         end

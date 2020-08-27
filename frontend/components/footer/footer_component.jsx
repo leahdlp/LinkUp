@@ -8,14 +8,24 @@ const Footer = props => (
                 <div className="footer-top">
                     <Link id="footer-link" to={`/groups/new`}>Start a new group</Link>
                 </div>
-            </div>
+            </div> 
             
             <div className ="my-links">
                 {/* <i className="fab fa-github-square"></i> */}
                 <ul className="link-list">
-                    <li><a id="linkedin" href="https://www.linkedin.com/in/leahdelapena/">LinkedIn</a></li>
-                    <li><a id="github" href="https://github.com/leahdlp">Github</a></li>
-                    <li><a id="angellist" href="https://angel.co/u/leah-de-la-pena">AngelList</a></li>
+
+                    <li>
+                        <i className="fab fa-linkedin"></i>
+                        <a id="linkedin" href="https://www.linkedin.com/in/leahdelapena/">LinkedIn</a>
+                    </li>
+                    <li>
+                        <i className="fab fa-github-square"></i>
+                        <a id="github" href="https://github.com/leahdlp">Github</a>
+                    </li>
+                    <li>
+                        <i className="fab fa-angellist"></i>
+                        <a id="angellist" href="https://angel.co/u/leah-de-la-pena">AngelList</a>
+                    </li>
                 </ul>
             </div>
 

@@ -15,4 +15,8 @@ class Location < ApplicationRecord
     has_many :groups,
         foreign_key: :location_id,
         class_name: :Group
+
+    has_many :events,
+        foreign_key: :location_id,
+        class_name: :Event
 end

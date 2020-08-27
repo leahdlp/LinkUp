@@ -22,6 +22,7 @@ class GroupCreateForm extends React.Component {
 
         this.props.processForm(group)
             .then(action => this.props.history.push(`/groups/${action.group.id}`))
+            // .then(action => console.log(action))
     }
 
     handleCancel(event) {
@@ -32,7 +33,7 @@ class GroupCreateForm extends React.Component {
         let errors = this.props.errors;
         let klass = "";
         let feedback = "";
-        if (errors.length != 0) klass = "errors";
+        if (errors.length !== 0) klass = "errors";
 
         return (
             <div className="errors-container">

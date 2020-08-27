@@ -39,5 +39,14 @@ class Group < ApplicationRecord
         through: :subcategory,
         source: :category
 
+    has_many :events,
+        foreign_key: :group_id,
+        class_name: :Event,
+        dependent: :destroy
+
+    has_many :users,
+        through: :members,
+        source: :user
+
     has_one_attached :photo
 end

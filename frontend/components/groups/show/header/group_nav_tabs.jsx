@@ -18,6 +18,8 @@ class NavTabs extends React.Component {
     }
 
     allMembers() {
+        if (this.props.members === {}) return null;
+        
         return (
             <ul>
                 {this.props.group.member_ids.map(member_id => (

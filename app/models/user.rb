@@ -27,6 +27,14 @@ class User < ApplicationRecord
         through: :members,
         source: :group
 
+    has_many :attendees,
+        foreign_key: :user_id,
+        class_name: :User,
+        dependent: :destroy
+
+    has_many :events,
+        through: :attendees,
+        source: :event
 
     attr_reader :password
 

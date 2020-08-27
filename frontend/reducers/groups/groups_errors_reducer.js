@@ -11,7 +11,7 @@ const groupErrorsReducer = (oldState = [], action) => {
         case RECEIVE_GROUP:
             return [];
         case RECEIVE_GROUP_ERRORS:
-            return action.errors
+            return action.errors;
         case CLEAR_GROUP_ERRORS:
             return [];
         default:
