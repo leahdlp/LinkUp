@@ -12,7 +12,9 @@ Rails.application.routes.draw do
     resources :categories, only: [:index, :show]
     resources :subcategories, only: [:index, :show]
     resources :locations, only: [:index, :show]
+    resources :events, except: [:new, :edit] do 
+      resources :attendees, only: [:index]
+    end
+    resources :attendees, only: [:create, :destroy]
   end
-
-  # resources :members, only: [:show]
 end

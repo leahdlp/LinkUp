@@ -8,6 +8,7 @@ class NavBar extends React.Component {
             <div className="loggedIn-header">
                 <div id="logo">
                     <h2>Welcome aboard! {user.name}</h2>
+                    {/* <i className="fab fa-meetup" id="logo-icon"></i> */}
                 </div>
                 <div id="nav-links-container">
                     <Link
@@ -31,25 +32,32 @@ class NavBar extends React.Component {
                     </Link>
                     <div className="dropdown">
                         <button className="dropbtn">
-                            Drop Icon
+                            <i className="fas fa-chevron-down"></i>
                         </button>
                         <div className="dropdown-content">
                             <button onClick={()=>(this.props.history.push("/"))}>
                                 Profile
                             </button>
-                            <button onClick={()=>(this.props.history.push("/"))}>
+                            <button onClick={()=> this.props.logout()}>
                                 Log out
                             </button>                            
                             <button onClick={()=>(this.props.history.push("/"))}>
-                                LinkedIn
+                                <i className="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/leahdelapena/">
+                                    LinkedIn
+                                </a>
                             </button>                            
                             <button onClick={()=>this.props.history.push("/")}>
-                                Github
+                                <i className="fab fa-github-square"></i>
+                                <a href="https://github.com/leahdlp">Github</a>
                             </button>
                             <button 
                                 id="last-dropdown"
                                 onClick={()=>(this.props.history.push("/"))}>
-                                AngelList
+                                <i className="fab fa-angellist"></i>
+                                <a href="https://angel.co/u/leah-de-la-pena">
+                                    AngelList
+                                </a>
                             </button>
                         </div>
                     </div>

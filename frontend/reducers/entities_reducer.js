@@ -5,6 +5,8 @@ import membersReducer from './members/members_reducer';
 import categoriesReducer from './categories/categories_reducer';
 import subcategoriesReducer from './subcategories/subcategories_reducer';
 import locationsReducer from './locations/locations_reducer';
+import eventsReducer from './events/events_reducer';
+import attendeesReducer from './attendees/attendees_reducer';
 
 const entitiesReducers = combineReducers({
     users: usersReducer,
@@ -12,7 +14,9 @@ const entitiesReducers = combineReducers({
     members: membersReducer,
     categories: categoriesReducer,
     subCategories: subcategoriesReducer,
-    locations: locationsReducer
+    locations: locationsReducer,
+    events: eventsReducer,
+    attendees: attendeesReducer
 })
 
 export default entitiesReducers;

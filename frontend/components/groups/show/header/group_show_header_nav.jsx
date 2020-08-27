@@ -45,9 +45,11 @@ class GroupShowHeaderNav extends React.Component {
         let group = this.props.group;
 
         let button =
-            <button onClick={() => this.props.deleteGroup(group.id)}>
-                Delete Group
-            </button>
+            <div id="show-edit">
+                <Link to="/" onClick={() => this.props.deleteGroup(group.id)}>
+                    Delete Group
+                </Link>
+            </div>
 
         if (this.props.currentUser &&
             group.creator_id !== this.props.currentUser.id) {
