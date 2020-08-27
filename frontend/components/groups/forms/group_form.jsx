@@ -20,13 +20,8 @@ class GroupCreateForm extends React.Component {
         group.location_id = parseInt(group.location_id);
         group.subcategory_id = parseInt(group.subcategory_id);
 
-        this.props.processForm(group);
-        
-        if (group.id) {
-            this.props.history.push(`groups/${group.id}`);
-        } else {
-            this.props.history.push("/");
-        }
+        this.props.processForm(group)
+            .then(action => this.props.history.push(`/groups/${action.group.id}`))
     }
 
     handleCancel(event) {
