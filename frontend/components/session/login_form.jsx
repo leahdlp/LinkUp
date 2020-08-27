@@ -18,7 +18,7 @@ class LogInForm extends React.Component {
         return event => this.setState({ [field]: event.currentTarget.value })
     }
 
-    handleSubmit(event) {
+    handleSubmit() {
         event.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
@@ -26,7 +26,8 @@ class LogInForm extends React.Component {
         this.state = {email: "", password: ""}
     }
 
-    handleDemoUser(event) {
+    handleDemoUser() {
+        event.preventDefault();
         const user = { email: "thanAMug@gmail.com", password: "0123456789" };
         this.props.processForm(user);
     }

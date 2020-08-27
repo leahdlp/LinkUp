@@ -20,8 +20,8 @@ const App = () => (
         </header>
 
         <Switch>
-            <Route exact path="/groups/:groupId/edit" component={GroupEditFormContainer} />
-            <Route exact path="/groups/new" component={GroupCreateFormContainer}/>
+            <ProtectedRoute exact path="/groups/:groupId/edit" component={GroupEditFormContainer} />
+            <ProtectedRoute exact path="/groups/new" component={GroupCreateFormContainer}/>
             <Route path="/groups/:groupId" component={GroupShowContainer} />
             <AuthRoute path="/login" component={LogInContainer} />
             <AuthRoute path="/signup" component={SignUpContainer}/>
