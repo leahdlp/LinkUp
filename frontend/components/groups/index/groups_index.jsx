@@ -8,17 +8,19 @@ class GroupsIndex extends React.Component {
     
     render () {
         return (
-            <div className="group-list-container">
-                <ul className="group-list">
-                    {this.props.groups.map(group => (
-                        <GroupsIndexItem
-                            key={`group-${group.id}`}
-                            history={this.props.history}
-                            group={group}
-                            fetchGroup={this.props.fetchGroup}
-                        />
-                    ))}
-                </ul>
+            <div className="group-index-page">
+                <div className="group-list-container">
+                    <ul className="group-list">
+                        {this.props.groups.map(group => (
+                            <GroupsIndexItem
+                                key={`group-${group.id}`}
+                                history={this.props.history}
+                                group={group}
+                                fetchGroup={this.props.fetchGroup}
+                            />
+                        ))}
+                    </ul>
+                </div>
             </div>
         )
     }

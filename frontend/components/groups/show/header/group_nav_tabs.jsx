@@ -18,16 +18,20 @@ class NavTabs extends React.Component {
     }
 
     allMembers() {
-        if (this.props.members === {}) return null;
+        if (Object.values(this.props.members) === 0) return null;
         
         return (
-            <ul>
-                {this.props.group.member_ids.map(member_id => (
-                    <li key={`member-${member_id}`}>
-                        {this.props.members[member_id].name}
-                    </li>
-                ))}
-            </ul>
+            <div className="tab-member-list-container">
+                <ul className="tab-member-list">
+                    {this.props.group.member_ids.map(member_id => (
+                        <li key={`member-${member_id}`} className="tab-member">
+                            <div className="member-photo">
+                            </div>
+                            {this.props.members[member_id].name}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         )
     }
 

@@ -8,15 +8,19 @@ class GroupShow extends React.Component {
         this.props.fetchSubcategory(this.props.group.subcategory_id);
     }
 
-    afterMount() {
+    render () {
         const group = this.props.group
+        const subcategories = this.props.subcategories
+
+        if (subcategories === undefined) return null;
+        if (Object.values(subcategories).length === 0) return null;
         
         return (
             <div>
                 <GroupShowHeader 
                     currentUser={this.props.currentUser}
                     members={this.props.members}
-                    location={this.props.location}
+                    locations={this.props.locations}
                     group={group}
                     createMember={this.props.createMember}
                     deleteMember={this.props.deleteMember}
@@ -34,16 +38,11 @@ class GroupShow extends React.Component {
                 
                 <div className="subcats">
                     <SubcategoriesList 
+                        group={group}
                         subcategories={this.props.subcategories}
                     />
                 </div>
             </div>
-        )
-    }
-    
-    render() {
-        return (
-            this.props.subcategories === undefined ? null : this.afterMount()
         )
     }
 }

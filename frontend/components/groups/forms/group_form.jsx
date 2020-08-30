@@ -22,7 +22,6 @@ class GroupCreateForm extends React.Component {
 
         this.props.processForm(group)
             .then(action => this.props.history.push(`/groups/${action.group.id}`))
-            // .then(action => console.log(action))
     }
 
     handleCancel(event) {
@@ -80,7 +79,7 @@ class GroupCreateForm extends React.Component {
                             <br />
                             <input
                                 type="text"
-                                value={this.state.name}
+                                defaultValue={this.state.name}
                                 onChange={this.update("name")}
                             />
                         </label>
@@ -91,7 +90,7 @@ class GroupCreateForm extends React.Component {
                                 rows="10"
                                 cols="50"
                                 type="text"
-                                value={this.state.description}
+                                defaultValue={this.state.description}
                                 onChange={this.update("description")}
                             />
                         </label>
@@ -99,7 +98,7 @@ class GroupCreateForm extends React.Component {
                         <label className="user-input"> Location:
                             <br />
                             <select 
-                                value={currentLoc}
+                                defaultValue={currentLoc}
                                 onChange={this.update("location_id")}>
 
                                 <option disabled value="default">
@@ -121,7 +120,7 @@ class GroupCreateForm extends React.Component {
                         <label className="user-input"> Categories:
                             <br />
                             <select
-                                value={currentCat}
+                                defaultValue={currentCat}
                                 onChange={this.update("subcategory_id")}>
 
                                 <option disabled value="default">

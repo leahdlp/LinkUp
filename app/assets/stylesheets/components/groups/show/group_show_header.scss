@@ -23,18 +23,22 @@ $border-bottom: 1px solid rgb(216, 187, 187);
     margin-bottom: 10px;
 }
 
+.group-img-container {
+    border-radius: 10px;
+    margin-right: 40px;
+    height: 300px;
+    width: 600px;
+    background-image: image_url('white-dress-color-backgroud.jpg');
+    background-repeat: no-repeat;
+    background-size: 600px 350px;
+}
+
 .img-details-header {
     display: flex;
     justify-content: center;
     background-color: white;
     margin-left: 13%;
     width: 65%;
-}
-
-.group-img-container {
-    margin-right: 40px;
-    height: 300px;
-    width: 600px;
 }
 
 .group-details-container {

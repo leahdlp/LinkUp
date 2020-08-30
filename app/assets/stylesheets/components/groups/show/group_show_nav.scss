@@ -141,14 +141,18 @@ $border-bottom: 1px solid rgb(211, 211, 211);
 }
 
 .tab-content-container {
-    display: block;
+    display: flex;
+    justify-content: center;
+    width: 700px;
     height: fit-content;
+    border-top: $border-bottom;
+    // margin-left: 100px;
     // border: deeppink 1px solid;
 }
 
 .tab-content {
     display: block;
-    margin-left: 80px;
+    // margin-left: 80px;
     margin-top: 5%;
     margin-bottom: 40px;
     min-width: 600px;
@@ -156,4 +160,5 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     height: fit-content;
     font-size: 16px;
     color: black;
+    // border: orange 1px solid;
 }

@@ -19,14 +19,14 @@ class GroupPage extends React.Component {
     render() {
         if (this.props.group === undefined) return null;
         if (this.props.members === undefined) return null;
-        if (this.props.location === undefined) return null;
+        if (this.props.locations === undefined) return null;
 
         return (
             <GroupShow 
                 currentUser={this.props.currentUser}
                 group={this.props.group}
                 members={this.props.members}
-                location={this.props.location}
+                locations={this.props.locations}
                 subcategories={this.props.subcategories}
                 createMember={this.props.createMember}
                 deleteMember={this.props.deleteMember}
@@ -40,8 +40,8 @@ class GroupPage extends React.Component {
 const mapStateToProps = (state, ownProps)=> ({
     group: state.entities.groups[ownProps.match.params.groupId],
     members: state.entities.members,
-    location: state.entities.locations,
-    subcategories: Object.values(state.entities.subCategories),
+    locations: state.entities.locations,
+    subcategories: state.entities.subCategories,
     currentUser: state.entities.users[state.session.id]
 })
 

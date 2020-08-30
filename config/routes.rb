@@ -7,12 +7,13 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :groups, except: [:new, :edit] do 
       resources :members, only: [:index]
+      resources :events, only: [:create]
     end
     resources :members, only: [:create, :destroy]
     resources :categories, only: [:index, :show]
     resources :subcategories, only: [:index, :show]
     resources :locations, only: [:index, :show]
-    resources :events, except: [:new, :edit] do 
+    resources :events, except: [:new, :edit, :create] do 
       resources :attendees, only: [:index]
     end
     resources :attendees, only: [:create, :destroy]

@@ -14,7 +14,7 @@ export const fetchEvent = eventId => (
 
 export const createEvent = event => (
     $.ajax({
-        url: `/api/events`,
+        url: `/api/groups/${event.group_id}/events`,
         method: 'POST',
         data: { event }
     })

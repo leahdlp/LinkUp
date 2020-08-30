@@ -13,7 +13,7 @@ import GroupEditFormContainer from './groups/forms/update_form_container';
 import EventIndexContainer from './events/index/event_index_container';
 import EventCreateFormContainer from './events/forms/create_event_container';
 import EventEditFormContainer from './events/forms/edit_event_container';
-// import EventShowContainer from './events/show/event_show_container'
+import EventShowContainer from './events/show/event_show_container';
 import FooterContainer from "./footer/footer_component_container";
 
 const App = () => (
@@ -31,17 +31,16 @@ const App = () => (
         <Switch> 
             <ProtectedRoute exact path="/groups/:groupId/edit" component={GroupEditFormContainer} />
             <ProtectedRoute exact path="/groups/new" component={GroupCreateFormContainer}/>
-            <Route path="/groups/:groupId" component={GroupShowContainer} />
+            <Route exact path="/groups/:groupId" component={GroupShowContainer} />
             <AuthRoute path="/login" component={LogInContainer} />
             <AuthRoute path="/signup" component={SignUpContainer}/>
             <ProtectedRoute exact path="/" component={GroupsIndexContainer} />
         </Switch>
 
         <Switch>
+            <ProtectedRoute exact path="/groups/:groupId/events/new" component={EventCreateFormContainer} />
             <Route exact path="/events/:eventId/edit" component={EventEditFormContainer} />
-            <ProtectedRoute exact path="/events/new" component={EventCreateFormContainer} />
-            {/* <Route path="/:groupName/members" component={<div>this</div>}/> */}
-            {/* <h1>what?</h1> */}
+            <Route path="/events/:eventId" component={EventShowContainer} />
         </Switch>
 
         <footer>

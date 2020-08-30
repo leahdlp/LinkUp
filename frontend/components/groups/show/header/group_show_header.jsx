@@ -4,28 +4,29 @@ import GroupShowHeaderNav from './group_show_header_nav'
 const GroupShowHeader = ({ 
     group, 
     members, 
-    location, 
+    locations, 
     createMember, 
     deleteMember,
     deleteGroup,
     currentUser 
 }) => {
-
-    if (location[group.location_id] === undefined) return null;
+    if (locations[group.location_id] === undefined) return null;
+    // let klass = `group-img-container-${group.id}`
  
     return (
         <div className="show-pg-header-container">
             <div className="show-pg-header">
                 <div className="img-details-header-container">
                     <div className="img-details-header">
-                        <div className="group-img-container">
+                        <div className={`group-img-container`}>
                             {/* <img src={window.communionUrl} alt="" /> */}
                         </div>
                         <div className="group-details-container">
                             <div className="group-details">
                                 <h1>{group.name}</h1>
                                 <p>
-                                    {location[group.location_id].city},   {location[group.location_id].state}
+                                    {locations[group.location_id].city}, 
+                                    {locations[group.location_id].state}
                                 </p>
                                 <p>{members[group.creatorId]}</p>
                             </div>

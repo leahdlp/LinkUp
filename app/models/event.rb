@@ -12,7 +12,7 @@
 #  description :text             not null
 #
 class Event < ApplicationRecord
-    validates :name, :group_id, :date, :time, :location_id, :description, presence: true
+    validates :name, :group_id, :date_time, :location_id, :description, presence: true
     validates :group_id, uniqueness: { scope: [:date_time, :location_id] }
 
     belongs_to :group,

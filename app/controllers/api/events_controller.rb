@@ -11,18 +11,40 @@ class Api::EventsController < ApplicationController
 
     def create
         @event = Event.new(event_params)
+        @event.date_time = DateTime.parse(params[:event][:date_time]);
+        creator_id = @event.group.creator_id
 
-        if @member.save
+        if creator_id != current_user.id
+            render json: ["Event can only be created by group adminr"], status: 422
+        elsif @event.save
             render '/api/events/show'
         else
             render json: @event.errors.full_messages, status: 422
         end
     end
 
+    def update
+        @event = Event.find_by(id: params[:id])
+        creator_id = @event.group.creator_id
+
+
+        if creator_id != current_user.id
+            render json: ["Event can only be updated by its creator"], status: 422
+        elsif @event
+            @event.update(event_params)
+            render '/api/events/show'
+        else
+            render json: ["Could not update, event not found"], status: 404
+        end
+    end
+
     def destroy
         @event = Event.find_by(id: params[:id])
+        creator_id = @event.group.creator_id
 
-        if @event.destroy
+        if creator_id != current_user.id
+            render json: ["Event can only be destroyed by its creator"], status: 422
+        elsif @event.destroy
             render '/api/events/show'
         else
             render json: ['Event could not be destroyed'], status: 422
