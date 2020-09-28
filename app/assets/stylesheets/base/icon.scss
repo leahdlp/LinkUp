@@ -1,15 +1,14 @@
+$pink-btn-color: #F65858;
+
 i {
     margin-right: 10px;
 }
 
-#logo {
+.logo {
     background-color: white;
 }
 
-// #logo-icon {
-//     color: pink;
-//     height: 100px;
-//     width: 100px;
-//     border: purple 1px solid;
-//     size: 200px;
-// }
+#logo-icon {
+    color:$pink-btn-color;
+    font-size: 50px;
+}

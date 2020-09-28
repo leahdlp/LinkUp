@@ -72,87 +72,98 @@ class GroupCreateForm extends React.Component {
         let currentCat = this.state.subcategory_id || "default"
 
         return (
-            <div className="form-container">
-                <form onSubmit={this.handleSubmit} className="form">
-                    <div className="inputs">
-                        <label className="user-input"> Group Name:
-                            <br />
-                            <input
-                                type="text"
-                                defaultValue={this.state.name}
-                                onChange={this.update("name")}
-                            />
-                        </label>
-                        <br /> 
-                        <label className="user-input"> Description:
-                            <br />
-                            <textarea
-                                rows="10"
-                                cols="50"
-                                type="text"
-                                defaultValue={this.state.description}
-                                onChange={this.update("description")}
-                            />
-                        </label>
-                        <br />
-                        <label className="user-input"> Location:
-                            <br />
-                            <select 
-                                defaultValue={currentLoc}
-                                onChange={this.update("location_id")}>
+          <div className="form-container">
+            <form onSubmit={this.handleSubmit} className="form">
+              <div className="inputs">
+                <label className="user-input">
+                  {/* {" "} */}
+                  Group Name:
+                  <br />
+                  <input
+                    type="text"
+                    defaultValue={this.state.name}
+                    onChange={this.update("name")}
+                  />
+                </label>
+                <br />
+                <label className="user-input">
+                  {/* {" "} */}
+                  Description:
+                  <br />
+                  <textarea
+                    type="text"
+                    defaultValue={this.state.description}
+                    onChange={this.update("description")}
+                  />
+                </label>
+                <br />
+                <label className="user-input">
+                  {/* {" "} */}
+                  Location:
+                  <br />
+                  <select
+                    className="drop-select"
+                    defaultValue={currentLoc}
+                    onChange={this.update("location_id")}
+                  >
+                    <option disabled value="default">
+                      -- Please Select --
+                    </option>
 
-                                <option disabled value="default">
-                                    -- Please Select --
-                                </option>
+                    {Object.values(this.props.locations).map((location) => (
+                      <option
+                        value={location.id}
+                        key={`location-${location.id}`}
+                      >
+                        {location.city}, {location.state}
+                      </option>
+                    ))}
+                  </select>
+                </label>
 
-                                {Object.values(this.props.locations).map(location => (
-                                    <option 
-                                        value={location.id}
-                                        key={`location-${location.id}`}>
-                                        {location.city}, {location.state}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
+                <br />
 
-                        <br />
+                <label className="user-input">
+                  {/* {" "} */}
+                  Categories:
+                  <br />
+                  <select
+                    className="drop-select"
+                    defaultValue={currentCat}
+                    onChange={this.update("subcategory_id")}
+                  >
+                    <option disabled value="default">
+                      -- Please Select --
+                    </option>
 
-                        <label className="user-input"> Categories:
-                            <br />
-                            <select
-                                defaultValue={currentCat}
-                                onChange={this.update("subcategory_id")}>
-
-                                <option disabled value="default">
-                                    -- Please Select --
-                                </option>
-
-                                {Object.values(this.props.subcategories).map(subcategory => (
-                                    <option
-                                        value={subcategory.id}
-                                        key={`subcat-${subcategory.id}`}>
-                                        {subcategory.name}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                    </div>
-                    <br />
-                    <div className="form-submit-btn-container">
-                        <div className="form-submit-btn">
-                            <input
-                                type="submit"
-                                value={this.props.formType}
-                            />
-                            <br />
-                        </div>
-                        <button onClick={() => this.handleCancel()}>
-                            cancel
-                        </button>
-                    </div>
-                </form>
-            </div>
-        )
+                    {Object.values(this.props.subcategories).map(
+                      (subcategory) => (
+                        <option
+                          value={subcategory.id}
+                          key={`subcat-${subcategory.id}`}
+                        >
+                          {subcategory.name}
+                        </option>
+                      )
+                    )}
+                  </select>
+                </label>
+              </div>
+              <br />
+              <div className="form-submit-btn-container">
+                <div className="form-submit-btn">
+                  <input type="submit" value={this.props.formType} />
+                  <br />
+                </div>
+                <button 
+                    onClick={() => this.handleCancel()}
+                    className="cancel-btn">
+                    cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        );
     }
 
     render() {

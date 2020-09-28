@@ -6,9 +6,9 @@ class NavBar extends React.Component {
     loggedIn(user) {
         return (
             <div className="loggedIn-header">
-                <div id="logo">
-                    <h2>Welcome aboard! {user.name}</h2>
-                    {/* <i className="fab fa-meetup" id="logo-icon"></i> */}
+                <div className="logo">
+                    {/* <h2>Welcome aboard! {user.name}</h2> */}
+                    <i className="fab fa-meetup" id="logo-icon"></i>
                 </div>
                 <div id="nav-links-container">
                     <Link
@@ -68,13 +68,20 @@ class NavBar extends React.Component {
 
     loggedOut() {
         return (
-            <div className="login-signup-header">
-                <div className="nav-btns">
-                    <Link to="/login" id="login-link">Log in</Link>
-                    <Link to="/signup" id="signup-link">Sign up</Link>
-                </div>
+          <div className="login-signup-header">
+            <div className="logo">
+              <i className="fab fa-meetup" id="logo-icon"></i>
             </div>
-        )
+            <div className="nav-btns">
+              <Link to="/login" id="login-link">
+                Log in
+              </Link>
+              <Link to="/signup" id="signup-link">
+                Sign up
+              </Link>
+            </div>
+          </div>
+        );
     }
 
     render () {

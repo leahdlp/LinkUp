@@ -104,6 +104,7 @@ class EventForm extends React.Component {
                         <label className="user-input"> Location:
                                     <br />
                             <select
+                                className="drop-select"
                                 defaultValue={currentLoc}
                                 onChange={this.update("location_id")}>
 

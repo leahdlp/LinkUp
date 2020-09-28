@@ -15,38 +15,56 @@ import EventCreateFormContainer from './events/forms/create_event_container';
 import EventEditFormContainer from './events/forms/edit_event_container';
 import EventShowContainer from './events/show/event_show_container';
 import FooterContainer from "./footer/footer_component_container";
+import Landing from './splash_page/splash_page';
 
 const App = () => (
-    <div>
-        <header>
-            <Route path="/" component={CovidContainer} />
-            <Route path="/" component={NavBarContainer} />
-        </header>
+  <div>
+    <header>
+      <Route path="/" component={CovidContainer} />
+      <Route path="/" component={NavBarContainer} />
+    </header>
 
-        <Switch>
-            {/* <AuthRoute path="/" component={EventIndexContainer} /> */}
-            {/* <ProtectedRoute path="/" component={GroupsIndexContainer} /> */}
-        </Switch>
+    <Switch>
+      {/* <AuthRoute path="/" component={EventIndexContainer} /> */}
+      {/* <ProtectedRoute path="/" component={GroupsIndexContainer} /> */}
+    </Switch>
 
-        <Switch> 
-            <ProtectedRoute exact path="/groups/:groupId/edit" component={GroupEditFormContainer} />
-            <ProtectedRoute exact path="/groups/new" component={GroupCreateFormContainer}/>
-            <Route exact path="/groups/:groupId" component={GroupShowContainer} />
-            <AuthRoute path="/login" component={LogInContainer} />
-            <AuthRoute path="/signup" component={SignUpContainer}/>
-            <ProtectedRoute exact path="/" component={GroupsIndexContainer} />
-        </Switch>
+    <Switch>
+      <ProtectedRoute
+        exact
+        path="/groups/:groupId/edit"
+        component={GroupEditFormContainer}
+      />
+      <ProtectedRoute
+        exact
+        path="/groups/new"
+        component={GroupCreateFormContainer}
+      />
+      <Route exact path="/groups/:groupId" component={GroupShowContainer} />
+      <AuthRoute path="/login" component={LogInContainer} />
+      <AuthRoute path="/signup" component={SignUpContainer} />
+      <ProtectedRoute exact path="/" component={GroupsIndexContainer} />
+      <AuthRoute exact path="/" component={Landing} />
+    </Switch>
 
-        <Switch>
-            <ProtectedRoute exact path="/groups/:groupId/events/new" component={EventCreateFormContainer} />
-            <Route exact path="/events/:eventId/edit" component={EventEditFormContainer} />
-            <Route path="/events/:eventId" component={EventShowContainer} />
-        </Switch>
+    <Switch>
+      <ProtectedRoute
+        exact
+        path="/groups/:groupId/events/new"
+        component={EventCreateFormContainer}
+      />
+      <Route
+        exact
+        path="/events/:eventId/edit"
+        component={EventEditFormContainer}
+      />
+      <Route path="/events/:eventId" component={EventShowContainer} />
+    </Switch>
 
-        <footer>
-            <Route path="/" component={FooterContainer} />
-        </footer>
-    </div>
-)
+    <footer>
+      <Route path="/" component={FooterContainer} />
+    </footer>
+  </div>
+);
 
 export default App;

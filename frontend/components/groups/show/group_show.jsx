@@ -11,7 +11,7 @@ class GroupShow extends React.Component {
     render () {
         const group = this.props.group
         const subcategories = this.props.subcategories
-
+        // debugger;
         if (subcategories === undefined) return null;
         if (Object.values(subcategories).length === 0) return null;
         
