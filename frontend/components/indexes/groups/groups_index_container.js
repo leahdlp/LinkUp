@@ -1,15 +1,16 @@
 import { connect } from 'react-redux';
 import { fetchGroups, fetchGroup } from '../../../actions/groups_actions';
 
-import GroupsIndex from './groups_index';
+import EntitiesIndex from '../entities_index';
 
 const mapStateToProps = state => ({
-    groups: Object.values(state.entities.groups)
+    entities: Object.values(state.entities.groups),
+    indexType: "Group"
 })
 
 const mapDispatchToProps = dispatch => ({
-    fetchGroups: () => dispatch(fetchGroups()),
-    fetchGroup: groupId => dispatch(fetchGroup(groupId))
+    fetchEntities: () => dispatch(fetchGroups()),
+    fetchEntity: groupId => dispatch(fetchGroup(groupId))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(GroupsIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(EntitiesIndex);

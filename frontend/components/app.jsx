@@ -4,8 +4,8 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import CovidContainer from './header/covid/covid_container'
 import NavBarContainer from './header/nav_bar/navbar_container';
-import SignUpContainer from './session/signup_form_container';
-import LogInContainer from './session/login_form_container';
+import SignUpContainer from './forms/session/signup_form_container';
+import LogInContainer from './forms/session/login_form_container';
 import GroupsIndexContainer from "./indexes/groups/groups_index_container";
 import GroupShowContainer from './show/groups/group_show_container';
 import GroupCreateFormContainer from './forms/groups/create_form_container';
@@ -24,10 +24,8 @@ const App = () => (
       <Route path="/" component={NavBarContainer} />
     </header>
 
-    <Switch>
-      {/* <AuthRoute path="/" component={EventIndexContainer} /> */}
-      {/* <ProtectedRoute path="/" component={GroupsIndexContainer} /> */}
-    </Switch>
+    <AuthRoute exact path="/" component={EventIndexContainer} />
+    <ProtectedRoute exact path="/" component={GroupsIndexContainer} />
 
     <Switch>
       <ProtectedRoute
@@ -43,8 +41,8 @@ const App = () => (
       <Route exact path="/groups/:groupId" component={GroupShowContainer} />
       <AuthRoute path="/login" component={LogInContainer} />
       <AuthRoute path="/signup" component={SignUpContainer} />
-      <ProtectedRoute exact path="/" component={GroupsIndexContainer} />
-      <AuthRoute exact path="/" component={Landing} />
+      {/* <ProtectedRoute exact path="/" component={GroupsIndexContainer} /> */}
+      {/* <AuthRoute exact path="/" component={EventIndexContainer} /> */}
     </Switch>
 
     <Switch>

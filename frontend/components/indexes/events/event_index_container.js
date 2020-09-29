@@ -1,16 +1,17 @@
 import { connect } from 'react-redux';
 
 import { fetchEvents, fetchEvent } from '../../../actions/events_actions';
-import EventIndex from './event_index';
+import EntitiesIndex from '../entities_index';
 
 const mapStateToProps = (state, ownProps) => ({
-    events: state.props.events,
+    entities: Object.values(state.entities.events),
+    indexType: "Event"
     // event: state.props.events[ownProps.match.params.eventId]
 })
 
 const mapDispatchToProps = dispatch => ({
-    fetchEvents: () => dispatch(fetchEvents()),
-    // fetchEvent: errors => dispatch(fetchEvent(errors)),
+    fetchEntities: () => dispatch(fetchEvents()),
+    // fetchEntity: eventId => dispatch(fetchEvent(eventId)),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(EventIndex)
+export default connect(mapStateToProps, mapDispatchToProps)(EntitiesIndex)
