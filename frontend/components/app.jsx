@@ -6,14 +6,14 @@ import CovidContainer from './header/covid/covid_container'
 import NavBarContainer from './header/nav_bar/navbar_container';
 import SignUpContainer from './session/signup_form_container';
 import LogInContainer from './session/login_form_container';
-import GroupsIndexContainer from './groups/index/groups_index_container';
-import GroupShowContainer from './groups/show/group_show_container';
+import GroupsIndexContainer from "./indexes/groups/groups_index_container";
+import GroupShowContainer from './show/groups/group_show_container';
 import GroupCreateFormContainer from './forms/groups/create_form_container';
 import GroupEditFormContainer from './forms/groups/update_form_container';
-import EventIndexContainer from './events/index/event_index_container';
+import EventIndexContainer from './indexes/events/event_index_container';
 import EventCreateFormContainer from "./forms/events/create_event_container";
 import EventEditFormContainer from "./forms/events/edit_event_container";
-import EventShowContainer from './events/show/event_show_container';
+import EventShowContainer from "./show/events/event_show_container";
 import FooterContainer from "./footer/footer_component_container";
 import Landing from './splash_page/splash_page';
 

@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
 
 import { fetchEvent, deleteEvent } from '../../../actions/events_actions';
-import { fetchAttendees, createAttendee, deleteAttendee  } from '../../../actions/attendees_actions';
+import { fetchAttendees, createAttendee, deleteAttendee } from '../../../actions/attendees_actions';
 import { fetchLocation } from '../../../actions/locations_actions';
+
 import EventShow from './event_show';
 
 
