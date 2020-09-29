@@ -19,7 +19,7 @@ class NavTabs extends React.Component {
 
     allMembers() {
         if (Object.values(this.props.members) === 0) return null;
-        debugger
+        // debugger
         
         return (
             <div className="tab-member-list-container">

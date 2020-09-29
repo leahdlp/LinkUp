@@ -1,12 +1,23 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom'
 
-class GroupCreateForm extends React.Component {
+class EntityForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.group;
+        this.state = this.props.entity;
+
+        console.log(this.props.formType)
+        this.entity = this.props.formType.split(" ").includes("Group")
+          ? "Group"
+          : "Event"; 
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.update = this.update.bind(this);
+        this.handleCancel = this.update.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
+        this.renderDateTime = this.renderDateTime.bind(this);
+        this.renderHeader = this.renderHeader.bind(this);
+        this.renderForm = this.renderForm.bind(this);
     }
 
     update(field) {
@@ -15,13 +26,23 @@ class GroupCreateForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const group = Object.assign({}, this.state);
+        let entity = Object.assign({}, this.state);
 
-        group.location_id = parseInt(group.location_id);
-        group.subcategory_id = parseInt(group.subcategory_id);
+        entity.location_id = parseInt(entity.location_id);
+        entity.subcategory_id = parseInt(entity.subcategory_id);
 
-        this.props.processForm(group)
-            .then(action => this.props.history.push(`/groups/${action.group.id}`))
+        this.props.processForm(entity)
+            .then(action => {
+              if (this.entity === "Group") {
+                this.props.history.push(
+                  `/${this.entity.toLowerCase()}s/${action.group.id}`
+                );
+              } else if (this.entity === "Event") {
+                this.props.history.push(
+                  `/${this.entity.toLowerCase()}s/${action.event.id}`
+                );
+              }
+            })
     }
 
     handleCancel(event) {
@@ -47,29 +68,49 @@ class GroupCreateForm extends React.Component {
         )
     }
 
-    renderHeader() {
+    renderDateTime() {
+      if (this.entity === "Group") {
+        return null
+      } else {
         return (
-            <div className="group-form-header">
-                <div className="form-type">
-                    <h2>{this.props.formType}</h2>
-                </div>
-                <br />
-                <p id="header-msg">
-                    Want to update an existing group?
-                    <Link
-                        className="other-link"
-                        to="/"
-                    >
-                        View Groups
-                    </Link>
-                </p>
-            </div>
+          <label className="user-input"> Date and Time:
+              <br />
+              <input 
+                  type="datetime-local" 
+                  value={this.state.date_time}
+                  onChange={this.update("date_time")}
+              />
+          </label>
         )
+      }
+    }
+
+    renderHeader() {
+      let fillWord = this.entity === "Group" ? " " : " Group "
+      let other_link = this.entity === "Group" ? "/" : `${this.props.groupId}`
+      console.log(other_link)
+
+        return (
+          <div className="group-form-header">
+            <div className="form-type">
+              <h2>{this.props.formType}</h2>
+            </div>
+            <br />
+            <p id="header-msg">
+              Want to update an existing {this.entity.toLowerCase()}?
+              <Link className="other-link" to={other_link}>
+                View{fillWord}{this.entity}s
+              </Link>
+            </p>
+          </div>
+        );
     }  
 
     renderForm() {
         let currentLoc = this.state.location_id || "default";
-        let currentCat = this.state.subcategory_id || "default"
+        let currentCat = this.state.subcategory_id || "default";
+
+        let label = this.entity === "Group" ? "Description" : "Details";
 
         return (
           <div className="form-container">
@@ -77,7 +118,7 @@ class GroupCreateForm extends React.Component {
               <div className="inputs">
                 <label className="user-input">
                   {/* {" "} */}
-                  Group Name:
+                  Name:
                   <br />
                   <input
                     type="text"
@@ -88,7 +129,7 @@ class GroupCreateForm extends React.Component {
                 <br />
                 <label className="user-input">
                   {/* {" "} */}
-                  Description:
+                  {label}:
                   <br />
                   <textarea
                     type="text"
@@ -96,6 +137,8 @@ class GroupCreateForm extends React.Component {
                     onChange={this.update("description")}
                   />
                 </label>
+                <br />
+                  {this.renderDateTime()}
                 <br />
                 <label className="user-input">
                   {/* {" "} */}
@@ -167,7 +210,7 @@ class GroupCreateForm extends React.Component {
     }
 
     render() {
-        if (this.props.group === undefined) return null;
+        if (this.props.entity === undefined) return <div>nah sis</div>;
         return (
             <div>
                 {this.renderErrors()}
@@ -182,4 +225,4 @@ class GroupCreateForm extends React.Component {
     }
 }
 
-export default GroupCreateForm;
+export default EntityForm;

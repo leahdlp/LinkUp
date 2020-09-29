@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
 import React from 'react';
 
-import { createEvent, clearEventErrors } from '../../../actions/events_actions';
+import { fetchEvent, updateEvent, clearEventErrors } from '../../../actions/events_actions';
 import { fetchLocations } from '../../../actions/locations_actions';
 
-import EventForm from './event_form';
+import EntityForm from '../entity_form';
 
-class CreateEventForm extends React.Component {
+class UpdateEventForm extends React.Component {
     componentDidMount() {
+        this.props.fetchEvent(this.props.match.params.eventId);
         this.props.fetchLocations();
     }
 
@@ -15,11 +16,12 @@ class CreateEventForm extends React.Component {
         this.props.clearEventErrors();
     }
 
-    render () {
+    render() {
+        if (this.props.event === undefined) return null;
         if (this.props.locations === undefined) return null;
 
         return (
-            <EventForm 
+            <EntityForm
                 event={this.props.event}
                 formType={this.props.formType}
                 errors={this.props.errors}
@@ -31,24 +33,18 @@ class CreateEventForm extends React.Component {
     }
 }
 
-
 const mapStateToProps = (state, ownProps) => ({
-    event: { 
-        name: "", 
-        description: "", 
-        group_id: ownProps.match.params.groupId, 
-        date_time: 0, 
-        location_id: 0 
-    },
-    forType: 'Create Event',
+    entity: state.entities.events[ownProps.match.params.eventId],
+    formType: 'Update Event',
     errors: state.errors.events,
     locations: state.entities.locations
 })
 
 const mapDispatchToProps = dispatch => ({
-    processForm: event => dispatch(createEvent(event)),
+    processForm: event => dispatch(updateEvent(event)),
+    fetchEvent: eventId => dispatch(fetchEvent(eventId)),
     fetchLocations: () => dispatch(fetchLocations()),
     clearEventErrors: () => dispatch(clearEventErrors())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateEventForm)
+export default connect(mapStateToProps, mapDispatchToProps)(UpdateEventForm)

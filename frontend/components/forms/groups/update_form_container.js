@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
 import React from 'react';
 
-import { createGroup, clearGroupErrors } from '../../../actions/groups_actions';
-import { fetchSubcategories } from '../../../actions/subcategories_actions';
+import { updateGroup, fetchGroup, clearGroupErrors } from '../../../actions/groups_actions';
 import { fetchLocations } from '../../../actions/locations_actions';
+import { fetchSubcategories } from '../../../actions/subcategories_actions';
 
-import GroupForm from './group_form';
+import EntityForm from '../entity_form';
 
-
-class GroupCreateForm extends React.Component {
+class GroupEditForm extends React.Component {
     componentDidMount() {
+        this.props.fetchGroup(this.props.match.params.groupId);
         this.props.fetchLocations();
         this.props.fetchSubcategories();
     }
@@ -21,10 +21,10 @@ class GroupCreateForm extends React.Component {
     render() {
         const locations = this.props.locations;
         const subcategories = this.props.subcategories;
-
+        if (this.props.group === undefined) return null;
         if (locations === undefined || subcategories === undefined) return null;
         return (
-            <GroupForm
+            <EntityForm 
                 history={this.props.history}
                 processForm={this.props.processForm}
                 errors={this.props.errors}
@@ -38,26 +38,22 @@ class GroupCreateForm extends React.Component {
     }
 }
 
+
 const mapStateToProps = (state, ownProps) => ({
     errors: state.errors.groups,
-    formType: 'Create Group',
-    group: {
-        name: "",
-        description: "",
-        subcategory_id: 0,
-        location_id: 0,
-        creator_id: state.session.id
-    },
+    formType: 'Update Group',
+    entity: state.entities.groups[ownProps.match.params.groupId],
     locations: state.entities.locations,
     subcategories: state.entities.subCategories,
     creator: state.entities.users[state.session.id]
 })
 
 const mapDispatchToProps = dispatch => ({
+    fetchGroup: groupId => dispatch(fetchGroup(groupId)),
     fetchLocations: () => dispatch(fetchLocations()),
     fetchSubcategories: () => dispatch(fetchSubcategories()),
-    processForm: group => dispatch(createGroup(group)),
+    processForm: group => dispatch(updateGroup(group)),
     clearGroupErrors: () => dispatch(clearGroupErrors())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(GroupCreateForm)
+export default connect(mapStateToProps, mapDispatchToProps)(GroupEditForm);

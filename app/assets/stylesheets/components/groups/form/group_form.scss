@@ -63,6 +63,11 @@ div {
     // border: 7px solid green;
 }
 
+.user-input > textarea:focus {
+    border: 1px solid blue;
+    padding: 5px 5px;
+}
+
 .user-input select {
     width: 100%;
 }
