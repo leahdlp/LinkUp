@@ -24,9 +24,6 @@ const App = () => (
       <Route path="/" component={NavBarContainer} />
     </header>
 
-    <AuthRoute exact path="/" component={EventIndexContainer} />
-    <ProtectedRoute exact path="/" component={GroupsIndexContainer} />
-
     <Switch>
       <ProtectedRoute
         exact
@@ -41,6 +38,7 @@ const App = () => (
       <Route exact path="/groups/:groupId" component={GroupShowContainer} />
       <AuthRoute path="/login" component={LogInContainer} />
       <AuthRoute path="/signup" component={SignUpContainer} />
+      <ProtectedRoute exact path="/" component={GroupsIndexContainer} />
       {/* <ProtectedRoute exact path="/" component={GroupsIndexContainer} /> */}
       {/* <AuthRoute exact path="/" component={EventIndexContainer} /> */}
     </Switch>
@@ -57,6 +55,7 @@ const App = () => (
         component={EventEditFormContainer}
       />
       <Route path="/events/:eventId" component={EventShowContainer} />
+      <AuthRoute exact path="/" component={EventIndexContainer} />
     </Switch>
 
     <footer>
