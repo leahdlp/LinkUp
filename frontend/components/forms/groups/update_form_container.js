@@ -21,7 +21,8 @@ class GroupEditForm extends React.Component {
     render() {
         const locations = this.props.locations;
         const subcategories = this.props.subcategories;
-        if (this.props.group === undefined) return null;
+
+        if (this.props.entity === undefined) return null;
         if (locations === undefined || subcategories === undefined) return null;
         return (
             <EntityForm 
@@ -29,7 +30,7 @@ class GroupEditForm extends React.Component {
                 processForm={this.props.processForm}
                 errors={this.props.errors}
                 formType={this.props.formType}
-                group={this.props.group}
+                entity={this.props.entity}
                 locations={this.props.locations}
                 subcategories={this.props.subcategories}
                 creator={this.props.creator}

@@ -210,7 +210,7 @@ class EntityForm extends React.Component {
     }
 
     render() {
-        if (this.props.entity === undefined) return <div>nah sis</div>;
+        if (this.props.entity === undefined) return null;
         return (
             <div>
                 {this.renderErrors()}
