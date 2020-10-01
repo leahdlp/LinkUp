@@ -38,7 +38,7 @@ const App = () => (
       <Route exact path="/groups/:groupId" component={GroupShowContainer} />
       <AuthRoute path="/login" component={LogInContainer} />
       <AuthRoute path="/signup" component={SignUpContainer} />
-      <ProtectedRoute exact path="/" component={GroupsIndexContainer} />
+      {/* <ProtectedRoute exact path="/" component={GroupsIndexContainer} /> */}
     </Switch>
 
     <Switch>

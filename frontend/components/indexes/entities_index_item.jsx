@@ -5,12 +5,13 @@ const EntitiesIndexItem = ({ history, entity, indexType }) => {
     `/groups/${entity.id}` : `/events/${entity.id}`;
     
     return (
-        <div className="grid-item"><li 
-            className="index-item"
-            onClick={() => history.push(link)}
-        >
-            {entity.name}
-        </li></div>
+        <div className="grid-item">
+            <li 
+                className="index-item"
+                onClick={() => history.push(link)}>
+                {entity.name}
+            </li>
+        </div>
     )
 }
 

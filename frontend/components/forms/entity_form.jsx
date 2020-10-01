@@ -91,7 +91,7 @@ class EntityForm extends React.Component {
       console.log(other_link)
 
         return (
-          <div className="group-form-header">
+          <div className="entity-form-header">
             <div className="form-type">
               <h2>{this.props.formType}</h2>
             </div>
@@ -214,8 +214,8 @@ class EntityForm extends React.Component {
         return (
             <div>
                 {this.renderErrors()}
-                <div className="group-page">
-                    <div className="group-form-container">
+                <div className="entity-form-page">
+                    <div className="entity-form-container">
                         {this.renderHeader()}
                         {this.renderForm()}
                     </div>
