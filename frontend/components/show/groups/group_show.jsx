@@ -36,7 +36,7 @@ class GroupShow extends React.Component {
                     </div>
                 </div>
                 
-                <div className="subcats">
+                <div className="subcats-list-container">
                     <SubcategoriesList 
                         group={group}
                         subcategories={this.props.subcategories}

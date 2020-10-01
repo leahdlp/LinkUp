@@ -34,9 +34,6 @@ const GroupShowHeader = ({
                     </div>
                 </div>
 
-
-                
-                
                 <GroupShowHeaderNav
                     currentUser={currentUser}
                     group={group}

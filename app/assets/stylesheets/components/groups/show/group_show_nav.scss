@@ -1,52 +1,64 @@
 $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 $border-bottom: 1px solid rgb(211, 211, 211);
-
 .show-navbar-container {
-    border-top: $border-bottom;
-    border-bottom: $border-bottom;
-    display: flex;
-    background-color: white;
-    // border: goldenrod 10px solid;
-}
-
-.show-navbar {
     font-family: $meetup-font;
     background-color: white;
     width: 100%;
-    height: 55px;
     display: flex;
-    align-items: center;
+    justify-content: center;
+//     align-items: center;
     // border: gray 1px solid;
+    border-top: $border-bottom;
+    border-bottom: $border-bottom;
+}
+
+.show-navbar {
+    display: flex;
+    justify-content: space-around;
+    height: 55px;
+    width: 53%;
+    // justify-content: space-around;
+    // padding-left: 19%;
+    background-color: white;
+    // border: goldenrod 1px solid;
 }
 
 .tabs-container {
     background-color: white;
     display: flex;
     justify-content: center;
-    width: 55%;
+    width: 65%;
+    // max-width: 35%;
     height: 100%;
+    // margin-right: 2%;
+    // padding-right: 15%;
+    // border: 10px solid green;
 }
 
 .show-nav-btns {
     display: flex;
-    padding-left: 35px;
+    width: 33%;
+    // margin-left: 2%;
     background-color: white;
+    // border: 3px solid blue;
 }
 
 .show-pink-btn-container {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
     max-width: 370px;
     min-width: fit-content;
     background-color: white;
+    // border: red 4px solid;
 }
 
 .show-pink-btn {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     padding: 5px;
-    width: 350px;
+    width: 100%;
     min-width: fit-content;
     background-color: white;
 }
@@ -57,6 +69,7 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     padding: 0px 16px;
     margin-left: 10px;
     min-height: 36px;
+    min-width: fit-content;
     height: fit-content;
     background-color: $pink-btn-color;
     color: white;
@@ -103,20 +116,23 @@ $border-bottom: 1px solid rgb(211, 211, 211);
 
 .tab {
     display: block;
-    margin-left: 65%;
+    // margin-left: 17%;
     margin-bottom: 40px;
-    width: 70%;
+    width: 100%;
     height: 100%;
+
     background-color: white;
     font-size: 14px;
+    // border: red 10px solid;
 }
 
 .tab-header-container {
     display: flex;
     justify-content: flex-end;
-    margin-left: 35px;
+    // margin-left: 35px;
     width: 100%;
     height: inherit;
+    // border: salmon 3px solid;
 }
 
 .tab-header {
@@ -143,22 +159,26 @@ $border-bottom: 1px solid rgb(211, 211, 211);
 .tab-content-container {
     display: flex;
     justify-content: center;
-    width: 700px;
+    min-width: fit-content;
+    width: 100%;
+    max-width: 650px;
+
     height: fit-content;
     border-top: $border-bottom;
-    // margin-left: 100px;
+    // margin-left: 3%;
     // border: deeppink 1px solid;
 }
 
 .tab-content {
     display: block;
     // margin-left: 80px;
-    margin-top: 5%;
-    margin-bottom: 40px;
-    min-width: 600px;
-    width: 80%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-left: 3%;
+    min-width: 300px;
+    width: 100%;
     height: fit-content;
     font-size: 16px;
-    color: black;
-    // border: orange 1px solid;
+    // color: black;
+    // border: orange 7px solid;
 }

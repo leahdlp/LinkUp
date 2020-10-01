@@ -86,19 +86,21 @@ class GroupShowHeaderNav extends React.Component {
         return (
             <div className="show-navbar-container">
                 <div className="show-navbar">
+                    {/* <div className="show-navbar"> */}
                     <div className="tabs-container">
                         <NavTabs 
                             group={group}
                             members={this.props.members}
                         />
-                        <div className="show-nav-btns">
-                            <div className="show-pink-btn-container">
-                                <div className="show-pink-btn">
-                                    {this.displayMemberButtonOrGroupButtons()}
-                                </div>
+                    </div>
+                    <div className="show-nav-btns">
+                        <div className="show-pink-btn-container">
+                            <div className="show-pink-btn">
+                                {this.displayMemberButtonOrGroupButtons()}
                             </div>
                         </div>
                     </div>
+                    {/* </div> */}
                 </div>
             </div>
         )
