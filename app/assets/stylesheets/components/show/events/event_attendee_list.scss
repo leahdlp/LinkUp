@@ -1,18 +1,18 @@
 .attendee-section {
     display: flex;
     justify-content: center;
-    border: lightcoral 10px solid;
+    // border: lightcoral 10px solid;
     height: 500px;
 }
 
 .attendee-container {
-    width: 45%;
+    width: 35%;
     // padding-left: 2%;
-    border: lawngreen 10px solid;
+    // border: lawngreen 10px solid;
 }
 
 .attendee-list-container {
-    border: crimson 3px solid;
+    // border: crimson 3px solid;
     height: 100%;
 }
 
@@ -21,7 +21,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 8%;
     height: 85%;
-    border: blue 1px solid;
+    // border: blue 1px solid;
 }
 .attendee-list-item {
     height: 100%;
@@ -29,7 +29,7 @@
     border-radius: 8px;
     background-color: white;
     text-align: center;
-    border: coral 2px solid;
+    // border: coral 2px solid;
     // display: flex;
     // justify-content: center;
 }
@@ -51,5 +51,5 @@
     border-radius: 90px;
     height: 80px;
     width: 80px;
-    border: purple 1px solid;
+    // border: purple 1px solid;
 }
