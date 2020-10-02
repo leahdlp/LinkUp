@@ -798,310 +798,328 @@ member65 = Member.create!({ user_id: user9.id, group_id: group3.id })
 member66 = Member.create!({ user_id: user9.id, group_id: group13.id })
 
 # # EVENTS:
+Event.destroy_all
 event1 = Event.create!({
-    name: "Be Black, Be Mindful", 
-    group_id: group22.id, 
-    creator_id: user15.id,
-    date: (datetime),
-    time: (datetime),
+    name: "Understanding Black Fandoms", 
+    group_id: group4.id, 
+    date_time: DateTime.strptime("09/14/2020 8:00", "%m/%d/%Y %H:%M"),
+    description: "Purchase tickets here! https://www.crowdcast.io/e/looking-black
+Ticket prices go up the evening of the event so get yours soon.
+
+Often, when we talk about fandom, it’s usually white folks talking about the things they love, as if their fan objects stand in for the universality of all fandom. But what about Black fandoms and the things we love? Dr. Alfred L. Martin Jr., Assistant Professor at the University of Iowa, will delve into Black fandoms centered around Black Panther, Tyler Perry’s media output, Misty Copeland, the cult classic The Wiz and the perennial sitcom The Golden Girls. Everyone’s invited to explore how Black fandom operates and core discourses around it during this fascinating talk.
+******************************************
+The Lecture Bar hosts expert scholars and researchers in their fields. All presenters are paid an honorarium that respects their time and expertise, so a modest ticket cost is incurred.
+
+*******************************************
+Can't make the event date? All ticket-holders receive access to replay the program.",
     location_id: losAngeles.id
 })
 
 event2 = Event.create!({
-    name: "Black Virtual Career Fair", 
+    name: "Black Excellence In Tech", 
     group_id: group23.id, 
-    creator_id: user86.id,
-    date: (datetime),
-    time: (datetime),
-    location_id: 
+    date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+    description: "Join Flatiron School, in partnership with Blacks In Technology Foundation, for an event featuring successful black professionals in tech, all from different industries, backgrounds and experiences.
+
+Panelists will address:
+- Their introduction into technology
+- Their motivation for pursuing a career in tech
+- How this pivotal time in society will affect black people in the tech industry
+- Connecting with people of color within the tech industry
+- How to build a sustainable career in an industry where you are one of the few persons of color
+
+Hoping to break into tech or looking for your next opportunity? Bring all of your questions and get ready to be inspired from the source.
+
+We welcome people from all ethnicities and races to attend this event, as well as people of all technical backgrounds; including newbies thinking about breaking into tech to professionals with flourishing careers",
+    location_id: oakland.id
 })
 
 event3 = Event.create!({
-    name: "", 
-    group_id: group.id, 
-    creator_id: user.id,
-    date: (datetime),
-    time: (datetime),
-    location_id: 
+    name: "Black Lives Matter Discussions", 
+    group_id: group12.id, 
+    date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+    description: "Let's have an open discussion on Black Lives Matter—the Civil Rights Movement of our times—both on a macro and micro scale.
+Our 60 minutes Journaling Sessions will focus on:
+1. Past: Your Personal Experience in Racial/Social Injustices & Justices
+2. Present: Resources on the progressions and regressions of civil society.
+3. Future: What are your hopes, your dreams, your aspirations for yourself, your family, friends, and society in the future?
+#differentiate, but don't segregate.
+We are inclusive, compassionate, and diverse.
+We aim to embrace both the tragedy and the divine comedy of the individual life story, also known as The Love Story.",
+    location_id: houston.id
 })
 
-event4 = Event.create!({
-    name: "", 
-    group_id: group.id, 
-    creator_id: user.id,
-    date: (datetime),
-    time: (datetime),
-    location_id: 
-})
+# event4 = Event.create!({
+#     name: "", 
+#     group_id: group.id, 
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+#     description: "",
+#     location_id: 
+# })
 
-event5 = Event.create!({
-    name: "", 
-    group_id: group.id, 
-    creator_id: user.id,
-    date: (datetime),
-    time: (datetime),
-    location_id: 
-})
+# event5 = Event.create!({
+#     name: "", 
+#     group_id: group.id, 
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+#     description: "",
+#     location_id: 
+# })
 
-event6 = Event.create!({
-    name: "", 
-    group_id: group.id, 
-    creator_id: user.id,
-    date: (datetime),
-    time: (datetime),
-    location_id: 
-})
+# event6 = Event.create!({
+#     name: "", 
+#     group_id: group.id, 
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+#     description: "",
+#     location_id: 
+# })
 
-event7 = Event.create!({
-    name: "", 
-    group_id: group.id, 
-    creator_id: user.id,
-    date: (datetime),
-    time: (datetime),
-    location_id: 
-})
+# event7 = Event.create!({
+#     name: "", 
+#     group_id: group.id, 
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+#     description: "",
+#     location_id: 
+# })
 
-event8 = Event.create!({
-    name: "", 
-    group_id: group.id, 
-    creator_id: user.id,
-    date: (datetime),
-    time: (datetime),
-    location_id: 
-})
+# event8 = Event.create!({
+#     name: "", 
+#     group_id: group.id, 
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+#     description: "",
+#     location_id: 
+# })
 
-event9 = Event.create!({
-    name: "", 
-    group_id: group.id, 
-    creator_id: user.id,
-    date: (datetime),
-    time: (datetime),
-    location_id: 
-})
+# event9 = Event.create!({
+#     name: "", 
+#     group_id: group.id, 
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+#     description: "",
+#     location_id: 
+# })
 
-event10 = Event.create!({
-    name: "", 
-    group_id: group.id, 
-    creator_id: user.id,
-    date: (datetime),
-    time: (datetime),
-    location_id: 
-})
+# event10 = Event.create!({
+#     name: "", 
+#     group_id: group.id, 
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+#     description: "",
+#     location_id: 
+# })
 
 # event11 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event12 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event13 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event14 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event15 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event16 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event17 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event18 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event19 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event20 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event21 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event22 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event23 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event24 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event25 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event26 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event27 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event28 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event29 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # event30 = Event.create!({
 #     name: "", 
 #     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
+#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
+# description: "",
+#
 #     location_id: 
 # })
 
 # # ATTENDEES:
-# attendee1 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee2 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee3 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee4 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee5 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee6 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee7 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee8 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee9 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee10 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee11 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee12 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee13 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee14 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee15 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee16 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee17 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee18 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee19 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee20 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee21 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee22 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee23 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee24 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee25 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee26 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee27 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee28 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee29 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee30 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee31 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee32 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee33 = Attendee.create!({ event_id: event.id, user_id: user.id })
+Attendee.destroy_all
+attendee1 = Attendee.create!({ event_id: event1.id, user_id: user88.id })
+attendee2 = Attendee.create!({ event_id: event1.id, user_id: user77.id })
+attendee3 = Attendee.create!({ event_id: event1.id, user_id: user66.id })
+attendee4 = Attendee.create!({ event_id: event1.id, user_id: user55.id })
+attendee5 = Attendee.create!({ event_id: event1.id, user_id: user44.id })
+attendee6 = Attendee.create!({ event_id: event1.id, user_id: user33.id })
+attendee7 = Attendee.create!({ event_id: event1.id, user_id: user22.id })
+attendee8 = Attendee.create!({ event_id: event1.id, user_id: user11.id })
+attendee9 = Attendee.create!({ event_id: event1.id, user_id: user99.id })
+attendee10 = Attendee.create!({ event_id: event1.id, user_id: user101.id })
+attendee11 = Attendee.create!({ event_id: event1.id, user_id: user1.id })
+attendee12 = Attendee.create!({ event_id: event2.id, user_id: user42.id })
+attendee13 = Attendee.create!({ event_id: event2.id, user_id: user31.id })
+attendee14 = Attendee.create!({ event_id: event2.id, user_id: user53.id })
+attendee15 = Attendee.create!({ event_id: event2.id, user_id: user64.id })
+attendee16 = Attendee.create!({ event_id: event2.id, user_id: user75.id })
+attendee17 = Attendee.create!({ event_id: event2.id, user_id: user86.id })
+attendee18 = Attendee.create!({ event_id: event2.id, user_id: user97.id })
+attendee19 = Attendee.create!({ event_id: event2.id, user_id: user37.id })
+attendee20 = Attendee.create!({ event_id: event2.id, user_id: user45.id })
+attendee21 = Attendee.create!({ event_id: event2.id, user_id: user27.id })
+attendee22 = Attendee.create!({ event_id: event2.id, user_id: user90.id })
+attendee23 = Attendee.create!({ event_id: event3.id, user_id: user10.id })
+attendee24 = Attendee.create!({ event_id: event3.id, user_id: user20.id })
+attendee25 = Attendee.create!({ event_id: event3.id, user_id: user30.id })
+attendee26 = Attendee.create!({ event_id: event3.id, user_id: user40.id })
+attendee27 = Attendee.create!({ event_id: event3.id, user_id: user50.id })
+attendee28 = Attendee.create!({ event_id: event3.id, user_id: user60.id })
+attendee29 = Attendee.create!({ event_id: event3.id, user_id: user70.id })
+attendee30 = Attendee.create!({ event_id: event3.id, user_id: user80.id })
+attendee31 = Attendee.create!({ event_id: event3.id, user_id: user90.id })
+attendee32 = Attendee.create!({ event_id: event3.id, user_id: user100.id })
+attendee33 = Attendee.create!({ event_id: event3.id, user_id: user15.id })
 # attendee34 = Attendee.create!({ event_id: event.id, user_id: user.id })
 # attendee35 = Attendee.create!({ event_id: event.id, user_id: user.id })
 # attendee36 = Attendee.create!({ event_id: event.id, user_id: user.id })

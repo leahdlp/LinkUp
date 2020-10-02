@@ -31,7 +31,8 @@ class EventBar extends React.Component {
     }
 
     render() {
-        if (Object.values(this.attendees).length === 0) return null;
+        if (Object.values(this.attendees).length === 0) return 'EventBar';
+
         return this.eventButton();
     }
 }
