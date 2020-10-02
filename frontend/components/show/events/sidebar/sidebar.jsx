@@ -6,6 +6,9 @@ class SideBar extends React.Component {
 
     this.eventButton = this.eventButton.bind(this);
     this.convertDate = this.convertDate.bind(this);
+    this.handleHours = this.handleHours.bind(this);
+    this.startTime = this.startTime.bind(this);
+    this.endTime = this.endTime.bind(this);
     this.convertTime = this.convertTime.bind(this);
     this.convertDateTime = this.convertDateTime.bind(this);
   }
@@ -46,57 +49,50 @@ class SideBar extends React.Component {
 
     switch (month) {
       case "01":
-        month = "Jan";
+        month = "January";
         break;
       case "02":
-        month = "Feb";
+        month = "February";
         break;
       case "03":
-        month = "Mar";
+        month = "March";
         break;
       case "04":
-        month = "Apr";
+        month = "April";
         break;
       case "05":
         month = "May";
         break;
       case "06":
-        month = "Jun";
+        month = "June";
         break;
       case "07":
-        month = "Jul";
+        month = "July";
         break;
       case "08":
-        month = "Aug";
+        month = "August";
         break;
       case "09":
-        month = "Sep";
+        month = "September";
         break;
       case "10":
-        month = "Oct";
+        month = "October";
         break;
       case "11":
-        month = "Nov";
+        month = "November";
         break;
       case "12":
-        month = "Dec";
+        month = "December";
         break;
       default:
         break;
     }
 
-    if (year === "2020") {
-      return `${month} ${day}`;
-    } else {
-      return `${month} ${day}, ${year}`;
-    }
+    return `${month} ${day}, ${year}`;
   }
 
-  convertTime(time) {
-    const hms = time.split(":");
-    let hour = hms[0];
-    const min = hms[1];
-    let AMPM = "AM";
+  handleHours(hour) {
+    let AMPM = "AM"
 
     switch (hour) {
       case "13":
@@ -154,10 +150,41 @@ class SideBar extends React.Component {
     hour = hour.split("");
 
     if (hour[0] === "0") {
-      hour = hour[1];
+        hour = hour[1];
+    } else {
+        hour = hour.join("")
     }
 
-    return `${hour}:${min} ${AMPM}`;
+    return [hour, AMPM];
+  }
+
+  startTime(hms) {
+    let start_hour = hms[0];
+    const min = hms[1];
+
+    let str_time = this.handleHours(start_hour)
+
+    let strt_hr = str_time[0]
+    const AMPM = str_time[1];
+
+    return `${strt_hr}:${min} ${AMPM}`
+  }
+
+  endTime(hms) {
+    let end_hour = (parseInt(hms[0]) + 2).toString();
+    const min = hms[1];
+
+    let end_time = this.handleHours(end_hour);
+    end_hour = end_time[0];
+
+    const AMPM = end_time[1];
+
+    return `${end_hour}:${min} ${AMPM}`
+  }
+
+  convertTime(time) {
+    const hms = time.split(":");
+    return [this.startTime(hms), this.endTime(hms)];
   }
 
   convertDateTime(date_time) {
@@ -166,26 +193,23 @@ class SideBar extends React.Component {
     const time = dt_arr[1];
 
     return (
-      <h3>
-        {this.convertDate(date)} {this.convertTime(time)}
-      </h3>
+      <div className="date-time">
+        <h3 id="date">{this.convertDate(date)}</h3>
+        <h3 id="time">{this.convertTime(time)[0]} to {this.convertTime(time)[1]}</h3>
+      </div>
     );
   }
 
   render() {
-    if (Object.values(this.props.attendees).length === 0) return "EventBar";
-
     const event = this.props.event;
 
     return (
-      <div className="sidebar">
-        <div className="sidebar-info">
-          {this.convertDateTime(event.date_time)}
-          <h1>{event.name}</h1>
-        </div>
-      </div>
+    <div className="sidebar-info">
+        <i class="far fa-clock"></i>
+        {this.convertDateTime(event.date_time)}
+    </div>
     );
   }
 }
 
-export default EventBar;
+export default SideBar;

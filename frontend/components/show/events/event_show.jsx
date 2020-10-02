@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import EventShowHeader from './header/event_show_header';
 import AttendeeList from './attendees/attendee_list';
 import EventBar from './event_bar/event_bar';
+import Sidebar from './sidebar/sidebar';
 
 class EventShow extends React.Component {
     // constructor(props) {
@@ -82,7 +83,10 @@ class EventShow extends React.Component {
                     Group Details
                   </div>
                   <div className="sidebar-event-details">
-                    Event Details
+                    <Sidebar 
+                      event={event}
+                      group={this.props.group}
+                    />
                   </div>
                 </div>
               </div>
