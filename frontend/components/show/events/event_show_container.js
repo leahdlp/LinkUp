@@ -5,11 +5,13 @@ import { fetchAttendees, createAttendee, deleteAttendee } from '../../../actions
 import { fetchLocations } from '../../../actions/locations_actions';
 
 import EventShow from './event_show';
+import { fetchGroup } from '../../../actions/groups_actions';
 
 
 const mapStateToProps = (state, ownProps) => ({
     events: state.entities.events,
     event: state.entities.events[ownProps.match.params.eventId],
+    groups: state.entities.groups,
     attendees: state.entities.attendees,
     locations: state.entities.locations,
     users: state.entities.users,
@@ -20,6 +22,7 @@ const mapDispatchToProps = dispatch => ({
     fetchEvents: () => dispatch(fetchEvents()),
     fetchEvent: eventId => dispatch(fetchEvent(eventId)),
     deleteEvent: eventId => dispatch(deleteEvent(eventId)),
+    fetchGroup: groupId => dispatch(fetchGroup(groupId)),
     fetchAttendees: eventId => dispatch(fetchAttendees(eventId)),
     createAttendee: eventId => dispatch(createAttendee(eventId)),
     deleteAttendee: attendeeId => dispatch(deleteAttendee(attendeeId)),
