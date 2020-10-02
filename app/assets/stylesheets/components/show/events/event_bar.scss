@@ -1,6 +1,13 @@
+$border-bottom: 1px solid rgb(211, 211, 211);
+
 .event-bar-container {
     margin-top: 2%;
     // border: red 1px solid;
+    width: 100%;
     height: 100px;
     background-color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: -1px;
+    border-top: $border-bottom;
 }

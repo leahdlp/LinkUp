@@ -43,39 +43,52 @@ class EventShow extends React.Component {
               event={event}
               deleteEvent={this.props.deleteEvent}
             />
-            <div className="event-show-body-container">
-              <div className="event-show-body">
-                <div className="event-img-container">
-                  <div className="event-img"></div>
-                </div>
-                <div className="details-section-container">
-                  <div className="details-section">
-                    <h3>Details:</h3>
-                    {event.description}
+            <div className="event-show-main">
+              <div className="event-show-body-container">
+                <div className="event-show-body">
+                  <div className="event-img-container">
+                    <div className="event-img"></div>
+                  </div>
+                  <div className="details-section-container">
+                    <div className="details-section">
+                      <h3>Details:</h3>
+                      {event.description}
+                    </div>
+                  </div>
+
+                  <div className="attendee-section">
+                    <div className="attendee-container">
+                    <AttendeeList
+                      eventId={event.id}
+                      attendees={attendees}
+                      users={this.props.users}
+                    />
+                    </div>
+                  </div>
+
+                  <div className="event-group-container">
+                    <div className="event-group">
+                      <Link to={`/groups/${event.group_id}`}>
+                        {/* {group.name} */}
+                        The Event's Group
+                      </Link>
+                    </div>
                   </div>
                 </div>
+              </div>
 
-                <div className="attendee-section">
-                  <div className="attendee-container">
-                  <AttendeeList
-                    eventId={event.id}
-                    attendees={attendees}
-                    users={this.props.users}
-                  />
+              <div className="sidebar-container">
+                <div className="sidebar">
+                  <div className="sidebar-group-details">
+                    Group Details
                   </div>
-                </div>
-
-                <div className="event-group-container">
-                  <div className="event-group">
-                    <Link to={`/groups/${event.group_id}`}>
-                      {/* {group.name} */}
-                      The Event's Group
-                    </Link>
+                  <div className="sidebar-event-details">
+                    Event Details
                   </div>
                 </div>
               </div>
             </div>
-
+            
             <div className="event-bar-container">
                 <EventBar
                 event={event}
