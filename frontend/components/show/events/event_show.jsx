@@ -43,30 +43,36 @@ class EventShow extends React.Component {
               event={event}
               deleteEvent={this.props.deleteEvent}
             />
+            <div className="event-show-body-container">
+              <div className="event-show-body">
+                <div className="event-img-container">
+                  <div className="event-img"></div>
+                </div>
+                <div className="details-section-container">
+                  <div className="details-section">
+                    <h3>Details:</h3>
+                    {event.description}
+                  </div>
+                </div>
 
-            <div className="details-section-container">
-              <div className="details-section">
-                <h3>Details:</h3>
-                {event.description}
-              </div>
-            </div>
+                <div className="attendee-section">
+                  <div className="attendee-container">
+                  <AttendeeList
+                    eventId={event.id}
+                    attendees={attendees}
+                    users={this.props.users}
+                  />
+                  </div>
+                </div>
 
-            <div className="attendee-section">
-              <div className="attendee-container">
-              <AttendeeList
-                eventId={event.id}
-                attendees={attendees}
-                users={this.props.users}
-              />
-              </div>
-            </div>
-
-            <div className="event-group-container">
-              <div className="event-group">
-                <Link to={`/groups/${event.group_id}`}>
-                  {/* {group.name} */}
-                  The Event's Group
-                </Link>
+                <div className="event-group-container">
+                  <div className="event-group">
+                    <Link to={`/groups/${event.group_id}`}>
+                      {/* {group.name} */}
+                      The Event's Group
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
 

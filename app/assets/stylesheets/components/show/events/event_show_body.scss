@@ -1,0 +1,31 @@
+.event-show-body-container {
+    width: 60%; 
+    display: flex;
+    justify-content: flex-end;
+    // border: yellow 10px solid;
+
+}
+
+.event-show-body {
+    // border: red 10px solid;
+    margin: 5%;
+    width: 60%;
+}
+
+.event-img-container {
+    // border: salmon 4px solid;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.event-img {
+    // border: royalblue 3px solid;
+    height: 100%;
+    width: 90%;
+    background-image: image-url('brunch.jpg');
+    background-repeat: no-repeat;
+    background-size: 600px 350px;
+    // border-radius: ;
+
+}

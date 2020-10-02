@@ -1,8 +1,11 @@
-.details-section-container {
-    border: yellowgreen 10px solid;
+.details-section-container{
+    display: flex;
+    justify-content: center;
+    // border: blue 10px solid;
 }
 
 .details-section {
-    border: darkcyan 10px solid;
-    width: 35%;
+    width: 100%;
+    padding-left: 2%;
+    // border: indigo 10px solid;
 }
