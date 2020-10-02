@@ -53,7 +53,7 @@ const App = () => (
         component={EventEditFormContainer}
       />
       <Route path="/events/:eventId" component={EventShowContainer} />
-      <AuthRoute exact path="/" component={EventIndexContainer} />
+      <Route exact path="/" component={EventIndexContainer} />
     </Switch>
 
     <footer>

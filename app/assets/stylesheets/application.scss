@@ -39,5 +39,9 @@
 @import "components/show/groups/group_show_header";
 @import "components/show/groups/group_show_members";
 @import "components/show/groups/group_show_categories";
+
+// EventShow:
+@import "components/show/events/event_show_header";
+@import "components/show/events/event_attendee_list";
 // GroupForm:
 @import "components/form/entity_form";

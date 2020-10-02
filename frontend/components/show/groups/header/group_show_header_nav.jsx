@@ -8,7 +8,7 @@ class GroupShowHeaderNav extends React.Component {
 
         let button =
             <button onClick={() => this.props.createMember(group.id)}>
-                Join this group
+                Join group
             </button>
 
         let members = this.props.members;
@@ -17,7 +17,7 @@ class GroupShowHeaderNav extends React.Component {
             if (this.props.currentUser && 
                 members[id].user_id === this.props.currentUser.id) {
                 button = <button onClick={() => this.props.deleteMember(id)}>
-                    Leave this group
+                    Leave group
                 </button>
             }
         }

@@ -517,20 +517,34 @@ group21 = Group.create!({
     location_id: miami.id, 
     creator_id: user51.id
 })
-# group22 = Group.create({ 
-#     name: "Blacks in Technology - SF Bay Area(Official)", 
-#     description: "coool group", 
-#     subcategory_id: sub_cat, 
-#     location_id: "", 
-#     creator_id: user 
-# })
-# group23 = Group.create({ 
-#     name: "Blacks in Technology - SF Bay Area(Official)", 
-#     description: "coool group", 
-#     subcategory_id: sub_cat, 
-#     location_id: "", 
-#     creator_id: user 
-# })
+group22 = Group.create({ 
+    name: "The Right Kind Of Black Girl", 
+    description: "Are you tired of code-switching? Or feeling like you are alone in white spaces? Or how about working twice as hard as everyone else to prove your worth? If so, this space is for you.
+
+Founded by Shambria Williams, a USC graduate and young professional who grew tired of racist people and people of color who stem from wealthy backgrounds having little to no idea and/or being willfully ignorant of the challenges Black females face in white spaces.
+
+This group was created to provide a safe space for Black female professionals of all shades to vent, mentor, coach, listen, and, most importantly, develop a support system amongst women who share similar experiences.
+
+We will host focus groups, cocktail hours, hang outs, and more. We will also share tips and tricks to deal with micro-aggressions, implicit bias, intersectionality, micro-inequities, and inclusion amongst other things. We hope you will embark on this journey of sisterhood with us in building the right kind of professional Black woman.
+
+* If your membership is approved, there is a requirement to join our GroupMe community.", 
+    subcategory_id: sub_cat121.id, 
+    location_id: losAngeles.id, 
+    creator_id: user31.id 
+})
+group23 = Group.create({ 
+    name: "Awkward Black Tribe", 
+    description: "No matter what you're into Awkward Black Tribe has got you. The joy of this group is you no longer have to live a tokenized existence when it comes to your social life. You now have access to over 1,300 other highly eclectic, like-minded black people who are into doing the same things that you're constantly being scrutinized for partaking in.
+
+We all know that there is no such thing as a universal black experience. Our interests are just as diverse as our upbringings. If you're looking for a non judgmental, low anxiety place to share your passions then you've found your tribe. And if you feel like your passion isn't being represented through our events then don't be afraid to pitch me an idea.
+
+Your Awkward Organizer,
+
+Roger Porter", 
+    subcategory_id: sub_cat154.id, 
+    location_id: oakland.id, 
+    creator_id: user86.id
+})
 # group24 = Group.create({ 
 #     name: "Blacks in Technology - SF Bay Area(Official)", 
 #     description: "coool group", 
@@ -717,129 +731,162 @@ group21 = Group.create!({
 # MEMBERS:
 Member.destroy_all
 member1 = Member.create!({ user_id: user0.id, group_id: group1.id })
-member2 = Member.create!({ user_id: user0.id, group_id: group2.id })
-member3 = Member.create!({ user_id: user0.id, group_id: group3.id })
-member4 = Member.create!({ user_id: user0.id, group_id: group4.id })
-member5 = Member.create!({ user_id: user0.id, group_id: group5.id })
-member6 = Member.create!({ user_id: user0.id, group_id: group6.id })
-member7 = Member.create!({ user_id: user1.id, group_id: group1.id })
-member8 = Member.create!({ user_id: user1.id, group_id: group2.id })
-member9 = Member.create!({ user_id: user1.id, group_id: group3.id })
-member10 = Member.create!({ user_id: user1.id, group_id: group4.id })
-member11 = Member.create!({ user_id: user1.id, group_id: group5.id })
-member12 = Member.create!({ user_id: user1.id, group_id: group6.id })
+member2 = Member.create!({ user_id: user0.id, group_id: group3.id })
+member3 = Member.create!({ user_id: user0.id, group_id: group5.id })
+member4 = Member.create!({ user_id: user0.id, group_id: group7.id })
+member5 = Member.create!({ user_id: user0.id, group_id: group9.id })
+member6 = Member.create!({ user_id: user0.id, group_id: group11.id })
+member7 = Member.create!({ user_id: user1.id, group_id: group2.id })
+member8 = Member.create!({ user_id: user1.id, group_id: group4.id })
+member9 = Member.create!({ user_id: user1.id, group_id: group6.id })
+member10 = Member.create!({ user_id: user1.id, group_id: group8.id })
+member11 = Member.create!({ user_id: user1.id, group_id: group10.id })
+member12 = Member.create!({ user_id: user1.id, group_id: group12.id })
 member13 = Member.create!({ user_id: user2.id, group_id: group1.id })
-member14 = Member.create!({ user_id: user2.id, group_id: group2.id })
-member15 = Member.create!({ user_id: user2.id, group_id: group3.id })
-member16 = Member.create!({ user_id: user2.id, group_id: group4.id })
-member17 = Member.create!({ user_id: user2.id, group_id: group5.id })
-member18 = Member.create!({ user_id: user2.id, group_id: group6.id })
-member19 = Member.create!({ user_id: user2.id, group_id: group7.id })
-member20 = Member.create!({ user_id: user3.id, group_id: group1.id })
-member21 = Member.create!({ user_id: user3.id, group_id: group3.id })
-member22 = Member.create!({ user_id: user3.id, group_id: group4.id })
-member23 = Member.create!({ user_id: user3.id, group_id: group5.id })
-member24 = Member.create!({ user_id: user3.id, group_id: group6.id })
-member25 = Member.create!({ user_id: user3.id, group_id: group7.id })
-member26 = Member.create!({ user_id: user3.id, group_id: group8.id })
+member14 = Member.create!({ user_id: user2.id, group_id: group3.id })
+member15 = Member.create!({ user_id: user2.id, group_id: group5.id })
+member16 = Member.create!({ user_id: user2.id, group_id: group7.id })
+member17 = Member.create!({ user_id: user2.id, group_id: group9.id })
+member18 = Member.create!({ user_id: user2.id, group_id: group11.id })
+member19 = Member.create!({ user_id: user2.id, group_id: group13.id })
+member20 = Member.create!({ user_id: user3.id, group_id: group2.id })
+member21 = Member.create!({ user_id: user3.id, group_id: group4.id })
+member22 = Member.create!({ user_id: user3.id, group_id: group6.id })
+member23 = Member.create!({ user_id: user3.id, group_id: group8.id })
+member24 = Member.create!({ user_id: user3.id, group_id: group10.id })
+member25 = Member.create!({ user_id: user3.id, group_id: group12.id })
+member26 = Member.create!({ user_id: user3.id, group_id: group14.id })
 member27 = Member.create!({ user_id: user4.id, group_id: group1.id })
-member28 = Member.create!({ user_id: user4.id, group_id: group2.id })
-member29 = Member.create!({ user_id: user4.id, group_id: group3.id })
-member30 = Member.create!({ user_id: user4.id, group_id: group4.id })
-member31 = Member.create!({ user_id: user4.id, group_id: group5.id })
-member32 = Member.create!({ user_id: user4.id, group_id: group6.id })
-member33 = Member.create!({ user_id: user4.id, group_id: group7.id })
+member28 = Member.create!({ user_id: user4.id, group_id: group3.id })
+member29 = Member.create!({ user_id: user4.id, group_id: group5.id })
+member30 = Member.create!({ user_id: user4.id, group_id: group7.id })
+member31 = Member.create!({ user_id: user4.id, group_id: group9.id })
+member32 = Member.create!({ user_id: user4.id, group_id: group11.id })
+member33 = Member.create!({ user_id: user4.id, group_id: group13.id })
+member34 = Member.create!({ user_id: user5.id, group_id: group2.id })
+member35 = Member.create!({ user_id: user5.id, group_id: group4.id })
+member36 = Member.create!({ user_id: user5.id, group_id: group6.id })
+member37 = Member.create!({ user_id: user5.id, group_id: group8.id })
+member38 = Member.create!({ user_id: user5.id, group_id: group10.id })
+member39 = Member.create!({ user_id: user5.id, group_id: group12.id })
+member40 = Member.create!({ user_id: user6.id, group_id: group1.id })
+member41 = Member.create!({ user_id: user6.id, group_id: group3.id })
+member42 = Member.create!({ user_id: user6.id, group_id: group5.id })
+member43 = Member.create!({ user_id: user6.id, group_id: group7.id })
+member44 = Member.create!({ user_id: user6.id, group_id: group9.id })
+member45 = Member.create!({ user_id: user6.id, group_id: group11.id })
+member46 = Member.create!({ user_id: user7.id, group_id: group2.id })
+member47 = Member.create!({ user_id: user7.id, group_id: group6.id })
+member48 = Member.create!({ user_id: user7.id, group_id: group10.id })
+member49 = Member.create!({ user_id: user7.id, group_id: group14.id })
+member50 = Member.create!({ user_id: user7.id, group_id: group18.id })
+member51 = Member.create!({ user_id: user7.id, group_id: group22.id })
+member52 = Member.create!({ user_id: user7.id, group_id: group1.id })
+member53 = Member.create!({ user_id: user8.id, group_id: group1.id })
+member54 = Member.create!({ user_id: user8.id, group_id: group3.id })
+member55 = Member.create!({ user_id: user8.id, group_id: group6.id })
+member56 = Member.create!({ user_id: user8.id, group_id: group9.id })
+member57 = Member.create!({ user_id: user8.id, group_id: group12.id })
+member58 = Member.create!({ user_id: user8.id, group_id: group15.id })
+member59 = Member.create!({ user_id: user8.id, group_id: group18.id })
+member60 = Member.create!({ user_id: user9.id, group_id: group1.id })
+member61 = Member.create!({ user_id: user9.id, group_id: group5.id })
+member62 = Member.create!({ user_id: user9.id, group_id: group10.id })
+member63 = Member.create!({ user_id: user9.id, group_id: group15.id })
+member64 = Member.create!({ user_id: user9.id, group_id: group8.id })
+member65 = Member.create!({ user_id: user9.id, group_id: group3.id })
+member66 = Member.create!({ user_id: user9.id, group_id: group13.id })
 
 # # EVENTS:
-# event1 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
-#     location_id: 
-# })
+event1 = Event.create!({
+    name: "Be Black, Be Mindful", 
+    group_id: group22.id, 
+    creator_id: user15.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: losAngeles.id
+})
 
-# event2 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
-#     location_id: 
-# })
+event2 = Event.create!({
+    name: "Black Virtual Career Fair", 
+    group_id: group23.id, 
+    creator_id: user86.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
 
-# event3 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
-#     location_id: 
-# })
+event3 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
 
-# event4 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
-#     location_id: 
-# })
+event4 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
 
-# event5 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
-#     location_id: 
-# })
+event5 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
 
-# event6 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
-#     location_id: 
-# })
+event6 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
 
-# event7 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
-#     location_id: 
-# })
+event7 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
 
-# event8 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
-#     location_id: 
-# })
+event8 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
 
-# event9 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
-#     location_id: 
-# })
+event9 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
 
-# event10 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     creator_id: user.id,
-#     date: (datetime),
-#     time: (datetime),
-#     location_id: 
-# })
+event10 = Event.create!({
+    name: "", 
+    group_id: group.id, 
+    creator_id: user.id,
+    date: (datetime),
+    time: (datetime),
+    location_id: 
+})
 
 # event11 = Event.create!({
 #     name: "", 

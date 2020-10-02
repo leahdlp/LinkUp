@@ -1,26 +1,29 @@
 import { connect } from 'react-redux';
 
-import { fetchEvent, deleteEvent } from '../../../actions/events_actions';
+import { fetchEvent, deleteEvent, fetchEvents } from '../../../actions/events_actions';
 import { fetchAttendees, createAttendee, deleteAttendee } from '../../../actions/attendees_actions';
-import { fetchLocation } from '../../../actions/locations_actions';
+import { fetchLocations } from '../../../actions/locations_actions';
 
 import EventShow from './event_show';
 
 
 const mapStateToProps = (state, ownProps) => ({
+    events: state.entities.events,
     event: state.entities.events[ownProps.match.params.eventId],
     attendees: state.entities.attendees,
     locations: state.entities.locations,
-    currentUser: state.entities.users[state.session.id]
-})
+    users: state.entities.users,
+    currentUser: state.entities.users[state.session.id],
+});
 
 const mapDispatchToProps = dispatch => ({
+    fetchEvents: () => dispatch(fetchEvents()),
     fetchEvent: eventId => dispatch(fetchEvent(eventId)),
     deleteEvent: eventId => dispatch(deleteEvent(eventId)),
     fetchAttendees: eventId => dispatch(fetchAttendees(eventId)),
     createAttendee: eventId => dispatch(createAttendee(eventId)),
     deleteAttendee: attendeeId => dispatch(deleteAttendee(attendeeId)),
-    fetchLocation: locationId => dispatch(fetchLocation(locationId)),
+    fetchLocations: () => dispatch(fetchLocations()),
     processForm: eventId => dispatch(updateEvent(eventId))
 })
 

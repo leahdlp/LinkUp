@@ -18,11 +18,11 @@ const GroupShowHeader = ({
             <div className="show-pg-header">
                 <div className="img-details-header-container">
                     <div className="img-details-header">
-                        <div className={`group-img-container`}>
+                        <div className="show-img-container">
                             {/* <img src={window.communionUrl} alt="" /> */}
                         </div>
-                        <div className="group-details-container">
-                            <div className="group-details">
+                        <div className="show-details-container">
+                            <div className="show-details">
                                 <h1>{group.name}</h1>
                                 <p>
                                     {locations[group.location_id].city}, 
