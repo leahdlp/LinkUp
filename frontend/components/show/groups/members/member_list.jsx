@@ -2,7 +2,6 @@ import React from 'react';
 import MemberListItem from './member_list_item';
 
 const MemberList = ({ members, users }) => {
-    console.log("members: ", members);
     return(
         <div className="members-container">
             <div className="member-list-container">

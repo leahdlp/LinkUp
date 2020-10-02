@@ -6,7 +6,6 @@ class EntityForm extends React.Component {
         super(props);
         this.state = this.props.entity;
 
-        console.log(this.props.formType)
         this.entity = this.props.formType.split(" ").includes("Group")
           ? "Group"
           : "Event"; 
@@ -88,7 +87,6 @@ class EntityForm extends React.Component {
     renderHeader() {
       let fillWord = this.entity === "Group" ? " " : " Group "
       let other_link = this.entity === "Group" ? "/" : `${this.props.groupId}`
-      console.log(other_link)
 
         return (
           <div className="entity-form-header">

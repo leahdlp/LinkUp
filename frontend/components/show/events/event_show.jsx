@@ -19,7 +19,6 @@ class EventShow extends React.Component {
         this.props.fetchLocations();
         this.props.fetchEvent(parseInt(this.props.match.params.eventId))
             .then(action => {
-                console.log(action.event.id)
                 this.props.fetchAttendees(action.event.id)
             })
     }

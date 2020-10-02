@@ -1,6 +1,6 @@
 class Api::AttendeesController < ApplicationController
     def index
-        @attendees = Attendee.all
+        @attendees = Event.find_by(id: params[:event_id]).attendees
         render :index
     end
 
