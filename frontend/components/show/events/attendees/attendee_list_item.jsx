@@ -7,7 +7,7 @@ const AttendeeListItem = ({ attendee }) => {
                 <div className="attendee-photo"></div>
             </div>
             <li key={`attendee-${attendee.id}`} className="attendee-name">
-                {attendee.name}, {attendee.event_id}
+                {attendee.name}
             </li>
         </div>
     )
