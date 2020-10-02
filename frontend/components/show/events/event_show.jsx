@@ -53,11 +53,11 @@ class EventShow extends React.Component {
 
             <div className="attendee-section">
               <div className="attendee-container">
-                <AttendeeList
-                  eventId={event.id}
-                  attendees={attendees}
-                  users={this.props.users}
-                />
+              <AttendeeList
+                eventId={event.id}
+                attendees={attendees}
+                users={this.props.users}
+              />
               </div>
             </div>
 
