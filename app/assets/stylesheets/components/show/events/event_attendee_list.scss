@@ -34,6 +34,10 @@ $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubu
     margin-right: 5%;
 }
 
+#see-all:hover {
+    text-decoration: underline;
+}
+
 .attendee-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

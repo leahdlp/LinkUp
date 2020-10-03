@@ -2,11 +2,11 @@ import React from 'react';
 import AttendeeListItem from './attendee_list_item';
 import { Link } from 'react-router-dom';
 
-const AttendeeList = ({ attendees, users }) => {
+const AttendeeList = ({ attendees, eventId, users }) => {
     let count = 1;
     let see = Object.values(attendees).length > 8 ? 
         <Link 
-            to={`/events/${event.id}/attendees`}
+            to={`/events/${eventId}/attendees`}
             id="see-all">
             See all
         </Link> : "";
