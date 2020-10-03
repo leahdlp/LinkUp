@@ -44,6 +44,6 @@ export const createAttendee = attendee => dispatch => (
 
 export const deleteAttendee = attendeeId => dispatch => (
     AttendeesAPIUtil.deleteAttendee(attendeeId)
-        .then(attendeeId => dispatch(removeAttendee(attendeeId)))
+        .then(attendee => dispatch(removeAttendee(attendee.id)))
         .fail(errors => dispatch(receiveAttendeeErrors(errors.responseJSON)))
 )

@@ -37,8 +37,6 @@ class EventShow extends React.Component {
         const location = this.props.locations[event.location_id];
         const attendees = this.props.attendees;
         const host = this.props.users[group.creator_id]
-        console.log(this.props.users)
-        console.log(host)
 
         return (
           <div className="event-show-pg">
@@ -95,8 +93,10 @@ class EventShow extends React.Component {
               <EventBar
                 event={event}
                 createAttendee={this.props.createAttendee}
-                deleteAttendee={this.props.deleteAttendeer}
+                deleteAttendee={this.props.deleteAttendee}
                 attendees={attendees}
+                history={this.props.history}
+                currentUser={this.props.currentUser}
               />
             </div>
           </div>

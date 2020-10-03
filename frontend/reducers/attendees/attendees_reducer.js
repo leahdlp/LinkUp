@@ -11,7 +11,7 @@ const attendeesReducer = (oldState={}, action) => {
             return Object.assign({}, action.attendees);
         case RECEIVE_ATTENDEE:
             nextState[action.attendee.id] = action.attendee;
-            return action.attendee;
+            return nextState;
         case REMOVE_ATTENDEE:
             delete nextState[action.attendeeId]
             return nextState;

@@ -10,7 +10,9 @@ class EventBar extends React.Component {
         this.convertDateTime = this.convertDateTime.bind(this);
     }
 
-    eventButton() {
+
+
+    eventButton(event) {
         const attendees = this.props.attendees;
         let button;
 
@@ -18,9 +20,9 @@ class EventBar extends React.Component {
             if (this.props.currentUser &&
                 attendees[id].user_id === this.props.currentUser.id) {
                 return (
-                    <div className="pink-btn">
+                    <div className="event-pink-btn">
                         <button 
-                            onClick={() => this.props.deleteAttendee}>
+                            onClick={() => this.props.deleteAttendee(id)}>
                             Leave Event
                         </button>
                     </div>
@@ -29,10 +31,18 @@ class EventBar extends React.Component {
         }
 
         return (
-            <div className="pink-btn">
+            <div className="event-pink-btn">
                 <button
-                    onClick={() => this.props.createAttendee}
-                    className="pink-btn">
+                    onClick={() => { 
+                        if (this.props.currentUser) {
+                            this.props.createAttendee({
+                                event_id: event.id,
+                                user_id: this.props.currentUser.id
+                            })
+                        } else {
+                            this.props.history.push('/login')
+                        }
+                    }}>
                     Join Event
                 </button>
             </div>
@@ -187,7 +197,7 @@ class EventBar extends React.Component {
                 </div>
                 <div className="event-bar-right">
                     <p>FREE</p>
-                    {this.eventButton()}
+                    {this.eventButton(event)}
                 </div>
             </div>
         )
