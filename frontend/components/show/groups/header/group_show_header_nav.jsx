@@ -33,11 +33,6 @@ class GroupShowHeaderNav extends React.Component {
                 <Link to={`/groups/${group.id}/edit`}>Edit Group</Link>
             </div>
 
-        // if (this.props.currentUser && 
-        //     group.creator_id !== this.props.currentUser.id) {
-        //     button = <div className="not-displayed"></div>;
-        // }
-
         return button
     }
 
@@ -86,11 +81,14 @@ class GroupShowHeaderNav extends React.Component {
         return (
             <div className="show-navbar-container">
                 <div className="show-navbar">
-                    {/* <div className="show-navbar"> */}
                     <div className="tabs-container">
                         <NavTabs 
+                            history={this.props.history}
                             group={group}
                             members={this.props.members}
+                            events={this.props.events}
+                            attendees={this.props.attendees}
+                            fetchAttendees={this.props.fetchAttendees}
                         />
                     </div>
                     <div className="show-nav-btns">
@@ -100,7 +98,6 @@ class GroupShowHeaderNav extends React.Component {
                             </div>
                         </div>
                     </div>
-                    {/* </div> */}
                 </div>
             </div>
         )

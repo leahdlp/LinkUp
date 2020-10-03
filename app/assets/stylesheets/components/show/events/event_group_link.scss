@@ -1,0 +1,43 @@
+$meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+.event-group-container {
+    // border: 1px solid red;
+    padding-left: 1.5%;
+}
+
+.event-group {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 92%;
+    margin-right: 2%;
+    border-radius: 8px;
+    min-height: 80px; 
+    cursor: pointer;
+    font-family: $meetup-font;
+    font-size: 18px;
+    // border: rebeccapurple 1px solid;
+    padding-right: 2.5%;
+}
+
+.event-group-link-info {
+    display: flex;
+    align-items: center;
+    background-color: inherit;
+    width: 80%;
+}
+
+.event-group-pic {
+    height: 20px;
+    max-width: 60px;
+    // border: tomato 1px solid;
+}
+
+.event-group > i {
+    margin-left: 10%;
+    margin-right: 2%;
+    color: rgb(87, 166, 185);
+    font-size: 20px;
+    // border: grey 1px solid;
+}

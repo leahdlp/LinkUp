@@ -5,11 +5,11 @@ export const fetchAttendees = eventId => (
     })
 )
 
-export const createAttendee = eventId => (
+export const createAttendee = attendee => (
     $.ajax({
         url: `/api/attendees`,
         method: 'POST',
-        data: { attendee: { event_id: eventId } }
+        data: { attendee }
     })
 )
 

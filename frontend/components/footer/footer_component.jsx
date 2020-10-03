@@ -12,7 +12,6 @@ const Footer = props => (
             
             <div className="my-links-container">
                 <div className ="my-links">
-                    {/* <i className="fab fa-github-square"></i> */}
                     <ul className="link-list">
 
                         <li>

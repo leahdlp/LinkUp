@@ -8,10 +8,15 @@ const attendeesReducer = (oldState={}, action) => {
 
     switch (action.type) {
         case RECEIVE_ATTENDEES:
-            return Object.assign({}, action.attendees);
+            const attendees = action.attendees;
+            for (let id in attendees) {
+                nextState[id] = attendees[id];
+            }
+
+            return nextState;
         case RECEIVE_ATTENDEE:
             nextState[action.attendee.id] = action.attendee;
-            return action.attendee;
+            return nextState;
         case REMOVE_ATTENDEE:
             delete nextState[action.attendeeId]
             return nextState;

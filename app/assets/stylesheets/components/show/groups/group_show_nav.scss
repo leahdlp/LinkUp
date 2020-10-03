@@ -6,8 +6,6 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     width: 100%;
     display: flex;
     justify-content: center;
-//     align-items: center;
-    // border: gray 1px solid;
     border-top: $border-bottom;
     border-bottom: $border-bottom;
 }
@@ -17,8 +15,6 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     justify-content: space-around;
     height: 55px;
     width: 53%;
-    // justify-content: space-around;
-    // padding-left: 19%;
     background-color: white;
     // border: goldenrod 1px solid;
 }
@@ -28,17 +24,12 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     display: flex;
     justify-content: center;
     width: 65%;
-    // max-width: 35%;
     height: 100%;
-    // margin-right: 2%;
-    // padding-right: 15%;
-    // border: 10px solid green;
 }
 
 .show-nav-btns {
     display: flex;
     width: 33%;
-    // margin-left: 2%;
     background-color: white;
     // border: 3px solid blue;
 }
@@ -116,7 +107,6 @@ $border-bottom: 1px solid rgb(211, 211, 211);
 
 .tab {
     display: block;
-    // margin-left: 17%;
     margin-bottom: 40px;
     width: 100%;
     height: 100%;
@@ -129,7 +119,6 @@ $border-bottom: 1px solid rgb(211, 211, 211);
 .tab-header-container {
     display: flex;
     justify-content: flex-end;
-    // margin-left: 35px;
     width: 100%;
     height: inherit;
     // border: salmon 3px solid;
@@ -165,13 +154,10 @@ $border-bottom: 1px solid rgb(211, 211, 211);
 
     height: fit-content;
     border-top: $border-bottom;
-    // margin-left: 3%;
-    // border: deeppink 1px solid;
 }
 
 .tab-content {
     display: block;
-    // margin-left: 80px;
     margin-top: 1%;
     margin-bottom: 1%;
     padding-left: 3%;
@@ -179,6 +165,6 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     width: 100%;
     height: fit-content;
     font-size: 16px;
-    // color: black;
     // border: orange 7px solid;
 }
+

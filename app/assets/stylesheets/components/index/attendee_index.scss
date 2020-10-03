@@ -1,0 +1,100 @@
+$meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$footer-color: rgb(60, 67, 77);
+
+.att-idx-pg {
+    display: flex;
+    justify-content: center;
+    // border: lightpink 10px solid;
+    min-height: fit-content;
+}
+
+.att-idx-style-bar {
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    background-color: $footer-color;
+}
+
+.attendee-index {
+    z-index: 1;
+    border-radius: 12px;
+    background-color: white;
+    // border: rebeccapurple 1px solid;
+    width: 30%;
+    display: block;
+    overflow: scroll;
+    margin: 3% 0%;
+    font-family: $meetup-font;
+}
+
+.att-idx-header {
+    display: flex;
+    align-items: center;
+    border-radius: inherit;
+    background-color: inherit;
+    // border: 1px solid blue;
+    min-height: fit-content;
+    height: 10%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+
+.att-idx-link {
+    color: rgb(87, 166, 185);
+    font-size: 16px;
+    font-weight: 400;
+    height: 50%;
+    margin-bottom: 10px;
+    padding: 1%;
+}
+
+.att-idx-link:hover {
+    text-decoration: underline;
+}
+
+.att-idx-info {
+    // border: salmon 10px solid;
+    height: fit-content;
+    width: 100%;
+}
+
+.att-idx-info > h3 {
+    padding: 1%;
+    // border: rebeccapurple 1px solid;
+    font-size: 16px;
+    background-color: white;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin: 0px;
+}
+
+#att-idx-arrow {
+    color: lightgrey;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.att-idx-info {
+    background-color: white;
+}
+
+.att-index-item {
+    margin: 0% 5%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    // border: royalblue 1px solid;
+    border-bottom: lightgrey 1px solid;
+}
+
+.att-index-img {
+    // border: seagreen 1px solid;
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+    margin: 2% 5%;
+}

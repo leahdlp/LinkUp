@@ -39,9 +39,18 @@
 @import "components/show/groups/group_show_header";
 @import "components/show/groups/group_show_members";
 @import "components/show/groups/group_show_categories";
+@import "components/show/groups/group_show_events";
 
 // EventShow:
 @import "components/show/events/event_show_header";
 @import "components/show/events/event_attendee_list";
+@import "components/show/events/event_details";
+@import "components/show/events/event_group_link";
+@import "components/show/events/event_bar";
+@import "components/show/events/event_show_body";
+@import "components/show/events/side_bar";
+// EventIndex
+@import "components/index/attendee_index";
+
 // GroupForm:
 @import "components/form/entity_form";
