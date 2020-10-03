@@ -13,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
     fetchEntity: groupId => dispatch(fetchGroup(groupId))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(EntitiesIndex);
+// export default connect(mapStateToProps, mapDispatchToProps)(EntitiesIndex);

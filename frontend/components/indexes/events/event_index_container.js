@@ -12,4 +12,4 @@ const mapDispatchToProps = dispatch => ({
     fetchEntities: () => dispatch(fetchEvents()),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(EntitiesIndex)
+// export default connect(mapStateToProps, mapDispatchToProps)(EntitiesIndex)

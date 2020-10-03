@@ -1,0 +1,60 @@
+$meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$border-bottom: 2px solid rgb(211, 211, 211);
+$blue: rgb(31, 34, 61);
+
+
+.landing-pg {
+    // border: red 1px solid;
+}
+
+.landing-nav {
+    // border: rebeccapurple 10px solid;
+    height: 100px;
+    background-color: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-toggle {
+    // border: salmon 10px solid;
+    display: flex;
+    justify-content: space-between;
+    min-width: fit-content;
+    // margin-left: 2%;
+    background-color: $blue;
+}
+
+.index-toggle > button {
+    // border: seagreen 10px solid;
+    border: $border-bottom;
+    // border-radius: 10px;
+    color: $blue;
+    font-weight: 900;
+    font-size: 18px;
+    font-family: $meetup-font;
+    z-index: 2;
+    padding: 10px 10px;
+    margin-left: 200px solid;
+    background-color: white;
+}
+
+.index-toggle > button:hover {
+    border: white 3px solid;
+    background-color: $blue;
+    color: white;
+    // border: springgreen 10px solid;
+}
+
+.search-bar {
+    width: 30%;
+    height: 30%;
+    border-radius: 12px;
+    // border: violet 10px solid;
+    border: 1px solid $border-bottom;
+    margin-right: 3%;
+}
+
+.search-bar:focus {
+    border: blue 1px solid;
+}

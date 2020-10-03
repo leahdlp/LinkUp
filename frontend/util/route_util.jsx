@@ -24,6 +24,17 @@ const Protected = ({ loggedIn, path, component: Component }) => (
     }
     />
 )
+
+const Landing = ({ component: Component, loggedIn, path, exact }) => (
+  <Route
+    path={path}
+    exact={exact}
+    render={(props) =>
+      loggedIn ? <Component {...props} /> : <Redirect to="/splash" />
+    }
+  />
+);
     
 export const AuthRoute = withRouter(connect(mapStateToProps, null)(Auth))
 export const ProtectedRoute = withRouter(connect(mapStateToProps, null)(Protected))
+export const LandingRoute = withRouter(connect(mapStateToProps, null)(Landing))
