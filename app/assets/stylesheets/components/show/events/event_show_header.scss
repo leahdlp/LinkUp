@@ -3,24 +3,86 @@ $border-bottom: 1px solid rgb(211, 211, 211);
 
 .event-show-header-container {
     // border: hotpink 10px solid;
-    height: 250px;
+    height: 200px;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-bottom: $border-bottom;
     background-color: white;
 }
 
 .event-show-header {
-    width: 57%;
+    // display: flex;
+    // align-items: center;
+    width: 53%;
     background-color: white;
+    font-family: $meetup-font;
     // border: sienna 5px solid;
+
 }
 
 .event-show-header > h1 {
-    font-size: 150%;
-    font-family: $meetup-font;
+    display: block;
+    font-size: 32px;
     font-weight: 900;
-    padding-top: 3%;;
+    // border: yellow 1px solid;
 }
 
+.event-show-header > p {
+    display: block;
+    font-weight: 300;
+    font-size: 18px;
+    // margin: 1% 0%;
+    color: grey;
+}
 
+.header-date {
+    display: block;
+
+    padding: 0px;
+    height: fit-content;
+    font-weight: 200;
+    font-size: 10px;
+    background-color: white;
+    // border: turquoise 10px solid;
+}
+
+.event-show-header > h3 {
+    font-size: 16px;
+    height: fit-content;
+    padding: 0px;
+    margin: 0px;
+    // margin-top: 1%;
+    font-weight: 300;
+    color: grey;
+    // margin-bottom: 2px;
+}
+
+.event-host {
+    background-color: white;
+    display: flex;
+    margin-top: 2%;
+}
+
+.event-host > p {
+    margin-top: 1.5%;
+}
+
+.host-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    // border: yellowgreen 1px solid;
+    margin-right: 2%;
+}
+
+.host-info {
+    background-color: inherit;
+    padding-top: 0.5%;
+}
+
+#host {
+    display: block;
+    font-weight: 600;
+    padding-top: 4px;
+}

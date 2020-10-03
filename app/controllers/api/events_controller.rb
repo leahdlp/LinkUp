@@ -15,8 +15,9 @@ class Api::EventsController < ApplicationController
         creator_id = @event.group.creator_id
 
         if creator_id != current_user.id
-            render json: ["Event can only be created by group adminr"], status: 422
+            render json: ["Event can only be created by group admin"], status: 422
         elsif @event.save
+            Attendee.create!({ event_id: @event.id, user_id: current_user.id })
             render '/api/events/show'
         else
             render json: @event.errors.full_messages, status: 422

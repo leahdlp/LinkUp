@@ -22,6 +22,7 @@ class EventShow extends React.Component {
             .then(action => {
                 this.props.fetchAttendees(action.event.id)
                 this.props.fetchGroup(action.event.group_id)
+                  .then(action => this.props.fetchUser(action.group.creator_id))
             })
     }
 
@@ -35,15 +36,19 @@ class EventShow extends React.Component {
         const group = this.props.groups[event.group_id]
         const location = this.props.locations[event.location_id];
         const attendees = this.props.attendees;
+        const host = this.props.users[group.creator_id]
+        console.log(this.props.users)
+        console.log(host)
 
         return (
           <div className="event-show-pg">
             <EventShowHeader
-              currentUser={this.props.currentUser}
-              attendees={attendees}
-              locations={location}
+              // currentUser={this.props.currentUser}
+              // attendees={attendees}
+              host={host}
+              location={location}
               event={event}
-              deleteEvent={this.props.deleteEvent}
+              // deleteEvent={this.props.deleteEvent}
             />
             <div className="event-show-main">
               <div className="event-show-body-container">
@@ -60,40 +65,39 @@ class EventShow extends React.Component {
 
                   <div className="attendee-section">
                     <div className="attendee-container">
-                    <AttendeeList
-                      eventId={event.id}
-                      attendees={attendees}
-                      users={this.props.users}
-                    />
+                      <AttendeeList
+                        eventId={event.id}
+                        attendees={attendees}
+                        users={this.props.users}
+                      />
                     </div>
                   </div>
 
                   <div className="event-group-container">
-                    <div className="event-group">
-                      <Link to={`/groups/${event.group_id}`}>
-                        <div className="event-group-pic"></div>
-                        {group.name}
-                      </Link>
-                    </div>
+                    <Link
+                      className="event-group"
+                      to={`/groups/${event.group_id}`}
+                    >
+                      <div className="event-group-pic"></div>
+                      {group.name}
+                      <i className="fas fa-chevron-right"></i>
+                    </Link>
                   </div>
                 </div>
               </div>
 
               <div className="sidebar-container">
-                <Sidebar 
-                  event={event}
-                  group={group}
-                />
+                <Sidebar event={event} group={group} />
               </div>
             </div>
-            
+
             <div className="event-bar-container">
-                <EventBar
+              <EventBar
                 event={event}
                 createAttendee={this.props.createAttendee}
                 deleteAttendee={this.props.deleteAttendeer}
                 attendees={attendees}
-                />
+              />
             </div>
           </div>
         );
