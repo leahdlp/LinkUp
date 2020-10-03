@@ -46,9 +46,9 @@ class Landing extends React.Component {
         return (
             <div className="landing-pg">
                 <div className="landing-nav">
-                    <div className="search-bar">
+                    <input className="search-bar">
 
-                    </div>
+                    </input>
                     <div className="index-toggle">
                         <button onClick={() => this.handleToggle(this.state.entity)}>
                             Groups

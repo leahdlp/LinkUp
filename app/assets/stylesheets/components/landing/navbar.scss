@@ -53,8 +53,11 @@ $blue: rgb(31, 34, 61);
     // border: violet 10px solid;
     border: 1px solid $border-bottom;
     margin-right: 3%;
+    background-color: white;
+    padding-left: 10px;
+    font-family: $meetup-font;
 }
 
 .search-bar:focus {
-    border: blue 1px solid;
+    border: rgb(0, 102, 255) 2px solid;
 }
