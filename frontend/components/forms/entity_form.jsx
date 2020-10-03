@@ -115,7 +115,6 @@ class EntityForm extends React.Component {
             <form onSubmit={this.handleSubmit} className="form">
               <div className="inputs">
                 <label className="user-input">
-                  {/* {" "} */}
                   Name:
                   <br />
                   <input
@@ -126,7 +125,6 @@ class EntityForm extends React.Component {
                 </label>
                 <br />
                 <label className="user-input">
-                  {/* {" "} */}
                   {label}:
                   <br />
                   <textarea
@@ -139,7 +137,6 @@ class EntityForm extends React.Component {
                   {this.renderDateTime()}
                 <br />
                 <label className="user-input">
-                  {/* {" "} */}
                   Location:
                   <br />
                   <select
@@ -165,7 +162,6 @@ class EntityForm extends React.Component {
                 <br />
 
                 <label className="user-input">
-                  {/* {" "} */}
                   Categories:
                   <br />
                   <select

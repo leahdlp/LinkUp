@@ -15,9 +15,6 @@ const GroupShowHeader = ({
     history 
 }) => {
     if (locations[group.location_id] === undefined) return null;
-    // let klass = `group-img-container-${group.id}`
- 
-        // console.log(history);
 
     return (
         <div className="show-pg-header-container">

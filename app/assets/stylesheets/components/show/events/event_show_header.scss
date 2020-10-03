@@ -12,8 +12,6 @@ $border-bottom: 1px solid rgb(211, 211, 211);
 }
 
 .event-show-header {
-    // display: flex;
-    // align-items: center;
     width: 53%;
     background-color: white;
     font-family: $meetup-font;
@@ -32,7 +30,6 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     display: block;
     font-weight: 300;
     font-size: 18px;
-    // margin: 1% 0%;
     color: grey;
 }
 
@@ -52,10 +49,8 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     height: fit-content;
     padding: 0px;
     margin: 0px;
-    // margin-top: 1%;
     font-weight: 300;
     color: grey;
-    // margin-bottom: 2px;
 }
 
 .event-host {

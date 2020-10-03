@@ -62,11 +62,7 @@ class EventShowHeader extends React.Component {
         const dt_arr = date_time.split("T");
         const date = dt_arr[0];
 
-        return (
-        // <div className="header-date-time">
-            <h3 id="header-date">{this.convertDate(date)}</h3>
-        // </div>
-        );
+        return <h3 id="header-date">{this.convertDate(date)}</h3>
     }
 
     render() {

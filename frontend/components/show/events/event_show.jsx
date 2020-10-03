@@ -6,14 +6,6 @@ import EventBar from './event_bar/event_bar';
 import Sidebar from './sidebar/sidebar';
 
 class EventShow extends React.Component {
-    // constructor(props) {
-    //     super(props);
-
-    //     this.event = this.props.event;
-    //     // this.location = this.props.locations[event.location_id];
-    //     // this.attendees = this.props.attendees;
-    // }
-
     componentDidMount() {
         if (Object.values(this.props.events).length === 0) fetchEvents();
 
@@ -41,12 +33,9 @@ class EventShow extends React.Component {
         return (
           <div className="event-show-pg">
             <EventShowHeader
-              // currentUser={this.props.currentUser}
-              // attendees={attendees}
               host={host}
               location={location}
               event={event}
-              // deleteEvent={this.props.deleteEvent}
             />
             <div className="event-show-main">
               <div className="event-show-body-container">

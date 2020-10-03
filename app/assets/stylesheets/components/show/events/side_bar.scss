@@ -14,7 +14,6 @@ $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubu
     width: 40%;
     display: flex;
     justify-content: flex-start;
-    // padd
 }
 
 .sidebar {
@@ -26,25 +25,17 @@ $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubu
     position: -webkit-sticky;
     position: sticky;
     top: 3%;
-    // display: flex;
-    // align-items: stretch;
 }
 
 .sidebar-group-details {
-    // min-height: 800xp;
-    // padding: 40px 80px;
     margin-bottom: 3%;
     border-radius: 8px;
-    // width: 300px;
-    // border: cadetblue 10px solid;
     background-color: white;
 }
 
 .group-info {
     width: 100%;
     height: fit-content;
-    // height: 75px;
-    // width: 300px;
     padding: 20px 0px;
     // border: 10px solid red;
     background-color: inherit;
@@ -64,9 +55,6 @@ $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubu
 }
 
 .sidebar-event-details {
-    // height: 800xp;
-    // width: 300px;
-    // padding: 40px 80px;
     margin-top: 3%;
     border-radius: 8px;
  
@@ -90,8 +78,6 @@ $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubu
     margin-top: 7%;
     margin-left: 5%;
     margin-right: 5%;
-    // height: 30px;
-    // width: 30px;
     font-size: 30px;
     color: rgb(196, 194, 194);
 }

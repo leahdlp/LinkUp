@@ -16,9 +16,6 @@ $footer-color: rgb(48, 58, 66);
     width: 100%;
     height: 300px;
     background: $footer-color;
-    // display: flex;
-    // justify-content: center;
-    // border: 1px solid black;
 }
 
 .footer-top-container {
@@ -26,7 +23,6 @@ $footer-color: rgb(48, 58, 66);
     display: flex;
     justify-content: center;
     height: fit-content;
-    // border: green 1px solid;
 }
 
 .footer-top {
@@ -50,8 +46,6 @@ $footer-color: rgb(48, 58, 66);
     background-color: $sub-footer-color;
     height: 100px;
     font-size: 14px;
-    // padding-left: %;
-    // border: orangered 1px solid;
 }
 
 #footer-link {
@@ -61,7 +55,6 @@ $footer-color: rgb(48, 58, 66);
     line-height: 24px;
     padding-top: 4px;
     padding-bottom: 4px;
-    // border: orange 1px solid;
 }
 
 .my-links-container {
@@ -69,38 +62,31 @@ $footer-color: rgb(48, 58, 66);
     width: 100%;
     display: flex;
     justify-content: center;
-    // border: blue 3px solid;
 }
 
 .my-links {
     width: 53%;
     background-color: $footer-color;
-    // margin-left: 20.5%;
     margin-top: 10px;
-    // border: royalblue 1px solid;
 }
 
 .link-list li {
     padding-top: 20px;
     margin-top: 10px;
     background-color: $footer-color;
-    // border: rebeccapurple 1px solid;
 }
 
 .sub-footer > p {
     margin-top: 20px;
     margin-bottom: 20px;
-    // border: red 1px solid;
 }
 
 .sub-footer-sub {
     background-color: $sub-footer-color;
     display: flex;
     margin-right: 600px;
-    // border: yellow 1px solid;
 }
 
 .sub-footer-sub > p {
     margin-right: 10px;
-    // border: salmon 1px solid;
 }

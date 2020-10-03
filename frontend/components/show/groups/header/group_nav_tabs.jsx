@@ -53,7 +53,6 @@ class NavTabs extends React.Component {
     }
 
     separateAttendees() {
-        // debugger
         const events = this.props.events;
         const attendees = this.props.attendees;
 
@@ -68,13 +67,10 @@ class NavTabs extends React.Component {
         }
         }
 
-        // debugger
-
         return separated;
     }
 
     numAttendees(eventId) {
-        // debugger
         const attendees = this.separateAttendees();
 
         if (!attendees[eventId]) return 0;
@@ -218,7 +214,6 @@ class NavTabs extends React.Component {
 
     allEvents() {
         const events = this.props.events;
-        // console.log(this.props.history)
         if (Object.values(events).length === 0) return null;
 
         return (

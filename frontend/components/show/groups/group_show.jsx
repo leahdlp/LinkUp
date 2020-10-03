@@ -14,8 +14,7 @@ class GroupShow extends React.Component {
         
         if (subcategories === undefined) return null;
         if (Object.values(subcategories).length === 0) return null;
-        // console.log(this.props.history);
-        // console.log(this.props)
+
         return (
             <div>
                 <GroupShowHeader 

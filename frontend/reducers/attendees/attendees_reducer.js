@@ -9,9 +9,7 @@ const attendeesReducer = (oldState={}, action) => {
     switch (action.type) {
         case RECEIVE_ATTENDEES:
             const attendees = action.attendees;
-            // return Object.assign({}, action.attendees);
             for (let id in attendees) {
-                // console.log(attendees)
                 nextState[id] = attendees[id];
             }
 
