@@ -51,6 +51,8 @@ $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubu
     display: flex;
     align-items: center;
     font-family: $meetup-font;
+    border-radius: 8px;
+
 }
 
 .event-group-pic {
