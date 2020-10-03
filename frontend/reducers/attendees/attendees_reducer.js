@@ -8,7 +8,14 @@ const attendeesReducer = (oldState={}, action) => {
 
     switch (action.type) {
         case RECEIVE_ATTENDEES:
-            return Object.assign({}, action.attendees);
+            const attendees = action.attendees;
+            // return Object.assign({}, action.attendees);
+            for (let id in attendees) {
+                // console.log(attendees)
+                nextState[id] = attendees[id];
+            }
+
+            return nextState;
         case RECEIVE_ATTENDEE:
             nextState[action.attendee.id] = action.attendee;
             return nextState;

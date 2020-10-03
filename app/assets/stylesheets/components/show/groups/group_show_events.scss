@@ -1,0 +1,109 @@
+.tab-event-item {
+    border-radius: 12px;
+    background-color: white;
+}
+
+.tab-event-item:hover {
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+}
+
+.tab-event {
+    background-color: inherit;
+    // border: red 7px solid;
+    border-radius: 12px;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+.tab-event-head {
+    // border: green 6px solid;
+    background-color: inherit;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+    padding-top: 20px;
+}
+
+.tab-event-head-info {
+    background-color: inherit;
+    // border: springgreen 9px solid;
+    width: 60%;
+}
+
+.ge-datetime {
+    background-color: inherit;
+    color: rgb(57, 146, 146);
+
+    // border: indigo 4px solid;
+}
+
+.group-event-img {
+    // background-color: inherit;
+
+    // border: lightcoral 3px solid;
+    width: 25%;
+    min-height: 100px;
+    // background-color: black;
+    border-radius: 16px;
+    font-size: 18px;
+    margin: 1% 0%;
+}
+
+.tab-event-foot {
+    background-color: inherit;
+
+    // border: hotpink 5px solid;
+}
+
+.ge-name {
+    background-color: inherit;
+    font-weight: 700;
+    font-size: 18px;
+    // border: lightseagreen 2px solid;
+}
+
+.ge-desc {
+    background-color: inherit;
+
+    display: block;
+    overflow: hidden;
+    // border: lime 8px solid;
+    max-height: 100px;
+    overflow: scroll;
+
+}
+
+.group-event-bar {
+    background-color: inherit;
+
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: 0px 10px;
+}
+
+.group-event-bar > p {
+    background-color: inherit;
+
+    // border: springgreen 10px solid;
+}
+
+.group-event-bar > button {
+    background-color: inherit;
+
+    border: rgb(57, 146, 146) 2px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: rgb(57, 146, 146);
+}
+
+.group-event-bar > button:hover {
+    background-color:  rgb(57, 146, 146);
+    border: white 2px solid;
+    color: white;
+}

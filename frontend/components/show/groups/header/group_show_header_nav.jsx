@@ -82,15 +82,19 @@ class GroupShowHeaderNav extends React.Component {
 
     render() {
         const group = this.props.group;
-
+        // console.log(this.props.history)
         return (
             <div className="show-navbar-container">
                 <div className="show-navbar">
                     {/* <div className="show-navbar"> */}
                     <div className="tabs-container">
                         <NavTabs 
+                            history={this.props.history}
                             group={group}
                             members={this.props.members}
+                            events={this.props.events}
+                            attendees={this.props.attendees}
+                            fetchAttendees={this.props.fetchAttendees}
                         />
                     </div>
                     <div className="show-nav-btns">

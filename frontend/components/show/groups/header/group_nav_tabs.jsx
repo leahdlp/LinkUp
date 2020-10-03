@@ -11,6 +11,15 @@ class NavTabs extends React.Component {
 
         this.selectTab = this.selectTab.bind(this);
         this.allMembers = this.allMembers.bind(this);
+        this.separateAttendees = this.separateAttendees.bind(this);
+        this.numAttendees = this.numAttendees.bind(this);
+        this.allEvents = this.allEvents.bind(this);
+    }
+
+    componentDidMount() {
+        Object.values(this.props.events).map(event => (
+            this.props.fetchAttendees(event.id)
+        ))
     }
 
     selectTab(idx) {
@@ -18,13 +27,14 @@ class NavTabs extends React.Component {
     }
 
     allMembers() {
-        if (Object.values(this.props.members).length === 0) return null;
-
         const members = this.props.members;
+
+        if (Object.values(members).length === 0) return null;
+
         return (
             <div className="tab-member-list-container">
                 <ul className="tab-member-list">
-                    {Object.values(this.props.members).map(member => {
+                    {Object.values(members).map(member => {
                         if (member.group_id === this.props.group.id) {
                             return (
                                 <li
@@ -32,6 +42,82 @@ class NavTabs extends React.Component {
                                 className="tab-member">
                                     <div className="member-photo"></div>
                                     {member.name}
+                                </li>
+                            )
+                        }
+                    })}
+                </ul>
+            </div>
+        )
+    }
+
+    separateAttendees() {
+        // debugger
+        const events = this.props.events;
+        const attendees = this.props.attendees
+
+        const eventIds = Object.keys(events);
+        const separated = {};
+
+        for (let id in attendees) {
+            if (separated[attendees[id].event_id]) {
+                separated[attendees[id].event_id].push(attendees[id])
+            } else {
+                separated[attendees[id].event_id] = [attendees[id]];
+            }
+        }
+
+        // debugger
+
+        return separated;
+    }
+
+    numAttendees(eventId) {
+        // debugger
+        const attendees = this.separateAttendees();
+
+        if (!attendees[eventId]) return 0;
+        
+        return attendees[eventId].length
+    }
+
+    allEvents() {
+        const events = this.props.events;
+        // console.log(this.props.history)
+        if (Object.values(events).length === 0) return null;
+
+        return (
+            <div>
+                <ul className="tab-events">
+                    {Object.values(events).map(event => {
+                        if (event.group_id === this.props.group.id) {
+                            return (
+                                <li 
+                                    key={`event-${event.id}`} 
+                                    className="tab-event-item"
+                                    onClick={() => this.props.history.push
+                                        (`/events/${event.id}`)}>
+                                    <div className="tab-event">
+                                        <div className="tab-event-head">
+                                            <div className="tab-event-head-info">
+                                                <p className='ge-datetime'>{event.date_time}</p>
+                                                <p className='ge-name'>{event.name}</p>
+                                            </div>
+                                            <div className='group-event-img'></div>
+                                        </div>
+                                        <div className="tab-event-foot">
+                                            <p className='ge-desc'>{event.description}</p>
+                                        </div>
+                                        <div className="group-event-bar">
+                                            <p>
+                                                {this.numAttendees(event.id)} attendees
+                                            </p>
+                                            <button onClick={() => this.props.history.push
+                                                (`/events/${event.id}`)}>
+                                                Attend
+                                            </button>
+                                        </div>
+                                    </div>
                                 </li>
                             )
                         }
@@ -50,10 +136,10 @@ class NavTabs extends React.Component {
     render() {
         const idx = this.state.currentTab;
         const panes = [
-            {title: "About", content: this.props.group.description }, 
-            {title: "Events", content: "event schedule" }, 
-            {title: "Members", content: this.allMembers()}, 
-            {title: "Photos", content: "Pics"}
+            { title: "About", content: this.props.group.description }, 
+            { title: "Events", content: this.allEvents() }, 
+            { title: "Members", content: this.allMembers() }, 
+            { title: "Photos", content: "Pics" }
         ];
         const selected = panes[idx];
 

@@ -3,16 +3,22 @@ import GroupShowHeaderNav from './group_show_header_nav'
 
 const GroupShowHeader = ({ 
     group, 
-    members, 
+    members,
+    attendees,
+    events,
     locations, 
     createMember, 
     deleteMember,
     deleteGroup,
-    currentUser 
+    fetchAttendees,
+    currentUser,
+    history 
 }) => {
     if (locations[group.location_id] === undefined) return null;
     // let klass = `group-img-container-${group.id}`
  
+        // console.log(history);
+
     return (
         <div className="show-pg-header-container">
             <div className="show-pg-header">
@@ -38,9 +44,13 @@ const GroupShowHeader = ({
                     currentUser={currentUser}
                     group={group}
                     members={members}
+                    attendees={attendees}
+                    events={events}
                     createMember={createMember}
                     deleteMember={deleteMember}
                     deleteGroup={deleteGroup}
+                    fetchAttendees={fetchAttendees}
+                    history={history}
                     id="grp-show-nav"
                 />
             </div>

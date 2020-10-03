@@ -20,14 +20,16 @@ const AttendeeList = ({ attendees, eventId, users }) => {
         <ul className="attendee-list">
           {Object.values(attendees).map((attendee) => {
             if (count <= 8) {
-              count += 1;
-              return (
-                <AttendeeListItem
-                  key={`attendee-${attendee.id}`}
-                  attendee={attendee}
-                  users={users}
-                />
-              );
+              if (attendee.event_id === eventId) {
+                count += 1;
+                return (
+                  <AttendeeListItem
+                    key={`attendee-${attendee.id}`}
+                    attendee={attendee}
+                    users={users}
+                  />
+                );
+              }
             } else {
               return null;
             }
