@@ -56,7 +56,7 @@ class EventShow extends React.Component {
                   </div>
                   <div className="details-section-container">
                     <div className="details-section">
-                      <h3>Details:</h3>
+                      <h3>Details</h3>
                       {event.description}
                     </div>
                   </div>
@@ -76,8 +76,11 @@ class EventShow extends React.Component {
                       className="event-group"
                       to={`/groups/${event.group_id}`}
                     >
-                      <div className="event-group-pic"></div>
-                      {group.name}
+                      <div className="event-group-link-info">
+                        <div className="event-group-pic"></div>
+                        <p>{group.name}</p>
+                      </div>
+
                       <i className="fas fa-chevron-right"></i>
                     </Link>
                   </div>

@@ -7,7 +7,9 @@ $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubu
 
 .event-group {
     background-color: white;
+    // text-align: start;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     // justify-content: center;
     // border: darkorange 10px solid;
@@ -24,6 +26,13 @@ $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubu
     padding-right: 2.5%;
 }
 
+.event-group-link-info {
+    display: flex;
+    align-items: center;
+    background-color: inherit;
+    width: 80%;
+}
+
 .event-group-pic {
     height: 20px;
     max-width: 60px;
@@ -35,4 +44,5 @@ $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubu
     margin-right: 2%;
     color: rgb(87, 166, 185);
     font-size: 20px;
+    // border: grey 1px solid;
 }
