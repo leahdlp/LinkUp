@@ -29,7 +29,7 @@ class User < ApplicationRecord
 
     has_many :attendees,
         foreign_key: :user_id,
-        class_name: :User,
+        class_name: :Attendee,
         dependent: :destroy
 
     has_many :events,
