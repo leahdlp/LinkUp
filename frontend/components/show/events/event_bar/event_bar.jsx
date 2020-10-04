@@ -4,15 +4,16 @@ class EventBar extends React.Component {
     constructor(props) {
         super(props);
 
-        this.eventButton = this.eventButton.bind(this);
+        this.attendanceButton = this.attendanceButton.bind(this);
+        this.eventButtons = this.eventButtons.bind(this);
+        this.renderButtons = this.renderButtons.bind(this);
         this.convertDate = this.convertDate.bind(this);
         this.convertTime = this.convertTime.bind(this);
         this.convertDateTime = this.convertDateTime.bind(this);
     }
 
 
-
-    eventButton(event) {
+    attendanceButton(event) {
         const attendees = this.props.attendees;
         let button;
 
@@ -47,6 +48,30 @@ class EventBar extends React.Component {
                 </button>
             </div>
         );
+    }
+
+    eventButtons(event) {
+        return (
+            <div id="edit-event" className="event-pink-btn">
+                <button onClick={() => this.props.history.push(`/events/${event.id}/edit`)}>
+                    Edit Event
+                </button>
+                <button id="delete-event" onClick={() => {
+                    this.props.deleteEvent(event.id);
+                    this.props.history.push("/");
+                }}>
+                    Delete Event
+                </button>
+            </div>
+        )
+    }
+
+    renderButtons(event) {
+        if (this.props.currentUser.id === this.props.host.id) {
+            return this.eventButtons(event)
+        } else {
+            return this.attendanceButton(event)
+        }
     }
 
     convertDate(date) {
@@ -184,9 +209,10 @@ class EventBar extends React.Component {
     }
 
     render() {
-        if (Object.values(this.props.attendees).length === 0) return 'EventBar';
-
         const event = this.props.event;
+
+        if (Object.values(this.props.attendees).length === 0) return 'EventBar';
+        if (event === undefined) return null;
 
 
         return (
@@ -197,7 +223,7 @@ class EventBar extends React.Component {
                 </div>
                 <div className="event-bar-right">
                     <p>FREE</p>
-                    {this.eventButton(event)}
+                    {this.renderButtons(event)}
                 </div>
             </div>
         )

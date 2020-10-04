@@ -11,25 +11,28 @@ const AttendeeList = ({ attendees, eventId, users }) => {
             See all
         </Link> : "";
 
+    let eventAtts = [];
+    Object.values(attendees).forEach(attendee => {
+      if (attendee.event_id === eventId) eventAtts.push(attendee)
+    })
+
     return (
       <div className="attendee-list-container">
         <div className="attendee-list-header">
-            <h3>Attendee List ({Object.values(attendees).length} attendees):</h3>
+            <h3>Attendee List ({eventAtts.length} attendees):</h3>
             {see}
         </div>
         <ul className="attendee-list">
-          {Object.values(attendees).map((attendee) => {
+          {eventAtts.map((attendee) => {
             if (count <= 8) {
-              if (attendee.event_id === eventId) {
-                count += 1;
-                return (
-                  <AttendeeListItem
-                    key={`attendee-${attendee.id}`}
-                    attendee={attendee}
-                    users={users}
-                  />
-                );
-              }
+              count += 1;
+              return (
+                <AttendeeListItem
+                  key={`attendee-${attendee.id}`}
+                  attendee={attendee}
+                  users={users}
+                />
+              );
             } else {
               return null;
             }

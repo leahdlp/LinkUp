@@ -16,6 +16,7 @@ class NavTabs extends React.Component {
         this.convertDateTime = this.convertDateTime.bind(this);
         this.separateAttendees = this.separateAttendees.bind(this);
         this.numAttendees = this.numAttendees.bind(this);
+        this.renderAddEvent = this.renderAddEvent.bind(this);
         this.allEvents = this.allEvents.bind(this);
     }
 
@@ -212,12 +213,30 @@ class NavTabs extends React.Component {
         );
     }
 
+    renderAddEvent() {
+        if (this.props.currentUser.id === this.props.group.creator_id) {
+            return (
+              <div 
+                onClick={() => this.props.history.push(
+                    `/groups/${this.props.group.id}/events/new`
+                )}
+                className="tab-event-item">
+                    <div className="add-event">
+                        <i className="fas fa-plus-circle"></i>
+                        <h3>Add Event</h3>
+                    </div>
+              </div>
+            );
+        }
+    }
+
     allEvents() {
         const events = this.props.events;
         if (Object.values(events).length === 0) return null;
 
         return (
         <div>
+            {this.renderAddEvent()}
             <ul className="tab-events">
             {Object.values(events).map((event) => {
                 if (event.group_id === this.props.group.id) {

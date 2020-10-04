@@ -17,12 +17,12 @@ class UpdateEventForm extends React.Component {
     }
 
     render() {
-        if (this.props.event === undefined) return null;
+        if (this.props.entity === undefined) return null;
         if (this.props.locations === undefined) return null;
 
         return (
             <EntityForm
-                event={this.props.event}
+                entity={this.props.entity}
                 formType={this.props.formType}
                 errors={this.props.errors}
                 locations={this.props.locations}

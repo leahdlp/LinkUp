@@ -83,7 +83,6 @@ $pink-btn-color: #F65858;
     padding-left: 30px;
     border-radius: 8px;
 
-
     display: flex;
     justify-content: center;
     background-color: $pink-btn-color;
@@ -96,4 +95,12 @@ $pink-btn-color: #F65858;
 .event-pink-btn > button:hover {
     background-color: #c41633;
     cursor: pointer;
+}
+
+#edit-event {
+    margin-right: 10px;
+}
+
+#delete-event {
+    margin-left: 10px;
 }
