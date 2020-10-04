@@ -19,7 +19,7 @@ const AttendeeList = ({ attendees, eventId, users }) => {
     return (
       <div className="attendee-list-container">
         <div className="attendee-list-header">
-            <h3>Attendee List ({eventAtts.length} attendees):</h3>
+            <h3>Attendees ({eventAtts.length})</h3>
             {see}
         </div>
         <ul className="attendee-list">

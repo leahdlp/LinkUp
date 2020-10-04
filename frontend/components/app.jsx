@@ -16,6 +16,7 @@ import EventEditFormContainer from "./forms/events/edit_event_container";
 import EventShowContainer from "./show/events/event_show_container";
 import FooterContainer from "./footer/footer_component_container";
 import AttendeeIndex from './indexes/attendee/attendee_index_container';
+import MemberIndexContainer from './indexes/members/member_index_container';
 import Landing from './splash_page/landing_container'
 import Splash from './splash_page/splash_page';
 
@@ -40,6 +41,7 @@ const App = () => (
         path="/groups/new"
         component={GroupCreateFormContainer}
       />
+      <ProtectedRoute exact path="/groups/:groupId/members" component={MemberIndexContainer}/>
       <Route exact path="/groups/:groupId" component={GroupShowContainer} />
       <AuthRoute path="/login" component={LogInContainer} />
       <AuthRoute path="/signup" component={SignUpContainer} />
