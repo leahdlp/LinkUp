@@ -89,6 +89,7 @@ class GroupShowHeaderNav extends React.Component {
                             events={this.props.events}
                             attendees={this.props.attendees}
                             fetchAttendees={this.props.fetchAttendees}
+                            currentUser={this.props.currentUser}
                         />
                     </div>
                     <div className="show-nav-btns">

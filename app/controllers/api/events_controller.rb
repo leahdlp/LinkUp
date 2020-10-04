@@ -11,7 +11,11 @@ class Api::EventsController < ApplicationController
 
     def create
         @event = Event.new(event_params)
-        @event.date_time = DateTime.parse(params[:event][:date_time]);
+
+        if params[:event][:date_time].instance_of? DateTime
+            @event.date_time = DateTime.parse(params[:event][:date_time])
+        end
+
         creator_id = @event.group.creator_id
 
         if creator_id != current_user.id

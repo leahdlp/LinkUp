@@ -23,12 +23,15 @@ class EventShow extends React.Component {
         if (this.props.event === undefined) return null;
         if (Object.values(this.props.locations).length === undefined) return null;
         if (Object.values(this.props.groups).length === 0) return null;
-
+       
         const event = this.props.event
         const group = this.props.groups[event.group_id]
         const location = this.props.locations[event.location_id];
         const attendees = this.props.attendees;
+
+        if (!Object.keys(this.props.users).includes(`${group.creator_id}`)) return null;
         const host = this.props.users[group.creator_id]
+
 
         return (
           <div className="event-show-pg">
@@ -84,9 +87,11 @@ class EventShow extends React.Component {
             <div className="event-bar-container">
               <EventBar
                 event={event}
+                deleteEvent={this.props.deleteEvent}
                 createAttendee={this.props.createAttendee}
                 deleteAttendee={this.props.deleteAttendee}
                 attendees={attendees}
+                host={host}
                 history={this.props.history}
                 currentUser={this.props.currentUser}
               />

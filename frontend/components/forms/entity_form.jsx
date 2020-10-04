@@ -12,8 +12,9 @@ class EntityForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
-        this.handleCancel = this.update.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
+        this.renderCategories = this.renderCategories.bind(this);
         this.renderDateTime = this.renderDateTime.bind(this);
         this.renderHeader = this.renderHeader.bind(this);
         this.renderForm = this.renderForm.bind(this);
@@ -67,6 +68,34 @@ class EntityForm extends React.Component {
         )
     }
 
+    renderCategories() {
+      let currentCat = this.state.subcategory_id || "default";
+      if (this.entity === "Event") return null;
+
+      return (
+        <label className="user-input">
+          Categories:
+          <br />
+          <select
+            className="drop-select"
+            defaultValue={currentCat}
+            onChange={this.update("subcategory_id")}
+          >
+            <option disabled value="default">
+              -- Please Select --
+            </option>
+
+            {Object.values(this.props.subcategories).map((subcategory) => (
+              <option value={subcategory.id} key={`subcat-${subcategory.id}`}>
+                {subcategory.name}
+              </option>
+            ))}
+          </select>
+        </label>
+      );
+    }
+
+
     renderDateTime() {
       if (this.entity === "Group") {
         return null
@@ -106,7 +135,6 @@ class EntityForm extends React.Component {
 
     renderForm() {
         let currentLoc = this.state.location_id || "default";
-        let currentCat = this.state.subcategory_id || "default";
 
         let label = this.entity === "Group" ? "Description" : "Details";
 
@@ -161,33 +189,10 @@ class EntityForm extends React.Component {
 
                 <br />
 
-                <label className="user-input">
-                  Categories:
-                  <br />
-                  <select
-                    className="drop-select"
-                    defaultValue={currentCat}
-                    onChange={this.update("subcategory_id")}
-                  >
-                    <option disabled value="default">
-                      -- Please Select --
-                    </option>
-
-                    {Object.values(this.props.subcategories).map(
-                      (subcategory) => (
-                        <option
-                          value={subcategory.id}
-                          key={`subcat-${subcategory.id}`}
-                        >
-                          {subcategory.name}
-                        </option>
-                      )
-                    )}
-                  </select>
-                </label>
+                {this.renderCategories()}
               </div>
               <br />
-              <div className="form-submit-btn-container">
+              <div className="form-btns-container">
                 <div className="form-submit-btn">
                   <input type="submit" value={this.props.formType} />
                   <br />

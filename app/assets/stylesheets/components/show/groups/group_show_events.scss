@@ -102,3 +102,24 @@
     border: white 2px solid;
     color: white;
 }
+
+.add-event {
+    // border: slateblue 1px solid;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.add-event> i{
+    display: flex;
+    align-items: center;
+    color: gray;
+    // border: violet 1px solid;
+}
+
+.add-event> h3 {
+    color: gray;
+    font-family: $meetup-font;
+    // border: turquoise 1px solid;
+}

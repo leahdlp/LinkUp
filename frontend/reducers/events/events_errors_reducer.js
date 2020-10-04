@@ -9,6 +9,7 @@ const eventsErrorsReducer = (oldState=[], action) => {
         case RECEIVE_EVENT:
             return [];
         case RECEIVE_EVENT_ERRORS:
+            console.log(action)
             return action.errors;
         case CLEAR_EVENT_ERRORS:
             return [];

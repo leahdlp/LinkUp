@@ -29,9 +29,9 @@ class Api::GroupsController < ApplicationController
     def create
         @group = Group.new(group_params)
         @group.creator_id = current_user.id
-        Member.create({ group_id: @group.id, user_id: current_user.id })
-
+        
         if @group.save
+            Member.create({ group_id: @group.id, user_id: current_user.id })
             render "/api/groups/show"
         else
             render json: @group.errors.full_messages, status: 404

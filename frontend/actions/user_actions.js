@@ -10,5 +10,5 @@ const receiveUser = user => ({
 export const fetchUser = userId => dispatch => (
     UserAPIUtil.fetchUser(userId)
         .then(user => dispatch(receiveUser(user)))
-        .catch(errors => console.log(errors))
+        .fail(errors => console.log(errors))
 )

@@ -46,6 +46,7 @@ export const createEvent = event => dispatch => (
     EventsAPIUtil.createEvent(event)
         .then(event => dispatch(receiveEvent(event)))
         .fail(errors => dispatch(receiveEventErrors(errors.responseJSON)))
+        // .fail(errors => console.log(errors))
 )
 
 export const updateEvent = event => dispatch => (
