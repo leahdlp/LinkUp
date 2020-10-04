@@ -17,34 +17,38 @@ class GroupShow extends React.Component {
 
         return (
             <div>
-                <GroupShowHeader 
-                    currentUser={this.props.currentUser}
-                    events={this.props.events}
-                    members={this.props.members}
-                    attendees={this.props.attendees}
-                    locations={this.props.locations}
-                    group={group}
-                    fetchAttendees={this.props.fetchAttendees}
-                    createMember={this.props.createMember}
-                    deleteMember={this.props.deleteMember}
-                    deleteGroup={this.props.deleteGroup}
-                    history={this.props.history}
-                />
-                <div className="member-section">
-                    <div className="member-container">
-                        <MemberList 
-                            groupId={this.props.group.id}
-                            members={this.props.members}
-                            users={this.props.users}
-                        />
+                <div className="mem-head-body">
+                    <GroupShowHeader 
+                        currentUser={this.props.currentUser}
+                        events={this.props.events}
+                        members={this.props.members}
+                        attendees={this.props.attendees}
+                        locations={this.props.locations}
+                        group={group}
+                        fetchAttendees={this.props.fetchAttendees}
+                        createMember={this.props.createMember}
+                        deleteMember={this.props.deleteMember}
+                        deleteGroup={this.props.deleteGroup}
+                        history={this.props.history}
+                    />
+                    <div className="member-section">
+                        <div className="member-container">
+                            <MemberList 
+                                groupId={this.props.group.id}
+                                members={this.props.members}
+                                users={this.props.users}
+                            />
+                        </div>
                     </div>
                 </div>
                 
-                <div className="subcats-list-container">
-                    <SubcategoriesList 
-                        group={group}
-                        subcategories={this.props.subcategories}
-                    />
+                <div className="category-section">
+                    <div className="subcats-list-container">
+                        <SubcategoriesList 
+                            group={group}
+                            subcategories={this.props.subcategories}
+                        />
+                    </div>
                 </div>
             </div>
         )

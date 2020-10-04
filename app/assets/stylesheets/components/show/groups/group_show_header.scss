@@ -29,10 +29,10 @@ $border-bottom: 1px solid rgb(216, 187, 187);
 
 .img-details-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     background-color: white;
-    min-width: fit-content;
-    width: 53%;
+    // min-width: fit-content;
+    max-width: 60%;
     // border: 5px solid pink
 }
 
@@ -60,12 +60,30 @@ $border-bottom: 1px solid rgb(216, 187, 187);
     height: 200px;
     width: 100%;
     background-color: white;
+    padding-left: 10%;
     // border: 5px solid yellow;
 }
 
-.group-details > h1 {
-    font-size: 32px;
-    font-weight: 1100;
+.show-details > h1 {
+    font-size: 42px;
+    font-weight: 900;
     width: 100%;
+    // border: lightseagreen 5px solid;
 }
 
+.show-sub-details {
+    background-color: white;
+    padding-top: 5%;
+    // border: lightseagreen 3px solid;
+    height: fit-content;
+    display: flex;
+}
+
+.show-detail-icons {
+    text-align: right;
+    background-color: inherit;
+}
+
+.show-detail-info {
+    background-color: inherit;
+}

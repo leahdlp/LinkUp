@@ -5,7 +5,7 @@ const MemberList = ({ members, users }) => {
     return(
         <div className="members-container">
             <div className="member-list-container">
-                <h3>Member List ({Object.values(members).length} members):</h3>
+                <h3>Members ({Object.values(members).length})</h3>
                 <ul className="member-list">
                     {Object.values(members).map(member => (
                         <MemberListItem 
