@@ -38,11 +38,9 @@ class Landing extends React.Component {
     render() {
         const events = this.props.events;
         const groups = this.props.groups;
-        // console.log(groups)
 
         if (events.length === 0 || groups.length === 0) return null;
-        console.log(this.state.entity)
-        // console.log('evets', events)
+        
         return (
             <div className="landing-pg">
                 <div className="landing-nav">
