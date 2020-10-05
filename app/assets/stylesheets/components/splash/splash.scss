@@ -1,0 +1,184 @@
+.splash-container {
+    // border: sienna 5px solid;
+    display: flex;
+    justify-content: center;
+    font-family: $meetup-font;
+}
+
+.splash {
+    // border: tomato 5px solid;
+    // width: 70%;
+}
+
+.intro-section {
+    // border: teal 4px solid;
+    background-color: rgb(116, 27, 71);
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-section-txt {
+    width: 50%;
+    padding-right: 10%;
+    font-weight: 300;
+    background-color: inherit;
+    color: white;
+}
+
+.intro-section-txt > h1 {
+    font-size: 46px;
+    font-weight: 900000;
+}
+
+.intro-section-txt > p {
+    font-size: 24px;
+}
+
+.splash-btn-container { 
+    display: flex;
+    justify-content: center;
+}
+
+#splash-btn {
+    background-color: inherit;
+    margin-top: 10%;
+    // padding-top: 10px;
+    margin-left: 0px;
+    // padding-left: 0px;
+    // border: 1px solid gold;
+    display: flex;
+    align-items: flex-start;
+}
+
+#splash-btn > button {
+    padding: 10px 15px;
+    border-radius: 12px;
+}
+
+.splash-img-container {
+    // border: tomato 10px solid;
+    height: 650px;
+    // display: block;
+}
+
+.splash-img {
+    height: 500px;
+    background-image: image_url("after_work_drinks.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 170%;
+    display: flex;
+    justify-content: center;
+    // align-items: flex-end;
+    // padding-top: 500px;
+}
+
+.splash-img-slides {
+    // border: 10px solid blue;
+    // background-color: turquoise;
+    min-height: fit-content;
+    height: 55%;
+    max-height: 400px;
+    z-index: 3;
+    width: 40%;
+    margin-top: 20%;
+    box-shadow: $box-shadow;
+    border-radius: 4px;
+}
+
+.description-container {
+    // border: slateblue 10px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 600px;
+}
+
+.description {
+    display: block;
+}
+
+.description > h3 {
+    font-size: 28px;
+}
+
+.splash-how-it-works-container {
+    background-color: rgb(3, 58, 75);
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.splash-how-it-works {
+    width: 60%;
+    background-color: inherit;
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    font-weight: 900;
+    padding-top: 5%;
+}
+
+#works {
+    background-color: inherit;;
+}
+
+#works-img {
+    margin-top: 10%;
+}
+
+#works-img-slides {
+    margin-top: 35%;
+}
+
+.features-container {
+    height: 400px;
+    // text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features {
+    border: seagreen 4px solid;
+    // text-align: center;
+}
+
+.splash-options-container {
+    display: flex;
+    margin-left: 20%;
+    justify-content: space-around;
+    // border: violet 3px solid;
+    height: fit-content;
+    width: 60%;
+    margin-top: 5%;
+}
+
+.splash-option {
+    display: block;
+    // border: yellow 2px solid;
+    width: 25%;
+    min-height: fit-content;
+    // height: 300px;
+    // max-height: 200px;
+    // display: flex;
+    // align-items: stretch;
+}
+
+.splash-option > h5 {
+    font-size: 16px;
+}
+
+.splash-link {
+    color: teal;
+    font-weight: 600;
+    padding-top: 100px;
+    margin-top: 100px;
+    // border: tomato 2px solid;
+}
+
+.splash-link:hover { 
+    text-decoration: underline;
+}

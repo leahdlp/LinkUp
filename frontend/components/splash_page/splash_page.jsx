@@ -1,22 +1,116 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Landing = props => {
+const Splash = props => {
     return (
-        <div className="splash">
-            <div className="anime-section">
-                1
-            </div>
-            <div className="description">
-                2
-            </div>
-            <div className="features">
-                3
-            </div>
-            <div >
+        <div className="splash-container">
+            <div className="splash">
+                <div className="intro-section">
+                    <div className="intro-section-txt">
+                        <h1>LinkUp creates possibilities</h1>
+                        <p>
+                            LinkUp is a platform for finding and building local communities.
+                            People use LinkUp to meet new people, learn new things, find
+                            support, get out of their comfort zones, and pursue their passions,
+                            together.
+                        </p>
 
+                        <div className="pink-btn" id="splash-btn">
+                            <button 
+                                // className="pink-btn"
+                                onClick={() => props.history.push("/signup")}>
+                                Join LinkUp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="splash-img-container">
+                    <div className="splash-img">
+                        <div className="splash-img-slides">
+
+                        </div>
+                    </div>
+                </div>
+                <div className="description-container">
+                    <div className="description">
+                        <h3>What you can do</h3>
+                        <div className="splash-options-container">
+                            <div className="splash-option">
+                                <h5>Explore your city</h5>
+                                <p>
+                                    Visit a museum, try new food, go hiking, hit up a 
+                                    brewery tour, or just go meet new people
+                                </p>
+                            </div>
+                            <div className="splash-option">
+                                <h5>Build your career</h5>
+                                <p>
+                                    Test a prototype, network, take a class, learn a language, 
+                                    pitch to investors, or learn a new skill
+                                </p>
+                            </div>
+                            <div className="splash-option">
+                                <h5>Get creative</h5>
+                                <p>
+                                    Create a podcast, write a screenplay, discuss art, 
+                                    design something, or get feedback on your work
+                                </p>
+                            </div>
+                        </div>
+                        <div className="splash-btn-container">
+                            <div className="pink-btn" id="splash-btn">
+                                <button onClick={() => props.history.push("/signup")}>
+                                    See more topics
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="splash-how-it-works-container">
+                    <div className="splash-how-it-works">
+                        How it works
+                        <div className="splash-img-container" id="works">
+                            <div className="splash-img" id="works-img">
+                                <div 
+                                    className="splash-img-slides" 
+                                    id="works-img-slides">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="features-container">
+                    <div className="features">
+                        <h3>Want to do more of what you love?</h3>
+                        <div className="splash-options-container">
+                            <div className="splash-option">
+                                <h5>Discover groups</h5>
+                                <p>See who’s hosting local events for all the things you love.</p>
+                                <Link 
+                                    className="splash-link"
+                                    to="/signup">
+                                    Join Meetup
+                                </Link>
+                            </div>
+                            <div className="splash-option">
+                                <h5>Start a group</h5>
+                                <p>
+                                    Create your own Meetup group, and draw from a community of millions.
+                                </p>
+                                <Link 
+                                    className="splash-link"
+                                    to="/login">
+                                    Start a group
+                                </Link>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div></div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Landing;
+export default Splash;
