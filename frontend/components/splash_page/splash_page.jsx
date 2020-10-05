@@ -27,7 +27,8 @@ const Splash = props => {
                 <div className="splash-img-container">
                     <div className="splash-img">
                         <div className="splash-img-slides">
-
+                            <i class="fas fa-chevron-left"></i>
+                            <i class="fas fa-chevron-right"></i>
                         </div>
                     </div>
                 </div>
@@ -82,6 +83,8 @@ const Splash = props => {
                                 <div 
                                     className="splash-img-slides" 
                                     id="works-img-slides">
+                                        <i class="fas fa-chevron-left"></i>
+                                        <i class="fas fa-chevron-right"></i>
                                 </div>
                             </div>
                         </div>

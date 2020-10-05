@@ -90,6 +90,21 @@
     margin-top: 20%;
     box-shadow: $box-shadow;
     border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding-left: 5%;
+    // padding-right: 5%;
+    padding: 0% 3%;
+    color: teal;
+    font-size: 20px;
+}
+
+.splash-img-slides > i {
+    cursor: pointer;
+    border: 1px solid rgb(173, 173, 173);
+    padding: 8px;
+    border-radius: 8px;
 }
 
 .description-container {
