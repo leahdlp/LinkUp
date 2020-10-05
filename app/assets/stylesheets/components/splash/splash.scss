@@ -98,6 +98,8 @@
 
 .description {
     display: block;
+    // justify-content: center;
+    // border: green 1px solid;
 }
 
 .description > h3 {
@@ -159,6 +161,7 @@
     text-align: left;
 }
 
+
 .splash-options-container {
     display: flex;
     // margin-left: 20%;
@@ -168,6 +171,11 @@
     width: 100%;
     margin-top: 5%;
     // text-align: left;
+}
+
+#desc-con {
+    width: 60%;
+    margin-left: 20%;
 }
 
 .splash-option {
@@ -187,6 +195,10 @@
     // max-height: 200px;
     // display: flex;
     // align-items: stretch;;
+}
+
+#desc-icon {
+    font-size: 32px;
 }
 
 #feature-icon {

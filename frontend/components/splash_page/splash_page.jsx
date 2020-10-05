@@ -34,27 +34,35 @@ const Splash = props => {
                 <div className="description-container">
                     <div className="description">
                         <h3>What you can do</h3>
-                        <div className="splash-options-container">
+                        <div className="splash-options-container" id="desc-con">
                             <div className="splash-option">
-                                <h5>Explore your city</h5>
-                                <p>
-                                    Visit a museum, try new food, go hiking, hit up a 
-                                    brewery tour, or just go meet new people
-                                </p>
+                                <div>
+                                    <i id="desc-icon" className="fas fa-map-marker-alt"></i>                                    <h5>Explore your city</h5>
+                                    <p>
+                                        Visit a museum, try new food, go hiking, hit up a 
+                                        brewery tour, or just go meet new people
+                                    </p>
+                                </div>
                             </div>
                             <div className="splash-option">
-                                <h5>Build your career</h5>
-                                <p>
-                                    Test a prototype, network, take a class, learn a language, 
-                                    pitch to investors, or learn a new skill
-                                </p>
+                                <div>
+                                    <i id="desc-icon" className="fas fa-briefcase"></i>
+                                    <h5>Build your career</h5>
+                                    <p>
+                                        Test a prototype, network, take a class, learn a language, 
+                                        pitch to investors, or learn a new skill
+                                    </p>
+                                </div>
                             </div>
                             <div className="splash-option">
-                                <h5>Get creative</h5>
-                                <p>
-                                    Create a podcast, write a screenplay, discuss art, 
-                                    design something, or get feedback on your work
-                                </p>
+                                <div>
+                                    <i id="desc-icon" className="fas fa-image"></i>
+                                    <h5>Get creative</h5>
+                                    <p>
+                                        Create a podcast, write a screenplay, discuss art, 
+                                        design something, or get feedback on your work
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div className="splash-btn-container">
