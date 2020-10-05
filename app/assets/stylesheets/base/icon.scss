@@ -5,12 +5,22 @@ i {
 .logo {
     background-color: white;
     cursor: pointer;
+    background-image: image_url("logo.png");
+    background-repeat: no-repeat;
+    height: 50px;
+    // height: fit-content;
+    width: 8%;
+    // border: 3px solid black;
+    background-position: center;
+    background-color: white;
+    background-size: 200px 90px;
+    cursor: pointer;
 }
 
-#logo-icon {
-    color:$pink-btn-color;
-    font-size: 50px;
-}
+// #logo-icon {
+//     color:$pink-btn-color;
+//     font-size: 50px;
+// }
 
 .dot {
     height: 1px;

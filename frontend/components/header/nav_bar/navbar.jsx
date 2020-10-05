@@ -7,7 +7,7 @@ class NavBar extends React.Component {
         return (
           <div className="loggedIn-header">
             <div className="logo" onClick={() => this.props.history.push("/")}>
-              <i className="fab fa-meetup" id="logo-icon"></i>
+              {/* <i className="fab fa-meetup" id="logo-icon"></i> */}
             </div>
             <div id="nav-links-container">
               <Link id="special-offer" to="/groups/new">
@@ -63,7 +63,7 @@ class NavBar extends React.Component {
             <div 
                 className="logo"
                 onClick={() => this.props.history.push("/")}>
-              <i className="fab fa-meetup" id="logo-icon"></i>
+              {/* <i className="fab fa-meetup" id="logo-icon"></i> */}
             </div>
             <div className="nav-btns">
               <Link to="/login" id="login-link">
