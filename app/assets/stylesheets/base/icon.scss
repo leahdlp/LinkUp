@@ -5,16 +5,16 @@ i {
 .logo {
     background-color: white;
     cursor: pointer;
-    background-image: image_url("logo.png");
+    background-image: image_url("meetup.png");
     background-repeat: no-repeat;
-    height: 50px;
+    height: 55px;
     // height: fit-content;
     width: 8%;
-    // border: 3px solid black;
     background-position: center;
     background-color: white;
-    background-size: 200px 90px;
+    background-size: 200px 50px;
     cursor: pointer;
+    // border: black 0.5px solid;
 }
 
 // #logo-icon {
