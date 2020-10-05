@@ -40,9 +40,12 @@ $pg-background-color: rgb(245, 245, 247);
     background-repeat: no-repeat;
     background-size: 250px 150px;
     background-position: bottom;
+    // box-shadow: $box-shadow;
 }
 
 .index-item {
+    // border: grey 1px solid;
     border-radius: 4px;
+    text-shadow: 1px 1px black;
 }
 
