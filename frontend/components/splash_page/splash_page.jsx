@@ -34,27 +34,35 @@ const Splash = props => {
                 <div className="description-container">
                     <div className="description">
                         <h3>What you can do</h3>
-                        <div className="splash-options-container">
+                        <div className="splash-options-container" id="desc-con">
                             <div className="splash-option">
-                                <h5>Explore your city</h5>
-                                <p>
-                                    Visit a museum, try new food, go hiking, hit up a 
-                                    brewery tour, or just go meet new people
-                                </p>
+                                <div>
+                                    <i id="desc-icon" className="fas fa-map-marker-alt"></i>                                    <h5>Explore your city</h5>
+                                    <p>
+                                        Visit a museum, try new food, go hiking, hit up a 
+                                        brewery tour, or just go meet new people
+                                    </p>
+                                </div>
                             </div>
                             <div className="splash-option">
-                                <h5>Build your career</h5>
-                                <p>
-                                    Test a prototype, network, take a class, learn a language, 
-                                    pitch to investors, or learn a new skill
-                                </p>
+                                <div>
+                                    <i id="desc-icon" className="fas fa-briefcase"></i>
+                                    <h5>Build your career</h5>
+                                    <p>
+                                        Test a prototype, network, take a class, learn a language, 
+                                        pitch to investors, or learn a new skill
+                                    </p>
+                                </div>
                             </div>
                             <div className="splash-option">
-                                <h5>Get creative</h5>
-                                <p>
-                                    Create a podcast, write a screenplay, discuss art, 
-                                    design something, or get feedback on your work
-                                </p>
+                                <div>
+                                    <i id="desc-icon" className="fas fa-image"></i>
+                                    <h5>Get creative</h5>
+                                    <p>
+                                        Create a podcast, write a screenplay, discuss art, 
+                                        design something, or get feedback on your work
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div className="splash-btn-container">
@@ -82,26 +90,42 @@ const Splash = props => {
                 <div className="features-container">
                     <div className="features">
                         <h3>Want to do more of what you love?</h3>
-                        <div className="splash-options-container">
+                        <div className="splash-options-container" id="feature">
                             <div className="splash-option">
-                                <h5>Discover groups</h5>
-                                <p>See who’s hosting local events for all the things you love.</p>
-                                <Link 
-                                    className="splash-link"
-                                    to="/signup">
-                                    Join Meetup
-                                </Link>
+                                <div>
+                                    <i id="feature-icon" className="fas fa-search"></i>
+                                </div>
+                                <div>
+                                    <h5 id="feature-head">Discover groups</h5>
+                                    <p id="feature-body">
+                                        See who’s hosting local events for all 
+                                        the things you love.
+                                    </p>
+                                    <Link 
+                                        id="feature-link"
+                                        className="splash-link"
+                                        to="/signup">
+                                        Join Meetup
+                                    </Link>
+                                </div>
                             </div>
                             <div className="splash-option">
-                                <h5>Start a group</h5>
-                                <p>
-                                    Create your own Meetup group, and draw from a community of millions.
-                                </p>
-                                <Link 
-                                    className="splash-link"
-                                    to="/login">
-                                    Start a group
-                                </Link>
+                                <div>
+                                    <i id="feature-icon" className="fas fa-plus"></i>
+                                </div>
+                                <div>
+                                    <h5 id="feature-head">Start a group</h5>
+                                    <p id="feature-body">
+                                        Create your own Meetup group, and draw 
+                                        from a community of millions.
+                                    </p>
+                                    <Link 
+                                        id="feature-link"
+                                        className="splash-link"
+                                        to="/login">
+                                        Start a group
+                                    </Link>
+                                </div>
                             </div>
                         </div>
 
