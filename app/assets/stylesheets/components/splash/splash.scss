@@ -50,11 +50,16 @@
     // border: 1px solid gold;
     display: flex;
     align-items: flex-start;
+    width: fit-content;
 }
 
 #splash-btn > button {
     padding: 10px 15px;
     border-radius: 12px;
+    // border: lawngreen 1px solid;
+    // padding: 0px;
+    margin: 0px;
+    // width: 300px;
 }
 
 .splash-img-container {
