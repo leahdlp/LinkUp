@@ -122,15 +122,19 @@
 }
 
 #works {
-    background-color: inherit;;
+    background-color: inherit;
 }
 
 #works-img {
     margin-top: 10%;
+    background-image: image_url("dia-de-los-muertos.jpg");
+    background-position: center;
+    background-color: inherit;
 }
 
 #works-img-slides {
     margin-top: 35%;
+    width: 70%;
 }
 
 .features-container {
@@ -142,33 +146,64 @@
 }
 
 .features {
-    border: seagreen 4px solid;
-    // text-align: center;
+    // border: seagreen 4px solid;
+    text-align: center;
+}
+
+.features > h3 {
+    font-size: 28px;
+    font-weight: 900;
+}
+
+#feature {
+    text-align: left;
 }
 
 .splash-options-container {
     display: flex;
-    margin-left: 20%;
+    // margin-left: 20%;
     justify-content: space-around;
     // border: violet 3px solid;
     height: fit-content;
-    width: 60%;
+    width: 100%;
     margin-top: 5%;
+    // text-align: left;
 }
 
 .splash-option {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    // border: green 1px solid;
+    width: 30%;
+}
+
+.splash-option > div {
     display: block;
     // border: yellow 2px solid;
-    width: 25%;
+    width: fit-content;
     min-height: fit-content;
     // height: 300px;
     // max-height: 200px;
     // display: flex;
-    // align-items: stretch;
+    // align-items: stretch;;
 }
 
-.splash-option > h5 {
+#feature-icon {
+    font-size: 42px;
+    color: teal;
+    margin-right: 15px;
+    padding-top: 25px;
+    // border: 1px solid blue;
+
+}
+
+#feature-head {
     font-size: 16px;
+}
+
+#feature-body {
+    margin-bottom: 10px;
 }
 
 .splash-link {
