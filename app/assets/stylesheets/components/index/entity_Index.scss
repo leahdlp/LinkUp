@@ -36,11 +36,23 @@ $pg-background-color: rgb(245, 245, 247);
     height: 100px;
     color: white;
     cursor: pointer;
-    background-image: image_url('got-hands.jpg');
+    background-image: image_url('after_work_drinks.jpg');
     background-repeat: no-repeat;
-    background-size: 250px 150px;
-    background-position: bottom;
+    background-size: 450px 250px;
+    background-position: center;
     // box-shadow: $box-shadow;
+    display: flex;
+    align-items: center;
+}
+
+.grid-item:hover {
+    color: white;
+    background-color: rgb(255, 255, 255);
+    height: 170px;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 900;
+    z-index: 6;
 }
 
 .index-item {

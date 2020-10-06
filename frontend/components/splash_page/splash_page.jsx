@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SplashTabs from './splash_tabs'
 
 const Splash = props => {
     return (
@@ -24,11 +25,16 @@ const Splash = props => {
                         </div>
                     </div>
                 </div>
-                <div className="splash-img-container">
-                    <div className="splash-img">
-                        <div className="splash-img-slides">
-                            <i class="fas fa-chevron-left"></i>
-                            <i class="fas fa-chevron-right"></i>
+                <div className="splash-img-container" id="group-splash-img-con">
+                    <div className="splash-img" className="img-long">
+                        <div className="splash-img-slides-container" id="img-slide-con">
+                            {/* <div className="splash-img-slides"> */}
+                                    {/* <div className="slide-section"> */}
+                                        <SplashTabs 
+                                            type="group"
+                                        />
+                                    {/* </div> */}
+                            {/* </div> */}
                         </div>
                     </div>
                 </div>
@@ -81,10 +87,11 @@ const Splash = props => {
                         <div className="splash-img-container" id="works">
                             <div className="splash-img" id="works-img">
                                 <div 
-                                    className="splash-img-slides" 
-                                    id="works-img-slides">
-                                        <i class="fas fa-chevron-left"></i>
-                                        <i class="fas fa-chevron-right"></i>
+                                    className="splash-img-slides-container" 
+                                    id="works-slides">
+                                        <SplashTabs 
+                                            type="works"
+                                        />
                                 </div>
                             </div>
                         </div>

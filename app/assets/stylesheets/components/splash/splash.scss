@@ -75,42 +75,106 @@
     background-size: 100% 170%;
     display: flex;
     justify-content: center;
+    // border: 10px solid red;
     // align-items: flex-end;
     // padding-top: 500px;
 }
 
-.splash-img-slides {
-    // border: 10px solid blue;
-    // background-color: turquoise;
-    min-height: fit-content;
-    height: 55%;
-    max-height: 400px;
-    z-index: 3;
-    width: 40%;
-    margin-top: 20%;
-    box-shadow: $box-shadow;
-    border-radius: 4px;
+.splash-img-slides-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    // padding-left: 5%;
-    // padding-right: 5%;
-    padding: 0% 3%;
-    color: teal;
-    font-size: 20px;
-}
-
-.splash-img-slides > i {
-    cursor: pointer;
-    border: 1px solid rgb(173, 173, 173);
-    padding: 8px;
+    min-height: fit-content;
+    height: fit-content;
+    box-shadow: $box-shadow;
+    z-index: 3;
     border-radius: 8px;
+    width: 70%;
+    // border: orange 10px solid;
+    // margin-top: 70%;
+    // padding: 0px;
 }
 
-.splash-img-slides > i:hover {
-    background-color: rgb(167, 167, 167);
-    color: white;
+#group-splash-img-con {
+    height: 850px;
+    // border: 10px solid blue;
 }
+
+.img-long {
+    min-height: 700px;
+    max-height: 700px;
+    // border: 10px solid hotpink;
+    display: flex;
+    justify-content: center;
+}
+
+#img-slide-con {
+    // border: olivedrab 10px solid;
+    // border-radius: inherit;
+    margin-top: 33%;
+    width: 60%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // border-radius: 8px;
+}
+
+// .splash-img-slides {
+//     border-radius: inherit;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     border: 10px solid black;
+//     min-width: 100%;
+//     color: grey;
+//     // width: 100%;
+//     height: 80%;
+//     // z-index: 4;
+//     // min-height: fit-content;
+//     // margin: 0px;
+// }
+
+// .slide-section {
+    //     display: flex;
+    //     justify-content: space-between;
+    // }
+
+// .splash-arrows {
+//     // border: 1px solid black;
+// }
+    
+//     .slide-section {
+//         // border: 10px solid blue;
+//         width: 90%;
+//         // background-color: turquoise;
+//         // height: 55%;
+//         // max-height: 400px;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         // padding-left: 5%;
+//         // padding-right: 5%;
+//         padding: 0% 3%;
+//         color: teal;
+//         font-size: 20px;
+//         // z-index: 5;
+// }
+
+// .slide-section > i {
+//     cursor: pointer;
+//     border: 1px solid rgb(173, 173, 173);
+//     padding: 8px;
+//     border-radius: 8px;
+//     border: hotpink 1px solid;
+// }
+
+
+
+// .slide-section > i:hover {
+//     background-color: rgb(167, 167, 167);
+//     color: white;
+// }
 
 .description-container {
     // border: slateblue 10px solid;
@@ -132,7 +196,7 @@
 }
 
 .splash-how-it-works-container {
-    background-color: rgb(3, 58, 75);
+    background-color: rgb(45, 93, 107);
     height: 1000px;
     display: flex;
     justify-content: center;
@@ -140,7 +204,9 @@
 
 .splash-how-it-works {
     width: 60%;
-    background-color: inherit;
+    // background-color: inherit;
+    background-color: rgb(45, 93, 107);
+
     text-align: center;
     font-size: 36px;
     color: white;
@@ -150,6 +216,8 @@
 
 #works {
     background-color: inherit;
+    background-color: rgb(45, 93, 107);
+
 }
 
 #works-img {
@@ -157,6 +225,12 @@
     background-image: image_url("dia-de-los-muertos.jpg");
     background-position: center;
     background-color: inherit;
+//       -webkit-transition: opacity 1s ease-in-out;
+//   -moz-transition: opacity 1s ease-in-out;
+//   -o-transition: opacity 1s ease-in-out;
+//   transition: opacity 1s ease-in-out;
+    background-color: rgb(45, 93, 107);
+
 }
 
 #works-img-slides {
@@ -191,7 +265,7 @@
     display: flex;
     // margin-left: 20%;
     justify-content: space-around;
-    // border: violet 3px solid;
+    // border: violet 10px solid;
     height: fit-content;
     width: 100%;
     margin-top: 5%;
@@ -224,6 +298,13 @@
 
 #desc-icon {
     font-size: 32px;
+}
+
+#works-slides {
+    margin-top: 38%;
+    color: black;
+    width: 70%;
+    // border: red 20px solid;
 }
 
 #feature-icon {
