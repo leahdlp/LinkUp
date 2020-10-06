@@ -39,6 +39,8 @@
 .splash-btn-container { 
     display: flex;
     justify-content: center;
+    align-items: center;
+    // border: 10px solid red;
 }
 
 #splash-btn {
@@ -53,7 +55,28 @@
     width: fit-content;
 }
 
+#see-more {
+    background-color: inherit;
+    margin-top: 3%;
+    // padding-top: 10px;
+    margin-left: 0px;
+    // padding-left: 0px;
+    // border: 1px solid gold;
+    display: flex;
+    align-items: flex-start;
+    width: fit-content;
+}
+
 #splash-btn > button {
+    padding: 10px 15px;
+    border-radius: 12px;
+    // border: lawngreen 1px solid;
+    // padding: 0px;
+    margin: 0px;
+    // width: 300px;
+}
+
+#see-more > button {
     padding: 10px 15px;
     border-radius: 12px;
     // border: lawngreen 1px solid;
@@ -268,13 +291,23 @@
     // border: violet 10px solid;
     height: fit-content;
     width: 100%;
-    margin-top: 5%;
+    margin-top: 3%;
     // text-align: left;
 }
 
 #desc-con {
     width: 60%;
     margin-left: 20%;
+    height: fit-content;
+    // border: green 10px solid;
+}
+
+#desc-con > div {
+    padding: 20px 20px;
+    margin: 20px 20px;
+    box-shadow: $box-shadow;
+    border-radius: 8px;
+    
 }
 
 .splash-option {

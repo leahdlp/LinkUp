@@ -73,7 +73,7 @@ const Splash = props => {
                             </div>
                         </div>
                         <div className="splash-btn-container">
-                            <div className="pink-btn" id="splash-btn">
+                            <div className="pink-btn" id="splash-btn" id="see-more">
                                 <button onClick={() => props.history.push("/signup")}>
                                     See more topics
                                 </button>
