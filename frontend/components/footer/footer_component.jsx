@@ -11,7 +11,7 @@ const Footer = props => (
             </div> 
             
             <div className="my-links-container">
-                <div className ="my-links">
+                <div className="my-links">
                     <ul className="link-list">
 
                         <li>

@@ -7,12 +7,13 @@ div {
 }
 
 .login-page {
+    border: 10px solid red;
     display: flex;
     justify-content: center;
     border-radius: 4px;
     border: $border-bottom;
-    margin-top: 10%;
-    margin-bottom: 20%;
+    // margin-top: 5%;
+    margin-bottom: 5%;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
@@ -22,11 +23,15 @@ div {
 
 
 .login-form {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-radius: 4px;
     width: 100%;
     height: fit-content;
-    background-color: white;
+    background-color: #ffffff;
+    // border: rgb(0, 119, 255) 10px solid;
 }
 
 .signup-page {
@@ -34,45 +39,56 @@ div {
     justify-content: center;
     border: $border-bottom;
     border-radius: 4px;
-    margin-top: 10%;
-    margin-bottom: 20%;
+    // margin-top: 5%;
+    margin-bottom: 5%;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     max-width: 400px;
     background-color: white;
+    // border: purple 1px solid;
 }
 
 .signup-form {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-radius: 4px;
     width: 100%;
     height: fit-content;
     background-color: white;
+    // border: yellow 1px solid;
 } 
 
 
 #header-msg {
     display: block;
     padding-right: 10px;
+    // border: rgb(0, 119, 255) 1px solid;
 }
 
 .form-container {
     display: block;
     border-radius: 4px;
-    padding: 16px;
+    padding-bottom: 10%;
+    min-width: 90%;
     background-color: white;
+    // border:red 2px solid;
+    // max-width: 50%;
 
 }
 
 .form-header {
     border-bottom: $border-bottom;
     border-radius: 4px 4px 0px 0px;
-    padding-left: 16px;
+    padding-top: 5%;
+    width: 93%;
     height: fit-content;
     min-height: 100px;
     background-color: white;
     font-family: $meetup-font;
+    // border: 1px green solid;
 }
 
 .form-type {
@@ -95,25 +111,29 @@ div {
 }
 
 .inputs {
-    margin: auto;
-    width: 100%;
+    margin: 15px auto;
+    // width: 95%;
     background-color: white;
+    // border: hotpink 1px solid;
 }
 
 .user-input {
     font-family: $meetup-font;
-    font-size: 13px;
+    font-size: 16px;
+    // border: indianred 1px solid;
 }
 
 .user-input > input {
     display: flex;
     justify-content: center;
     border-radius: 4px;
-    height: 21px;
-    width: 95%;
+    height: 30px;
+    // width: x/%;
+    margin-top: 8px;
     margin-bottom: 16px;
-    padding: 4px;
+    // padding: 4px;
     background-color: $pg-background-color;
+    // border: 1px solid orange;
 }
 
 .user-input > input:focus {
