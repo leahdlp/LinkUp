@@ -20,6 +20,14 @@ $border-bottom: 1px solid rgb(211, 211, 211);
     border-bottom: $border-bottom;
 }
 
+.left-header {
+    width: 40%;
+    display: flex;
+    justify-self: space-between;
+    align-items: center;
+    background-color: white;
+}
+
 .logout-btn {
     display: flex;
     justify-content: space-around;

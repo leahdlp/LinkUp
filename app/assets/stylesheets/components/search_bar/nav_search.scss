@@ -1,0 +1,31 @@
+.search-bar-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+#nav-search {
+    border-radius: 0px;
+    border: 1px solid rgb(199, 197, 197);
+    height: 27px;
+    min-width: 80%;
+    margin: 0px
+    // background-color: white;
+}
+
+.search-btn {
+    border: 1px solid rgb(199, 197, 197);
+    color: grey;
+    height: 27px;
+    min-width: 20%;
+    text-align: center;
+    margin: 0px
+    // padding: 2% 3x%;
+}
+
+.search-btn:hover {
+    background-color: grey;
+    color: white;
+    font-weight: 500;
+}

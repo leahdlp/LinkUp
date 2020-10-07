@@ -35,11 +35,8 @@ class LogInForm extends React.Component {
     renderErrors() {
         let errors = this.props.errors;
         let klass = "";
-        let feedback = "";
+
         if (errors.length != 0) klass = "errors";
-        if (errors.includes("Your email or password was entered incorrectly.")) {
-            feedback = "To reset your password, please click here";
-        }
 
         return (
             <div className="errors-container">
@@ -49,7 +46,6 @@ class LogInForm extends React.Component {
                             <li key={`error-${i}`}>{error}</li>
                         ))}
                     </ul>
-                    <p>{feedback}</p>
                 </div>
             </div>
         )

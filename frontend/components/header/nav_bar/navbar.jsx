@@ -6,8 +6,17 @@ class NavBar extends React.Component {
     loggedIn(user) {
         return (
           <div className="loggedIn-header">
-            <div className="logo" onClick={() => this.props.history.push("/")}>
-              {/* <i className="fab fa-meetup" id="logo-icon"></i> */}
+            <div className="left-header">
+              <div
+                className="logo"
+                onClick={() => this.props.history.push("/")}
+              >
+                {/* <i className="fab fa-meetup" id="logo-icon"></i> */}
+              </div>
+              <div className="search-bar-container">
+                <input className="search-bar" id="nav-search"></input>
+                <button className="search-btn">Search</button>
+              </div>
             </div>
             <div id="nav-links-container">
               <Link id="special-offer" to="/groups/new">

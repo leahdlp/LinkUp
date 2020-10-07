@@ -10,6 +10,7 @@ class NavTabs extends React.Component {
         };
 
         this.selectTab = this.selectTab.bind(this);
+        this.changeWindowSize = this.changeWindowSize.bind(this)
         this.allMembers = this.allMembers.bind(this);
         this.convertDate = this.convertDate.bind(this);
         this.convertTime = this.convertTime.bind(this);
@@ -18,16 +19,76 @@ class NavTabs extends React.Component {
         this.numAttendees = this.numAttendees.bind(this);
         this.renderAddEvent = this.renderAddEvent.bind(this);
         this.allEvents = this.allEvents.bind(this);
+        this.allPhotos = this.allPhotos.bind(this);
     }
 
     componentDidMount() {
         Object.values(this.props.events).map((event) =>
-        this.props.fetchAttendees(event.id)
+            this.props.fetchAttendees(event.id)
         );
     }
 
     selectTab(idx) {
         this.setState({ currentTab: idx });
+
+        let type;
+        switch (idx) {
+            case 1:
+                type = 'events';
+                break;
+            case 2:
+                type = 'members';
+                break;
+            case 3: 
+                type = 'photos';
+                break
+            default:
+                type = '';
+                break;
+        }
+
+        this.changeWindowSize(type);
+    }
+
+    changeWindowSize(type) {
+        let section = document.getElementsByClassName("member-section")[0];
+        let page = document.getElementsByClassName("mem-head-body")[0];
+
+        // console.log(section);
+
+        section.setAttribute("id", "gshow-event-section");
+        page.setAttribute("id", "gshow-event-page")
+
+        section = document.getElementById("gshow-event-section");
+        page = document.getElementById("gshow-event-page")
+
+        let height; 
+        
+        switch (type) {
+            case 'events':
+                height = `${Object.values(this.props.events).length * 160}px`;
+                break;
+            case 'members':
+                console.log('here')
+                height = `${Object.values(this.props.members).length * 115}px`;
+                console.log(height)
+                break;
+            case 'photos':
+                height = `${(20 / 4) * 170}px`;
+                console.log(height)
+                break;
+            default:
+                height = 'fit-content'
+                console.log(height)
+                break;
+        }
+
+        section.setAttribute("style", `height: ${height}`)
+        // page.setAttribute("style", `height: ${height * 10}px`)
+    }
+
+    revertWindowSize(type) {
+
     }
 
     allMembers() {
@@ -277,6 +338,17 @@ class NavTabs extends React.Component {
         );
     }
 
+    allPhotos() {
+        const photos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+        return (
+            <ul className="photo-list">
+                {photos.map(photo => {
+                    return <li className="photo-list-item"></li>
+                })}
+            </ul>
+        )
+    }
+
     setHeader(idx) {
         if (idx === 0) {
         return <h3>What we're about</h3>;
@@ -289,7 +361,7 @@ class NavTabs extends React.Component {
         { title: "About", content: this.props.group.description },
         { title: "Events", content: this.allEvents() },
         { title: "Members", content: this.allMembers() },
-        { title: "Photos", content: "Pics" },
+        { title: "Photos", content: this.allPhotos() },
         ];
         const selected = panes[idx];
 
