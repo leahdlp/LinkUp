@@ -7,6 +7,7 @@ import subcategoriesReducer from './subcategories/subcategories_reducer';
 import locationsReducer from './locations/locations_reducer';
 import eventsReducer from './events/events_reducer';
 import attendeesReducer from './attendees/attendees_reducer';
+import keywordReducer from './keyword/keyword_reducer';
 
 const entitiesReducers = combineReducers({
     users: usersReducer,
@@ -16,7 +17,8 @@ const entitiesReducers = combineReducers({
     subCategories: subcategoriesReducer,
     locations: locationsReducer,
     events: eventsReducer,
-    attendees: attendeesReducer
+    attendees: attendeesReducer,
+    keyword: keywordReducer
 })
 
 export default entitiesReducers;

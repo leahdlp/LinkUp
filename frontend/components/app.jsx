@@ -17,7 +17,9 @@ import EventShowContainer from "./show/events/event_show_container";
 import FooterContainer from "./footer/footer_component_container";
 import AttendeeIndex from './indexes/attendee/attendee_index_container';
 import MemberIndexContainer from './indexes/members/member_index_container';
-import Landing from './splash_page/landing_container'
+// import SearchBarContainer from './search_bar/search_bar_container';
+import IndexListContainer from './indexes/search/index_list_container';
+import Landing from './splash_page/landing_container';
 import Splash from './splash_page/splash_page';
 
 const App = () => (
@@ -29,6 +31,11 @@ const App = () => (
 
     <LandingRoute exact path="/" component={Landing} />
     <AuthRoute exact path="/splash" component={Splash} />
+
+    <Switch>
+        <Route exact path="/find/keyword=:keyword" component={IndexListContainer} />
+        <Route exact path="/find" component={IndexListContainer} />
+    </Switch>
 
     <Switch>
       <ProtectedRoute

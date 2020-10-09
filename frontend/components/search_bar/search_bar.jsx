@@ -6,11 +6,12 @@ class SearchBar extends React.Component {
 
         this.state = { 
             search: "",
-            result: []
+            queried: false,
+            results: []
         }
 
         this.update - this.update.bind(this);
-        this.filterOut = this.filterOut.bind(this);
+        // this.filterOut = this.filterOut.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -18,20 +19,33 @@ class SearchBar extends React.Component {
         this.setState({ search: event.target.value })
     }
 
-    filterOut(type) {
-        // this.props.groups.map(group => (
-            
-        // ))
-    }
+    // filterOut(type) {
+    //     this.setState({ queried: true })
+
+    //     this.props.entities.forEach(entity => (
+    //         this.state.results.push(entity)
+    //     ))
+    // }
 
     handleSubmit() {
-        this.props.fetchGroups();
-        this.props.fetchEvents();
-        this.props.fetchSubcategories();
+        // this.props.fetchGroups();
+        // this.props.fetchEvents();
+        // this.props.fetchSubcategories();
+        this.props.setKeyword(this.state.search);
+        if (this.state.search === "") {
+            this.props.history.push('/find')
+        } else {
+            this.props.history.push(`/find/keyword=${this.state.search}`);
+        }
     }
 
     render() {
-
+        return (
+            <form onSubmit={() => this.handleSubmit()}>
+                <input type="text" onChange={() => this.update()} id="nav-search" />
+                <input type="submit" value="Search" className="search-btn"/>
+            </form>
+        )
 
         // query for all possible entities
         // filter out results 

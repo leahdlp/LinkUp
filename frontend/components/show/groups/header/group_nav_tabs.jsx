@@ -75,7 +75,7 @@ class NavTabs extends React.Component {
                 break;
             case 'photos':
                 height = `${(20 / 4) * 170}px`;
-                console.log(height)
+                console.log(height) 
                 break;
             default:
                 height = 'fit-content'

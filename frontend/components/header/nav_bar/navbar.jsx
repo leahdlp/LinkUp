@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import SearchBar from '../../search_bar/search_bar'
+
 class NavBar extends React.Component {
 
     loggedIn(user) {
@@ -14,8 +16,10 @@ class NavBar extends React.Component {
                 {/* <i className="fab fa-meetup" id="logo-icon"></i> */}
               </div>
               <div className="search-bar-container">
-                <input className="search-bar" id="nav-search"></input>
-                <button className="search-btn">Search</button>
+                <SearchBar 
+                  setKeyword={this.props.setKeyword}
+                  history={this.props.history}
+                />
               </div>
             </div>
             <div id="nav-links-container">
