@@ -157,7 +157,7 @@ class IndexList extends React.Component {
         if (query === "") {
             this.filterOut('none')
         } else {
-            console.log('filerting...')
+            console.log('filtering...')
             this.filterOut('events');
             this.filterOut('groups');
             this.filterOut('subcats');
