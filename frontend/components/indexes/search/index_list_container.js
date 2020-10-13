@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import { withRouter } from 'react-router-dom'
 
 import { searchEntities } from '../../../actions/search_actions';
 import { fetchGroup } from "../../../actions/groups_actions";
@@ -6,8 +7,8 @@ import { fetchGroup } from "../../../actions/groups_actions";
 
 import IndexList from "./index_list";
 
-const mapStateToProps = (state, ownProps) => ({
-    keyword: ownProps.match.params.keyword,
+const mapStateToProps = state => ({
+    // keyword: ownProps.match.params.keyword,
     events: state.entities.events,
     groups: state.entities.groups
 });
@@ -17,4 +18,4 @@ const mapDispatchToProps = dispatch => ({
     fetchGroup: groupId => dispatch(fetchGroup(groupId))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(IndexList);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(IndexList));

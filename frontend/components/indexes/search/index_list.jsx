@@ -5,25 +5,30 @@ class IndexList extends React.Component {
     constructor(props) {
         super(props);
 
+        this.keyword = this.props.location.pathname.split("=")[1];
+
+        this.getEventGroups = this.getEventGroups.bind(this);
         this.includesKeyword = this.includesKeyword.bind(this);
         this.keywordSort = this.keywordSort.bind(this);
     }
 
     componentDidMount() {
-        console.log('MOUNTINGGGGGGGGGG')
-        // this.props.searchEntities(this.props.keyword)
-            // .then(action => {
-                console.log(this.props.keyword)
-                console.log(this.props.events)
-                Object.values(this.props.events).forEach(event => {
-                    console.log('FETCHINGOGGG===', event)
-                    this.props.fetchGroup(event.group_id)
-                })
-            // })
+        if (Object.values(this.props.events).length === 0 && Object.values(this.props.groups).length === 0) {
+            // console.log(this.keyword);
+            this.props.searchEntities(this.keyword)
+                .then(() => this.getEventGroups());   
+        }
+    }
+
+    getEventGroups() {
+        Object.values(this.props.events).forEach((event) => {
+            // console.log("FETCHINGOGGG===", event);
+            this.props.fetchGroup(event.group_id);
+        });
     }
 
     includesKeyword(name) {
-        return name.toLowerCase().split(' ').includes(this.props.keyword);
+        return name.toLowerCase().split(' ').includes(this.keyword);
     }
 
     keywordSort(results, callback) {
@@ -60,9 +65,9 @@ class IndexList extends React.Component {
     render() {
         let results = [];
         const events = Object.values(this.props.events);
-        console.log('EVENTSSSSSSSSSSSSS', events)
+        // console.log('EVENTSSSSSSSSSSSSS', events)
         const groups = Object.values(this.props.groups);
-        console.log("GROUPSSSSSSSSSSSSS", groups);
+        // console.log("GROUPSSSSSSSSSSSSS", groups);
         // results = Object.values(Object.assign(events, groups));
         // console.log('results', results)
 
@@ -70,7 +75,7 @@ class IndexList extends React.Component {
         // if (events.length === 0 || groups.length === 0) return null;
 
         results = results.concat(events, groups);
-        console.log(results)
+        // console.log(results)
         results = this.keywordSort(results);
 
         if (results.length === 0) {
@@ -87,8 +92,13 @@ class IndexList extends React.Component {
           <ul className="search-idx">
             {results.map(result => {
                 // console.log('RESULTTTTTTTTTT', result)
-                let type = "event";
-                if (result.creator_id) type = "group";
+                let type = "group"
+                if (!result.creator_id) {
+                    type = "event";
+                    console.log(this.props.groups)
+                    console.log(result)
+                    // if (!this.props.groups[result.group_id]) this.getEventGroups();
+                };
                 return (
                     <IndexListItem
                         entity={result}

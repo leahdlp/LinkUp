@@ -57,4 +57,73 @@
 .search-idx-group {
     font-size: 14px;
     font-weight: 300;
+    margin-top: 0.5%;
+}
+
+.search-idx-users {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 2.5%;
+    color: grey;
+    background-color: white;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    // border: rgb(156, 127, 54) 10px solid;
+}
+
+.circle-users {
+    background-color: white;
+    display: flex;
+    // border: red 10px solid;
+    // margin-right: -2%;
+    // width: 100px;
+}
+
+.user-count {
+    // border: rgb(156, 127, 54) 10px solid;
+    background-color: white;
+    // margin
+}
+
+#user1-circle {
+    border: white 4px solid;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    z-index: 1;
+    margin-right: -10%;
+    background-image: image_url("respected.jpg");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center;
+
+
+}
+
+#user2-circle {
+    border: white 4px solid;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    z-index: 2;
+    margin-right: -10%;
+    background-image: image_url("solo-girl.jpg");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+
+}
+
+#user3-circle {
+    border: white 4px solid;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    z-index: 3;
+    margin-right: -10%;
+    background-image: image_url("sis.jpg");
+    background-repeat: no-repeat;
+    background-size: 40px 30px;
+    background-position: center;
+
 }

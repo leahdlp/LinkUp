@@ -5,23 +5,20 @@ class IndexListItem extends React.Component {
         super(props);
 
         this.numAttendees = this.numAttendees.bind(this);
+        this.numMembers = this.numMembers.bind(this);
         this.convertTime = this.convertTime.bind(this);
         this.convertDate = this.convertDate.bind(this);
         this.convertDateTime = this.convertDateTime.bind(this);
+        this.renderUserCircles = this.renderUserCircles.bind(this);
+        this.renderUserVisual = this.renderUserVisual.bind(this);
     }
-
-    // componentDidMount() {
-    //   if (this.props.type === 'event') {
-    //     console.log('hererererere')
-    //     console.log(this.props.type)
-    //     console.log(this.props.entity.group_id)
-    //     console.log(this.props.groups)
-    //     this.props.fetchGroup(this.props.entity.group_id)
-    //   }
-    // }
 
     numAttendees() {
         return this.props.entity.attendee_ids.length;
+    }
+
+    numMembers() {
+        return this.props.entity.member_ids.length;
     }
 
     convertDate(date) {
@@ -158,41 +155,93 @@ class IndexListItem extends React.Component {
         );
     }
 
+    renderUserCircles(num) {
+        console.log(num)
+        switch (num) {
+            case 0:
+                return;
+            case 1:
+                return (
+                    <div className="circle-users">
+                        <div id="user1-circle"></div>
+                    </div>
+                )
+                // break;
+            case 2:
+                return (
+                    <div className="circle-users">
+                        <div id="user1-circle"></div>
+                        <div id="user2-circle"></div>
+                    </div>
+                )
+            default:
+                console.log('default')
+                return (
+                    <div className="circle-users">
+                        <div id="user1-circle"></div>
+                        <div id="user2-circle"></div>
+                        <div id="user3-circle"></div>
+                    </div>
+                )
+        }
+    }
+
+    renderUserVisual() {
+        const numUsers = this.props.type === 'event' ? this.numAttendees() : this.numMembers();
+        const users = this.props.type === 'event' ? "attendees" : "members"
+        
+
+        return (
+            <div className="search-idx-users">
+                {this.renderUserCircles(numUsers)}
+                <div className="user-count">
+                    {numUsers} {users}
+                </div>
+            </div>
+        );
+    }
+
     render() {
+        
         const history = this.props.history;
         const type = this.props.type;
         const entity = this.props.entity;
         const groups = this.props.groups;
+        
+        // if (!Object.keys(groups).includes(entity.group_id)) return null;
 
         let date_time;
         let group;
-        let num_atten;
+        // let num_users;
         
         if (type === 'event') {
-            // this.props.fetchGroup(entity.group_id)
-            //     .then(action => group = action.group.name)
+            if (!groups[entity.group_id]) {
+                this.props.fetchGroup(entity.group_id)
+                    .then(action => group = action.group.name)
+            }
+
             date_time = this.convertDateTime(entity.date_time);
-            num_atten = `${this.numAttendees()} attendees`;
         } else {
+            console.log('else')
             date_time = "";
             group = "";
-            num_atten = "";
+
         }
-        // console.log(entity)
-        // console.log(type)
+
         return (
-            <li 
-                className="search-index-item" 
-                onClick={() => history.push(`/${type}s/${entity.id}`)}>
-                <div className="search-index-img"></div>
-                <div className="search-idx-info">
-                    {date_time}
-                    {entity.name}
-                    <p className="seach-idx-group">{group}</p>
-                    <p className="serach-idx-atten">{num_atten}</p>
-                </div>
-            </li>        
-        )
+          <li
+            className="search-index-item"
+            onClick={() => history.push(`/${type}s/${entity.id}`)}
+          >
+            <div className="search-index-img"></div>
+            <div className="search-idx-info">
+              {date_time}
+              {entity.name}
+              <p className="search-idx-group">{group}</p>
+              {this.renderUserVisual()}
+            </div>
+          </li>
+        );
     }
 }
 
