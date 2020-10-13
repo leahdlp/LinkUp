@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom';
+import Background from './form_background';
 
 class EntityForm extends React.Component {
     constructor(props) {
@@ -211,14 +212,17 @@ class EntityForm extends React.Component {
     render() {
         if (this.props.entity === undefined) return null;
         return (
-            <div>
+            <div className="entire-entity-page">
                 {this.renderErrors()}
+                  <div className="background-container">
+                      <Background />
                 <div className="entity-form-page">
                     <div className="entity-form-container">
                         {this.renderHeader()}
                         {this.renderForm()}
                     </div>
                 </div>
+                  </div>
             </div>
         )
     }

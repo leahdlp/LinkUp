@@ -9,14 +9,17 @@ $blue: rgb(31, 34, 61);
 
 .landing-nav {
     // border: rebeccapurple 10px solid;
-    height: 100px;
-    background-color: $blue;
+    height: 120px;
+    background-color: rgb(46, 51, 65);
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    z-index: 0;
 }
 
 .index-toggle {
+    // margin-top: 3%;
+    margin-right: 25%;
     // border: salmon 10px solid;
     display: flex;
     justify-content: space-between;

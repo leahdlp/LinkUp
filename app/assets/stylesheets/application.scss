@@ -23,7 +23,7 @@
 @import "base/icon";
 
 // COMPONENTS
-// Form:
+// SessionForm:
 @import "components/session/form";
 // CovidBar:
 @import "components/header/covid_bar";
@@ -54,8 +54,9 @@
 // EventIndex
 @import "components/index/attendee_index";
 
-// GroupForm:
+// EntityForm:
 @import "components/form/entity_form";
+@import "components/form/form_background";
 
 // LandingPage:
 @import "components/landing/navbar";
