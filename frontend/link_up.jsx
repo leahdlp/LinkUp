@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { fetchEvents, fetchEvent, createEvent, updateEvent, deleteEvent } from './util/events_api_util'
 import { fetchAttendees, createAttendee, deleteAttendee } from './util/attendees_api_util'
+import { searchEntities } from './util/search_api_util';
 
 import configureStore from './store/store'
 import Root from './components/root'
@@ -35,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.fetchAttendees = fetchAttendees;
     window.createAttendee = createAttendee;
     window.deleteAttendee = deleteAttendee;
+    window.searchEntities = searchEntities;
     // FOR TESTING
 
     ReactDOM.render(<Root store={store}/>, root);

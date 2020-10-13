@@ -2,20 +2,40 @@
     width: 80%;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: white;
+    // border: 3px solid salmon;
+    border: 1px solid rgb(199, 197, 197);
+    border-radius: 12px;
+}
+
+.search-bar-container > form {
+    // border: 1px solid seagreen;
+    width: 100%;
+    display: flex;
+}
+
+.search-bar-container > form > i {
+    margin-top: 1.5%;
+    margin-left: 2%;
+    color: grey;
+}
+
+.search-bar {
+    // border: slateblue 3px solid;
 }
 
 #nav-search {
     border-radius: 0px;
-    border: 1px solid rgb(199, 197, 197);
     height: 27px;
     min-width: 80%;
-    margin: 0px
+    margin: 0px;
+    // border: 1px solid sandybrown;
     // background-color: white;
 }
 
 .search-btn {
-    border: 1px solid rgb(199, 197, 197);
+    // border: 1px solid rgb(199, 197, 197);
     color: grey;
     height: 27px;
     min-width: 20%;

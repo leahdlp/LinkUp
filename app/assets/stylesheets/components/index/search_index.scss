@@ -1,0 +1,60 @@
+.search-idx-pg {
+    // border: orange 5px solid;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.search-idx {
+    // border: 5px solid blue;
+    width: 50%;
+    background-color: white;
+
+}
+
+.search-index-item {
+    font-family: $meetup-font;
+    // border: 3px solid green;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    background-color: white;
+    height: 160px;
+    border-bottom: 0.5px solid rgb(211, 211, 211);
+}
+
+.search-index-img {
+    // border: 1px solid black;
+    height: 70%;
+    width: 20%;
+    margin-top: 2%;
+    margin-right: 2%;
+    background-color: white;
+    border-radius: 8px;
+    background-image: image_url("communion.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 200%;
+}
+
+.search-idx-info {
+    // border: red 7px solid;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 2%;
+    margin-right: 2%;
+    width: 70%;
+    height: 70%;
+    background-color: white;
+
+}
+
+.search-idx-datetime {
+    color: rgb(156, 127, 54);
+    margin-bottom: 2%;
+}
+
+.search-idx-group {
+    font-size: 14px;
+    font-weight: 300;
+}

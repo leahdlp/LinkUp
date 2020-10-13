@@ -1,5 +1,8 @@
 import * as SubcategoryAPIUtil from '../util/subcategories_api_util';
 
+import { receiveEvents } from './events_actions';
+import { receiveGroups } from './groups_actions';
+
 export const RECEIVE_SUBCATEGORIES = 'RECEIVE_SUBCATEGORIES';
 export const RECEIVE_SUBCATEGORY = 'RECEIVE_SUBCATEGORY';
 
@@ -12,6 +15,7 @@ const receiveSubcategory = subcategory => ({
     type: RECEIVE_SUBCATEGORY,
     subcategory
 })
+
 
 export const fetchSubcategories = () => dispatch => (
     SubcategoryAPIUtil.fetchSubcategories()

@@ -1,22 +1,20 @@
 import { connect } from "react-redux";
 
-import { fetchEvents } from "../../../actions/events_actions";
-import { fetchGroups } from "../../../actions/groups_actions";
-import { fetchSubcategories } from "../../../actions/subcategories_actions";
+import { searchEntities } from '../../../actions/search_actions';
+import { fetchGroup } from "../../../actions/groups_actions";
+
 
 import IndexList from "./index_list";
 
 const mapStateToProps = (state, ownProps) => ({
-  keyword: ownProps.match.params.keyword,
-  events: state.entities.events,
-  groups: state.entities.groups,
-  subcategories: state.entities.subCategories,
+    keyword: ownProps.match.params.keyword,
+    events: state.entities.events,
+    groups: state.entities.groups
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  fetchEvents: () => dispatch(fetchEvents()),
-  fetchGroups: () => dispatch(fetchGroups()),
-  fetchSubcategories: () => dispatch(fetchSubcategories()),
+const mapDispatchToProps = dispatch => ({
+    searchEntities: keyword => dispatch(searchEntities(keyword)),
+    fetchGroup: groupId => dispatch(fetchGroup(groupId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(IndexList);

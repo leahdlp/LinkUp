@@ -17,7 +17,12 @@ class NavBar extends React.Component {
               </div>
               <div className="search-bar-container">
                 <SearchBar 
+                  groups={this.props.groups}
+                  events={this.props.events}
+                  keyword={this.props.keyword}
                   setKeyword={this.props.setKeyword}
+                  searchEntities={this.props.searchEntities}
+                  clearSearch={this.props.clearSearch}
                   history={this.props.history}
                 />
               </div>

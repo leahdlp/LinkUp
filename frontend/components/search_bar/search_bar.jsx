@@ -6,12 +6,14 @@ class SearchBar extends React.Component {
 
         this.state = { 
             search: "",
-            queried: false,
-            results: []
+            // queried: false,
+            // results: []
         }
 
         this.update - this.update.bind(this);
         // this.filterOut = this.filterOut.bind(this);
+        this.redirect = this.redirect.bind(this);
+        this.search = this.search.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -27,11 +29,7 @@ class SearchBar extends React.Component {
     //     ))
     // }
 
-    handleSubmit() {
-        // this.props.fetchGroups();
-        // this.props.fetchEvents();
-        // this.props.fetchSubcategories();
-        this.props.setKeyword(this.state.search);
+    redirect() {
         if (this.state.search === "") {
             this.props.history.push('/find')
         } else {
@@ -39,13 +37,39 @@ class SearchBar extends React.Component {
         }
     }
 
+    search() {
+        this.props.searchEntities(this.state.search);
+    }
+
+    handleSubmit() {
+        // this.props.fetchGroups();
+        // this.props.fetchEvents();
+        // this.props.fetchSubcategories();
+        this.props.setKeyword(this.state.search);
+        // this.props.clearSearch()
+
+        // if (Object.values(this.props.groups).length > 0 ||
+        //     Object.values(this.props.events).length > 0) {
+        if (this.state.search !== this.props.keyword) {
+            this.props.clearSearch()
+                // .then(() => this.search())
+            // this.search() 
+        // } else {
+        }
+        this.search();
+        this.redirect();
+    }
+
     render() {
         return (
-            <form onSubmit={() => this.handleSubmit()}>
-                <input type="text" onChange={() => this.update()} id="nav-search" />
-                <input type="submit" value="Search" className="search-btn"/>
-            </form>
-        )
+          <form onSubmit={() => this.handleSubmit()}>
+              {/* <div className="search-bar"> */}
+                <i class="fas fa-search"></i>
+                <input type="text" value={this.state.search} onChange={() => this.update()} id="nav-search" />
+              {/* </div> */}
+            {/* <input type="submit" value="Search" className="search-btn" /> */}
+          </form>
+        );
 
         // query for all possible entities
         // filter out results 
