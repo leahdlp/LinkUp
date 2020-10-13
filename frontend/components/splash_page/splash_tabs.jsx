@@ -34,8 +34,6 @@ class NavTabs extends React.Component {
 
     selectTabLeft(type) {
         let idx = this.state[type] === 0 ? 2 : (this.state[type] - 1);
-        console.log(idx)
-        console.log(this.state[type])
         this.setState({ [type]: idx })
     }
 
@@ -119,40 +117,26 @@ class NavTabs extends React.Component {
         let current_pane = type === "group" ? this.state.currentGroupTab : this.state.currentWorkTab;
         let iden = type === 'group' ? "" : "works-content"
 
-        // let img1 = document.getElementsByClassName("splash-img")
-        // let img2 = document.getElementById("works-img");
-
-
-        // console.log(img);
         if (!this.img1 || !this.img2) return null;
 
         this.img1.setAttribute("id", `group-tab-${this.state.currentGroupTab}`); 
         this.img2.setAttribute("id", `works-tab-${this.state.currentWorkTab}`);
-        // this.img1.border = "40px solid blue"
-        // this.img1.setAttribute("style", `background-image: image_url("${
-        //     group_panes[this.state.currentGroupTab].image
-        // }")`); 
-        // this.img2.setAttribute("style", `background-image: image_url("${
-        //     work_panes[this.state.currentWorkTab].image
-        // }")`);
 
         return (
         <div className="splash-tab">
-            {/* <div className="=splash-tab-content-container"> */}
-                <div className="splash-tab-content">
-                    <i 
-                        className="splash-arrows"
-                        className="fas fa-chevron-left"
-                        onClick={() => this.selectTabLeft(state_slice)}    
-                    ></i>
-                    <article id={iden}>{selected.content}</article>
-                    <i 
-                        className="splash-arrows"
-                        className="fas fa-chevron-right"
-                        onClick={() => this.selectTabRight(state_slice)}
-                    ></i>
-                </div>
-            {/* </div> */}
+            <div className="splash-tab-content">
+                <i 
+                    className="splash-arrows"
+                    className="fas fa-chevron-left"
+                    onClick={() => this.selectTabLeft(state_slice)}    
+                ></i>
+                <article id={iden}>{selected.content}</article>
+                <i 
+                    className="splash-arrows"
+                    className="fas fa-chevron-right"
+                    onClick={() => this.selectTabRight(state_slice)}
+                ></i>
+            </div>
             <div className="slide-section2">
             <Tab
                 currentPane={current_pane}
@@ -165,7 +149,5 @@ class NavTabs extends React.Component {
     }
 }
 
-{/* <SplashTabs /> */}
-{/* <div className="slide"></div> */}
 
 export default NavTabs;

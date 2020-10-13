@@ -6,7 +6,7 @@ export const REMOVE_EVENT = 'REMOVE_EVENT';
 export const RECEIVE_EVENT_ERRORS = 'RECEIVE_EVENT_ERRORS';
 export const CLEAR_EVENT_ERRORS = 'CLEAR_EVENT_ERRORS';
 
-const receiveEvents = events => ({
+export const receiveEvents = events => ({
     type: RECEIVE_EVENTS,
     events
 })

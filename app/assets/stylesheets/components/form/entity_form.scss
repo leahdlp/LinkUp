@@ -1,63 +1,55 @@
-// $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-// $pg-background-color: rgb(245, 245, 247);
-// $border-bottom: 1px solid rgb(211, 211, 211);
-
 div {
     background-color: $pg-background-color;
-    // border: 2px solid red;
 }
 
 .entity-form-page {
     font-family: $meetup-font;
-    margin: auto;
-    border-radius: 4px;
-    margin-bottom: 30%;
+    margin-top: 12.5%;
+    border-radius: 8px;
+    margin-bottom: 10%;
     display: flex;
     justify-content: center;
     background-color: white;
     border: $border-bottom;
-    // border: 9px solid orange;
+    width: 30%;
+    z-index: 12;
+    box-shadow: $box-shadow;
 }
 
 .entity-form-container {
-    // border: 3px green solid;
-    width: 30%;
-    max-width: 25%;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
 }
 
 .form-container {
     width: 93%;
     max-width: 93%;
-    // border: 1px solid royalblue;
 }
 
-.form {
-    // border: 2px solid aqua;
-}
 
 .entity-form-header {
     background-color: white;
     width: 92%;
     max-width: 92%;
     padding: 4%;
-    // border: 3px solid yellow;
+    border-radius: 8px;
 }
-
-.inputs {
-    // border: pink 3px solid;
-}
-
 
 .user-input > input {
-    width: 99%;
+    width: 96%;
+    padding: 5px 5px;
 }
 
 .user-input > textarea {
     background-color: $pg-background-color;
-    width: 100%;
+    width: 96%;
     height: 200px;
     padding: 5px 5px;
-    // border: 7px solid green;
 }
 
 .user-input > textarea:focus {
@@ -73,19 +65,16 @@ div {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
-    // border: blue 6px solid;
 }
 
 .form-submit-btn {
     background-color: white;
-    // border: 5px solid indigo;
     display: flex;
     justify-content: center;
     width: 40%;
 }
 
 .cancel-btn {
-    // border: 1px solid orange;
     width: 40%;
     display: flex;
     justify-content: center;

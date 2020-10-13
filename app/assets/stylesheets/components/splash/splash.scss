@@ -1,17 +1,10 @@
 .splash-container {
-    // border: sienna 5px solid;
     display: flex;
     justify-content: center;
     font-family: $meetup-font;
 }
 
-.splash {
-    // border: tomato 5px solid;
-    // width: 70%;
-}
-
 .intro-section {
-    // border: teal 4px solid;
     background-color: rgb(116, 27, 71);
     height: 550px;
     display: flex;
@@ -40,16 +33,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // border: 10px solid red;
 }
 
 #splash-btn {
     background-color: inherit;
     margin-top: 10%;
-    // padding-top: 10px;
     margin-left: 0px;
-    // padding-left: 0px;
-    // border: 1px solid gold;
     display: flex;
     align-items: flex-start;
     width: fit-content;
@@ -58,10 +47,7 @@
 #see-more {
     background-color: inherit;
     margin-top: 3%;
-    // padding-top: 10px;
     margin-left: 0px;
-    // padding-left: 0px;
-    // border: 1px solid gold;
     display: flex;
     align-items: flex-start;
     width: fit-content;
@@ -70,25 +56,17 @@
 #splash-btn > button {
     padding: 10px 15px;
     border-radius: 12px;
-    // border: lawngreen 1px solid;
-    // padding: 0px;
     margin: 0px;
-    // width: 300px;
 }
 
 #see-more > button {
     padding: 10px 15px;
     border-radius: 12px;
-    // border: lawngreen 1px solid;
-    // padding: 0px;
     margin: 0px;
-    // width: 300px;
 }
 
 .splash-img-container {
-    // border: tomato 10px solid;
     height: 650px;
-    // display: block;
 }
 
 .splash-img {
@@ -98,9 +76,6 @@
     background-size: 100% 170%;
     display: flex;
     justify-content: center;
-    // border: 10px solid red;
-    // align-items: flex-end;
-    // padding-top: 500px;
 }
 
 .splash-img-slides-container {
@@ -113,94 +88,25 @@
     z-index: 3;
     border-radius: 8px;
     width: 70%;
-    // border: orange 10px solid;
-    // margin-top: 70%;
-    // padding: 0px;
 }
 
 #group-splash-img-con {
     height: 850px;
-    // border: 10px solid blue;
 }
 
 .img-long {
     min-height: 700px;
     max-height: 700px;
-    // border: 10px solid hotpink;
     display: flex;
     justify-content: center;
 }
 
 #img-slide-con {
-    // border: olivedrab 10px solid;
-    // border-radius: inherit;
     margin-top: 33%;
     width: 60%;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // border-radius: 8px;
 }
 
-// .splash-img-slides {
-//     border-radius: inherit;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     border: 10px solid black;
-//     min-width: 100%;
-//     color: grey;
-//     // width: 100%;
-//     height: 80%;
-//     // z-index: 4;
-//     // min-height: fit-content;
-//     // margin: 0px;
-// }
-
-// .slide-section {
-    //     display: flex;
-    //     justify-content: space-between;
-    // }
-
-// .splash-arrows {
-//     // border: 1px solid black;
-// }
-    
-//     .slide-section {
-//         // border: 10px solid blue;
-//         width: 90%;
-//         // background-color: turquoise;
-//         // height: 55%;
-//         // max-height: 400px;
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: center;
-//         // padding-left: 5%;
-//         // padding-right: 5%;
-//         padding: 0% 3%;
-//         color: teal;
-//         font-size: 20px;
-//         // z-index: 5;
-// }
-
-// .slide-section > i {
-//     cursor: pointer;
-//     border: 1px solid rgb(173, 173, 173);
-//     padding: 8px;
-//     border-radius: 8px;
-//     border: hotpink 1px solid;
-// }
-
-
-
-// .slide-section > i:hover {
-//     background-color: rgb(167, 167, 167);
-//     color: white;
-// }
-
 .description-container {
-    // border: slateblue 10px solid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -210,8 +116,6 @@
 
 .description {
     display: block;
-    // justify-content: center;
-    // border: green 1px solid;
 }
 
 .description > h3 {
@@ -227,7 +131,6 @@
 
 .splash-how-it-works {
     width: 60%;
-    // background-color: inherit;
     background-color: rgb(45, 93, 107);
 
     text-align: center;
@@ -248,10 +151,6 @@
     background-image: image_url("dia-de-los-muertos.jpg");
     background-position: center;
     background-color: inherit;
-//       -webkit-transition: opacity 1s ease-in-out;
-//   -moz-transition: opacity 1s ease-in-out;
-//   -o-transition: opacity 1s ease-in-out;
-//   transition: opacity 1s ease-in-out;
     background-color: rgb(45, 93, 107);
 
 }
@@ -263,14 +162,12 @@
 
 .features-container {
     height: 400px;
-    // text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .features {
-    // border: seagreen 4px solid;
     text-align: center;
 }
 
@@ -286,20 +183,16 @@
 
 .splash-options-container {
     display: flex;
-    // margin-left: 20%;
     justify-content: space-around;
-    // border: violet 10px solid;
     height: fit-content;
     width: 100%;
     margin-top: 3%;
-    // text-align: left;
 }
 
 #desc-con {
     width: 60%;
     margin-left: 20%;
     height: fit-content;
-    // border: green 10px solid;
 }
 
 #desc-con > div {
@@ -314,19 +207,13 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    // border: green 1px solid;
     width: 30%;
 }
 
 .splash-option > div {
     display: block;
-    // border: yellow 2px solid;
     width: fit-content;
     min-height: fit-content;
-    // height: 300px;
-    // max-height: 200px;
-    // display: flex;
-    // align-items: stretch;;
 }
 
 #desc-icon {
@@ -337,7 +224,6 @@
     margin-top: 38%;
     color: black;
     width: 70%;
-    // border: red 20px solid;
 }
 
 #feature-icon {
@@ -345,8 +231,6 @@
     color: teal;
     margin-right: 15px;
     padding-top: 25px;
-    // border: 1px solid blue;
-
 }
 
 #feature-head {
@@ -362,7 +246,6 @@
     font-weight: 600;
     padding-top: 100px;
     margin-top: 100px;
-    // border: tomato 2px solid;
 }
 
 .splash-link:hover { 

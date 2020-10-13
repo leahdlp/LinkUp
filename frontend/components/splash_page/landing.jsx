@@ -1,5 +1,6 @@
 import React from 'react';
 import EntitiesIndex from '../indexes/entities_index'
+import SearchBar from '../search_bar/search_bar'
 
 class Landing extends React.Component {
     constructor(props) {
@@ -44,9 +45,6 @@ class Landing extends React.Component {
         return (
             <div className="landing-pg">
                 <div className="landing-nav">
-                    <input className="search-bar">
-
-                    </input>
                     <div className="index-toggle">
                         <button onClick={() => this.handleToggle(this.state.entity)}>
                             Groups

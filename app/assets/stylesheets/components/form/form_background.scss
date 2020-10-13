@@ -1,0 +1,319 @@
+.background-container {
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 5%;
+}
+
+.background {
+    z-index: 0;
+    margin-bottom: -60%;
+    height: fit-content;
+    width: 78%;
+    overflow: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    box-shadow: $box-shadow;
+}
+
+.background > div {
+    height: 130px;
+    width: 200px;
+    background-repeat: no-repeat;
+}
+
+.background-1 {
+    background-image: image_url("tshifts.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.background-2 {
+    background-image: image_url("stacking.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.background-3 {
+    background-image: image_url("white-dress-color-backgroud.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.background-4 {
+    background-image: image_url("workout_flex.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.background-5 {
+    background-image: image_url("white-claws.jpg");
+    background-position: center;
+    background-size: 100% 120%;
+}
+
+.background-6 {
+    background-image: image_url("truth-sign.jpg");
+    background-position: center;
+    background-size: 100% 120%;
+}
+
+.background-7 {
+    background-image: image_url("taking-in-the-sites.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.background-8 {
+    background-image: image_url("star-wars.jpg");
+    background-position: bottom;
+    background-size: 100% 200%;
+}
+
+.background-9 {
+    background-image: image_url("solo-girl.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-10 {
+    background-image: image_url("solo-girl.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-11 {
+    background-image: image_url("snow.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-12 {
+    background-image: image_url("sitting-on-the-bar.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-13 {
+    background-image: image_url("sit-down.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-14 {
+    background-image: image_url("sacred-march.jpg");
+    background-position: bottom;
+    background-size: 100% 160%;
+}
+
+.background-15 {
+    background-image: image_url("rowing.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-16 {
+    background-image: image_url("respected.jpg");
+    background-position: top;
+    background-size: 100% 160%;
+}
+
+.background-17 {
+    background-image: image_url("life-guarding.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-18 {
+    background-image: image_url("fire.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-19 {
+    background-image: image_url("got-hands.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-20 {
+    background-image: image_url("pipes.jpg");
+    background-position: bottom;
+    background-size: 100% 160%;
+}
+
+.background-21 {
+    background-image: image_url("outfits.jpg");
+    background-position: center;
+    background-size: 100% 140%;
+}
+
+.background-22 {
+    background-image: image_url("mj-hoop.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-23 {
+    background-image: image_url("masks.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.background-24 {
+    background-image: image_url("dog.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-25 {
+    background-image: image_url("cafe.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-26 {
+    background-image: image_url("band.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-27 {
+    background-image: image_url("ana-rojas-squad.jpg");
+    background-position: center;
+    background-size: 100% 180%;
+}
+
+.background-30 {
+    background-image: image_url("hot-air-balloons.jpg");
+    background-position: center;
+    background-size: 100% 140%;
+}
+
+.background-31 {
+    background-image: image_url("love.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-32 {
+    background-image: image_url("friends.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-33 {
+    background-image: image_url("connection.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-34 {
+    background-image: image_url("in-the-mud.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-35 {
+    background-image: image_url("boxing.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-36 {
+    background-image: image_url("drummers.jpg");
+    background-position: center;
+    background-size: 100% 140%;
+}
+
+.background-37 {
+    background-image: image_url("drinks.jpg");
+    background-position: center;
+    background-size: 100% 140%;
+}
+
+.background-38 {
+    background-image: image_url("blm.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-39 {
+    background-image: image_url("jasminebrowley-nappy-.jpeg");
+    background-position: center;
+    background-size: 100% 140%;
+}
+
+.background-40 {
+    background-image: image_url("communion.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-41 {
+    background-image: image_url("beach.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-42 {
+    background-image: image_url("all-smiles.jpg");
+    background-position: center;
+    background-size: 100% 160%;
+}
+
+.background-43 {
+    background-image: image_url("dance.jpg");
+    background-position: center;
+    background-size: 100% 120%;
+}
+
+.background-44 {
+    background-image: image_url("market.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.background-45 {
+    background-image: image_url("couch-comradery.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.background-46 {
+    background-image: image_url("dia-de-los-muertos.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.background-47 {
+    background-image: image_url("lined-up.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.background-48 {
+    background-image: image_url("kick-back.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.background-49 {
+    background-image: image_url("embrace.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.background-50 {
+    background-image: image_url("connection.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.background-51 {
+    background-image: image_url("boxing.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}

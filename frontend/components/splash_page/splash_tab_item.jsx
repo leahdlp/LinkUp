@@ -9,12 +9,6 @@ const Tab = (props) => {
     let title = pane.title;
     let iden = idx === selected ? "splash-current" : "";
 
-    // <div className="slide-section2">
-        {/* <i class="far fa-circle"></i> */}
-
-        {/* <i class="far fa-circle"></i> */}
-    // </div>;
-
     return (
       <li
         key={`tab-${idx}`}

@@ -17,8 +17,7 @@ const Splash = props => {
                         </p>
 
                         <div className="pink-btn" id="splash-btn">
-                            <button 
-                                // className="pink-btn"
+                            <button
                                 onClick={() => props.history.push("/signup")}>
                                 Join LinkUp
                             </button>
@@ -28,13 +27,9 @@ const Splash = props => {
                 <div className="splash-img-container" id="group-splash-img-con">
                     <div className="splash-img" className="img-long">
                         <div className="splash-img-slides-container" id="img-slide-con">
-                            {/* <div className="splash-img-slides"> */}
-                                    {/* <div className="slide-section"> */}
-                                        <SplashTabs 
-                                            type="group"
-                                        />
-                                    {/* </div> */}
-                            {/* </div> */}
+                            <SplashTabs 
+                                type="group"
+                            />
                         </div>
                     </div>
                 </div>

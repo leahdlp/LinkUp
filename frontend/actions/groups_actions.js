@@ -6,7 +6,7 @@ export const REMOVE_GROUP = 'REMOVE_GROUP';
 export const RECEIVE_GROUP_ERRORS = 'RECEIVE_GROUP_ERRORS';
 export const CLEAR_GROUP_ERRORS = 'CLEAR_GROUP_ERRORS';
 
-const receiveGroups = groups => ({
+export const receiveGroups = groups => ({
     type: RECEIVE_GROUPS,
     groups
 })

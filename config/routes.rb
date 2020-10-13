@@ -17,5 +17,6 @@ Rails.application.routes.draw do
       resources :attendees, only: [:index]
     end
     resources :attendees, only: [:create, :destroy]
+    resources :search, only: [:index]
   end
 end

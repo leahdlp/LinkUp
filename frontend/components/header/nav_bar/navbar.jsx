@@ -1,13 +1,30 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import SearchBar from '../../search_bar/search_bar'
+
 class NavBar extends React.Component {
 
     loggedIn(user) {
         return (
           <div className="loggedIn-header">
-            <div className="logo" onClick={() => this.props.history.push("/")}>
-              {/* <i className="fab fa-meetup" id="logo-icon"></i> */}
+            <div className="left-header">
+              <div
+                className="logo"
+                onClick={() => this.props.history.push("/")}
+              >
+              </div>
+              <div className="search-bar-container">
+                <SearchBar 
+                  groups={this.props.groups}
+                  events={this.props.events}
+                  keyword={this.props.keyword}
+                  setKeyword={this.props.setKeyword}
+                  searchEntities={this.props.searchEntities}
+                  clearSearch={this.props.clearSearch}
+                  history={this.props.history}
+                />
+              </div>
             </div>
             <div id="nav-links-container">
               <Link id="special-offer" to="/groups/new">
@@ -62,8 +79,8 @@ class NavBar extends React.Component {
           <div className="login-signup-header">
             <div 
                 className="logo"
+                id="logged-out-logo"
                 onClick={() => this.props.history.push("/")}>
-              {/* <i className="fab fa-meetup" id="logo-icon"></i> */}
             </div>
             <div className="nav-btns">
               <Link to="/login" id="login-link">

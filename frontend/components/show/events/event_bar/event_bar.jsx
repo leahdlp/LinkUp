@@ -189,8 +189,10 @@ class EventBar extends React.Component {
 
         hour = hour.split('');
 
-        if (hour[0] === '0') {
-            hour = hour[1];
+        if (hour[0] === "0") {
+          hour = hour[1];
+        } else {
+          hour = hour.join("");
         }
 
         return `${hour}:${min} ${AMPM}`;

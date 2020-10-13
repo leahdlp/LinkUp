@@ -1,26 +1,19 @@
 .splash-tab { 
-    // border: tomato 4px solid;
     background-color: white;
-    // min-height: 400px;
-    // min-width: 120%;
     min-width: 100%;
-    // margin: 0% 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // border:blue 10px solid;
     border-radius: 12px;
 }
 
 .splash-tab-content > i {
     color: teal;
-    // font-size: 14px;
     background-color: white;
     border-radius: 12px;
     font-size: 28px;
     padding: 8px;
-    // padding-right: 5px;
     border: 1px solid grey;
     border-radius: 4px;
 }
@@ -31,40 +24,20 @@
     cursor: pointer;
 }
 
-// .splash-arrows {
-//     // border: turquoise 4px solid;
-//     color: grey;
-//     background-color: white;
-//     border-radius: 12px;
-//     font-size: 14px;
-//     // margin: 0% 15px;
-//     // min-height: 400px;
-//     // min-width: 500px;
-// }
-
 .splash-tab-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: white;
     border-radius: 12px;
-
-    // border: steelblue 5px solid;
-    // padding: 0% 3%;
-    // min-height: 400px;
-    // max-width: fit-content;
     width: 100%;
-    // margin: 0% 5%;
 }
 
 .splash-tab-content > article {
-    // border: peru 4px solid;
     max-width: 50%;
     text-align: center;
     background-color: white;
     border-radius: 12px;
-
-    // margin: 5% 0%;
     padding: 2% 0%;
 }
 
@@ -85,47 +58,25 @@
     font-size: 28px;
     background-color: white;
     border-radius: 12px;
-
-    // margin: 0px 8%;
     min-width: 60%;
-    // border: blue 1px solid;
-
 }
 
 .slide-section2 {
-    // border: sienna 4px solid;
-    // margin: 0% 100px;
     max-width: 15%;
     font-size: 14px;
     background-color: white;
     border-radius: 12px;
 
     margin-bottom: 5%;
-    // min-height: 400px;
-    // min-width: 500px;
     color: grey;
 }
 
 .splash-eachtab {
-    // text-align: center;
-    // display: flex;
-    // justify-content: center;
     width: fit-content;
     height: fit-content;
     background-color: white;
     border-radius: 12px;
-
-    // border: seagreen 4px solid;
 }
-
-// .slide-section2 > i {
-//     border: indigo 2px solid;
-//     font-size: 14px;
-// }
-
-// .slide-section2 > i:hover {
-//     border: indigo 2px solid;
-// }
 
 #splash-circle {
     background-color: whitesmoke;
@@ -153,12 +104,9 @@
     margin-top: 10%;
     background-image: image_url("star-wars.jpg");
     background-position-y: 93%;
-    // background-color: rgb(3, 58, 75);
     background-color: rgb(45, 93, 107);
     box-shadow: $box-shadow;
     background-size: 100% 280%;
-    // width: 90%;
-
 }  
 
 #works-tab-1 {
@@ -175,5 +123,4 @@
     background-position: center;
     background-color: rgb(3, 58, 75);
     box-shadow: $box-shadow;
-    // max-width: 100px;
 }

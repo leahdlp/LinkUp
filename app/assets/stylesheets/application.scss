@@ -23,7 +23,7 @@
 @import "base/icon";
 
 // COMPONENTS
-// Form:
+// SessionForm:
 @import "components/session/form";
 // CovidBar:
 @import "components/header/covid_bar";
@@ -40,6 +40,7 @@
 @import "components/show/groups/group_show_members";
 @import "components/show/groups/group_show_categories";
 @import "components/show/groups/group_show_events";
+@import "components/show/groups/group_show_photos";
 
 // EventShow:
 @import "components/show/events/event_show_header";
@@ -53,8 +54,9 @@
 // EventIndex
 @import "components/index/attendee_index";
 
-// GroupForm:
+// EntityForm:
 @import "components/form/entity_form";
+@import "components/form/form_background";
 
 // LandingPage:
 @import "components/landing/navbar";
@@ -63,4 +65,8 @@
 // SplashPage:
 @import "components/splash/splash";
 @import "components/splash/splash-tabs";
-@import "components/index/member_index.scss"
+@import "components/index/member_index.scss";
+
+// SearchBar
+@import "components/search_bar/nav_search";
+@import "components/index/search_index";
