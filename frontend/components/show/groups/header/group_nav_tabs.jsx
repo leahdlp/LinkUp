@@ -54,8 +54,6 @@ class NavTabs extends React.Component {
         let section = document.getElementsByClassName("member-section")[0];
         let page = document.getElementsByClassName("mem-head-body")[0];
 
-        // console.log(section);
-
         section.setAttribute("id", "gshow-event-section");
         page.setAttribute("id", "gshow-event-page")
 
@@ -69,22 +67,17 @@ class NavTabs extends React.Component {
                 height = `${Object.values(this.props.events).length * 160}px`;
                 break;
             case 'members':
-                console.log('here')
                 height = `${Object.values(this.props.members).length * 115}px`;
-                console.log(height)
                 break;
             case 'photos':
-                height = `${(20 / 4) * 170}px`;
-                console.log(height) 
+                height = `${(20 / 4) * 170}px`; 
                 break;
             default:
                 height = 'fit-content'
-                console.log(height)
                 break;
         }
 
-        section.setAttribute("style", `height: ${height}`)
-        // page.setAttribute("style", `height: ${height * 10}px`)
+        section.setAttribute("style", `height: ${height}`);
     }
 
     revertWindowSize(type) {
@@ -255,8 +248,10 @@ class NavTabs extends React.Component {
 
         hour = hour.split('');
 
-        if (hour[0] === '0') {
-            hour = hour[1];
+        if (hour[0] === "0") {
+          hour = hour[1];
+        } else {
+          hour = hour.join("");
         }
 
         return `${hour}:${min} ${AMPM}`;

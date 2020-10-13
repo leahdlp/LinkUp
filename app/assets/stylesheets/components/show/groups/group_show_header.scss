@@ -1,13 +1,9 @@
-$meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-$border-bottom: 1px solid rgb(216, 187, 187);
-
 .show-pg-header-container {
     display: flex;
     align-items: flex-end;
     height: fit-content;
     font-family: $meetup-font;
     background-color: white;
-    // border: blueviolet 1px solid;
 }
 
 .show-pg-header {
@@ -15,7 +11,6 @@ $border-bottom: 1px solid rgb(216, 187, 187);
     height: fit-content;
     min-height: fit-content;
     background-color: white;
-    // border: cadetblue 2px solid;
 }
 
 .img-details-header-container {
@@ -31,9 +26,7 @@ $border-bottom: 1px solid rgb(216, 187, 187);
     display: flex;
     justify-content: center;
     background-color: white;
-    // min-width: fit-content;
     max-width: 60%;
-    // border: 5px solid pink
 }
 
 .show-img-container {
@@ -44,7 +37,6 @@ $border-bottom: 1px solid rgb(216, 187, 187);
     background-image: image_url('white-dress-color-backgroud.jpg');
     background-repeat: no-repeat;
     background-size: 100% 116.67%;
-    // border: 4px solid red;
 }
 
 .show-details-container {
@@ -52,7 +44,6 @@ $border-bottom: 1px solid rgb(216, 187, 187);
     justify-content: flex-end;
     background-color: white;
     width: 30%;
-    // border: 6px solid blue;
 }
 
 .show-details {
@@ -61,20 +52,17 @@ $border-bottom: 1px solid rgb(216, 187, 187);
     width: 100%;
     background-color: white;
     padding-left: 10%;
-    // border: 5px solid yellow;
 }
 
 .show-details > h1 {
     font-size: 42px;
     font-weight: 900;
     width: 100%;
-    // border: lightseagreen 5px solid;
 }
 
 .show-sub-details {
     background-color: white;
     padding-top: 5%;
-    // border: lightseagreen 3px solid;
     height: fit-content;
     display: flex;
 }

@@ -1,28 +1,26 @@
 .background-container {
-    // border: yellow 10px solid;
-    height: fit-content;
+    height: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
     overflow: hidden;
+    margin-bottom: 5%;
 }
 
 .background {
     z-index: 0;
-    // border: 10px solid red;
-    margin-bottom: -77%;
-    height: 100%;
+    margin-bottom: -60%;
+    height: fit-content;
     width: 78%;
     overflow: wrap;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    box-shadow: $box-shadow;
 }
 
 .background > div {
     height: 130px;
     width: 200px;
-    // background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -319,111 +317,3 @@
     background-position: center;
     background-size: 100% 100%;
 }
-
-// .background-52 {
-
-// }
-
-// .background-53 {
-
-// }
-
-// .background-54 {
-
-// }
-
-// .background-55 {
-
-// }
-
-// .background-56 {
-
-// }
-
-// .background-57 {
-
-// }
-
-// .background-58 {
-
-// }
-
-// .background-59 {
-
-// }
-
-// .background-60 {
-
-// }
-
-// .background-61 {
-
-// }
-
-// .background-62 {
-
-// }
-
-// .background-63 {
-
-// }
-
-// .background-64 {
-
-// }
-
-// .background-65 {
-
-// }
-
-// .background-66 {
-
-// }
-
-// .background-67 {
-
-// }
-
-// .background-68 {
-
-// }
-
-// .background-69 {
-
-// }
-
-// .background-70 {
-
-// }
-
-// .background-71 {
-
-// }
-
-// .background-72 {
-
-// }
-
-// .background-73 {
-
-// }
-
-// .background-74 {
-
-// }
-
-// .background-75 {
-
-// }
-
-// .background-76 {
-
-// }
-
-// .background-77 {
-
-// }
-
-// .background-78 {
-
-// }

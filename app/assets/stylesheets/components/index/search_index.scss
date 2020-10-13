@@ -1,20 +1,16 @@
 .search-idx-pg {
-    // border: orange 5px solid;
     display: flex;
     justify-content: center;
     background-color: white;
 }
 
 .search-idx {
-    // border: 5px solid blue;
     width: 50%;
     background-color: white;
-
 }
 
 .search-index-item {
     font-family: $meetup-font;
-    // border: 3px solid green;
     display: flex;
     align-items: flex-start;
     cursor: pointer;
@@ -24,7 +20,6 @@
 }
 
 .search-index-img {
-    // border: 1px solid black;
     height: 70%;
     width: 20%;
     margin-top: 2%;
@@ -38,7 +33,6 @@
 }
 
 .search-idx-info {
-    // border: red 7px solid;
     font-size: 16px;
     font-weight: 600;
     margin-top: 2%;
@@ -67,21 +61,15 @@
     color: grey;
     background-color: white;
     display: flex;
-    // justify-content: space-between;
     align-items: center;
-    // border: rgb(156, 127, 54) 10px solid;
 }
 
 .circle-users {
     background-color: white;
     display: flex;
-    // border: red 10px solid;
-    // margin-right: -2%;
-    // width: 100px;
 }
 
 .user-count {
-    // border: rgb(156, 127, 54) 10px solid;
     background-color: white;
     // margin
 }
@@ -126,4 +114,28 @@
     background-size: 40px 30px;
     background-position: center;
 
+}
+
+.failed-search {
+    margin: 1% 30%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: $meetup-font;
+}
+
+.failed-search > h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.failed-search > p {
+    margin-top: 2%;
+}
+
+.failed-search > p > Link {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
 }

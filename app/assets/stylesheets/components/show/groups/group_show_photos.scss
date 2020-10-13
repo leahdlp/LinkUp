@@ -1,13 +1,10 @@
 .photo-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-
-    // row-gap: 5%;
     column-gap: 10px;
     width: 100%;
     max-width: 378px;
     min-height: fit-content;
-    // border: yellow 4px solid;
 }
 
 .photo-list-item {
@@ -23,5 +20,4 @@
     background-size: 145px 145px;
     background-position: bottom;
     border: 1px solid rgb(214, 213, 213);
-    // border: orange 7px solid;
 }

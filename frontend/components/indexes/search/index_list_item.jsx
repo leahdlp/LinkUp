@@ -138,6 +138,8 @@ class IndexListItem extends React.Component {
 
         if (hour[0] === '0') {
             hour = hour[1];
+        } else {
+            hour = hour.join('')
         }
 
         return `${hour}:${min} ${AMPM}`;
@@ -156,7 +158,6 @@ class IndexListItem extends React.Component {
     }
 
     renderUserCircles(num) {
-        console.log(num)
         switch (num) {
             case 0:
                 return;
@@ -166,7 +167,6 @@ class IndexListItem extends React.Component {
                         <div id="user1-circle"></div>
                     </div>
                 )
-                // break;
             case 2:
                 return (
                     <div className="circle-users">
@@ -175,7 +175,6 @@ class IndexListItem extends React.Component {
                     </div>
                 )
             default:
-                console.log('default')
                 return (
                     <div className="circle-users">
                         <div id="user1-circle"></div>
@@ -208,11 +207,8 @@ class IndexListItem extends React.Component {
         const entity = this.props.entity;
         const groups = this.props.groups;
         
-        // if (!Object.keys(groups).includes(entity.group_id)) return null;
-
         let date_time;
         let group;
-        // let num_users;
         
         if (type === 'event') {
             if (!groups[entity.group_id]) {
@@ -222,7 +218,6 @@ class IndexListItem extends React.Component {
 
             date_time = this.convertDateTime(entity.date_time);
         } else {
-            console.log('else')
             date_time = "";
             group = "";
 

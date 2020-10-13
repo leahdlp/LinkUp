@@ -214,15 +214,15 @@ class EntityForm extends React.Component {
         return (
             <div className="entire-entity-page">
                 {this.renderErrors()}
-                  <div className="background-container">
-                      <Background />
-                <div className="entity-form-page">
-                    <div className="entity-form-container">
-                        {this.renderHeader()}
-                        {this.renderForm()}
+                <div className="background-container">
+                    <Background />
+                    <div className="entity-form-page">
+                        <div className="entity-form-container">
+                            {this.renderHeader()}
+                            {this.renderForm()}
+                        </div>
                     </div>
                 </div>
-                  </div>
             </div>
         )
     }

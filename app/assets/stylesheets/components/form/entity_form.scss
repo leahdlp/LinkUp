@@ -1,32 +1,22 @@
-// $meetup-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-// $pg-background-color: rgb(245, 245, 247);
-// $border-bottom: 1px solid rgb(211, 211, 211);
-
 div {
     background-color: $pg-background-color;
-    // background-image: image_url("meetup-pic.png");
-    // background-repeat: no-repeat;
-    // border: 2px solid red;
-    // z-index: -30000000;
 }
 
 .entity-form-page {
     font-family: $meetup-font;
-    margin: auto;
+    margin-top: 12.5%;
     border-radius: 8px;
     margin-bottom: 10%;
     display: flex;
     justify-content: center;
     background-color: white;
     border: $border-bottom;
-    // border: 9px solid orange;
     width: 30%;
     z-index: 12;
     box-shadow: $box-shadow;
 }
 
 .entity-form-container {
-    // border: 3px green solid;
     border-radius: 8px;
     width: 100%;
     max-width: 100%;
@@ -39,12 +29,8 @@ div {
 .form-container {
     width: 93%;
     max-width: 93%;
-    // border: 4px solid royalblue;
 }
 
-.form {
-    // border: 2px solid aqua;
-}
 
 .entity-form-header {
     background-color: white;
@@ -52,14 +38,7 @@ div {
     max-width: 92%;
     padding: 4%;
     border-radius: 8px;
-
-    // border: 3px solid yellow;
 }
-
-.inputs {
-    // border: pink 3px solid;
-}
-
 
 .user-input > input {
     width: 96%;
@@ -71,7 +50,6 @@ div {
     width: 96%;
     height: 200px;
     padding: 5px 5px;
-    // border: 1px solid green;
 }
 
 .user-input > textarea:focus {
@@ -87,19 +65,16 @@ div {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
-    // border: blue 6px solid;
 }
 
 .form-submit-btn {
     background-color: white;
-    // border: 5px solid indigo;
     display: flex;
     justify-content: center;
     width: 40%;
 }
 
 .cancel-btn {
-    // border: 1px solid orange;
     width: 40%;
     display: flex;
     justify-content: center;

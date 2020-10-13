@@ -8,19 +8,16 @@ i {
     background-image: image_url("meetup.png");
     background-repeat: no-repeat;
     height: 55px;
-    // height: fit-content;
     width: 30%;
     background-position: center;
     background-color: white;
     background-size: 100% 50px;
     cursor: pointer;
-    // border: black 0.5px solid;
 }
 
-// #logo-icon {
-//     color:$pink-btn-color;
-//     font-size: 50px;
-// }
+#logged-out-logo {
+    width: 10%;
+}
 
 .dot {
     height: 1px;
@@ -28,6 +25,5 @@ i {
 }
 
 #splash-current { 
-    // background-color: grey;
     color: teal;
 }

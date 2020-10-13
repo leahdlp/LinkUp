@@ -8,7 +8,6 @@ import { fetchGroup } from "../../../actions/groups_actions";
 import IndexList from "./index_list";
 
 const mapStateToProps = state => ({
-    // keyword: ownProps.match.params.keyword,
     events: state.entities.events,
     groups: state.entities.groups
 });

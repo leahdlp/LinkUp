@@ -2,25 +2,20 @@
     width: 56%; 
     display: flex;
     justify-content: flex-end;
-    // border: yellow 10px solid;
-
 }
 
 .event-show-body {
-    // border: red 10px solid;
     margin-top: 5%;
     width: 600px;
 }
 
 .event-img-container {
-    // border: rgb(158, 149, 148) 4px solid;
     height: 300px;
     display: flex;
     justify-content: center;
 }
 
 .event-img {
-    // border: royalblue 3px solid;
     height: 100%;
     width: 90%;
     background-image: image-url('brunch.jpg');
