@@ -2,6 +2,7 @@ json.events do
     @events.each do |event| 
         json.set! event.id do 
             json.partial! '/api/events/event', event: event
+            json.group event.group.name
         end
     end
 end
@@ -27,6 +28,7 @@ json.subcategories do
         @subcats[:events].each do |event| 
             json.set! event.id do 
                 json.partial! '/api/events/event', event: event
+                json.group event.group.name
             end
         end
     end

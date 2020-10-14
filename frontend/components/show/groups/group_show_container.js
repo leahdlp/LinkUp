@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 
+import { fetchUser } from '../../../actions/user_actions';
 import { fetchGroup, fetchGroups, deleteGroup } from '../../../actions/groups_actions';
 import { createMember, fetchMembers, deleteMember } from '../../../actions/members_actions';
 import { fetchEvents } from '../../../actions/events_actions';
@@ -39,6 +40,7 @@ class GroupPage extends React.Component {
                 deleteGroup={this.props.deleteGroup}
                 fetchSubcategory={this.props.fetchSubcategory}
                 fetchAttendees={this.props.fetchAttendees}
+                fetchUser={this.props.fetchUser}
             />
         )
     }
@@ -63,7 +65,8 @@ const mapDispatchToProps = dispatch => ({
     deleteMember: memberId => dispatch(deleteMember(memberId)),
     fetchSubcategory: subCatId => dispatch(fetchSubcategory(subCatId)),
     fetchLocation: locationId => dispatch(fetchLocation(locationId)),
-    fetchAttendees: eventId => dispatch(fetchAttendees(eventId))
+    fetchAttendees: eventId => dispatch(fetchAttendees(eventId)), 
+    fetchUser: userId => dispatch(fetchUser(userId))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(GroupPage);

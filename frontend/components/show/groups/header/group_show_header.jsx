@@ -12,7 +12,8 @@ const GroupShowHeader = ({
     deleteGroup,
     fetchAttendees,
     currentUser,
-    history 
+    history,
+    organizer
 }) => {
     if (locations[group.location_id] === undefined) return null;
 
@@ -43,9 +44,10 @@ const GroupShowHeader = ({
                             <p>
                                 {Object.keys(members).length} members
                             </p>
-                            <p>
-                                Organized by {members[group.creatorId]}
-                            </p>
+                            <div className="organizer-info">
+                              <p>Organized by </p>
+                              <p id="organizer"> {organizer}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

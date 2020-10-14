@@ -82,8 +82,11 @@ class IndexList extends React.Component {
           <ul className="search-idx">
             {results.map(result => {
                 let type = "group"
+                // let groupName = ""
                 if (!result.creator_id) {
                     type = "event";
+                    // this.props.fetchGroup(result.group_id)
+                    //     .then(action => groupName = action.group.name)
                 };
                 return (
                     <IndexListItem
@@ -92,7 +95,8 @@ class IndexList extends React.Component {
                         history={this.props.history}
                         key={`result-${result.id}`}
                         groups={this.props.groups}
-                        fetchGroup={this.props.fetchGroup}
+                        // fetchGroup={this.props.fetchGroup}
+                        // groupName={groupName}
                     />
                 );
             })}

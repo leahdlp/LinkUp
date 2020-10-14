@@ -4,8 +4,16 @@ import MemberList from './members/member_list';
 import SubcategoriesList from './subcategories/show_subcategories'
 
 class GroupShow extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.organizer;
+    }
+
     componentDidMount() {
         this.props.fetchSubcategory(this.props.group.subcategory_id);
+        this.props.fetchUser(this.props.group.creator_id)
+            .then(action => this.organizer = action.user.name)
     }
 
     render () {
@@ -30,6 +38,7 @@ class GroupShow extends React.Component {
                         deleteMember={this.props.deleteMember}
                         deleteGroup={this.props.deleteGroup}
                         history={this.props.history}
+                        organizer={this.organizer}
                     />
                     <div className="member-section">
                         <div className="member-container">

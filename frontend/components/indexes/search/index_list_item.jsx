@@ -156,7 +156,7 @@ class IndexListItem extends React.Component {
           </p>
         );
     }
-
+ 
     renderUserCircles(num) {
         switch (num) {
             case 0:
@@ -205,23 +205,24 @@ class IndexListItem extends React.Component {
         const history = this.props.history;
         const type = this.props.type;
         const entity = this.props.entity;
-        const groups = this.props.groups;
+        // const groups = this.props.groups;
         
         let date_time;
-        let group;
+        // let group;
         
-        if (type === 'event') {
-            if (!groups[entity.group_id]) {
-                this.props.fetchGroup(entity.group_id)
-                    .then(action => group = action.group.name)
-            }
+        date_time = type === 'event' ? this.convertDateTime(entity.date_time) : "";
+        // if (type === 'event') {
+        //     // if (!groups[entity.group_id]) {
+        //     //     this.props.fetchGroup(entity.group_id)
+        //     //         .then(action => group = action.group.name)
+        //     // }
 
-            date_time = this.convertDateTime(entity.date_time);
-        } else {
-            date_time = "";
-            group = "";
+        //     date_time = this.convertDateTime(entity.date_time);
+        // } else {
+        //     date_time = "";
+        //     // group = "";
 
-        }
+        // }
 
         return (
           <li
@@ -232,7 +233,7 @@ class IndexListItem extends React.Component {
             <div className="search-idx-info">
               {date_time}
               {entity.name}
-              <p className="search-idx-group">{group}</p>
+              <p className="search-idx-group">{entity.group}</p>
               {this.renderUserVisual()}
             </div>
           </li>

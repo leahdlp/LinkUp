@@ -7,19 +7,53 @@ class Landing extends React.Component {
         super(props);
 
         this.state = { entity: "Event" };
-
+        
+        this.handleUserSelect = this.handleUserSelect.bind(this);
         this.handleToggle = this.handleToggle.bind(this);
         this.renderIndex = this.renderIndex.bind(this);
     }
-
+    
     componentDidMount() {
         this.props.fetchEvents();
         this.props.fetchGroups();
     }
 
+    handleUserSelect(toggle) {
+        if (toggle === "Event") {
+            document
+                .getElementsByClassName("idx-toggle-btn")[1]
+                .setAttribute("disabled", "");
+            document
+                .getElementsByClassName("idx-toggle-btn")[1]
+                .setAttribute("id", "toggle-selected");
+            document
+                .getElementsByClassName("idx-toggle-btn")[0]
+                .removeAttribute("disabled");
+            document
+                .getElementsByClassName("idx-toggle-btn")[0]
+                .removeAttribute("id", "toggle-selected");
+        } else {
+            document
+                .getElementsByClassName("idx-toggle-btn")[0]
+                .setAttribute("disabled", "");
+            document
+                .getElementsByClassName("idx-toggle-btn")[0]
+                .setAttribute("id", "toggle-selected");
+            document
+                .getElementsByClassName("idx-toggle-btn")[1]
+                .removeAttribute("id", "toggle-selected");
+            document
+                .getElementsByClassName("idx-toggle-btn")[1]
+                .removeAttribute("disabled");
+        }
+    }
+
     handleToggle(entity) {
-        const toggle = entity === "Event" ? "Group" : "Event"
-        this.setState({ entity: toggle })
+        const toggle = entity === "Event" ? "Group" : "Event";
+
+        this.setState({ entity: toggle }, () => {
+            this.handleUserSelect(toggle)
+        })
     }
 
     renderIndex(type) {
@@ -46,10 +80,15 @@ class Landing extends React.Component {
             <div className="landing-pg">
                 <div className="landing-nav">
                     <div className="index-toggle">
-                        <button onClick={() => this.handleToggle(this.state.entity)}>
+                        <button 
+                            className="idx-toggle-btn"
+                            onClick={() => this.handleToggle(this.state.entity)}>
                             Groups
                         </button>
-                        <button onClick={() => this.handleToggle(this.state.entity)}>
+                        <button 
+                            className="idx-toggle-btn"
+                            id="toggle-selected"
+                            onClick={() => this.handleToggle(this.state.entity)}>
                             Events
                         </button>
                     </div>
