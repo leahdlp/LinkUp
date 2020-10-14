@@ -7,7 +7,7 @@ import Sidebar from './sidebar/sidebar';
 
 class EventShow extends React.Component {
     componentDidMount() {
-        if (Object.values(this.props.events).length === 0) fetchEvents();
+        // if (Object.values(this.props.events).length === 0) this.props.fetchEvents();
 
         this.props.fetchLocations();
         this.props.fetchEvent(parseInt(this.props.match.params.eventId))

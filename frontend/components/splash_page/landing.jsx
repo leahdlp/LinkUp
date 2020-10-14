@@ -1,5 +1,5 @@
 import React from 'react';
-import EntitiesIndex from '../indexes/entities_index'
+import EntitiesIndex from '../indexes/entities/entities_index'
 import SearchBar from '../search_bar/search_bar'
 
 class Landing extends React.Component {

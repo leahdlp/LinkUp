@@ -53,7 +53,7 @@ class EntityForm extends React.Component {
     renderErrors() {
         let errors = this.props.errors;
         let klass = "";
-        let feedback = "";
+
         if (errors.length !== 0) klass = "errors";
 
         return (
@@ -213,15 +213,12 @@ class EntityForm extends React.Component {
         if (this.props.entity === undefined) return null;
         return (
             <div className="entire-entity-page">
-                {this.renderErrors()}
                 <div className="background-container">
-                    <Background />
-                    <div className="entity-form-page">
-                        <div className="entity-form-container">
-                            {this.renderHeader()}
-                            {this.renderForm()}
-                        </div>
-                    </div>
+                    <Background
+                      renderErrors={this.renderErrors}
+                      renderHeader={this.renderHeader}
+                      renderForm={this.renderForm}
+                    />
                 </div>
             </div>
         )

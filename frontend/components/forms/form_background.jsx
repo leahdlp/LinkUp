@@ -1,84 +1,15 @@
 import React from 'react';
 
 const Background = props => (
-    <div className="background">
-        <div className='background-1'></div>
-        <div className='background-2'></div>
-        <div className='background-3'></div>
-        <div className='background-4'></div>
-        <div className='background-5'></div>
-        <div className='background-6'></div>
-        <div className='background-7'></div>
-        <div className='background-8'></div>
-        <div className='background-9'></div>
-        <div className='background-10'></div>
-        <div className='background-11'></div>
-        <div className='background-12'></div>
-        <div className='background-13'></div>
-        <div className='background-14'></div>
-        <div className='background-15'></div>
-        <div className='background-16'></div>
-        <div className='background-17'></div>
-        <div className='background-18'></div>
-        <div className='background-19'></div>
-        <div className='background-20'></div>
-        <div className='background-21'></div>
-        <div className='background-22'></div>
-        <div className='background-23'></div>
-        <div className='background-24'></div>
-        <div className='background-25'></div>
-        <div className='background-26'></div>
-        <div className='background-27'></div>
-        <div className='background-30'></div>
-        <div className='background-31'></div>
-        <div className='background-32'></div>
-        <div className='background-33'></div>
-        <div className='background-34'></div>
-        <div className='background-35'></div>
-        <div className='background-36'></div>
-        <div className='background-37'></div>
-        <div className='background-38'></div>
-        <div className='background-39'></div>
-        <div className='background-40'></div>
-        <div className='background-41'></div>
-        <div className='background-42'></div>
-        <div className='background-43'></div>
-        <div className='background-44'></div>
-        <div className='background-45'></div>
-        <div className='background-46'></div>
-        <div className='background-47'></div>
-        <div className='background-48'></div>
-        <div className='background-49'></div>
-        <div className='background-50'></div>
-        <div className='background-51'></div>
-        {/* <div className='background-52'></div>
-        <div className='background-53'></div>
-        <div className='background-54'></div>
-        <div className='background-55'></div>
-        <div className='background-56'></div>
-        <div className='background-57'></div>
-        <div className='background-58'></div>
-        <div className='background-59'></div>
-        <div className='background-60'></div>
-        <div className='background-61'></div>
-        <div className='background-62'></div>
-        <div className='background-63'></div>
-        <div className='background-64'></div>
-        <div className='background-65'></div>
-        <div className='background-66'></div>
-        <div className='background-67'></div>
-        <div className='background-68'></div>
-        <div className='background-69'></div>
-        <div className='background-70'></div>
-        <div className='background-71'></div>
-        <div className='background-72'></div>
-        <div className='background-73'></div>
-        <div className='background-74'></div>
-        <div className='background-75'></div>
-        <div className='background-76'></div>
-        <div className='background-77'></div>
-        <div className='background-78'></div> */}
-    </div>
+        <div className='background-img'>
+            {props.renderErrors()}
+            <div className="entity-form-page">
+                <div className="entity-form-container">
+                    {props.renderHeader()}
+                    {props.renderForm()}
+                </div>
+            </div>
+        </div>
 )
 
 export default Background;
