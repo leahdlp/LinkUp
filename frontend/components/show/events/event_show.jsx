@@ -77,6 +77,7 @@ class EventShow extends React.Component {
             <div className="event-bar-container">
               <EventBar
                 event={event}
+                group={group}
                 deleteEvent={this.props.deleteEvent}
                 createAttendee={this.props.createAttendee}
                 deleteAttendee={this.props.deleteAttendee}

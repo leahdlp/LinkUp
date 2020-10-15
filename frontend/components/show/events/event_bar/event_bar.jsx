@@ -67,7 +67,15 @@ class EventBar extends React.Component {
     }
 
     renderButtons(event) {
-        if (this.props.currentUser.id === this.props.host.id) {
+        let isHost = false;
+        const attendees = this.props.attendees
+        const group = this.props.group;
+
+        for (let id in attendees) {
+            if (attendees[id].user_id === group.creator_id) isHost = true;
+        }
+
+        if (isHost) {
             return this.eventButtons(event)
         } else {
             return this.attendanceButton(event)
@@ -213,7 +221,7 @@ class EventBar extends React.Component {
     render() {
         const event = this.props.event;
 
-        if (Object.values(this.props.attendees).length === 0) return 'EventBar';
+        if (Object.values(this.props.attendees).length === 0) return null;
         if (event === undefined) return null;
 
 
