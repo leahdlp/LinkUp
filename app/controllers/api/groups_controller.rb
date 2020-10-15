@@ -1,4 +1,4 @@
-]class Api::GroupsController < ApplicationController
+class Api::GroupsController < ApplicationController
     before_action :require_logged_in, except: [:index, :show]
     
     def index
