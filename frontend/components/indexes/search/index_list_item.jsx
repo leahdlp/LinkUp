@@ -126,9 +126,9 @@ class IndexListItem extends React.Component {
                 hour = "11";
                 AMPM = 'PM';
                 break;
-            case "24":
+            case "00":
                 hour = "12";
-                AMPM = 'PM';
+                AMPM = 'AM';
                 break;
             default:
                 break;
