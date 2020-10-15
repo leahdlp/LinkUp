@@ -414,7 +414,7 @@ group6 = Group.create!({
 })
 group7 = Group.create!({ 
     name: "Arts Tech Philadelphia", 
-    description: "We aim to connect innovators in the field of arts, culture, and technology. Our meet-ups are designed to explore the ways in which social media and technology can help bring arts and culture to the masses. \"Democratizing\" the arts has been a long-standing goal in the art world, and no medium makes it more feasible than the web. The purpose of this meet-up is to bring together those working at the intersection of arts and technology to share ideas, strategies, successes, challenges and failures, and to explore the following questions: How can the new technology available help raise awareness about the arts and enrich the audience experience? -How can cultural institutions interact and engage with each other and their audience in meaningful ways? - What can they learn from their audience and how can they use this knowledge to improve the way in which they present their content? What kind of collaborations are happening at the intersection of arts and tech? - What are the possibilities of arts and tech? - As well as countless others that we hope to uncover at future meet-ups!", 
+    description: "We aim to connect innovators in the field of arts, culture, and technology. Our link-ups are designed to explore the ways in which social media and technology can help bring arts and culture to the masses. \"Democratizing\" the arts has been a long-standing goal in the art world, and no medium makes it more feasible than the web. The purpose of this link-up is to bring together those working at the intersection of arts and technology to share ideas, strategies, successes, challenges and failures, and to explore the following questions: How can the new technology available help raise awareness about the arts and enrich the audience experience? -How can cultural institutions interact and engage with each other and their audience in meaningful ways? - What can they learn from their audience and how can they use this knowledge to improve the way in which they present their content? What kind of collaborations are happening at the intersection of arts and tech? - What are the possibilities of arts and tech? - As well as countless others that we hope to uncover at future link-ups!", 
     subcategory_id: sub_cat4.id, 
     location_id: philly.id, 
     creator_id: user4.id 
@@ -441,14 +441,14 @@ group10 = Group.create!({
     creator_id: user102.id 
 })
 group11 = Group.create!({ 
-    name: "Houston Queer Book Club Meetup Group", 
+    name: "Houston Queer Book Club LinkUp Group", 
     description: "Welcome book lover! We will be meeting every month to discuss queer fiction and non-fiction. This is a space that welcomes respectful dialogue, be it a formal dive into the book’s themes or a more informal conversation about passages we enjoyed. All are welcome, LGBTQA + or otherwise. (Virtual for the time being) Book suggestions welcome.", 
     subcategory_id: sub_cat11.id, 
     location_id: houston.id, 
     creator_id: user89.id
 })
 group12 = Group.create!({ 
-    name: "Houston African American Authors Meetup Group", 
+    name: "Houston African American Authors LinkUp Group", 
     description: "This is a group for anyone interested in reading and discussing books written by African-American authors. All levels of book readers are welcome. I started this group to meet other avid enthusiasts of African-American literature. Looking forward to exploring genres with everybody.", 
     subcategory_id: sub_cat10.id, 
     location_id: houston.id, 
@@ -483,8 +483,8 @@ group16 = Group.create!({
     creator_id: user74.id 
 })
 group17 = Group.create!({ 
-    name: "Classics & Culture Meet-Up", 
-    description: "A brand new Meet-Up! This meet up is for anyone who loves cultural activities, reading the classics (or wants to begin reading them), and longs to join a friendly, fun, and nourishing community where they can read, discuss, and enjoy the finer things in life —on a budget and without the “ivory-tower” vibe. 😁 This group is for single or married adults ages 21 and up. We get together once a month to discuss a classic work of literature or philosophy, selected by the group, and share food and drinks (potluck style) based on the cuisine theme for the month. In addition to our monthly gathering, we will post other opportunities for hanging out centered around books, culture, ideas, and the arts. As a group, we do not hold to any philosophical or religious tradition, but rather seek to maintain an ecumenical and generous spirit where we give space for each person to be themselves. The Monthly Gathering: Discussion, books, and food is what this Gathering is all about! Each month we have a different cuisine we explore as a group and try our hand at making. We bring our dishes that we made (or bought 🤷‍♀️) to the Gathering to share. We provide introductory notes for each classic to help us all get into the work more easily. At the end of each read, we will put our ideas in a hat for the next classic work and cuisine theme and then pick at random. We read a variety of classics including literature like Homer, Dickens, and Tolstoy as well as philosophy and other expository works like Cicero, Plato, and Confucius. Any classic is on the table as an option for reading and discussing. We do not limit our book selections to the western canon but prefer to embrace classics from any region of our world. The Hang Outs: Here are some of the additional hangouts you can expect to see scheduled. ~Budget savvy cultural events (free nights at local museums, matinee nights at the opera or ballet, free jazz nights around town, etc. ~Interesting lectures at local universities. (they are usually free) ~Used bookstore outings in and around Charlotte. ~Whatever else seems fun to the group! Check out each event posting for details on what to bring and how to prepare. Once you join this meet-up you can join our private Facebook group where we introduce ourselves to the group and enjoy discussion in between Gatherings and Hangouts. Please reach out to Jennifer if you have any questions!", 
+    name: "Classics & Culture Link-Up", 
+    description: "A brand new Link-Up! This link up is for anyone who loves cultural activities, reading the classics (or wants to begin reading them), and longs to join a friendly, fun, and nourishing community where they can read, discuss, and enjoy the finer things in life —on a budget and without the “ivory-tower” vibe. 😁 This group is for single or married adults ages 21 and up. We get together once a month to discuss a classic work of literature or philosophy, selected by the group, and share food and drinks (potluck style) based on the cuisine theme for the month. In addition to our monthly gathering, we will post other opportunities for hanging out centered around books, culture, ideas, and the arts. As a group, we do not hold to any philosophical or religious tradition, but rather seek to maintain an ecumenical and generous spirit where we give space for each person to be themselves. The Monthly Gathering: Discussion, books, and food is what this Gathering is all about! Each month we have a different cuisine we explore as a group and try our hand at making. We bring our dishes that we made (or bought 🤷‍♀️) to the Gathering to share. We provide introductory notes for each classic to help us all get into the work more easily. At the end of each read, we will put our ideas in a hat for the next classic work and cuisine theme and then pick at random. We read a variety of classics including literature like Homer, Dickens, and Tolstoy as well as philosophy and other expository works like Cicero, Plato, and Confucius. Any classic is on the table as an option for reading and discussing. We do not limit our book selections to the western canon but prefer to embrace classics from any region of our world. The Hang Outs: Here are some of the additional hangouts you can expect to see scheduled. ~Budget savvy cultural events (free nights at local museums, matinee nights at the opera or ballet, free jazz nights around town, etc. ~Interesting lectures at local universities. (they are usually free) ~Used bookstore outings in and around Charlotte. ~Whatever else seems fun to the group! Check out each event posting for details on what to bring and how to prepare. Once you join this link-up you can join our private Facebook group where we introduce ourselves to the group and enjoy discussion in between Gatherings and Hangouts. Please reach out to Jennifer if you have any questions!", 
     subcategory_id: sub_cat18.id, 
     location_id: charlotte.id, 
     creator_id: user82.id
@@ -505,14 +505,14 @@ group19 = Group.create!({
 })
 group20 = Group.create!({ 
     name: "Melanin and Wine", 
-    description: "This meetup is for melanated people who love wine! Meetups every Wednesday at Sydney's Martini Bar at 7pm. They have tapas, $10 bottles of wine, and free validated parking", 
+    description: "This linkup is for melanated people who love wine! Linkups every Wednesday at Sydney's Martini Bar at 7pm. They have tapas, $10 bottles of wine, and free validated parking", 
     subcategory_id: sub_cat13.id, 
     location_id: charlotte.id, 
     creator_id: user7.id 
 })
 group21 = Group.create!({ 
-    name: "Miami Social Media Marketing and Networking Training Meetup", 
-    description: "PLEASE READ: This Meetup group is part of a large network of Meetup groups devoted to Best Practices with Social Media Marketing Strategies and Face to Face Networking. These Meetups are organized", 
+    name: "Miami Social Media Marketing and Networking Training Linkup", 
+    description: "PLEASE READ: This Linkup group is part of a large network of Linkup groups devoted to Best Practices with Social Media Marketing Strategies and Face to Face Networking. These Linkups are organized", 
     subcategory_id: sub_cat27.id, 
     location_id: miami.id, 
     creator_id: user51.id

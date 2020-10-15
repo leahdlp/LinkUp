@@ -47,7 +47,7 @@ class NavTabs extends React.Component {
                     <div>
                         <h3>Women programmers</h3>
                         <p>
-                            Over 250,000 women gather in Meetup groups around the world to sharpen 
+                            Over 250,000 women gather in LinkUp groups around the world to sharpen 
                             their software development skills.
                         </p>
                     </div>

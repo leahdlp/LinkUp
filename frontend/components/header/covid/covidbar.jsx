@@ -7,7 +7,7 @@ class CovidBar extends React.Component {
             <div className="covid-alert">
                 <label className="covid-alert-header">COVID-19 advisory
                     <p>
-                        For the health and safety of Meetup communities, we're 
+                        For the health and safety of LinkUp communities, we're 
                         advising that all events be hosted online in the coming weeks. 
                     </p>
                 </label>

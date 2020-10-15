@@ -110,7 +110,7 @@ const Splash = props => {
                                         id="feature-link"
                                         className="splash-link"
                                         to="/signup">
-                                        Join Meetup
+                                        Join LinkUp
                                     </Link>
                                 </div>
                             </div>
@@ -121,7 +121,7 @@ const Splash = props => {
                                 <div>
                                     <h5 id="feature-head">Start a group</h5>
                                     <p id="feature-body">
-                                        Create your own Meetup group, and draw 
+                                        Create your own LinkUp group, and draw 
                                         from a community of millions.
                                     </p>
                                     <Link 
