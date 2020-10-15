@@ -70,9 +70,12 @@ class EventBar extends React.Component {
         let isHost = false;
         const attendees = this.props.attendees
         const group = this.props.group;
+        const creator = group.creator_id;
+        const currentUser = this.props.currentUser.id;
 
         for (let id in attendees) {
-            if (attendees[id].user_id === group.creator_id) isHost = true;
+            const attendee = attendees[id];
+            if (attendee.user_id === currentUser && currentUser === creator) isHost = true;
         }
 
         if (isHost) {
