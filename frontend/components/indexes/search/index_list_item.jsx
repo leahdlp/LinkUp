@@ -205,24 +205,8 @@ class IndexListItem extends React.Component {
         const history = this.props.history;
         const type = this.props.type;
         const entity = this.props.entity;
-        // const groups = this.props.groups;
         
-        let date_time;
-        // let group;
-        
-        date_time = type === 'event' ? this.convertDateTime(entity.date_time) : "";
-        // if (type === 'event') {
-        //     // if (!groups[entity.group_id]) {
-        //     //     this.props.fetchGroup(entity.group_id)
-        //     //         .then(action => group = action.group.name)
-        //     // }
-
-        //     date_time = this.convertDateTime(entity.date_time);
-        // } else {
-        //     date_time = "";
-        //     // group = "";
-
-        // }
+        let date_time = type === 'event' ? this.convertDateTime(entity.date_time) : "";
 
         return (
           <li

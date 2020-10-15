@@ -7,31 +7,22 @@ import Sidebar from './sidebar/sidebar';
 
 class EventShow extends React.Component {
     componentDidMount() {
-        // if (Object.values(this.props.events).length === 0) this.props.fetchEvents();
-
-        this.props.fetchLocations();
         this.props.fetchEvent(parseInt(this.props.match.params.eventId))
             .then(action => {
-                this.props.fetchAttendees(action.event.id)
-                this.props.fetchGroup(action.event.group_id)
-                  .then(action => this.props.fetchUser(action.group.creator_id))
+                this.props.fetchAttendees(action.event.id);
+                this.props.fetchGroup(action.event.group_id);
             })
     }
 
     render () {
-        if (Object.values(this.props.events).length === 0) return null;
         if (this.props.event === undefined) return null;
-        if (Object.values(this.props.locations).length === undefined) return null;
         if (Object.values(this.props.groups).length === 0) return null;
        
         const event = this.props.event
         const group = this.props.groups[event.group_id]
-        const location = this.props.locations[event.location_id];
         const attendees = this.props.attendees;
-
-        if (!Object.keys(this.props.users).includes(`${group.creator_id}`)) return null;
-        const host = this.props.users[group.creator_id]
-
+        const location = event.location;
+        const host = event.host;
 
         return (
           <div className="event-show-pg">
@@ -58,7 +49,6 @@ class EventShow extends React.Component {
                       <AttendeeList
                         eventId={event.id}
                         attendees={attendees}
-                        users={this.props.users}
                       />
                     </div>
                   </div>

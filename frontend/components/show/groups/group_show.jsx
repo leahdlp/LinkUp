@@ -3,65 +3,44 @@ import GroupShowHeader from './header/group_show_header';
 import MemberList from './members/member_list';
 import SubcategoriesList from './subcategories/show_subcategories'
 
-class GroupShow extends React.Component {
-    constructor(props) {
-        super(props);
+const GroupShow = props => {
+    const group = props.group
 
-        this.organizer;
-    }
-
-    componentDidMount() {
-        this.props.fetchSubcategory(this.props.group.subcategory_id);
-        this.props.fetchUser(this.props.group.creator_id)
-            .then(action => this.organizer = action.user.name)
-    }
-
-    render () {
-        const group = this.props.group
-        const subcategories = this.props.subcategories
-        
-        if (subcategories === undefined) return null;
-        if (Object.values(subcategories).length === 0) return null;
-
-        return (
-            <div>
-                <div className="mem-head-body">
-                    <GroupShowHeader 
-                        currentUser={this.props.currentUser}
-                        events={this.props.events}
-                        members={this.props.members}
-                        attendees={this.props.attendees}
-                        locations={this.props.locations}
-                        group={group}
-                        fetchAttendees={this.props.fetchAttendees}
-                        createMember={this.props.createMember}
-                        deleteMember={this.props.deleteMember}
-                        deleteGroup={this.props.deleteGroup}
-                        history={this.props.history}
-                        organizer={this.organizer}
-                    />
-                    <div className="member-section">
-                        <div className="member-container">
-                            <MemberList 
-                                groupId={this.props.group.id}
-                                members={this.props.members}
-                                users={this.props.users}
-                            />
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="category-section">
-                    <div className="subcats-list-container">
-                        <SubcategoriesList 
-                            group={group}
-                            subcategories={this.props.subcategories}
+    return (
+        <div>
+            <div className="mem-head-body">
+                <GroupShowHeader 
+                    currentUser={props.currentUser}
+                    events={props.events}
+                    members={props.members}
+                    attendees={props.attendees}
+                    group={group}
+                    fetchAttendees={props.fetchAttendees}
+                    createMember={props.createMember}
+                    deleteMember={props.deleteMember}
+                    deleteGroup={props.deleteGroup}
+                    history={props.history}
+                />
+                <div className="member-section">
+                    <div className="member-container">
+                        <MemberList 
+                            groupId={props.group.id}
+                            members={props.members}
+                            users={props.users}
                         />
                     </div>
                 </div>
             </div>
-        )
-    }
+            
+            <div className="category-section">
+                <div className="subcats-list-container">
+                    <SubcategoriesList 
+                        subcategory={group.subcategory}
+                    />
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default GroupShow;

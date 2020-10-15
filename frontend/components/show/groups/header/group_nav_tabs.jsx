@@ -23,7 +23,7 @@ class NavTabs extends React.Component {
     }
 
     componentDidMount() {
-        Object.values(this.props.events).map((event) =>
+        Object.values(this.props.events).map(event =>
             this.props.fetchAttendees(event.id)
         );
     }
@@ -33,6 +33,9 @@ class NavTabs extends React.Component {
 
         let type;
         switch (idx) {
+            case 0:
+                type = 'about'
+                break;
             case 1:
                 type = 'events';
                 break;
@@ -53,24 +56,28 @@ class NavTabs extends React.Component {
     changeWindowSize(type) {
         let section = document.getElementsByClassName("member-section")[0];
         let page = document.getElementsByClassName("mem-head-body")[0];
-
+        
         section.setAttribute("id", "gshow-event-section");
         page.setAttribute("id", "gshow-event-page")
-
+        
         section = document.getElementById("gshow-event-section");
         page = document.getElementById("gshow-event-page")
-
+        
+        const wordCount = this.props.group.description.split(' ').length
         let height; 
         
         switch (type) {
+            case 'about':
+                height = `${(wordCount / 15) * 25}px`;
+                break;
             case 'events':
-                height = `${Object.values(this.props.events).length * 160}px`;
+                height = `${this.props.group.event_ids.length * 350}px`;
                 break;
             case 'members':
                 height = `${Object.values(this.props.members).length * 115}px`;
                 break;
             case 'photos':
-                height = `${(20 / 4) * 170}px`; 
+                height = `${(20 / 4) * 170}px`; ;
                 break;
             default:
                 height = 'fit-content'
@@ -78,10 +85,6 @@ class NavTabs extends React.Component {
         }
 
         section.setAttribute("style", `height: ${height}`);
-    }
-
-    revertWindowSize(type) {
-
     }
 
     allMembers() {
@@ -115,11 +118,11 @@ class NavTabs extends React.Component {
         const separated = {};
 
         for (let id in attendees) {
-        if (separated[attendees[id].event_id]) {
-            separated[attendees[id].event_id].push(attendees[id]);
-        } else {
-            separated[attendees[id].event_id] = [attendees[id]];
-        }
+            if (separated[attendees[id].event_id]) {
+                separated[attendees[id].event_id].push(attendees[id]);
+            } else {
+                separated[attendees[id].event_id] = [attendees[id]];
+            }
         }
 
         return separated;

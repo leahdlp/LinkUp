@@ -22,5 +22,4 @@ export const searchEntities = keyword => dispatch => (
           dispatch(receiveSearch(results))
       }
     })
-    // .fail(errors => dispatch(receiveSubcategoriesErrors(errors.responseJSON)))
 )

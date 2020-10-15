@@ -2,8 +2,10 @@ import React from 'react';
 import AttendeeListItem from './attendee_list_item';
 import { Link } from 'react-router-dom';
 
-const AttendeeList = ({ attendees, eventId, users }) => {
+const AttendeeList = ({ attendees, eventId }) => {
     let eventAtts = [];
+
+
     Object.values(attendees).forEach(attendee => {
       if (attendee.event_id === eventId) eventAtts.push(attendee)
     })
@@ -30,7 +32,6 @@ const AttendeeList = ({ attendees, eventId, users }) => {
                 <AttendeeListItem
                   key={`attendee-${attendee.id}`}
                   attendee={attendee}
-                  users={users}
                 />
               );
             } else {

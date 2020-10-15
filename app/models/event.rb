@@ -27,4 +27,8 @@ class Event < ApplicationRecord
         foreign_key: :event_id,
         class_name: :Attendee,
         dependent: :destroy    
+
+    has_many :host,
+        through: :group,
+        source: :creator
 end

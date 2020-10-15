@@ -69,7 +69,7 @@ class EventShowHeader extends React.Component {
         const location = this.props.location;
         const event = this.props.event;
         const host = this.props.host;
-        if (host === undefined) return null;
+
         if (location === undefined) return null;
 
         return (
@@ -84,7 +84,7 @@ class EventShowHeader extends React.Component {
                     <div className="host-img"></div>
                     <div className="host-info">
                         <p> Hosted by</p>
-                        <p id="host">{host.name}</p>
+                        <p id="host">{host}</p>
                     </div>
                 </div>
             </div>

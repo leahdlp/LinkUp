@@ -6,16 +6,13 @@ const GroupShowHeader = ({
     members,
     attendees,
     events,
-    locations, 
     createMember, 
     deleteMember,
     deleteGroup,
     fetchAttendees,
     currentUser,
     history,
-    organizer
 }) => {
-    if (locations[group.location_id] === undefined) return null;
 
     return (
       <div className="show-pg-header-container">
@@ -23,7 +20,6 @@ const GroupShowHeader = ({
           <div className="img-details-header-container">
             <div className="img-details-header">
               <div className="show-img-container">
-                {/* <img src={window.communionUrl} alt="" /> */}
               </div>
               <div className="show-details-container">
                 <div className="show-details">
@@ -38,15 +34,15 @@ const GroupShowHeader = ({
                         </div>
                         <div className="show-detail-info">
                             <p>
-                                {locations[group.location_id].city},
-                                {locations[group.location_id].state}
+                                {group.location.city},
+                                {group.location.state}
                             </p>
                             <p>
                                 {Object.keys(members).length} members
                             </p>
                             <div className="organizer-info">
                               <p>Organized by </p>
-                              <p id="organizer"> {organizer}</p>
+                              <p id="organizer"> {group.creator}</p>
                             </div>
                         </div>
                     </div>

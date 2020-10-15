@@ -9,8 +9,7 @@
 #  location_id    :integer          not null
 #  creator_id     :integer          not null
 #  created_at     :datetime         not null
-#  updated_at     :datetime         not null
-#
+#  updated_at     :datetime         not null #
 class Group < ApplicationRecord
     validates :name, :description, :creator_id, :location_id, :subcategory_id, presence: true 
     validates :name, uniqueness: { scope: :description }
