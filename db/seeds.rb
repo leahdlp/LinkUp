@@ -545,13 +545,14 @@ Roger Porter",
     location_id: oakland.id, 
     creator_id: user86.id
 })
-# group24 = Group.create({ 
-#     name: "Blacks in Technology - SF Bay Area(Official)", 
-#     description: "coool group", 
-#     subcategory_id: sub_cat, 
-#     location_id: "", 
-#     creator_id: user 
-# })
+group24 = Group.create({ 
+    name: "LinkUp Testers", 
+    description: "This is a group for people testing the code for the LinkUp website (a clone for the site Meetup). We are currently testing the css for the group show page. We want the tabs' content to have more space between it and the category/\"Related Topics\" section. We also want the the members list to render a max of 15 before creating a see all option that takes to a members component. That was a mouthful! We will have events to engage in the progression of our code!", 
+    subcategory_id: sub_cat30.id, 
+    location_id: sanFrancisco.id, 
+    creator_id: user0.id
+})
+
 # group25 = Group.create({ 
 #     name: "Blacks in Technology - SF Bay Area(Official)", 
 #     description: "coool group", 
@@ -796,6 +797,23 @@ member63 = Member.create!({ user_id: user9.id, group_id: group15.id })
 member64 = Member.create!({ user_id: user9.id, group_id: group8.id })
 member65 = Member.create!({ user_id: user9.id, group_id: group3.id })
 member66 = Member.create!({ user_id: user9.id, group_id: group13.id })
+member67 = Member.create!({ user_id: user0.id, group_id: group24.id })
+member68 = Member.create!({ user_id: user23.id, group_id: group24.id })
+member69 = Member.create!({ user_id: user37.id, group_id: group24.id })
+member70 = Member.create!({ user_id: user62.id, group_id: group24.id })
+member71 = Member.create!({ user_id: user89.id, group_id: group24.id })
+member72 = Member.create!({ user_id: user91.id, group_id: group24.id })
+member73 = Member.create!({ user_id: user45.id, group_id: group24.id })
+member74 = Member.create!({ user_id: user20.id, group_id: group24.id })
+member75 = Member.create!({ user_id: user31.id, group_id: group24.id })
+member76 = Member.create!({ user_id: user29.id, group_id: group24.id })
+member77 = Member.create!({ user_id: user52.id, group_id: group24.id })
+member78 = Member.create!({ user_id: user19.id, group_id: group24.id })
+member79 = Member.create!({ user_id: user27.id, group_id: group24.id })
+member80 = Member.create!({ user_id: user34.id, group_id: group24.id })
+member81 = Member.create!({ user_id: user41.id, group_id: group24.id })
+member82 = Member.create!({ user_id: user36.id, group_id: group24.id })
+
 
 # # EVENTS:
 Event.destroy_all
@@ -849,29 +867,29 @@ We aim to embrace both the tragedy and the divine comedy of the individual life 
     location_id: houston.id
 })
 
-# event4 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
-#     description: "",
-#     location_id: 
-# })
+event4 = Event.create!({
+    name: "Fix CSS For Tab Content - Event Show Page", 
+    group_id: group24.id, 
+    date_time: DateTime.strptime("10/03/2020 21:50", "%m/%d/%Y %H:%M"),
+    description: "When the list is at a certain length it gets too long for its section and cuts off. Maybe a min-height property on it and/or its container and have it fit-content? I feel like I probably already have something like that so will have to hunt for it.",
+    location_id: sanFrancisco.id
+})
 
-# event5 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
-#     description: "",
-#     location_id: 
-# })
+event5 = Event.create!({
+    name: "Fix Group Show Member List", 
+    group_id: group24.id, 
+    date_time: DateTime.strptime("10/03/2020 22:30", "%m/%d/%Y %H:%M"),
+    description: "I want there to be a max of 15 members shown in the list component before a see all button/option is created... See all takes user to the members index to see every member in the group... similar to see all for attendees.",
+    location_id: sanFrancisco.id
+})
 
-# event6 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
-#     description: "",
-#     location_id: 
-# })
+event6 = Event.create!({
+    name: "Fix Speed of Entity Forms", 
+    group_id: group24.id, 
+    date_time: DateTime.strptime("10/14/2020 14:56", "%m/%d/%Y %H:%M"),
+    description: "Entity form crashes Sami's computer and makes it freeze up. It runs incredibly slow for our dev team. Lets go ahead and figure out what is slowing this down and how to fix it! All are welcome to go on this debugging mission!",
+    location_id: oakland.id
+})
 
 # event7 = Event.create!({
 #     name: "", 
@@ -1120,6 +1138,54 @@ attendee30 = Attendee.create!({ event_id: event3.id, user_id: user80.id })
 attendee31 = Attendee.create!({ event_id: event3.id, user_id: user90.id })
 attendee32 = Attendee.create!({ event_id: event3.id, user_id: user100.id })
 attendee33 = Attendee.create!({ event_id: event3.id, user_id: user15.id })
+attendee34 = Attendee.create!({ user_id: user0.id, event_id: event4.id })
+attendee35 = Attendee.create!({ user_id: user23.id, event_id: event4.id })
+attendee36 = Attendee.create!({ user_id: user37.id, event_id: event4.id })
+attendee37 = Attendee.create!({ user_id: user62.id, event_id: event4.id })
+attendee38 = Attendee.create!({ user_id: user89.id, event_id: event4.id })
+attendee39 = Attendee.create!({ user_id: user91.id, event_id: event4.id })
+attendee40 = Attendee.create!({ user_id: user45.id, event_id: event4.id })
+attendee41 = Attendee.create!({ user_id: user20.id, event_id: event4.id })
+attendee42 = Attendee.create!({ user_id: user31.id, event_id: event4.id })
+attendee43 = Attendee.create!({ user_id: user29.id, event_id: event4.id })
+attendee44 = Attendee.create!({ user_id: user52.id, event_id: event4.id })
+attendee45 = Attendee.create!({ user_id: user19.id, event_id: event4.id })
+attendee46 = Attendee.create!({ user_id: user27.id, event_id: event4.id })
+attendee47 = Attendee.create!({ user_id: user34.id, event_id: event4.id })
+attendee48 = Attendee.create!({ user_id: user41.id, event_id: event4.id })
+attendee49 = Attendee.create!({ user_id: user36.id, event_id: event4.id })
+attendee50 = Attendee.create!({ user_id: user0.id, event_id: event5.id })
+attendee51 = Attendee.create!({ user_id: user23.id, event_id: event5.id })
+attendee52 = Attendee.create!({ user_id: user37.id, event_id: event5.id })
+attendee53 = Attendee.create!({ user_id: user62.id, event_id: event5.id })
+attendee54 = Attendee.create!({ user_id: user89.id, event_id: event5.id })
+attendee55 = Attendee.create!({ user_id: user91.id, event_id: event5.id })
+attendee56 = Attendee.create!({ user_id: user45.id, event_id: event5.id })
+attendee57 = Attendee.create!({ user_id: user20.id, event_id: event5.id })
+attendee58 = Attendee.create!({ user_id: user31.id, event_id: event5.id })
+attendee59 = Attendee.create!({ user_id: user29.id, event_id: event5.id })
+attendee60 = Attendee.create!({ user_id: user52.id, event_id: event5.id })
+attendee61 = Attendee.create!({ user_id: user19.id, event_id: event5.id })
+attendee62 = Attendee.create!({ user_id: user27.id, event_id: event5.id })
+attendee63 = Attendee.create!({ user_id: user34.id, event_id: event5.id })
+attendee64 = Attendee.create!({ user_id: user41.id, event_id: event5.id })
+attendee65 = Attendee.create!({ user_id: user36.id, event_id: event5.id })
+attendee66 = Attendee.create!({ user_id: user0.id, event_id: event6.id })
+attendee67 = Attendee.create!({ user_id: user23.id, event_id: event6.id })
+attendee68 = Attendee.create!({ user_id: user37.id, event_id: event6.id })
+attendee69 = Attendee.create!({ user_id: user62.id, event_id: event6.id })
+attendee70 = Attendee.create!({ user_id: user89.id, event_id: event6.id })
+attendee71 = Attendee.create!({ user_id: user91.id, event_id: event6.id })
+attendee72 = Attendee.create!({ user_id: user45.id, event_id: event6.id })
+attendee73 = Attendee.create!({ user_id: user20.id, event_id: event6.id })
+attendee74 = Attendee.create!({ user_id: user31.id, event_id: event6.id })
+attendee75 = Attendee.create!({ user_id: user29.id, event_id: event6.id })
+attendee76 = Attendee.create!({ user_id: user52.id, event_id: event6.id })
+attendee77 = Attendee.create!({ user_id: user19.id, event_id: event6.id })
+attendee78 = Attendee.create!({ user_id: user27.id, event_id: event6.id })
+attendee79 = Attendee.create!({ user_id: user34.id, event_id: event6.id })
+attendee80 = Attendee.create!({ user_id: user41.id, event_id: event6.id })
+attendee81 = Attendee.create!({ user_id: user36.id, event_id: event6.id })
 # attendee34 = Attendee.create!({ event_id: event.id, user_id: user.id })
 # attendee35 = Attendee.create!({ event_id: event.id, user_id: user.id })
 # attendee36 = Attendee.create!({ event_id: event.id, user_id: user.id })
