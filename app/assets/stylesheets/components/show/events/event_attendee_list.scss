@@ -42,10 +42,12 @@
     width: 80%;
     border-radius: 8px;
     background-color: white;
-    text-align: center;
     cursor: pointer;
     padding-right: 5%;
     padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .attendee-photo-container {
@@ -68,9 +70,13 @@
 }
 
 .attendee-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.attendee-name > p {
     width: fit-content;
-    max-width: 50%;
     text-align: center;
-    margin-left: 25%;
-    margin-left: 25%;
+    text-align: center;
 }
