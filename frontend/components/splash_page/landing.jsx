@@ -79,18 +79,20 @@ class Landing extends React.Component {
         return (
             <div className="landing-pg">
                 <div className="landing-nav">
-                    <div className="index-toggle">
-                        <button 
-                            className="idx-toggle-btn"
-                            onClick={() => this.handleToggle(this.state.entity)}>
-                            Groups
-                        </button>
-                        <button 
-                            className="idx-toggle-btn"
-                            id="toggle-selected"
-                            onClick={() => this.handleToggle(this.state.entity)}>
-                            Events
-                        </button>
+                    <div className="index-toggle-container">
+                        <div className="index-toggle">
+                            <button 
+                                className="idx-toggle-btn"
+                                onClick={() => this.handleToggle(this.state.entity)}>
+                                Groups
+                            </button>
+                            <button 
+                                className="idx-toggle-btn"
+                                id="toggle-selected"
+                                onClick={() => this.handleToggle(this.state.entity)}>
+                                Events
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div className="index-header">

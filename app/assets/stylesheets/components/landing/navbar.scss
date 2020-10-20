@@ -2,13 +2,22 @@
     height: 120px;
     background-color: rgb(46, 51, 65);
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    min-width: 100%;
     z-index: 0;
 }
 
+.index-toggle-container {
+    background-color: rgb(46, 51, 65);
+    display: flex;
+    justify-content: flex-end;
+    min-width: 815px;
+    width: 50%;
+}
+
 .index-toggle {
-    margin-right: 25%;
+    // margin-right: 25%;
     display: flex;
     justify-content: space-between;
     min-width: fit-content;

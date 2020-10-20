@@ -23,7 +23,8 @@
 .footer-top {
     background: $footer-color;
     border-bottom: rgb(112, 112, 112) 1px solid;
-    width: 53%;
+    min-width: 815px;
+    width: 50%;
     height: 100px;
     display: flex;
     align-items: center;
@@ -37,7 +38,8 @@
 }
 
 .sub-footer {
-    width: 53%;
+    min-width: 815px;
+    width: 50%;
     background-color: $sub-footer-color;
     height: 100px;
     font-size: 14px;
@@ -60,7 +62,8 @@
 }
 
 .my-links {
-    width: 53%;
+    min-width: 815px;
+    width: 50%;
     background-color: $footer-color;
     margin-top: 10px;
 }
@@ -84,7 +87,7 @@
 .sub-footer-sub {
     background-color: $sub-footer-color;
     display: flex;
-    margin-right: 600px;
+    // margin-right: 600px;
 }
 
 .sub-footer-sub > p {
