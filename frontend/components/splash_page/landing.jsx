@@ -111,7 +111,6 @@ class Landing extends React.Component {
     }
 
     render() {
-        console.log(this.state)
         const events = this.props.events;
         const groups = this.props.groups;
         const locations = this.props.locations;
