@@ -1168,16 +1168,16 @@ event10 = Event.create!({
 
 # # ATTENDEES:
 Attendee.destroy_all
-host1 = Attendee.create!({ event_id: event1.id, user_id: user20.id })
-host2 = Attendee.create!({ event_id: event2.id, user_id: user11.id })
-host3 = Attendee.create!({ event_id: event3.id, user_id: user11.id })
-host4 = Attendee.create!({ event_id: event4.id, user_id: user1.id})
-host5 = Attendee.create!({ event_id: event5.id, user_id: user14.id })
-host6 = Attendee.create!({ event_id: event6.id, user_id: user9.id })
-host7 = Attendee.create!({ event_id: event7.id, user_id: user4.id })
-host8 = Attendee.create!({ event_id: event8.id, user_id: user23.id  })
-host9 = Attendee.create!({ event_id: event9.id, user_id: user100.id  })
-host10 = Attendee.create!({ event_id: event10.id, user_id: user102.id })
+host1 = Attendee.create!({ event_id: event1.id, user_id: user1.id })
+host2 = Attendee.create!({ event_id: event2.id, user_id: user86.id })
+host3 = Attendee.create!({ event_id: event3.id, user_id: user15.id })
+host4 = Attendee.create!({ event_id: event4.id, user_id: user0.id})
+host5 = Attendee.create!({ event_id: event5.id, user_id: user0.id })
+host6 = Attendee.create!({ event_id: event6.id, user_id: user0.id })
+host7 = Attendee.create!({ event_id: event7.id, user_id: user0.id })
+host8 = Attendee.create!({ event_id: event8.id, user_id: user0.id  })
+host9 = Attendee.create!({ event_id: event9.id, user_id: user0.id  })
+host10 = Attendee.create!({ event_id: event10.id, user_id: user0.id })
 
 attendee1 = Attendee.create!({ event_id: event1.id, user_id: user88.id })
 attendee2 = Attendee.create!({ event_id: event1.id, user_id: user77.id })
