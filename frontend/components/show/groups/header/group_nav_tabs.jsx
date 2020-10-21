@@ -340,8 +340,8 @@ class NavTabs extends React.Component {
         const photos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
         return (
             <ul className="photo-list">
-                {photos.map(photo => {
-                    return <li className="photo-list-item"></li>
+                {photos.map((photo, idx) => {
+                    return <li key={`photo-list-${idx}`} className="photo-list-item"></li>
                 })}
             </ul>
         )

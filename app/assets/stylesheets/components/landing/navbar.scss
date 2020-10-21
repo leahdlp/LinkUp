@@ -1,23 +1,55 @@
+.landing-nav-container {
+    min-width: 100%;
+    background-color: rgb(46, 51, 65);
+    display: flex;
+    justify-content: center;
+}
+
 .landing-nav {
     height: 120px;
     background-color: rgb(46, 51, 65);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    min-width: 100%;
+    min-width: 815px;
+    width: 50%;
     z-index: 0;
+}
+
+#landing-search {
+    width: 75%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#landing-search > select {
+    height: 100%;
+    border-radius: 60px;
+    background-color: white;
+    border: none;
+    width: 30%;
+    cursor: pointer;
+}
+
+#landing-search > select:focus {
+    border: none;
+}
+
+#landing-search > input {
+    border-radius: 12px;
+    width: 65%;
+    padding-left: 10px;
 }
 
 .index-toggle-container {
     background-color: rgb(46, 51, 65);
     display: flex;
     justify-content: flex-end;
-    min-width: 815px;
-    width: 50%;
+    width: 25%;
 }
 
 .index-toggle {
-    // margin-right: 25%;
     display: flex;
     justify-content: space-between;
     min-width: fit-content;

@@ -26,11 +26,11 @@ const GroupShowHeader = ({
                     <h1>{group.name}</h1>
                     <div className="show-sub-details">
                         <div className="show-detail-icons">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i className="fas fa-map-marker-alt"></i>
                             <br />  
-                            <i class="fas fa-user-friends"></i>
+                            <i className="fas fa-user-friends"></i>
                             <br />  
-                            <i class="fas fa-user-alt"></i>
+                            <i className="fas fa-user-alt"></i>
                         </div>
                         <div className="show-detail-info">
                             <p>
