@@ -111,6 +111,8 @@ user99 = User.create({ name: "Dominique Jackson", email: "dominique@gmail.com", 
 user100 = User.create({ name: "Anglica Ross", email: "angelica@gmail.com", password: "0123456789" })
 user101 = User.create({ name: "Janet Mock", email: "janeta@gmail.com", password: "0123456789" })
 user102 = User.create({ name: "Billy Porter", email: "billy@gmail.com", password: "0123456789" })
+user103 = User.create({ name: "Gerald Rivera", email: "maxwell@gmail.com", password: "0123456789" })
+user104 = User.create({ name: "Michael Archer", email: "d@angelo.com", password: "0123456789"})
 
 # CATEGORIES
 Category.destroy_all
@@ -891,37 +893,37 @@ event6 = Event.create!({
     location_id: oakland.id
 })
 
-# event7 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
-#     description: "",
-#     location_id: 
-# })
+event7 = Event.create!({
+    name: "Finish Website Nav Search Bar", 
+    group_id: group24.id, 
+    date_time: DateTime.strptime("10/14/2020 0:30", "%m/%d/%Y %H:%M"),
+    description: "Join us for a night of search logic and functionality! The search should go through the backend rather than just be in the front. Also in need of some significant styling! All are welcome for this coding session full of lavendar candles, decaf chai tea, and the wonderful sounds of Neo-Soul (including Maxwell, Erykah Badu, Jill Scott, and D'Angelo)",
+    location_id: oakland.id
+})
 
-# event8 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
-#     description: "",
-#     location_id: 
-# })
+event8 = Event.create!({
+    name: "Fix Text Alignment of Pink Buttons Throughout Site", 
+    group_id: group24.id, 
+    date_time: DateTime.strptime("10/18/2020 13:30", "%m/%d/%Y %H:%M"),
+    description: "Pink buttons throughout the site render to where the text's vertical alignment is at the top, rather than the center. Might be an issue with just Sami's laptop as I haven't seen it elsewhere, but lets see if we can fix it anyways! This event will take place outside in the sun, so our members can get some Vitamin D for a change.",
+    location_id: oakland.id
+})
 
-# event9 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
-#     description: "",
-#     location_id: 
-# })
+event9 = Event.create!({
+    name: "Add a Search Bar for the logged in Landing Page", 
+    group_id: group24.id, 
+    date_time: DateTime.strptime("10/19/2020 19:00", "%m/%d/%Y %H:%M"),
+    description: "When logged in, we decided to render group/event indexes. It would be great for the user to be able to search through the indexes by location and/or name! This will simply be a frontend search since the index should already have all of our groups and events in the state. Join us for some exploration of the JavaScript built in filter method accompanied by conversation igniting podcasts",
+    location_id: oakland.id
+})
 
-# event10 = Event.create!({
-#     name: "", 
-#     group_id: group.id, 
-#     date_time: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"),
-#     description: "",
-#     location_id: 
-# })
+event10 = Event.create!({
+    name: "Integrate AWS Logic", 
+    group_id: group24.id, 
+    date_time: DateTime.strptime("10/20/2020 0:00", "%m/%d/%Y %H:%M"),
+    description: "Our site just has repeated stock photos at the moment. We would love to allow the user to upload their own photos for their groups, events, and member/attendee pictures! All are welcome for this movie night as we go through the AWS video setup guides!",
+    location_id: oakland.id
+})
 
 # event11 = Event.create!({
 #     name: "", 
@@ -1186,20 +1188,46 @@ attendee78 = Attendee.create!({ user_id: user27.id, event_id: event6.id })
 attendee79 = Attendee.create!({ user_id: user34.id, event_id: event6.id })
 attendee80 = Attendee.create!({ user_id: user41.id, event_id: event6.id })
 attendee81 = Attendee.create!({ user_id: user36.id, event_id: event6.id })
-# attendee34 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee35 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee36 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee37 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee38 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee39 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee40 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee41 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee42 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee43 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee44 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee45 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee46 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee47 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee48 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee49 = Attendee.create!({ event_id: event.id, user_id: user.id })
-# attendee50 = Attendee.create!({ event_id: event.id, user_id: user.id })
+
+attendee82 = Attendee.create!({ event_id: event7.id, user_id: user0.id })
+attendee83 = Attendee.create!({ event_id: event7.id, user_id: user103.id })
+attendee84 = Attendee.create!({ event_id: event7.id, user_id: user26.id })
+attendee85 = Attendee.create!({ event_id: event7.id, user_id: user27.id })
+attendee86 = Attendee.create!({ event_id: event7.id, user_id: user104.id })
+attendee87 = Attendee.create!({ event_id: event7.id, user_id: user54.id })
+attendee88 = Attendee.create!({ event_id: event7.id, user_id: user36.id })
+attendee89 = Attendee.create!({ event_id: event7.id, user_id: user22.id })
+attendee90 = Attendee.create!({ event_id: event7.id, user_id: user91.id })
+attendee91 = Attendee.create!({ event_id: event7.id, user_id: user12.id })
+attendee92 = Attendee.create!({ event_id: event7.id, user_id: user64.id })
+
+attendee93 = Attendee.create!({ event_id: event8.id, user_id: user0.id })
+attendee94 = Attendee.create!({ event_id: event8.id, user_id: user83.id })
+attendee95 = Attendee.create!({ event_id: event8.id, user_id: user77.id })
+attendee96 = Attendee.create!({ event_id: event8.id, user_id: user46.id })
+attendee97 = Attendee.create!({ event_id: event8.id, user_id: user28.id })
+attendee98 = Attendee.create!({ event_id: event8.id, user_id: user18.id })
+attendee99 = Attendee.create!({ event_id: event8.id, user_id: user72.id })
+attendee100 = Attendee.create!({ event_id: event8.id, user_id: user51.id })
+attendee101 = Attendee.create!({ event_id: event8.id, user_id: user59.id })
+attendee102 = Attendee.create!({ event_id: event8.id, user_id: user49.id })
+
+attendee103 = Attendee.create!({ event_id: event9.id, user_id: user11.id })
+attendee104 = Attendee.create!({ event_id: event9.id, user_id: user22.id })
+attendee105 = Attendee.create!({ event_id: event9.id, user_id: user33.id })
+attendee106 = Attendee.create!({ event_id: event9.id, user_id: user44.id })
+attendee107 = Attendee.create!({ event_id: event9.id, user_id: user55.id })
+attendee108 = Attendee.create!({ event_id: event9.id, user_id: user66.id })
+attendee109 = Attendee.create!({ event_id: event9.id, user_id: user77.id })
+attendee110 = Attendee.create!({ event_id: event9.id, user_id: user88.id })
+attendee111 = Attendee.create!({ event_id: event9.id, user_id: user99.id })
+attendee112 = Attendee.create!({ event_id: event9.id, user_id: user27.id })
+
+attendee113 = Attendee.create!({ event_id: event10.id, user_id: user18.id })
+attendee114 = Attendee.create!({ event_id: event10.id, user_id: user64.id })
+attendee115 = Attendee.create!({ event_id: event10.id, user_id: user30.id })
+attendee116 = Attendee.create!({ event_id: event10.id, user_id: user85.id })
+attendee117 = Attendee.create!({ event_id: event10.id, user_id: user91.id })
+attendee118 = Attendee.create!({ event_id: event10.id, user_id: user51.id })
+attendee119 = Attendee.create!({ event_id: event10.id, user_id: user28.id })
+

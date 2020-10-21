@@ -3,20 +3,33 @@ import { Link } from 'react-router-dom';
 import AttendeeIndexItem from './attendee_index_item';
 
 class AttendeeIndex extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.filterAttendees = this.filterAttendees.bind(this);
+    }
+
     componentDidMount() {
         this.props.fetchEvent(this.props.eventId)
+            .then(action => this.props.fetchAttendees(action.event.id))
+    }
 
-        if (this.props.attendees.length === 0) {
-            this.props.fetchAttendees(this.props.eventId)
-        }
+    filterAttendees() {
+        const event = this.props.event;
+        const attendees = this.props.attendees;
+
+        const filtered = event.attendee_ids.map(id => attendees[id])
+        return filtered;
     }
 
     render() {
-        const attendees = this.props.attendees;
         const event = this.props.event;
+        let attendees = this.props.attendees;
 
-        if (event === undefined) return null;
+        if (event === undefined || Object.values(attendees).length === 0) return null;
 
+        attendees = this.filterAttendees()
+        
         return (
           <div className="att-idx-pg">
             <div className="att-idx-style-bar"></div>
@@ -35,10 +48,10 @@ class AttendeeIndex extends React.Component {
                     </div>
 
                 </div>
-                {attendees.map((attendee) => (
+                {attendees.map(attendee => (
                     <AttendeeIndexItem
-                    key={`attendee-${attendee.id}-${attendee.name}`}
-                    attendee={attendee}
+                        key={`attendee-${attendee.id}-${attendee.name}`}
+                        attendee={attendee}
                     />
                 ))}
             </ul>
