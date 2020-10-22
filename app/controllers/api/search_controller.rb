@@ -24,6 +24,7 @@ class Api::SearchController < ApplicationController
         render '/api/search/index'
     end
 
+    private
     def search_params
         params.permit(:keyword)
     end

@@ -43,7 +43,9 @@ const mapStateToProps = (state, ownProps) => ({
         description: "", 
         group_id: ownProps.match.params.groupId, 
         date_time: 0, 
-        location_id: 0 
+        location_id: 0,
+        photo: null,
+        photoUrl: null
     },
     formType: 'Create Event',
     errors: state.errors.events,
@@ -60,3 +62,4 @@ const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateEventForm)
+// a.photo.attach(io: File.open(""), filename: "")

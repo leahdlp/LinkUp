@@ -47,7 +47,9 @@ const mapStateToProps = (state, ownProps) => ({
         description: "",
         subcategory_id: 0,
         location_id: 0,
-        creator_id: state.session.id
+        creator_id: state.session.id,
+        photo: null,
+        photoUrl: null
     },
     locations: state.entities.locations,
     subcategories: state.entities.subCategories,

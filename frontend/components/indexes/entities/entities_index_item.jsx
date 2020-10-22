@@ -9,6 +9,7 @@ const EntitiesIndexItem = ({ history, entity, indexType }) => {
             onClick={() => history.push(link)}
             className="grid-item">
             <li className="index-item">
+                <img src={entity.photoUrl} alt=""/>
                 {entity.name}
             </li>
         </div>

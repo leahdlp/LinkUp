@@ -7,9 +7,12 @@ class SignUpForm extends React.Component {
         this.state = {
             name: "",
             email: "",
-            password: ""
+            password: "",
+            photo: null,
+            photoUrl: null
         }
 
+        this.update = this.update.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemoUser = this.handleDemoUser.bind(this);
     }
@@ -18,10 +21,32 @@ class SignUpForm extends React.Component {
         return event => this.setState({ [field]: event.currentTarget.value })
     }
 
+    handleFile(event) {
+        const file = event.currentTarget.files[0];
+        const fileReader = new FileReader();
+        fileReader.onloadend = () => {
+            this.setState({ photoFile: file, photoUrl: fileReader.result });
+        }
+
+        if (file) {
+            fileReader.readAsDataURL(file);
+        }
+    }
+
     handleSubmit(event) {
         event.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+
+        const formData = new FormData();
+
+        for (let key in user) {
+            if (key === "photoUrl") continue;
+            if (key === "photo" && !this.state.photo) continue;
+
+            formData.append(`user[${key}]`, user[key]);
+        }
+
+        this.props.processForm(formData);
     }
 
     handleDemoUser(event) {
@@ -58,6 +83,10 @@ class SignUpForm extends React.Component {
     }
 
     render() {
+        const preview = this.state.photoUrl ? (
+            <img src={this.state.photoUrl} />
+            ) : null;
+
         return (
             <div>
 
@@ -104,6 +133,17 @@ class SignUpForm extends React.Component {
                                             value={this.state.password}
                                             onChange={this.update("password")}
                                         />
+                                    </label>
+                                     <br/>
+                                    <label className="photo-input"> Profile Picture:
+                                        <br/>
+                                        <br/>
+                                        <input 
+                                            type="file"
+                                            onChange={this.handleFile}
+                                            className="upload-photo"
+                                        />
+                                        {preview}
                                     </label>
                                 </div>
                                 <br />

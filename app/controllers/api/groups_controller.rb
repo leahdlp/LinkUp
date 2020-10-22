@@ -50,7 +50,8 @@ class Api::GroupsController < ApplicationController
             :name, 
             :description, 
             :subcategory_id, 
-            :location_id
+            :location_id,
+            :photo
         )
     end
 end

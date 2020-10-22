@@ -31,4 +31,12 @@ class Event < ApplicationRecord
     has_many :host,
         through: :group,
         source: :creator
+
+    has_one_attached :photo
+
+    # def ensure_phoo 
+    #     unless self.photo.attached?
+    #         errors[:photo] << "Must have picture for event"
+    #     end
+    # end
 end

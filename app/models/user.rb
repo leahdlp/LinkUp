@@ -36,6 +36,8 @@ class User < ApplicationRecord
         through: :attendees,
         source: :event
 
+    has_one_attached :photo
+
     attr_reader :password
 
     def self.generate_session_token
@@ -66,4 +68,10 @@ class User < ApplicationRecord
     def ensure_session_token
         self.session_token ||= User.generate_session_token
     end
+
+    # def ensure_phoo 
+    #     unless self.photo.attached?
+    #         errors[:photo] << "Must have profile picture"
+    #     end
+    # end
 end

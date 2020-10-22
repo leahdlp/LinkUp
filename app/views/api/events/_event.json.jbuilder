@@ -2,3 +2,4 @@ json.extract! event, :id, :name, :description, :group_id, :date_time, :location_
 json.host event.group.creator.name
 json.location event.location
 json.group event.group.name
+json.photoUrl url_for(event.photo)

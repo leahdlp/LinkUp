@@ -16,7 +16,9 @@ export const createEvent = event => (
     $.ajax({
         url: `/api/groups/${event.group_id}/events`,
         method: 'POST',
-        data: { event }
+        data: { event },
+        contentType: false,
+        processData: false
     })
 )
 
@@ -24,7 +26,9 @@ export const updateEvent = event => (
     $.ajax({
         url: `/api/events/${event.id}`,
         method: 'PATCH',
-        data: { event }
+        data: { event },
+        contentType: false,
+        processData: false
     })
 )
 

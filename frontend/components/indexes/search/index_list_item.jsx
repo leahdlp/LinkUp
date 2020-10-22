@@ -205,6 +205,7 @@ class IndexListItem extends React.Component {
         const history = this.props.history;
         const type = this.props.type;
         const entity = this.props.entity;
+        const photo = this.props.entity.photoUrl
         
         let date_time = type === 'event' ? this.convertDateTime(entity.date_time) : "";
 

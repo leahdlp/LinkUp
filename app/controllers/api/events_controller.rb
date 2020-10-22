@@ -63,7 +63,8 @@ class Api::EventsController < ApplicationController
             :description,
             :group_id, 
             :date_time, 
-            :location_id
+            :location_id,
+            :photo
         )
     end
 end

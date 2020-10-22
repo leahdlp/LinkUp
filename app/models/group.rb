@@ -48,4 +48,10 @@ class Group < ApplicationRecord
         source: :user
 
     has_one_attached :photo
+
+    # def ensure_phoo 
+    #     unless self.photo.attached?
+    #         errors[:photo] << "Must have picture for group"
+    #     end
+    # end
 end

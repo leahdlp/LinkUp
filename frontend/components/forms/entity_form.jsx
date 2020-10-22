@@ -11,6 +11,7 @@ class EntityForm extends React.Component {
           ? "Group"
           : "Event"; 
 
+        this.handleFile = this.handleFile.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
         this.handleCancel = this.handleCancel.bind(this);
@@ -25,6 +26,18 @@ class EntityForm extends React.Component {
         return () => this.setState({ [field]: event.target.value })
     }
 
+    handleFile(event) {
+        const file = event.currentTarget.files[0];
+        const fileReader = new FileReader();
+        fileReader.onloadend = () => {
+            this.setState({ photoFile: file, photoUrl: fileReader.result });
+        }
+
+        if (file) {
+            fileReader.readAsDataURL(file);
+        }
+    }
+
     handleSubmit(event) {
         event.preventDefault();
         let entity = Object.assign({}, this.state);
@@ -32,7 +45,17 @@ class EntityForm extends React.Component {
         entity.location_id = parseInt(entity.location_id);
         entity.subcategory_id = parseInt(entity.subcategory_id);
 
-        this.props.processForm(entity)
+        const formData = new FormData();
+        // formData.append(`${this.entity.toLowerCase()}[photo]`, this.state.photoFile)
+
+        for (let key in entity) {
+            if (key === "photoUrl") continue;
+            if (key === "photo" && !this.state.photo) continue;
+
+            formData.append(`${this.entity.toLowerCase()}[${key}]`, entity[key])
+        }
+
+        this.props.processForm(formData)
             .then(action => {
               if (this.entity === "Group") {
                 this.props.history.push(
@@ -138,6 +161,7 @@ class EntityForm extends React.Component {
         let currentLoc = this.state.location_id || "default";
 
         let label = this.entity === "Group" ? "Description" : "Details";
+        const preview = this.state.photoUrl ? <img src={this.state.photoUrl}/> : null
 
         return (
           <div className="form-container">
@@ -191,6 +215,18 @@ class EntityForm extends React.Component {
                 <br />
 
                 {this.renderCategories()}
+
+                <br/>
+                <label className="photo-input"> {this.entity} Picture:
+                  <br/>
+                  <br/>
+                  <input 
+                    type="file"
+                    onChange={this.handleFile}
+                    className="upload-photo"
+                  />
+                  {preview}
+                </label>
               </div>
               <br />
               <div className="form-btns-container">
