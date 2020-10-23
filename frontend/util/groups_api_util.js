@@ -16,7 +16,7 @@ export const createGroup = group => (
     $.ajax({
         url: `/api/groups`,
         method: 'POST',
-        data: { group },
+        data: group,
         contentType: false,
         processData: false
     })
@@ -26,7 +26,7 @@ export const updateGroup = group => (
     $.ajax({
         url: `/api/groups/${group.id}`,
         method: 'PATCH',
-        data: { group },
+        data: group,
         contentType: false,
         processData: false
     })

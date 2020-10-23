@@ -69,9 +69,9 @@ class User < ApplicationRecord
         self.session_token ||= User.generate_session_token
     end
 
-    # def ensure_phoo 
-    #     unless self.photo.attached?
-    #         errors[:photo] << "Must have profile picture"
-    #     end
-    # end
+    def ensure_phoo 
+        unless self.photo.attached?
+            errors[:photo] << "Must have profile picture"
+        end
+    end
 end

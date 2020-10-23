@@ -61,9 +61,12 @@
 }
 
 .attendee-photo {
-    background-image: image_url('/users/in_the_mud.jpg');
-    background-repeat: no-repeat;
-    background-size: 90px 90px;
+    border-radius: 90px;
+    height: 80px;
+    width: 80px;
+}
+
+.attendee-photo > img {
     border-radius: 90px;
     height: 80px;
     width: 80px;

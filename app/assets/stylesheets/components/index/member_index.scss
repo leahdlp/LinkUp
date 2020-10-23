@@ -28,7 +28,7 @@
     border-radius: inherit;
     background-color: inherit;
     min-height: fit-content;
-    height: 10%;
+    height: 125px;
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
@@ -80,11 +80,4 @@
     display: flex;
     align-items: center;
     border-bottom: lightgrey 1px solid;
-}
-
-.mem-index-img {
-    height: 80px;
-    width: 80px;
-    border-radius: 100px;
-    margin: 2% 5%;
 }

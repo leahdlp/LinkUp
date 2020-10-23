@@ -36,6 +36,12 @@ export const fetchAttendees = eventId => dispatch => (
         .fail(errors => dispatch(receiveAttendeeErrors(errors.responseJSON)))
 )
 
+export const fetchAttendee = attendeeId => dispatch => (
+    AttendeesAPIUtil.fetchAttendee(attendeeId)
+        .then(attendee => dispatch(receiveAttendee(attendee)))
+        .fail(errors => dispatch(receiveAttendeeErrors(errors.responseJSON)))
+)
+
 export const createAttendee = attendee => dispatch => (
     AttendeesAPIUtil.createAttendee(attendee)
         .then(attendee => dispatch(receiveAttendee(attendee)))

@@ -48,9 +48,11 @@
     height: 50px;
     margin-right: 5%;
     margin-left: 5%;
-    background-image: image_url("/groups/white-dress-color-backgroud.jpg");
-    background-size: 140% 100%;
-    background-position-x: center;
+}
+
+.event-group-pic > img {
+    width: 100%;
+    height: 50px;
 }
 
 .sidebar-event-details {

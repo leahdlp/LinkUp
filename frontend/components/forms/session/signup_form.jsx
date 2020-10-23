@@ -13,8 +13,10 @@ class SignUpForm extends React.Component {
         }
 
         this.update = this.update.bind(this);
+        this.handleFile = this.handleFile.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemoUser = this.handleDemoUser.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
     }
 
     update(field) {
@@ -43,9 +45,12 @@ class SignUpForm extends React.Component {
             if (key === "photoUrl") continue;
             if (key === "photo" && !this.state.photo) continue;
 
-            formData.append(`user[${key}]`, user[key]);
+            if (key === "photoFile") {
+              formData.append(`user[photo]`, user[key])
+            } else {
+              formData.append(`user[${key}]`, user[key])
+            }
         }
-
         this.props.processForm(formData);
     }
 

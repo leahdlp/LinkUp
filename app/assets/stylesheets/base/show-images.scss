@@ -2,7 +2,11 @@
     margin-right: 40px;
     height: 300px;
     width: 600px;
-    background-image: url(image_url('white-dress-color-backgroud.jpg'));
-    background-repeat: no-repeat;
-    background-size: 600px 350px;
+}
+
+.group-img-container-1 > img {
+    margin-right: 40px;
+    height: 300px;
+    width: 600px;
+    border: 10px solid green;
 }

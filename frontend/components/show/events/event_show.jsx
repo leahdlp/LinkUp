@@ -17,12 +17,12 @@ class EventShow extends React.Component {
     render () {
         if (this.props.event === undefined) return null;
         if (Object.values(this.props.groups).length === 0) return null;
-       
+        
         const event = this.props.event
         const group = this.props.groups[event.group_id]
         const attendees = this.props.attendees;
         const location = event.location;
-        const host = event.host;
+        const host = event.host
 
         return (
           <div className="event-show-pg">
@@ -30,12 +30,15 @@ class EventShow extends React.Component {
               host={host}
               location={location}
               event={event}
+              attendees={attendees}
             />
             <div className="event-show-main">
               <div className="event-show-body-container">
                 <div className="event-show-body">
                   <div className="event-img-container">
-                    <div className="event-img"></div>
+                    <div className="event-img">
+                      <img src={event.photoUrl} alt="" />
+                    </div>
                   </div>
                   <div className="details-section-container">
                     <div className="details-section">
@@ -46,10 +49,7 @@ class EventShow extends React.Component {
 
                   <div className="attendee-section">
                     <div className="attendee-container">
-                      <AttendeeList
-                        eventId={event.id}
-                        attendees={attendees}
-                      />
+                      <AttendeeList eventId={event.id} attendees={attendees} />
                     </div>
                   </div>
 
@@ -59,7 +59,9 @@ class EventShow extends React.Component {
                       to={`/groups/${event.group_id}`}
                     >
                       <div className="event-group-link-info">
-                        <div className="event-group-pic"></div>
+                        <div className="event-group-pic">
+                          <img src={group.photoUrl} alt=""/>
+                        </div>
                         <p>{group.name}</p>
                       </div>
 

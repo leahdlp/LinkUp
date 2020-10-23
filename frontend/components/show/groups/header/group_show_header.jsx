@@ -20,6 +20,7 @@ const GroupShowHeader = ({
           <div className="img-details-header-container">
             <div className="img-details-header">
               <div className="show-img-container">
+                <img src={group.photoUrl} alt=""/>
               </div>
               <div className="show-details-container">
                 <div className="show-details">

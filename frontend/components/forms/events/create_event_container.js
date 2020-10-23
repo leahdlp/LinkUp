@@ -62,4 +62,3 @@ const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateEventForm)
-// a.photo.attach(io: File.open(""), filename: "")

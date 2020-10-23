@@ -7,7 +7,7 @@ const AttendeeList = ({ attendees, eventId }) => {
 
 
     Object.values(attendees).forEach(attendee => {
-      if (attendee.event_id === eventId) eventAtts.push(attendee)
+      if (attendee.event_id === eventId) eventAtts.push(attendee) 
     })
     
     let see = eventAtts.length > 8 ? 

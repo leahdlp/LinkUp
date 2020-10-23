@@ -49,9 +49,9 @@ class Group < ApplicationRecord
 
     has_one_attached :photo
 
-    # def ensure_phoo 
-    #     unless self.photo.attached?
-    #         errors[:photo] << "Must have picture for group"
-    #     end
-    # end
+    def ensure_phoo 
+        unless self.photo.attached?
+            errors[:photo] << "Must have picture for group"
+        end
+    end
 end

@@ -46,13 +46,16 @@ class EntityForm extends React.Component {
         entity.subcategory_id = parseInt(entity.subcategory_id);
 
         const formData = new FormData();
-        // formData.append(`${this.entity.toLowerCase()}[photo]`, this.state.photoFile)
 
         for (let key in entity) {
             if (key === "photoUrl") continue;
             if (key === "photo" && !this.state.photo) continue;
 
-            formData.append(`${this.entity.toLowerCase()}[${key}]`, entity[key])
+            if (key === "photoFile") {
+              formData.append(`${this.entity.toLowerCase()}[photo]`, entity[key])
+            } else {
+              formData.append(`${this.entity.toLowerCase()}[${key}]`, entity[key])
+            }
         }
 
         this.props.processForm(formData)

@@ -120,7 +120,7 @@ user102 = User.create!({ name: "Billy Porter", email: "billy@gmail.com", passwor
 user103 = User.create!({ name: "Gerald Rivera", email: "maxwell@gmail.com", password: "0123456789" })
 user104 = User.create!({ name: "Michael Archer", email: "d@angelo.com", password: "0123456789"})
 
-user0.photo.attach(io: open("https://link-up-seeds.s3-us-west-1.amazonaws.com/2chainz.jpg"), filename: "tyrone.jpg")
+user0.photo.attach(io: open("https://link-up-seeds.s3-us-west-1.amazonaws.com/tyrone.jpg"), filename: "tyrone.jpg")
 user1.photo.attach(io: open("https://link-up-seeds.s3-us-west-1.amazonaws.com/anthony.jpg"), filename: "anthony.jpg")
 user2.photo.attach(io: open("https://link-up-seeds.s3-us-west-1.amazonaws.com/sis.jpg"), filename: "eddie.jpg")
 user3.photo.attach(io: open("https://link-up-seeds.s3-us-west-1.amazonaws.com/eddie3.jpeg"), filename: "eddie3.jpeg")

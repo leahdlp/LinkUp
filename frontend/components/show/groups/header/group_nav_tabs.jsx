@@ -99,7 +99,9 @@ class NavTabs extends React.Component {
                 if (member.group_id === this.props.group.id) {
                 return (
                     <li key={`member-${member.id}`} className="tab-member">
-                    <div className="member-photo"></div>
+                    <div className="member-photo">
+                        <img src={member.photoUrl} alt=""/>
+                    </div>
                     {member.name}
                     </li>
                 );
@@ -291,7 +293,7 @@ class NavTabs extends React.Component {
 
     allEvents() {
         const events = this.props.events;
-        if (Object.values(events).length === 0) return null;
+        if (Object.values(events).length === 0) return this.renderAddEvent();
 
         return (
         <div>
@@ -311,7 +313,9 @@ class NavTabs extends React.Component {
                             {this.convertDateTime(event.date_time)}
                             <p className="ge-name">{event.name}</p>
                         </div>
-                        <div className="group-event-img"></div>
+                        <div className="group-event-img">
+                            <img src={event.photoUrl} alt=""/>
+                        </div>
                         </div>
                         <div className="tab-event-foot">
                         <p className="ge-desc">{event.description}</p>

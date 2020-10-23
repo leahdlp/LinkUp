@@ -29,9 +29,9 @@ class Api::EventsController < ApplicationController
     end
 
     def update
-        @event = Event.find_by(id: params[:id])
+        @event = Event.find_by(id: params[:event][:id])
+        puts params[:id]
         creator_id = @event.group.creator_id
-
 
         if creator_id != current_user.id
             render json: ["Event can only be updated by its creator"], status: 422

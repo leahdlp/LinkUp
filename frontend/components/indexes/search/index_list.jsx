@@ -94,6 +94,8 @@ class IndexList extends React.Component {
                         history={this.props.history}
                         key={`result-${result.id}`}
                         groups={this.props.groups}
+                        fetchAttendee={this.props.fetchAttendee}
+                        fetchMember={this.props.fetchMember}
                     />
                 );
             })}

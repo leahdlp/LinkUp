@@ -3,6 +3,11 @@ class Api::AttendeesController < ApplicationController
         @attendees = Event.find_by(id: params[:event_id]).attendees
         render :index
     end
+    
+    def show
+        @attendee = Attendee.find_by(id: params[:id])
+        render "/api/attendees/info"
+    end
 
     def create
         @attendee = Attendee.new(attendee_params)

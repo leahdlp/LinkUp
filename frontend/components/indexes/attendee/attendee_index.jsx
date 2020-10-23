@@ -43,7 +43,7 @@ class AttendeeIndex extends React.Component {
                         <h3> Attendees ({attendees.length})</h3>
                         <Link 
                             className="att-idx-link"
-                            to={`events/${this.props.eventId}`}
+                            to={`/events/${this.props.eventId}`}
                             >{event.name}</Link>
                     </div>
 

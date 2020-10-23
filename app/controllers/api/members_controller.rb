@@ -4,6 +4,11 @@ class Api::MembersController < ApplicationController
         render :index
     end 
 
+    def show
+        @member = Member.find_by(id: params[:id])
+        render "/api/members/info"
+    end
+
     def create
         @member = Member.new(member_params)
         @member.user_id = current_user.id

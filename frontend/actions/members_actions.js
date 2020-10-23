@@ -36,6 +36,12 @@ export const fetchMembers = groupId => dispatch => (
         .then(members => dispatch(receiveMembers(members)))
 )
 
+export const fetchMember = memberId => dispatch => (
+    MemberAPIUtil.fetchMember(memberId)
+        .then(member => dispatch(receiveMember(member)))
+        .fail(errors => dispatch(receiveAttendeeErrors(errors.responseJSON)))
+)
+
 export const createMember = groupId => dispatch => (
     MemberAPIUtil.createMember(groupId)
         .then(groupInfo => dispatch(receiveMember(groupInfo)))

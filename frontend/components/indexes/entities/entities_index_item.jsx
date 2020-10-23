@@ -1,19 +1,34 @@
 import React from 'react';
 
-const EntitiesIndexItem = ({ history, entity, indexType }) => {
-    const link = indexType === "Group" ? 
-    `/groups/${entity.id}` : `/events/${entity.id}`;
-    
-    return (
-        <div 
-            onClick={() => history.push(link)}
-            className="grid-item">
-            <li className="index-item">
-                <img src={entity.photoUrl} alt=""/>
-                {entity.name}
-            </li>
-        </div>
-    )
+class EntitiesIndexItem extends React.Component {
+    constructor(props) {
+        super(props);
+        
+        this.entity = this.props.entity
+        this.item;
+    }
+
+    componentDidMount() {
+        this.item = document.getElementsByClassName("grid-item")[this.props.idx]
+        this.item.setAttribute("style", `background-image: url(${this.entity.photoUrl})`)
+    }
+
+    render() {
+        const history = this.props.history;
+        const indexType = this.props.indexType;
+        const link = indexType === "Group" ? 
+        `/groups/${this.entity.id}` : `/events/${this.entity.id}`;
+        
+        return (
+            <div 
+                onClick={() => history.push(link)}
+                className="grid-item">
+                <li className="index-item">
+                    {this.entity.name}
+                </li>
+            </div>
+        )
+    }
 }
 
 export default EntitiesIndexItem;

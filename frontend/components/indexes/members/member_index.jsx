@@ -31,7 +31,7 @@ class MembersIndex extends React.Component {
               <h3> Members ({members.length})</h3>
               <Link
                 className="mem-idx-link"
-                to={`groups/${this.props.groupId}`}
+                to={`/groups/${this.props.groupId}`}
               >
                 {group.name}
               </Link>

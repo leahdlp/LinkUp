@@ -9,14 +9,14 @@ Rails.application.routes.draw do
       resources :members, only: [:index]
       resources :events, only: [:create]
     end
-    resources :members, only: [:create, :destroy]
+    resources :members, only: [:show, :create, :destroy]
     resources :categories, only: [:index, :show]
     resources :subcategories, only: [:index, :show]
     resources :locations, only: [:index, :show]
     resources :events, except: [:new, :edit, :create] do 
       resources :attendees, only: [:index]
     end
-    resources :attendees, only: [:create, :destroy]
+    resources :attendees, only: [:show, :create, :destroy]
     resources :search, only: [:index]
     resources :posts, only: [:create, :index, :show]
   end

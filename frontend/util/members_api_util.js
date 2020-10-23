@@ -5,6 +5,13 @@ export const fetchMembers = groupId => (
     })
 )
 
+export const fetchMember = memberId => (
+    $.ajax({
+        url: `/api/members/${memberId}`,
+        method: 'GET'
+    })
+)
+
 export const createMember = groupId => (
     $.ajax({
         url: `/api/members`,

@@ -5,6 +5,13 @@ export const fetchAttendees = eventId => (
     })
 )
 
+export const fetchAttendee = attendeeId => (
+    $.ajax({
+        url: `/api/attendees/${attendeeId}`,
+        method: 'GET'
+    })
+)
+
 export const createAttendee = attendee => (
     $.ajax({
         url: `/api/attendees`,

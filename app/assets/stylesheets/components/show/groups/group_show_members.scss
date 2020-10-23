@@ -52,9 +52,12 @@
     width: 60px;
     background-color: white;
     border-radius: 120px;
-    background-image: image_url('/users/white-claws.jpg');
-    background-repeat: no-repeat;
-    background-size: 100px 80px;
+}
+
+.member-list-item > img {
+    height: 60px;
+    width: 60px;
+    border-radius: 120px;
 }
 
 .member-photo {
@@ -63,9 +66,12 @@
     margin: 10px;
     height: 80px;
     width: 14.5%;
-    background-image: image_url('/users/workout_flex.jpg');
-    background-repeat: no-repeat;
-    background-size: 90px 90px;
+}
+
+.member-photo > img {
+    border-radius: 200px;
+    height: 80px;
+    width: 100%;
 }
 
 .tab-member {

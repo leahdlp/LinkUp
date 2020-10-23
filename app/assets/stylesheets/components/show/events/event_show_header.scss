@@ -64,8 +64,12 @@
     width: 50px;
     border-radius: 100px;
     margin-right: 2%;
-    background-image: image_url("/events/break-room.jpg");
-    background-size: 100% 100%;
+}
+
+.host-img > img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
 }
 
 .host-info {

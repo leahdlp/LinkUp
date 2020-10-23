@@ -13,6 +13,10 @@ class IndexListItem extends React.Component {
         this.renderUserVisual = this.renderUserVisual.bind(this);
     }
 
+    componentDidMount() {
+        this.renderUserVisual();
+    }
+
     numAttendees() {
         return this.props.entity.attendee_ids.length;
     }
@@ -157,44 +161,82 @@ class IndexListItem extends React.Component {
         );
     }
  
-    renderUserCircles(num) {
-        switch (num) {
+    renderUserCircles(users) {
+        if (users[0] === undefined) return null;
+
+        switch (users.length) {
             case 0:
                 return;
             case 1:
                 return (
                     <div className="circle-users">
-                        <div id="user1-circle"></div>
+                        <div id="user1-circle">
+                            <img src={users[0].photoUrl} alt=""/>
+                        </div>
                     </div>
                 )
             case 2:
                 return (
                     <div className="circle-users">
-                        <div id="user1-circle"></div>
-                        <div id="user2-circle"></div>
+                        <div id="user1-circle">
+                            <img src={users[0].photoUrl} alt=""/>
+                        </div>
+                        <div id="user2-circle">
+                            <img src={users[1].photoUrl} alt=""/>
+                        </div>
                     </div>
                 )
             default:
                 return (
                     <div className="circle-users">
-                        <div id="user1-circle"></div>
-                        <div id="user2-circle"></div>
-                        <div id="user3-circle"></div>
+                        <div id="user1-circle">
+                            <img src={users[0].photoUrl} alt=""/>
+                        </div>
+                        <div id="user2-circle">
+                            <img src={users[1].photoUrl} alt=""/>
+                        </div>
+                        <div id="user3-circle">
+                            <img src={users[2].photoUrl} alt=""/>
+                        </div>
                     </div>
                 )
         }
     }
 
     renderUserVisual() {
-        const numUsers = this.props.type === 'event' ? this.numAttendees() : this.numMembers();
-        const users = this.props.type === 'event' ? "attendees" : "members"
-        
+        const type = this.props.type;
+        const entity = this.props.entity;
+
+        const numUsers = type === 'event' ? this.numAttendees() : this.numMembers();
+        const users = type === 'event' ? 
+        (entity.attendee_ids.slice(0, 3).map(attendeeId => {
+            let attendee;
+            this.props.fetchAttendee(attendeeId)
+                .then(action => {
+                    attendee = action.attendee
+                })
+                .fail(err => console.log(err))
+
+            if (attendee) return attendee;
+        }))
+        : 
+        (entity.member_ids.slice(0, 3).map(memberId => {
+            let member;
+            this.props.fetchMember(memberId)
+                .then(action => {
+                    member = action.member
+                })
+                .fail(err => console.log(err))
+            
+            if (member) return member;
+        }))
+        const label = type === 'event' ? "attendees" : "members";
 
         return (
             <div className="search-idx-users">
-                {this.renderUserCircles(numUsers)}
+                {this.renderUserCircles(users)}
                 <div className="user-count">
-                    {numUsers} {users}
+                    {numUsers} {label}
                 </div>
             </div>
         );
@@ -214,7 +256,9 @@ class IndexListItem extends React.Component {
             className="search-index-item"
             onClick={() => history.push(`/${type}s/${entity.id}`)}
           >
-            <div className="search-index-img"></div>
+            <div className="search-index-img">
+                <img src={photo} alt=""/>
+            </div>
             <div className="search-idx-info">
               {date_time}
               {entity.name}

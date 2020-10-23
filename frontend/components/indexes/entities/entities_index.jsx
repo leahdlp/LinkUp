@@ -5,12 +5,13 @@ const EntitiesIndex = ({ entities, history, indexType }) => (
     <div className="index-page">
         <div className="index-list-container">
             <ul className="index-list">
-                {entities.map(entity => (
+                {entities.map((entity, idx) => (
                     <EntitiesIndexItem
                         key={`entity-${entity.id}`}
                         history={history}
                         entity={entity}
                         indexType={indexType}
+                        idx={idx}
                     />
                 ))}
             </ul>

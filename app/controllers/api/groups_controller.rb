@@ -24,7 +24,7 @@ class Api::GroupsController < ApplicationController
     end
 
     def update
-        @group = Group.find_by(id: params[:id])
+        @group = Group.find_by(id: params[:group][:id])
 
         if @group.creator_id === current_user.id && @group.update(group_params)
             render "/api/groups/show"

@@ -16,7 +16,9 @@
 .event-img {
     height: 100%;
     width: 90%;
-    background-image: image-url('brunch.jpg');
-    background-repeat: no-repeat;
-    background-size: 600px 350px;
+}
+
+.event-img > img {
+    height: 100%;
+    width: 100%;
 }

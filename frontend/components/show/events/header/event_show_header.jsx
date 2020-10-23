@@ -81,7 +81,9 @@ class EventShowHeader extends React.Component {
                     {location.city}, {location.state}
                 </p>
                 <div className="event-host">
-                    <div className="host-img"></div>
+                    <div className="host-img">
+                        <img src={event.hostPhoto} alt=""/>
+                    </div>
                     <div className="host-info">
                         <p> Hosted by</p>
                         <p id="host">{host}</p>
