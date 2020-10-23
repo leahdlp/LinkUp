@@ -9,9 +9,6 @@
 
 require 'open-uri'
 
-# https://link-up-seeds.us-west-1.amazonaws.com/2chainz.jpg
-
-
 # USERS:
 User.destroy_all
 user0 = User.create!({ name: "Tyrone Bogues", email: "thanAMug@gmail.com", password: "0123456789" })
